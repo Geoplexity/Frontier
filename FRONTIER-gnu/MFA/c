@@ -1,0 +1,3 @@
+cd ..
+./compileC
+cd MFA

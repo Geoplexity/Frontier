@@ -1,0 +1,4 @@
+#java -Djava.library.path=./UTU/classes \
+#-classpath "./Sketcher/classes:./UTU/classes" utuJava
+cd Sketcher
+java -Djava.library.path=../UTU/classes -classpath "./classes:../UTU/classes" sketcher.SKMainFrame

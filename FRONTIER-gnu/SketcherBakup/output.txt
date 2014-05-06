@@ -1,0 +1,135 @@
+    |\^/|     Maple V Release 5 (University of Florida)
+._|\|   |/|_. Copyright (c) 1981-1997 by Waterloo Maple Inc. All rights
+ \  MAPLE  /  reserved. Maple and Maple V are registered trademarks of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> interface(prettyprint=0);
+> timelimit(200,fsolve({((-0.866025)-(((0.000000)*h31*k31)+((0.000000)*h31*n31)-((0.000000)*j31)+p31))^2+((0.500001)-(((0.000000)*(s31*j31*k31-t31*n31))+((0.000000)*(t31*k31+s31*j31*n31))+((0.000000)*s31*h31)+q31))^2+((0.000000)-(((0.000000)*(s31*n31+t31*j31*k31))+((0.000000)*(-s31*k31+t31*j31*n31))+((0.000000)*t31*h31)+f31))^2
+> =((0.500000))^2,(0.000000)
+> =((0.000000*h31*k31)-(1.000000*h31*n31)+(0.000000*j31)+p31),(1.000000)
+> =((0.000000*(s31*j31*k31+t31*n31))+(1.000000*(t31*k31-s31*j31*n31))-(0.000000*s31*h31)+q31),(0.000000)
+> =((0.000000*(s31*n31-t31*j31*k31))+(1.000000*(s31*k31+t31*j31*n31))+(0.000000*t31*h31)+f31),(-0.333333)
+> =((-0.942806*(s31*j31*k31+t31*n31))+(-0.333341*(t31*k31-s31*j31*n31))-(0.000000*s31*h31)+q31),(-0.544331)
+> =((-0.942806*(s31*n31-t31*j31*k31))+(-0.333341*(s31*k31+t31*j31*n31))+(0.000000*t31*h31)+f31),s31^2+t31^2
+> =1,h31^2+j31^2
+> =1,k31^2+n31^2
+> =1},{f31,h31,j31,k31,n31,p31,q31,t31,s31}));
+bytes used=1000168, alloc=917336, time=0.18
+bytes used=2000620, alloc=1441528, time=0.39
+bytes used=3000876, alloc=1507052, time=0.61
+bytes used=4016392, alloc=1572576, time=0.85
+bytes used=5030616, alloc=1638100, time=1.10
+bytes used=6033092, alloc=1638100, time=1.33
+bytes used=7033264, alloc=1638100, time=1.57
+bytes used=8037816, alloc=1638100, time=1.82
+bytes used=9037984, alloc=1638100, time=2.06
+bytes used=10038840, alloc=1638100, time=2.31
+bytes used=11039076, alloc=1638100, time=2.54
+bytes used=12039500, alloc=1638100, time=2.79
+bytes used=13039900, alloc=1638100, time=3.04
+bytes used=14040112, alloc=1638100, time=3.29
+bytes used=15040284, alloc=1638100, time=3.53
+bytes used=16040456, alloc=1638100, time=3.75
+bytes used=17046800, alloc=1638100, time=4.00
+bytes used=18046972, alloc=1638100, time=4.25
+bytes used=19055484, alloc=1638100, time=4.49
+bytes used=20056108, alloc=1638100, time=4.73
+bytes used=21056312, alloc=1638100, time=4.94
+bytes used=22056556, alloc=1638100, time=5.19
+bytes used=23056860, alloc=1638100, time=5.43
+bytes used=24057092, alloc=1638100, time=5.66
+bytes used=25057364, alloc=1638100, time=5.88
+bytes used=26057556, alloc=1638100, time=6.10
+bytes used=27059716, alloc=1638100, time=6.35
+bytes used=28066660, alloc=1638100, time=6.60
+bytes used=29067248, alloc=1638100, time=6.84
+bytes used=30068224, alloc=1638100, time=7.09
+bytes used=31068452, alloc=1638100, time=7.33
+bytes used=32068736, alloc=1638100, time=7.56
+bytes used=33068900, alloc=1703624, time=7.81
+bytes used=34069104, alloc=1703624, time=8.04
+bytes used=35069316, alloc=1703624, time=8.28
+bytes used=36070028, alloc=1703624, time=8.52
+bytes used=37070216, alloc=1703624, time=8.76
+bytes used=38102480, alloc=1703624, time=9.01
+bytes used=39102736, alloc=1703624, time=9.27
+bytes used=40102976, alloc=1703624, time=9.51
+bytes used=41103148, alloc=1703624, time=9.76
+bytes used=42105636, alloc=1703624, time=9.99
+bytes used=43105820, alloc=1703624, time=10.25
+bytes used=44118168, alloc=1703624, time=10.46
+bytes used=45118848, alloc=1703624, time=10.72
+bytes used=46119044, alloc=1703624, time=10.96
+bytes used=47120704, alloc=1703624, time=11.21
+bytes used=48120904, alloc=1703624, time=11.45
+bytes used=49121652, alloc=1703624, time=11.64
+bytes used=50122636, alloc=1703624, time=11.87
+bytes used=51126764, alloc=1703624, time=12.10
+bytes used=52159936, alloc=1703624, time=12.32
+bytes used=53160116, alloc=1703624, time=12.56
+bytes used=54160312, alloc=1703624, time=12.75
+bytes used=55160724, alloc=1703624, time=12.92
+bytes used=56160948, alloc=1703624, time=13.11
+bytes used=57183184, alloc=1703624, time=13.31
+bytes used=58183368, alloc=1703624, time=13.52
+bytes used=59183540, alloc=1703624, time=13.76
+bytes used=60184760, alloc=1703624, time=14.00
+bytes used=61185024, alloc=1703624, time=14.23
+bytes used=62192128, alloc=1703624, time=14.44
+bytes used=63192532, alloc=1703624, time=14.66
+bytes used=64192800, alloc=1703624, time=14.84
+bytes used=65193136, alloc=1703624, time=15.00
+bytes used=66193312, alloc=1703624, time=15.22
+bytes used=67193652, alloc=1703624, time=15.43
+bytes used=68210660, alloc=1703624, time=15.65
+bytes used=69211328, alloc=1703624, time=15.89
+bytes used=70211540, alloc=1703624, time=16.13
+bytes used=71218020, alloc=1703624, time=16.34
+bytes used=72218796, alloc=1703624, time=16.56
+bytes used=73218976, alloc=1703624, time=16.75
+bytes used=74222376, alloc=1703624, time=16.96
+bytes used=75230504, alloc=1703624, time=17.21
+bytes used=76230680, alloc=1703624, time=17.39
+bytes used=77230892, alloc=1703624, time=17.57
+bytes used=78231080, alloc=1703624, time=17.79
+bytes used=79231268, alloc=1703624, time=18.02
+bytes used=80268032, alloc=1703624, time=18.22
+bytes used=81268280, alloc=1703624, time=18.46
+bytes used=82272024, alloc=1703624, time=18.68
+bytes used=83272276, alloc=1703624, time=18.93
+bytes used=84308124, alloc=1769148, time=19.15
+bytes used=85308296, alloc=1769148, time=19.39
+bytes used=86309148, alloc=1769148, time=19.63
+bytes used=87309624, alloc=1769148, time=19.85
+bytes used=88341484, alloc=1769148, time=20.07
+bytes used=89341700, alloc=1769148, time=20.27
+bytes used=90344048, alloc=1769148, time=20.47
+bytes used=91344604, alloc=1769148, time=20.69
+bytes used=92344780, alloc=1769148, time=20.93
+bytes used=93353032, alloc=1769148, time=21.17
+bytes used=94361044, alloc=1769148, time=21.40
+bytes used=95369504, alloc=1769148, time=21.64
+bytes used=96369824, alloc=1769148, time=21.88
+bytes used=97371108, alloc=1769148, time=22.04
+bytes used=98371548, alloc=1769148, time=22.25
+bytes used=99371752, alloc=1769148, time=22.45
+bytes used=100373836, alloc=1769148, time=22.61
+bytes used=101374944, alloc=1769148, time=22.76
+bytes used=102375172, alloc=1769148, time=22.98
+bytes used=103382692, alloc=1769148, time=23.18
+bytes used=104382936, alloc=1769148, time=23.38
+bytes used=105384148, alloc=1769148, time=23.57
+bytes used=106384416, alloc=1769148, time=23.77
+bytes used=107385116, alloc=1769148, time=23.93
+bytes used=108385284, alloc=1769148, time=24.11
+bytes used=109385656, alloc=1769148, time=24.30
+bytes used=110385908, alloc=1769148, time=24.48
+bytes used=111386680, alloc=1769148, time=24.68
+fsolve({(-.866025-p31)^2+(.500001-q31)^2+f31^2 = .2500000000, 0 = -1.000000*h31
+*n31+p31, 1.000000 = 1.000000*t31*k31-1.000000*s31*j31*n31+q31, 0 = 1.000000*
+s31*k31+1.000000*t31*j31*n31+f31, -.333333 = -.942806*s31*j31*k31-.942806*t31*
+n31-.333341*t31*k31+.333341*s31*j31*n31+q31, -.544331 = -.942806*s31*n31+.94280\
+6*t31*j31*k31-.333341*s31*k31-.333341*t31*j31*n31+f31, s31^2+t31^2 = 1, h31^2+
+j31^2 = 1, k31^2+n31^2 = 1},{j31, n31, k31, h31, s31, t31, q31, f31, p31})
+> quit
+bytes used=111459596, alloc=1769148, time=24.69

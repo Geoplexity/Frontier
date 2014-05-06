@@ -1,0 +1,35 @@
+BufferedWriter bw;
+   FileWriter fw;
+   FileDialog fdSave = new FileDialog(this,"Save",FileDialog.LOAD);
+   fdSave.setVisible(true);
+   file = fdSave.getFile();
+   if (file != null)
+   {
+    try
+    {
+     fw = new FileWriter(file);
+     bw = new BufferedWriter(fw);
+    }
+    catch(IOException ioe)
+    {
+     System.out.println(ioe.getMessage());
+     return;
+    }
+    try
+    {
+     bw.write(ta.getText(),0,ta.getText().length());
+    }
+    catch(IOException ioe)
+    {
+     System.out.println(ioe.getMessage());
+    }
+    finally
+    {
+     try
+     {
+      bw.close();
+     }
+     catch(IOException ioe){}
+    }
+   }
+  

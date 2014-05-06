@@ -1,0 +1,11 @@
+Gp1
+(x1-x2)^2+(y1-y2)^2=(value)^2
+Root
+
+Gp2
+(value)^2=(y1+y2-m*(x1-x2))/(1+m^2)
+Root
+
+Gp1_1
+(x1-x2)^2+(y1-y2)^2=value^2
+Gp1
