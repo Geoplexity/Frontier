@@ -1,0 +1,136 @@
+/**
+ * Title:        SKCircleShape
+ * Description:  Represents a circle with 1 center point
+ */
+package sketcher;
+
+import java.awt.Graphics;
+import java.awt.Color;
+import java.awt.Point;
+import java.awt.geom.Ellipse2D;
+
+public class SKCircleShape extends SKBaseShape
+{
+  public SKPointSubShape pt1 = null;
+  public static final String[] ConType = new String[] {"Center","Circumference","Arbitrary"};
+  public Ellipse2D.Float ellipseShape = new Ellipse2D.Float();
+  public SKCircleShape(SKMainFrame frame, int newID, int x, int y)
+  {
+    super(frame,newID,"Circle"+newID,"Circle",1);
+
+    //Create points
+    pt1 = new SKPointSubShape(frame,x-15,y,this);
+
+    IconPath = "/images/circleicon.gif";
+  }
+
+  public void severTies()
+  {
+    super.severTies();
+    pt1.severTies();
+
+    pt1 = null;
+  }
+
+  public void updateMainShapeData(SKPropArray vPropList, SKConstraintArray vCurrentConstraints)
+  {
+    super.updateMainShapeData(vPropList,vCurrentConstraints);
+
+    if (vPropList != null)
+    { //Update properties
+      vPropList.add(frameMain.propFactory.getNewProp("Radius",new Integer(15),1,Color.red));
+      vPropList.add(frameMain.propFactory.getNewProp("Pt1 X",new Integer(pt1.getShapeX()),1) );
+      vPropList.add(frameMain.propFactory.getNewProp("Pt1 Y",new Integer(pt1.getShapeY()),1) );
+    }
+  }
+
+  public boolean setShapeData(String PropName, Object PropData)
+  {
+    if (super.setShapeData(PropName,PropData)) return true;
+
+    if (PropName=="Radius")
+    {
+      //setSize(getWidth(),new Integer(PropData.toString()).intValue());
+    }
+    else if (PropName=="Pt1 X")
+         {
+           pt1.setLocation(new Integer(PropData.toString()).intValue()-(pt1.getWidth()>>1),pt1.getY());
+         }
+    else if (PropName=="Pt1 Y")
+         {
+           pt1.setLocation(new Integer(PropData.toString()).intValue()-(pt1.getWidth()>>1),pt1.getY());
+         }
+    else return false;
+
+    //Make panelShapeArea repaint
+    frameMain.RefreshShapeArea();
+
+    return true;
+  }
+
+  public void paintSpecial(Graphics g)
+  {
+    //Color thisColor = (Selected) ? Color.red : (mouseOver) ? Color.white : Color.blue;
+    Color thisColor;
+    if (Selected)
+      thisColor = Color.red;
+     else if (this==frameMain.mouseOverItem)
+            thisColor = Color.white;
+           else
+            thisColor = Color.blue;
+
+    g.setColor(thisColor);
+
+    ellipseShape.setFrame(pt1.getShapeX(),pt1.getShapeY(),15,15);
+
+    g.drawOval(pt1.getX()+(pt1.getWidth()>>1),pt1.getY()+(pt1.getHeight()>>1),15,15);
+  }
+
+  public void setSelected(boolean sel)
+  {
+    if (sel != Selected)
+    {
+      Selected = sel;
+      pt1.setSelected(sel);
+    }
+  }
+
+  public void doMove(int deltaX, int deltaY)
+  {
+    pt1.doMove(deltaX,deltaY);
+  }
+
+  public boolean doHitTest(int x, int y)
+  {
+    return ellipseShape.intersects(x-3,y-3,6,6);
+  }
+
+  public Point getConstraintPoint(SKBaseConstraint con)
+  {
+    return new Point(pt1.getShapeX(),pt1.getShapeY());
+  }
+
+  public void updateConstraintProps(SKBaseConstraint con, SKPropArray vPropList)
+  {
+    super.updateConstraintProps(con,vPropList);
+
+    vPropList.add( frameMain.propFactory.getNewComboProp(Name,con.getConInfo(this,0),1,ConType) );
+  }
+
+  public int getConPropInfo(SKBaseConstraint con, String PropName, Object PropData)
+  {
+    if (PropData=="Pt1")
+      return 0;
+    else
+      return 1;
+  }
+
+  public void repaint()
+  {
+    frameMain.RefreshShapeArea( (int)ellipseShape.x-1,(int)ellipseShape.y-1,
+                                (int)java.lang.Math.abs(ellipseShape.x)+1,(int)java.lang.Math.abs(ellipseShape.y)+1 );
+  }
+
+}
+
+

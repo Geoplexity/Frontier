@@ -1,0 +1,12 @@
+echo "compiling java code..."
+javac -d "./UTU/classes" ./UTU/src/utuJava.java
+javac -classpath "./UTU/classes:./Sketcher/classes" -d "./Sketcher/classes" ./Sketcher/src/sketcher/*.java
+javah -d "./UTU/classes" -jni -classpath "./UTU/classes/" utuJava
+
+echo "compiling C/C++ code..."
+#on solar
+g++ -G -I/usr/local/java/include -I/usr/local/java/include/solaris -I./MFA -I./UTU/classes ./UTU/src/utuC.cpp -o ./UTU/classes/libutu.so
+
+#on linux (on lin116-02)
+#g++ -shared -I/usr/local/java/include -I/usr/local/java/include/linux 
+#-I./MFA -I./UTU/classes ./UTU/src/utuC.cpp -o ./UTU/classes/libutu.so

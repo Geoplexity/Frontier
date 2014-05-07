@@ -1,0 +1,130 @@
+Sketcher Version Information
+----------------------------
+
+Key:
+     + Added
+     - Removed
+     * Changed/Modified
+     / Bug fix
+
+v1.00.04b (IN PROGRESS)
+---------------------
+
+ + Added foregroundColor variable to SKShapeProp and 2 constructors that allow you to set this initially. This is the color the proprty will be displayed in.
+
+ + Added SKTableCellRenderer class to render cells of tableShapeProp (to allow for different colors in tableShapeProp)
+
+ + Added method RefreshShapeArea() to SKMainFrame so shapes can cause panelShapeArea to repaint
+
+ * SKLineShape now calls RefreshShapeArea() after its properties are modified (so line is redrawn correctly)
+
+ * Generalized SKPointShape so it can be used as a standalone shape
+
+ + Added SKPointLineShape (which extends from SKPointShape) for use with SKLineShape
+
+ + Added ShapeType to SKBaseShape, which is now a new property that is displayed just under ID (modified SKBaseShape's constructor)
+
+ + Can double-click on a constraint in constraint tree and will allow editing of constraint properties
+
+ + When a constraint is selected, the tree shows the list of associated shapes (double-clicking selects one of those shapes)
+
+ + Added updateMainProperties() & setMainData() to SKBaseConstraint for displaying/editing constraint properties
+
+ - Removed SKBooleanComboShape
+
+ + Added SKPropFactory class.  This recycles SKShapeProps.  You should use this to get/free properties
+   NOTE: Instead of clearing an array of properties, use SKPropFactory.freeProps(SKShapePropArray)!
+
+ * Modified all shapes and constraints (as necessary) to use SKPropFactory
+
+ * Modified SKMainFrame so instead of clearing vCurrPropData is uses SKPropFactory.freeProps
+
+ + Added a frameMain var to SKBaseConstraint (so constraints can have access to SKMainFrame and SKPropFactory)
+
+ / FIXED: If you were editing a property for Shape A and you clicked on Shape B, the editor and old value would still be there
+
+ + Added doMove() method to SKBaseShape to allow moving related shapes (ie with SKLineShape)
+
+ + Added Incidence constraint for Line-to-Line (new classes, to menu, etc)
+
+ * Changed SKShapeProp to SKProp, SKShapePropArray to SKPropArray
+
+ - Removed SKComboShapeProp, SKProp handles all types of props now
+
+ * Modified SKPropFactory to deal with only SKProp (much simplified, 1 less array, etc benefits)
+
+ + Created SKPointSubShape which is to be used by shapes that have points as part of themselves (ie SKLineShape)
+
+ * Modified SKPointLineShape to now descend from SKPointSubShape
+
+ + Added doHitTest() to SKBaseShape.  Returns true if the (x,y) coord is over the painSpecial() part of a shape.
+
+ + When you mouse over a draw graphic (ie the line part of SKLineShape) it is highlighted...clicking on it will select the shape
+
+ + Added SKItemInterface, an interface implemented by SKBaseShape and SKBaseConstraint to ease hittest detection between shapes AND constraints
+
+ * When your mouse is over a constraint it becomes highlighted...click to select
+
+ + You can now save/load shapes and constraints to files
+
+ + SKRepository is a repository viewer, you can now export/import user objects via the SKRepository!
+
+
+v1.00.03b (2/15/2000)
+---------------------
+
+ * Changed SKBaseShape.paintSegment() to paintSpecial().  This is where you do drawing on the panel (outside of your shape's drawing area, like the line between 2 points for a line)
+
+ + Added SKComboShapeProp and MultiCellEditor to allow for different cell editors (other than just JTextField)
+
+ + Added SKBooleanComboSProp (extends SKComboShapeProp) that is a combobox editor with True/False
+
+ * Modified all Shapes' setShapeData() method to make it more readable (and easier to add on to)
+
+
+v1.00.02b (2/8/2000)
+--------------------
+
+ + Created SKNormalShape which all standard shapes should derive from (addes X and Y properties)
+
+ * Modified SKRectShape and SKPointShape to derive from SKNormalShape
+
+ + Created SKLineShape (which consists of 2 SKPointShapes)
+
+ * Modified SKPointShape so that it MUST be associated with a SKLineShape only
+
+ + Added getSelectable() method to SKBaseShape which returns the shape that should be selected (it returns that shape normally, with SKPointShape it returns the associated line)
+
+ + Added getShapeX() and getShapeY() methods to SKBaseShape to return the shape's actual x and y (middle point)...real code implemented in SKNormalShape
+
+ * Modified shape creation code in panelShapeArea_mouseClicked() to not create SKPointShape and to create the new SKLineShape
+
+ * Moved shape's MouseListener and MouseMotionListener to SKBaseShape (from SKMainFrame in shape creation code)
+
+
+v1.00.01b (2/7/2000)
+--------------------
+
+ * Updated Sketcher.html with some more to-do items
+
+ + Added a SKPointShape, a Point (small, non-resizable circle).  This should provide another good example for creating the other shapes.
+
+ + Created an extension of ButtonGroup class to ease distinguishing between which shape to create (see panelShapeArea_mouseClick..where shapes are created...now a switch statement)
+
+ + Added Resizable property to SKBaseShape (implemented in mouseMoving and mouseDragging for shapes)
+
+ + Created a new renderer class for the shape combobox (cmbShapes) that will allow images to be drawn next to the shape name (for reference)..I made icons for rect and point (all icons need to be the same size with a white background, use recticon.gif for reference)..MUCH prettier now ;-)
+
+ + Added IconPath property to SKBaseShape (so cmbShapes knows where to get the icon for that particular shape when rendering)
+
+ * Made some changes to code regarding cmbShapes (Now holds a list of references to the shape, not just a string, etc)
+
+ * Changed Top,Left to X,Y in properties.  It now refers to the middle of the shape, not the top, left point
+
+ * When creating a shape, the point you click becomes the midpoint (therefore X,Y) of the created shape
+
+ + Added method toString() to SKBaseShape (for cmbShapes)...it returns the Shape's Name
+
+ * Changed so that when dragging a shape, the X,Y in statusbar reflect the shape's new X,Y coords
+
+ * Some other minor things I am forgetting...

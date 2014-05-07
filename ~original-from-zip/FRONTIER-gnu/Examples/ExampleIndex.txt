@@ -1,0 +1,50 @@
+Basic Examples
+
+Cir.skr		-- three circles
+CirDia.skr	-- three circles and a point
+Parallel.skr	-- two parallel lines and two points
+TwoTri.skr	-- two overlapping triangles
+Dia.skr		-- simple diamond shape
+TriAtPoint.skr	-- (underconstrained) two trianles meeting at a point
+CirTwoLin.skr	-- circle tangent to two lines
+FixedLinSeg.skr -- fixed length line segment
+LinTri.skr	-- three lines and a point
+
+
+Basic Examples with 4 or more elements
+
+LinSegTri.skr	-- three lines and a point form a triangle
+Hex.skr		-- hexagon
+
+
+Composite Examples
+
+ThreeDia.skr	-- basic three diamond example
+FiveDia.skr	-- five diamond example
+DiaHex.skr	-- hexagon with attached diamond
+HexTwoDia.skr	-- hexagon with two attached diamonds
+DiaOfDia.skr	-- diamond formed of diamonds
+LinTriDia.skr	-- three lines and a diamond
+
+
+Composite Example with 4 objects at highest level
+
+HexTwoDia.skr
+
+
+AutoSolve Examples
+
+ThreeDia.skr
+FiveDia.skr
+DiaOfDia.skr
+LinTriDia.skr
+
+
+UpdateMode Examples
+
+AddConstraint.skr
+DeleteConstraint.skr
+
+
+
+

@@ -1,0 +1,16 @@
+    |\^/|     Maple V Release 5 (University of Florida)
+._|\|   |/|_. Copyright (c) 1981-1997 by Waterloo Maple Inc. All rights
+ \  MAPLE  /  reserved. Maple and Maple V are registered trademarks of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> interface(prettyprint=0);
+> timelimit(10,solve({(1.000000)^2=((x7-(0.000000))^2+(y7-(-1.000000))^2),(1.000000)^2=((x7-(0.000000))^2+(y7-(0.000000))^2)},{x7,y7}));
+bytes used=1000472, alloc=786288, time=0.18
+{y7 = -.5000000000, x7 = -.8660254038}, {y7 = -.5000000000, x7 = .8660254038}
+> allvalues(%);
+Error, (in allvalues) 
+second argument must be either 'dependent' or 'independent'
+> evalf(%);
+{y7 = -.5000000000, x7 = -.8660254038}, {y7 = -.5000000000, x7 = .8660254038}
+> quit
+bytes used=1102640, alloc=786288, time=0.20

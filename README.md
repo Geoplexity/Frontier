@@ -13,8 +13,8 @@ Installation (for unix):
 NOTE: Currently, to run FRONTIER, you need Maple V or a later version.
 
 - copy the FRONTIER.tar.gz file
-- do gunzip FRONTIER.tar.gz
-- do tar -xvf FRONTIER.tar
+- do `gunzip FRONTIER.tar.gz`
+- do `tar -xvf FRONTIER.tar`
 
 You should now have a directory called FRONTIER-gnu that contains all the source code and documentation.
 	(the gnu public license can be found in the documentation index in the documentation directory in the FRONTIER-gnu directory).
