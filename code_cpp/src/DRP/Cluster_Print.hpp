@@ -1,6 +1,10 @@
+#ifndef CLUSTER_PRINT_HPP
+#define CLUSTER_PRINT_HPP
+
+
 #include <iostream>
 
-#include "Cluster.hpp"
+#include "../GDS/GDS.hpp"
 
 
 void printForest(List<Cluster> & DR_Trees, std::ostream &os, int indent);
@@ -13,7 +17,7 @@ void printTree(Cluster &DR_Tree, std::ostream &os, int indent)
    kids = DR_Tree.children;
    numKids = kids.returnLen();
 
-	
+
 
    for(i=0;i<indent;i++) os<<"**";
    os<<"Core: "<<DR_Tree.returnCore().returnName()
@@ -36,7 +40,7 @@ void printTree(Cluster &DR_Tree, std::ostream &os, int indent)
            os<<kidName<<' ';
       }
       os<<std::endl;
-	
+
 
 //     DR_Tree.output(os);
      printForest(kids, os, indent);
@@ -58,3 +62,7 @@ void printForest(List<Cluster> &DR_Trees, std::ostream &os, int indent)
    }
    return;
 }
+
+
+
+#endif

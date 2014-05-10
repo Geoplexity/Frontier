@@ -2,12 +2,8 @@
 
 #include <fstream>
 
+#include "defs.h"
 #include "Random.hpp"
-
-
-int nextEdgeName=1, nextVerName=1, singleVertex=1, treeFlag;
-
-
 
 
 
@@ -217,7 +213,7 @@ Vertex * Graph::VertAddr(int vName)
 int i;
 for(i=1;i<=NumVert;i++)
  if(vName==vertices.retrieve(i).returnName()) return vertices.addrByIndex(i);
-return NULL; 
+return NULL;
 }
 
 Edge * Graph::EdgeAddr(int eName)
@@ -480,7 +476,7 @@ int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData
       Vertex new_ver;
       shapeType=inputData[idx++];            // shapeType
       outf<<"shapeType="<<shapeType<<std::endl;
-      
+
       new_ver.setType(shapeType);
 //      outf<<"singleVertex="<<singleVertex<<std::endl;
       if(singleVertex<inputData[idx])
@@ -532,7 +528,7 @@ int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData
                new_ver.initialValue(2, dbleData[idxDbl++], 0); //x2
                new_ver.initialValue(3, dbleData[idxDbl++], 0); //y2
                idxDbl++;
-               
+
 /*               if(inputData[idx]>=0) {
                   new_ver.initialValue(5, dbleData[idxDbl++], -1); //length
                   new_ver.incrsWt(-1);
@@ -600,7 +596,7 @@ int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData
    outf<<inputData[idx]<<std::endl;
    outf << "Start to do part 2" << std::endl;
    idx++;
-   
+
    int highEdgeCount=0, temp;
 
    highEdgeCount=0;
@@ -639,20 +635,20 @@ int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData
             currVert=vertices.retrieve(i);
             if (currVert.returnType()==7)   //imaginary object
         {
-                currEdge1=returnEdgeByEnds(name1, currVert.returnName());            
+                currEdge1=returnEdgeByEnds(name1, currVert.returnName());
                 currEdge2=returnEdgeByEnds(name2, currVert.returnName());
                 //this imaginary object exists
                 if (currEdge1.returnName() && currEdge1.returnType()==1 && currEdge1.returnWeight()==3
-            && currEdge2.returnName() && currEdge2.returnType()==1 && currEdge2.returnWeight()==3)           
+            && currEdge2.returnName() && currEdge2.returnType()==1 && currEdge2.returnWeight()==3)
             temp1 = currVert;
-            
-                currEdge1=returnEdgeByEnds(name3, currVert.returnName());            
+
+                currEdge1=returnEdgeByEnds(name3, currVert.returnName());
                 currEdge2=returnEdgeByEnds(name2, currVert.returnName());
                 //this imaginary object exists
                 if (currEdge1.returnName() && currEdge1.returnType()==1 && currEdge1.returnWeight()==3
-            && currEdge2.returnName() && currEdge2.returnType()==1 && currEdge2.returnWeight()==3)           
+            && currEdge2.returnName() && currEdge2.returnType()==1 && currEdge2.returnWeight()==3)
             temp2 = currVert;
-            }   
+            }
         }
 
     if (hasVert(temp1.returnName()))
@@ -674,11 +670,11 @@ int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData
             temp2.setWeight(6);
             temp2.setIgnore(true);
         }
-        
+
         outf<<"name1 = "<<name1<<";   name2 = "<<name2<<";   name3 = "<<name3<<std::endl;
         Edge tempE1, tempE2, tempE3, tempE4, tempE5;
         int tempName;
- 
+
         tempE1.setName(1000+highEdgeCount++);
         tempE1.setEnd(0, temp1.returnName());
         tempE1.setEnd(1, temp2.returnName());
@@ -737,7 +733,7 @@ int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData
                 if(vert->returnName()==name2)
                     vert->appendIncid(tempName);
             }
-        }        
+        }
 
         currEdge1 = returnEdgeByEnds(name2, temp2.returnName());
         if (currEdge1.returnName())
@@ -802,7 +798,7 @@ int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData
         continue;
       }//if (constraintType = 7)
 
-       
+
       new_edg.setType(constraintType);
       new_edg.setWeight(1);                 // weight = 1 for most constraints
       eName=inputData[idx++];               // constraint ID  == edge name
@@ -815,7 +811,7 @@ int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData
       for(i=0;i<numInvolved;i++)
       {
      int endID;
-    
+
          //out<<"   involved="<<inputData[idx]<<std::endl;
      endID=inputData[idx];
          new_edg.setEnd(i, endID);
@@ -827,14 +823,14 @@ int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData
          }
          idx++;
 
-     int temp, vertType;    
+     int temp, vertType;
 
          if(constraintType==0||constraintType==1||constraintType==4||constraintType==6) {//dista
             atPart[i]=inputData[idx];
             //out<<"   part="<<inputData[idx]<<std::endl;
         temp=inputData[idx++];
 
-            outf<<"Constraint Type="<<constraintType<<" part="<<temp<<std::endl;    
+            outf<<"Constraint Type="<<constraintType<<" part="<<temp<<std::endl;
 
         vertType=returnVertByName(endID).returnType();
 
@@ -860,7 +856,7 @@ int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData
 
       if(constraintType==8) new_edg.setWeight(2);
 
-      if(constraintType==0||constraintType==4||constraintType==6||constraintType==8) 
+      if(constraintType==0||constraintType==4||constraintType==6||constraintType==8)
       { // distance (2 or 3D) or angle
          new_edg.setValue(dbleData[idxDbl++]);//-1.0 for arbitrary
          //new_edg.setValue(toFloat(inputData[idx]));//-1.0 for arbitrary
@@ -876,7 +872,7 @@ int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData
    if(vertices.retrieve(1).returnType()>5)
     dimension=3;
    else
-    dimension=2;    
+    dimension=2;
 
    output(outf);
    outf.close();
@@ -970,7 +966,7 @@ void Graph::output(std::ostream& os)
      for(i=1;i<=NumVert;i++)
      {
       currVert=vertices.retrieve(i);
-      os<<currVert<<std::endl; 
+      os<<currVert<<std::endl;
       totalVertW+=currVert.returnWeight();
       if(vertFlow[currVert.returnName()]!=currVert.returnEstFlow())
     os<<"Flows do not match for vertex "<<currVert.returnName()<<": Curr Flow="

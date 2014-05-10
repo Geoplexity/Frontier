@@ -8,7 +8,7 @@ by both the DR-Planner and the Solver. */
 #define LIST_HPP
 
 
-#define NULL 0
+#include "defs.h"
 
 
 int min(int a,int b)
@@ -131,7 +131,7 @@ Type &List<Type>::pop()
        first->prev=NULL;
        length--;
        return poped->elem;
-    } 
+    }
 }
 
 template<class Type>
@@ -143,7 +143,7 @@ Type& List<Type>::retrieve(int pos) const
     {
        oneNode<Type> *dummy=new oneNode<Type>;
        return dummy->elem;
-    } 
+    }
     current=first;
     if(length>1)
        for(i=1;i<pos;i++)
@@ -189,7 +189,7 @@ void List<Type>::deleteElem(Type& elm)
     {
        if(current==first) first = current->next;
        else if(current==last) last = current->prev;
-       else 
+       else
        {
     (current->prev)->next = current->next;
     (current->next)->prev = current->prev;

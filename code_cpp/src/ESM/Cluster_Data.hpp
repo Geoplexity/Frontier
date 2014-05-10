@@ -1,3 +1,7 @@
+#ifndef CLUSTER_DATA_HPP
+#define CLUSTER_DATA_HPP
+
+
 #define CDATALEN	8
 
 #ifndef CDATA_H
@@ -31,10 +35,10 @@ public:
 		init();
 	}
 
-	ClustData(int len) 
+	ClustData(int len)
 	{
 		create(len);
-		init();	
+		init();
 	}
 
 	ClustData(const ClustData &oldClustData)
@@ -43,9 +47,9 @@ public:
 		copy(oldClustData);
 	}
 
-	~ClustData()   
+	~ClustData()
 	{
-		destroy();	
+		destroy();
 	}
 
 	ClustData& operator = (const ClustData &oldClustData)
@@ -89,9 +93,9 @@ void ClustData::init()
 		edgeType[i]=0;
 		e1ID[i]=0;
 		e2ID[i]=0;
-		e1Type[i]=0; 
-		e2Type[i]=0; 
-		e1Part[i]=0; 
+		e1Type[i]=0;
+		e2Type[i]=0;
+		e1Part[i]=0;
 		e2Part[i]=0;
 	}
 }
@@ -114,7 +118,7 @@ void ClustData::destroy()
 
 void ClustData::copy(const ClustData &oldClustData)
 {
-	int i;   
+	int i;
 	for(i=0; i<length; i++)
 	{
 		inOrBetween[i]=oldClustData.inOrBetween[i];
@@ -144,27 +148,31 @@ std::ostream& operator <<(std::ostream& out, const ClustData &printData)
 		out.width(5);
 		out<<printData.edgeID[i];
 		out.width(5);
-		out<<printData.edgeType[i]; 
+		out<<printData.edgeType[i];
 		out.width(5);
-		out<<printData.e1ID[i]; 
+		out<<printData.e1ID[i];
 		out.width(5);
-		out<<printData.e1Type[i]; 
+		out<<printData.e1Type[i];
 		out.width(5);
-		out<<printData.e1Part[i]; 
+		out<<printData.e1Part[i];
 		out.width(5);
-		out<<printData.e2ID[i]; 
+		out<<printData.e2ID[i];
 		out.width(5);
-		out<<printData.e2Type[i]; 
+		out<<printData.e2Type[i];
 		out.width(5);
-		out<<printData.e2Part[i]; 
+		out<<printData.e2Part[i];
 
 		out.width(5);
 		out.precision(2);
-		out<<printData.values[i];  
+		out<<printData.values[i];
 		if(i<printData.length-1) out<<"\n";
 	}
 
 	return out;
 }
+
+#endif
+
+
 
 #endif

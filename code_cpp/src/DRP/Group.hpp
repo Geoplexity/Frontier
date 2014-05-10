@@ -1,23 +1,27 @@
 //file: mfa4Grop.cpp
 
+#ifndef GROUP_HPP
+#define GROUP_HPP
+
+
 #include <fstream>
 
 
-#include "Graph.hpp"
-#include "Cluster.hpp"
+#include "../GDS/GDS.hpp"
+
 #include "Cluster_Print.hpp"
 
 
 Cluster & oneGroup(jint *inputData, Graph &graph0, int &idx)
 {
    Cluster *DR_Tree = new Cluster(), childCluster;
-   
+
    std::ofstream outfile1;
    if (idx < 40)
       outfile1.open("oneGroup.out");
    else
 	outfile1.open("oneGroup2.out");
-	
+
    int i, shapeNum, vName, subGroupNum;
    Vertex childCore;
    List<int> frontiers, originalV;
@@ -25,13 +29,13 @@ Cluster & oneGroup(jint *inputData, Graph &graph0, int &idx)
 
    std::cout<<"Group="<<inputData[idx]<<std::endl;
    outfile1<<"Group(inputData["<<idx<<"]) = "<<inputData[idx]<<std::endl;
-   
+
    DR_Tree->setGroup(inputData[idx++]);
    shapeNum=inputData[idx++];
-   
+
    outfile1<<"The original content of DR_Tree is:"<<std::endl;
    outfile1<<"shapeNum(inputData["<<idx-1<<"]) = "<<shapeNum<<std::endl;
-   
+
    DR_Tree->output(outfile1);
 
    for(i=0;i<shapeNum;i++)
@@ -52,7 +56,7 @@ Cluster & oneGroup(jint *inputData, Graph &graph0, int &idx)
        frontiers.makeEmpty();
        originalV.makeEmpty();
    }
-   
+
 
    subGroupNum=inputData[idx++];
    outfile1<<"subGroupNum(inputData["<<idx<<"]) = "<<subGroupNum<<std::endl;
@@ -63,7 +67,7 @@ Cluster & oneGroup(jint *inputData, Graph &graph0, int &idx)
        DR_Tree->children.append(oneGroup(inputData, graph0, idx));
        DR_Tree->output(outfile1);
    }
-   
+
    outfile1.close();
    return *DR_Tree;
 }
@@ -79,11 +83,11 @@ void getGroups(jint *inputData, Graph &graph0, int &idx, List<Cluster> &DR_Trees
    idx++;  // 0 == number of shapes for group -1
 
    std::ofstream outfile1;
-   
+
    outfile1.open("getgroups.out");
 
    graph0.output(outfile1);
-   
+
    graph0.freeze();
    subGroupNum=inputData[idx++];
 
@@ -96,36 +100,36 @@ void getGroups(jint *inputData, Graph &graph0, int &idx, List<Cluster> &DR_Trees
    for(i=0;i<subGroupNum;i++)
    {
        DR_Trees.append(oneGroup(inputData, graph0, idx));
-   
+
        outfile1<<"idx = "<<idx<<std::endl;
-       
+
        printForest(DR_Trees, outfile1, 0);
    }
-   
+
    outfile1<<"singleVertex = "<<singleVertex<<std::endl;
-   
+
    for(vName=1;vName<=singleVertex;vName++)
    {
       outfile1<<"vName = "<<vName<<std::endl;
       if(graph0.hasVert(vName))
       {
          childCore=graph0.returnVertByName(vName);
-   
+
          outfile1<<"childCore = "<<childCore<<std::endl;
-         if(childCore.isFrozen()) 
+         if(childCore.isFrozen())
          {
             outfile1<<"childCore is forzen. "<<std::endl;
-   
+
             hasAppended = 0;
-   
+
             graph0.defrostOneVert(vName);
             childCore.defrost();
             frontiers.append(vName);
             originalV.append(vName);
             childCluster.formCl(childCore,frontiers,innerE,outerE,originalV);
-            
+
             childCluster.output(outfile1);
-           
+
             len=DR_Trees.returnLen();
             for(i=1;i<=len;i++)
             {
@@ -136,7 +140,7 @@ void getGroups(jint *inputData, Graph &graph0, int &idx, List<Cluster> &DR_Trees
 
    		int childLen=aTree.children.returnLen();
                 outfile1<<"the children number of aTree is : "<<childLen<<std::endl;
-       
+
                 incidNum = 0;
    		int v1, edgeName, j;
 		Vertex vTemp;
@@ -147,7 +151,7 @@ void getGroups(jint *inputData, Graph &graph0, int &idx, List<Cluster> &DR_Trees
 			v1 = vTemp.returnName();
  			outfile1<<"the v1 is : "<<v1<<std::endl;
 			if (vTemp.returnType()<=6)
-			{//vTemp isn't an imaginary object.			
+			{//vTemp isn't an imaginary object.
 				edge = graph0.returnEdgeByEnds(v1, vName);
 				outfile1<<"The edge is:"<<edge<<std::endl;
 				edgeName = edge.returnName();
@@ -157,26 +161,30 @@ void getGroups(jint *inputData, Graph &graph0, int &idx, List<Cluster> &DR_Trees
 				outfile1<<"incidNum is : "<<incidNum<<std::endl;
 			}
 		}
-		if(incidNum>=2) 
-		//vName is an imaginary object.	
+		if(incidNum>=2)
+		//vName is an imaginary object.
 		{
 			outfile1<<"add the imaginary object to the cluster."<<std::endl;
 			aTree.children.append(childCluster);
 			hasAppended = 1;
 		}
 		DR_Trees.append(aTree);
-   	    }          
-	    if (hasAppended == 0)	  
+   	    }
+	    if (hasAppended == 0)
             //this object has not been added to the DR_Trees
             	DR_Trees.append(childCluster);
             frontiers.makeEmpty();
             originalV.makeEmpty();
-            
+
 	    outfile1<<"The current DR_Trees is:"<<std::endl;
    	    printForest(DR_Trees, outfile1, 0);
-         }//if(childCore.isFrozen()) 
+         }//if(childCore.isFrozen())
       }//if(graph0.hasVert(vName))
    }//for(vName=1;vName<=singleVertex;vName++)
    graph0.output(outfile1);
    outfile1.close();
 }
+
+
+
+#endif

@@ -9,12 +9,11 @@
 #include <string>
 #include <iostream>
 
-#include "../MFA/List.hpp"
-#include "../MFA/Vertex.hpp"
-#include "../MFA/Edge.hpp"
-#include "../MFA/Graph.hpp"
-#include "../MFA/Cluster.hpp"
-#include "../MFA/Cluster_Data.hpp"
+
+#include "../GDS/GDS.hpp"
+
+
+#include "Cluster_Data.hpp"
 
 //#include "mfaTree.cpp"
 
@@ -39,7 +38,7 @@ int aOverlap;                            //an example constraint between two clu
 int equationCount;                       //the number of equations generated for a cluster
 int withHeldCluster;                     //theCluster whose values are carried over in solving
 int type1, type2;                        //used in the testEQ section
-int startI;                              //starting point for int array read  
+int startI;                              //starting point for int array read
 int startF;                              //starting point for float array read
 int currPosI;				 //current location in inputInts
 int currPosF;				 //current location in inputFloats

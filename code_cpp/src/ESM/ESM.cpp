@@ -8,9 +8,11 @@
 #include <math.h>
 
 #include "ESM.hpp"
+#include "mfaTree.hpp"
 //#include "mfaTree.cpp"
 
-#include "../MFA/Cluster_Print.hpp"
+#include "../DRP/Cluster_Print.hpp"
+#include "../DRP/Dense_Algo.hpp"
 
 using namespace std;
 
@@ -102,7 +104,7 @@ void getIntersectionLineLine(Vertex &theVertex, float x1, float y1, float m1, fl
 
      Xout=(m2*Xnew+Ynew)/(m1-m2);
      Yout=Xout*m1;
-     
+
      Xout+=x1;
      Yout+=y1;
 
@@ -123,7 +125,7 @@ void getIntersectionLineCircle(List<Vertex> &thePoints, float x1, float y1, floa
 
     deter=-y2-pow(m1,2)*pow(x1,2)+2*y1*m1*x1+pow(r,2)+pow(m1,2)*pow(r,2);
 
-    if(deter<0) 
+    if(deter<0)
     {
       thePoints.retrieve(1).setType(-1);
       return;
@@ -158,7 +160,7 @@ void getIntersectionCircleCircle(List<Vertex> &thePoints, float x1, float y1, fl
 
     deter=-pow(d,2)+2*d*f-pow(e,2);
 
-    if(deter<0) 
+    if(deter<0)
     {
       thePoints.retrieve(1).setType(-1);
       return;
@@ -175,7 +177,7 @@ void getIntersectionCircleCircle(List<Vertex> &thePoints, float x1, float y1, fl
     thePoints.retrieve(2).setType(0);
     thePoints.retrieve(2).setValues(0,Xout2);
     thePoints.retrieve(2).setValues(1,Yout2);
-}    
+}
 
 //given an point and another object, determines if the point has incidence with the object
 bool isValidPointIncidence(Vertex &thePoint, Vertex &theOther, int part1, int part2)
@@ -185,10 +187,10 @@ bool isValidPointIncidence(Vertex &thePoint, Vertex &theOther, int part1, int pa
     float pointAngle, length1, length2, length;
 
     if(part1!=1) return false;
-    if(part2!=0) return true;   
+    if(part2!=0) return true;
 
     type=theOther.returnType();
-    
+
     x1=thePoint.returnDegValueByName(0);
     y1=thePoint.returnDegValueByName(1);
     x2=theOther.returnDegValueByName(0);
@@ -230,7 +232,7 @@ bool isValidLineIncidence(Vertex &theLine, Vertex &theOther, int part1, int part
     bool out1, out2;
 
     if(part1!=0) return false;
-    if(part2!=0) return true;   
+    if(part2!=0) return true;
 
     x1=theLine.returnDegValueByName(0);
     y1=theLine.returnDegValueByName(1);
@@ -553,11 +555,11 @@ bool isValidCircleIncidence(Vertex &theCircle, Vertex &theOther, int part1, int 
 
     x1=theCircle.returnDegValueByName(0);
     y1=theCircle.returnDegValueByName(1);
-    r1=theCircle.returnDegValueByName(2);  
+    r1=theCircle.returnDegValueByName(2);
     x2=theOther.returnDegValueByName(0);
     y2=theOther.returnDegValueByName(1);
     r2=theOther.returnDegValueByName(2);
-    
+
     switch(type)
     {
           case 4:   switch(part1*10+part2)
@@ -612,11 +614,11 @@ bool isValidArcIncidence(Vertex &theArc, Vertex &theOther, int part1, int part2)
 
     x1=theArc.returnDegValueByName(0);
     y1=theArc.returnDegValueByName(1);
-    r1=theArc.returnDegValueByName(2);  
+    r1=theArc.returnDegValueByName(2);
     x2=theOther.returnDegValueByName(0);
     y2=theOther.returnDegValueByName(1);
     r2=theOther.returnDegValueByName(2);
-    
+
     switch(part1*10+part2)
     {
           case 0:  sep=getDistance(x1,y1,x2,y2);
@@ -686,8 +688,8 @@ bool isValidArcIncidence(Vertex &theArc, Vertex &theOther, int part1, int part2)
 }
 
 // given the edge, if it is not imaginary returns true (if the constraint
-// is not imaginary if must be satisfied after solution, otherwise the 
-// method calls the correct isValidIncidence method from above and returns 
+// is not imaginary if must be satisfied after solution, otherwise the
+// method calls the correct isValidIncidence method from above and returns
 // true only if the incidence is met with the current values
 bool isValidConstraint(Graph &graph0, Edge &theEdge, Cluster &theCluster)
 {
@@ -699,7 +701,7 @@ bool isValidConstraint(Graph &graph0, Edge &theEdge, Cluster &theCluster)
 
     part1=theEdge.returnPart1();
     part2=theEdge.returnPart2();
-    
+
     end1=graph0.returnVertByName(v1);
     end2=graph0.returnVertByName(v2);
 
@@ -878,7 +880,7 @@ void rotate(Cluster &theCluster, Vertex &v0)
 	outf << "The cluster is: " << endl;
 	theCluster.output(outf);
 	outf << "The vertex is: " << v0 << endl;
-	
+
     type=v0.returnType();
     int v0Name=v0.returnName();
 
@@ -892,7 +894,7 @@ void rotate(Cluster &theCluster, Vertex &v0)
 		v0.setValues(1,theCluster.returnValue(1));
                 v0.setValues(2,theCluster.returnValue(2));
 		return;
-	  }		
+	  }
 	  if(theCluster.right.hasElem(v0Name))
 	  {
 		v0.setValues(0,theCluster.returnValue(3));
@@ -922,7 +924,7 @@ void rotate(Cluster &theCluster, Vertex &v0)
 		v0.setValues(0,theCluster.returnValue(0));
 		v0.setValues(1,theCluster.returnValue(1));
 		return;
-	  }		
+	  }
 	  if(theCluster.right.hasElem(v0Name))
 	  {
 		v0.setValues(0,theCluster.returnValue(3));
@@ -990,7 +992,7 @@ void rotate(Cluster &theCluster, Vertex &v0)
 		    v0.setValues(2,x2New);
                     v0.setValues(3,y2New);
 		    break;
-	  case 6:   x=v0.returnDegValueByName(0); 
+	  case 6:   x=v0.returnDegValueByName(0);
                     y=v0.returnDegValueByName(1);
 		    z=v0.returnDegValueByName(2);
 		    p=theCluster.returnValue(0);
@@ -1012,14 +1014,14 @@ void rotate(Cluster &theCluster, Vertex &v0)
      		    outf << "x, y, z = " << x << ", " << y << ", " << z << endl;
      		    outf << "p, q, f, cos, sin, cosy, siny, cosz, sinz = " << p << ", " << q << ", " << f << ", " ;
      		    outf << cos <<  ", " << sin << ", " << cosy << ", " << siny << ", " << cosz << ", " << sinz <<
-endl;  
+endl;
      		    outf << "xnew, ynew, znew = " << xNew << ", " << yNew << ", " << zNew << endl;
                     v0.setValues(0,xNew);
                     v0.setValues(1,yNew);
                     v0.setValues(2,zNew);
 		    break;
 	   case 7:  x=v0.returnDegValueByName(0);
-                    y=v0.returnDegValueByName(1); 
+                    y=v0.returnDegValueByName(1);
                     z=v0.returnDegValueByName(2);
 		    c=v0.returnDegValueByName(3);
                     d=v0.returnDegValueByName(4);
@@ -1028,7 +1030,7 @@ endl;
                     q=theCluster.returnValue(1);
                     f=theCluster.returnValue(2);
                     cos=theCluster.returnValue(3);
-                    sin=theCluster.returnValue(4); 
+                    sin=theCluster.returnValue(4);
                     cosy=theCluster.returnValue(5);
                     siny=theCluster.returnValue(6);
                     cosz=theCluster.returnValue(7);
@@ -1053,7 +1055,7 @@ endl;
 //by rotating it through all the past rotations up from the children
 void setValueInCluster(Graph &graph0, Cluster &theCluster, Vertex &theVertex, int location)
 {
-   int i; 
+   int i;
    int childIndex;
 
 	ofstream outf;
@@ -1100,7 +1102,7 @@ void setValue(Vertex &theVertex, int index, float theValue)
 }
 
 //if the cluster is singleton, sets the values in the corresponding vertex in graph0
-//to the values stored in theCluster, otherwise recursively calls itself on every one 
+//to the values stored in theCluster, otherwise recursively calls itself on every one
 //of its children with populateForest
 void populateCluster(Graph &graph0, Cluster &theCluster)
 {
@@ -1187,7 +1189,7 @@ void generateOutput(Graph &graph0, Cluster &theCluster, ostream &outfile, bool p
    }
 }
 
-/*  Same as above but places the output values in the transfer arrays, inputInts and 
+/*  Same as above but places the output values in the transfer arrays, inputInts and
     inputFloats.  The format is as follows, if printnum, the ID of theCluster is output,
     otherwise nothing.  Then for every original vertex in theCluster, the ID is printed,
     then the following information, for every point the x then y coordinate, followed by
@@ -1202,12 +1204,12 @@ void generateOutput(Graph &graph0, Cluster &theCluster, ostream &outfile, bool p
        point3D - z coord
 */
 void generateOutputToArray(Graph &graph0, Cluster &theCluster, bool printNum)
-{   
+{
    int i, length;
-   Vertex currVert;   
+   Vertex currVert;
    float slope, angle1, angle2;
    float x,y,tempValue, tempValue2,x2,y2;
-   
+
    graph0.output(cout);
 
    int memPos=currPosI;
@@ -1218,12 +1220,12 @@ void generateOutputToArray(Graph &graph0, Cluster &theCluster, bool printNum)
    int temp;
 
    cout<<"Memory location of count="<<memPos<<endl;
-   
+
 //   if(printNum) inputInts[currPosI++]=theCluster.returnOrigLen();
    length=graph0.returnNumVer();
    for(i=1;i<=length;i++)
    {
-    
+
       currVert=graph0.returnVertByIndex(i);
       if(currVert.returnIgnore())
  	cout<<"Ignore=true for vertex="<<currVert.returnName()<<endl;
@@ -1279,7 +1281,7 @@ void generateOutputToArray(Graph &graph0, Cluster &theCluster, bool printNum)
 
         }
 	cout<<endl;
-      }  
+      }
    }
 
    cout<<"Count of bifurcations sent="<<outCount<<endl;
@@ -1342,7 +1344,7 @@ string replaceAll(string toReplace, string theReplace, string replaceWith, bool 
     while((pos+theReplaceLen)<=output.size())
     {
     	 ch = getSubString(output,pos+theReplaceLen, 1);
-         if(getSubString(output,pos,theReplaceLen)==theReplace && ch!="1" && ch!="2" && ch!="3" 
+         if(getSubString(output,pos,theReplaceLen)==theReplace && ch!="1" && ch!="2" && ch!="3"
            && ch!="4"&& ch!="5"&& ch!="6"&& ch!="7"&& ch!="8" && ch!="9"&& ch!="0")
          {
            output.replace(pos,theReplaceLen,replaceWith);
@@ -1422,14 +1424,14 @@ string toString(int a)
 
 //converts a double to a string
 string toString(double a)
-{ 
+{
     string output;
     char temp[100];
-    
-    sprintf(temp,"%f",a);   
+
+    sprintf(temp,"%f",a);
 
     output.assign(temp);
- 
+
     return output;
 }
 
@@ -1446,16 +1448,16 @@ void shellMaple()
 
     outputString="maple <input.txt> output.txt";
     remove("output.txt");
-    system(outputString.c_str());   
+    system(outputString.c_str());
 }
 
 /*
 //shells to maple and calls the solver
 void shellMaple()
-{ 
+{
     ofstream output;
     string outputString;
-    
+
     output.open("startup.m");
     output<<"xStart=zeros("+toString(vars.returnLen())+",1);\n";
     output<<"fun=@dplanFun;\nx=fsolve(fun, xStart);\nsave data.out xStart -ascii;\nquit;";
@@ -1526,14 +1528,14 @@ bool validBifur(string theString)
     return output;
 }
 
-bool isIdentical(Graph &graph0, Cluster &theCluster, List<int> &overlappedList, int ID, 
+bool isIdentical(Graph &graph0, Cluster &theCluster, List<int> &overlappedList, int ID,
 	float p, float q, float s, float t, float f, float h, float j, float k, float n)
 {
 	int vName, clustint1, clustint2;
 	Cluster tempCluster1, tempCluster2;
 	Vertex tempVertex1, tempVertex2;
 	float x1, y1, z1, x2, y2, z2, xold, yold, zold;
-	
+
 	int dimen = graph0.returnDimen();
 	//don't check 3D
 	if(graph0.returnDimen() ==3 ) return true;
@@ -1542,17 +1544,17 @@ bool isIdentical(Graph &graph0, Cluster &theCluster, List<int> &overlappedList, 
 //	outf.open("isIdentical.out", ios::app);
 	outf << "The cluster is: " << endl;
 	theCluster.output(outf);
-	outf<< "  s: " << s << "  t: " << t  << "  p: " << p  << "  q: " << q << endl; 
-	
+	outf<< "  s: " << s << "  t: " << t  << "  p: " << p  << "  q: " << q << endl;
+
 	for(int i=1; i<=overlappedList.returnLen(); i++)
 	{
 		List<int> tempList;
 		vName = overlappedList.retrieve(i);
 		outf << " we are checking: " << vName << endl;
-		
+
 		getContainedChildList(theCluster, vName, tempList);
 		if(tempList.returnLen()>2) continue;
-		
+
 		clustint1 = tempList.retrieve(1);
 		clustint2 = tempList.retrieve(2);
 		tempCluster1=theCluster.children.retrieve(getChildIndexByName(theCluster, clustint1));
@@ -1561,7 +1563,7 @@ bool isIdentical(Graph &graph0, Cluster &theCluster, List<int> &overlappedList, 
 		tempVertex2.setName(vName);
 		setValueInCluster(graph0, tempCluster1, tempVertex1);
 		setValueInCluster(graph0, tempCluster2, tempVertex2);
-		
+
 		outf << "withHeldCluster: " << withHeldCluster << endl;
 		outf << "clustint1: " << clustint1 << "    clustint2: " << clustint2 << endl;
 		outf << "values of vertex1:"<< endl;
@@ -1572,7 +1574,7 @@ bool isIdentical(Graph &graph0, Cluster &theCluster, List<int> &overlappedList, 
 		outf << tempVertex2.returnDegValueByName(0) << endl;
 		outf << tempVertex2.returnDegValueByName(1) << endl;
 		outf << tempVertex2.returnDegValueByName(2) << endl;
-		
+
 		if(clustint1==withHeldCluster)
 		{
 			x1 = tempVertex1.returnDegValueByName(0);
@@ -1630,7 +1632,7 @@ int verifyBifurs(Graph graph0, Cluster theCluster, List<string> &theList)
 
 	List<int> overlappedList;
 	getOverlapList(graph0, theCluster, overlappedList, 1, 2);
-	
+
 	if(overlappedList.returnLen()==0) return 1;
 	ofstream outf;
 //	outf.open("verifyBifurs.out", ios::app);
@@ -1639,8 +1641,8 @@ int verifyBifurs(Graph graph0, Cluster theCluster, List<string> &theList)
 
 	outf<< "the bifurs of the cluster are: " << endl;
 	printBifurcations(theCluster, outf);
-	outf << "finish printBifurs" << endl;	
-	
+	outf << "finish printBifurs" << endl;
+
 	int length, inputLength;
 	int pos=0, ID, childLen;
 	float value, p, q, s, t, f, h, j, k, n;
@@ -1652,7 +1654,7 @@ int verifyBifurs(Graph graph0, Cluster theCluster, List<string> &theList)
 	for(int jj=1; jj<=theList.returnLen(); jj++)
 	{
 		input=theList.retrieve(jj);
-		
+
 		outf << "The input is: " << input << endl;
 		length=0;
 		pos = 0;
@@ -1685,7 +1687,7 @@ int verifyBifurs(Graph graph0, Cluster theCluster, List<string> &theList)
 			ID=atoi(IDString.c_str());
 			setValue(theCluster,ID,value,getFreeDegIndex(varID,graph0.returnVertByName(ID)));
 			outf << "after setValue" << endl;
-			switch(varID) 
+			switch(varID)
 			{
 				case 'p': p=value;
 					break;
@@ -1715,10 +1717,10 @@ int verifyBifurs(Graph graph0, Cluster theCluster, List<string> &theList)
 		//the bifurcation is wrong, remove it
 		outf << "Before isIdentical" << endl;
 		if(!isIdentical(graph0, theCluster, overlappedList, ID, p, q, s, t, f, h, j, k, n))
-		{	
+		{
 			theList.deleteIndex(jj);
 			jj = 1;
-		}	
+		}
 		outf << "after one cycle, jj is	" << jj << endl;
 	}//for each bifurc<< endl;utf << "The END" << endl;
 }
@@ -1748,7 +1750,7 @@ void setBifurs(string filename, Graph graph0, Cluster& theCluster, bool usingfSo
             if(infile.eof()) return;
       }
       while(infile.get()!=';') if(infile.eof()) return;
-      
+
       infile>>in;
       while(in!='{')
       {
@@ -1757,13 +1759,13 @@ void setBifurs(string filename, Graph graph0, Cluster& theCluster, bool usingfSo
         infile>>in;
       }
 
-      infile>>in;  
+      infile>>in;
       while(tag==0)
       {
          while(in!='}')
          {
-             temp="";  
-             temp+=in; 
+             temp="";
+             temp+=in;
              temp+=" ";
              if(temp!="\\ ") output+=in;
              infile>>in;
@@ -1782,7 +1784,7 @@ void setBifurs(string filename, Graph graph0, Cluster& theCluster, bool usingfSo
       infile.close();
       //verifyBifurs(graph0, theCluster, theList);
       theCluster.setBifurs(theList);
-      return;      
+      return;
     }
 
     while(caretCount!=2)
@@ -1797,7 +1799,7 @@ void setBifurs(string filename, Graph graph0, Cluster& theCluster, bool usingfSo
     while(tag==0)
     {
        while(in!='}')
-       {   
+       {
            temp="";
            temp+=in;
            temp+=" ";
@@ -1822,7 +1824,7 @@ void setBifurs(string filename, Graph graph0, Cluster& theCluster, bool usingfSo
       theCluster.setBifurs(theList);
 }
 
-/*  All of the following methods generate the equation strings used to solve the equations in 
+/*  All of the following methods generate the equation strings used to solve the equations in
     Maple.  For each constraint type, distance, incidence, tangent, parallel, angle and
     perpendicular, there is a corresponding method of the form getDistanceEQ etc.  Each method
     simply a long case statement that considers the type of object at each endpoint of the edge
@@ -1960,10 +1962,10 @@ string getDistance3DEQ(Vertex &vEnd1, Vertex &vEnd2, Edge &theEdge, string theDi
 		   output="("+firstVal+")^2=(("+x1+"-"+x2+")^2+("+y1+"-"+y2+")^2+("+z1+"-"+z2+")^2)";
                    if(!vars.hasElem(x1)) vars.append(x1);
                    if(!vars.hasElem(y1)) vars.append(y1);
-                   if(!vars.hasElem(z1)) vars.append(z1);       
+                   if(!vars.hasElem(z1)) vars.append(z1);
                    if(!vars.hasElem(x2)) vars.append(x2);
                    if(!vars.hasElem(y2)) vars.append(y2);
-                   if(!vars.hasElem(z2)) vars.append(z2);       
+                   if(!vars.hasElem(z2)) vars.append(z2);
                    break;
     }
     return output;
@@ -2010,10 +2012,10 @@ string getAngle3DEQ(Vertex &vEnd1, Vertex &vEnd2, Edge &theEdge) //, string theD
 
                    if(!vars.hasElem(x1)) vars.append(x1);
                    if(!vars.hasElem(y1)) vars.append(y1);
-                   if(!vars.hasElem(z1)) vars.append(z1);       
+                   if(!vars.hasElem(z1)) vars.append(z1);
                    if(!vars.hasElem(x2)) vars.append(x2);
                    if(!vars.hasElem(y2)) vars.append(y2);
-                   if(!vars.hasElem(z2)) vars.append(z2);       
+                   if(!vars.hasElem(z2)) vars.append(z2);
                    break;
     }
     return output;
@@ -2087,7 +2089,7 @@ string getIncidenceEQ(Vertex &vEnd1, Vertex &vEnd2, Edge &theEdge)
     a1="a"+z1;
     b1="b"+z1;
     c1="c"+z1;
-    d1="d"+z1; 
+    d1="d"+z1;
     e1="e"+z1;
     g1="g"+z1;
     l1="l"+z1;
@@ -2140,10 +2142,10 @@ string getIncidenceEQ(Vertex &vEnd1, Vertex &vEnd2, Edge &theEdge)
                      if(!vars.hasElem(x1)) vars.append(x1);
                      if(!vars.hasElem(y1)) vars.append(y1);
                      if(!vars.hasElem(c2)) vars.append(c2);
-                     if(!vars.hasElem(d2)) vars.append(d2);  
+                     if(!vars.hasElem(d2)) vars.append(d2);
                      if(!vars.hasElem(zz1)) vars.append(zz1);
                      if(!vars.hasElem(e2)) vars.append(e2);
-		   }		
+		   }
 		   break;
           case 76: if(part1==1)
                    {
@@ -2151,13 +2153,13 @@ string getIncidenceEQ(Vertex &vEnd1, Vertex &vEnd2, Edge &theEdge)
                      if(!vars.hasElem(x1)) vars.append(x1);
                      if(!vars.hasElem(y1)) vars.append(y1);
                      if(!vars.hasElem(x2)) vars.append(x2);
-                     if(!vars.hasElem(y2)) vars.append(y2);  
+                     if(!vars.hasElem(y2)) vars.append(y2);
                      if(!vars.hasElem(zz1)) vars.append(zz1);
                      if(!vars.hasElem(zz2)) vars.append(zz2);
                    }
                    else if(part1==2)
                    {
-                     output=c1+"="+x2+","+d1+"="+y2+","+e1+"="+zz2; 
+                     output=c1+"="+x2+","+d1+"="+y2+","+e1+"="+zz2;
                      if(!vars.hasElem(c1)) vars.append(c1);
                      if(!vars.hasElem(d1)) vars.append(d1);
                      if(!vars.hasElem(x2)) vars.append(x2);
@@ -3685,7 +3687,7 @@ int getEdgeCode(Edge &theEdge, Cluster &theCluster)
        if(inOriginalV(theEdge.returnEnd2(), (theCluster.children).retrieve(i)))
          childrenWithEnd2.append(i);
     }
- 
+
     cout<<endl;
     cout<<"Before End1 List: ";
     for(i=1;i<=childrenWithEnd1.returnLen();i++)
@@ -3729,16 +3731,16 @@ int getEdgeCode(Edge &theEdge, Cluster &theCluster, int ch1, int ch2)
 	outf << "The edge is: " << theEdge << endl;
 	outf << "The cluster is: " << endl;
 	theCluster.output(outf);
-	
+
     childrenWithEnd1.makeEmpty();
     childrenWithEnd2.makeEmpty();
 
     childLength=(theCluster.children).returnLen();
     origLength=theCluster.returnOrigLen();
-   
+
    	outf << "childLenth = " << childLength << endl;
  	outf << "origLength = " << origLength << endl;
- 	
+
     isEnd=(childLength==origLength);
 
     length=(theCluster.children).returnLen();
@@ -3765,7 +3767,7 @@ int getEdgeCode(Edge &theEdge, Cluster &theCluster, int ch1, int ch2)
        if(inOriginalV(theEdge.returnEnd2(), (theCluster.children).retrieve(i)))
          childrenWithEnd2.append(i);
     }
- 
+
     outf <<endl;
     outf<<"Before End1 List: ";
     for(i=1;i<=childrenWithEnd1.returnLen();i++)
@@ -3785,8 +3787,8 @@ int getEdgeCode(Edge &theEdge, Cluster &theCluster, int ch1, int ch2)
 		childrenWithEnd1.deleteElem(i);
 		childrenWithEnd2.deleteElem(i);
 		outf << "the common child cluster index is: " << i << endl;
-		
-			return 0;	
+
+			return 0;
 	}
     }
     //The edge is between ch1 and ch2
@@ -3806,29 +3808,29 @@ int getEdgeCodeDRPlanner(Edge &theEdge, Cluster &theCluster)
     int i, length, childLength, origLength;
     bool isEnd;
     List<int> childrenWithEnd1, childrenWithEnd2;
-    
+
     ofstream outf;
 //    outf.open("getEdgeCodeDRPlanner.out", ios::app);
     outf << "The beginning:" << endl;
-    outf << "The edge is:" << theEdge << endl;   
+    outf << "The edge is:" << theEdge << endl;
     outf << "The cluster is:" << endl;
     theCluster.output(outf);
-      
+
     childrenWithEnd1.makeEmpty();
     childrenWithEnd2.makeEmpty();
-    
+
     childLength=(theCluster.children).returnLen();
     origLength=theCluster.returnOrigLen();
-        
+
     isEnd=(childLength==origLength);
-    
+
     length=(theCluster.children).returnLen();
     outf << "length = " << length << endl;
     if(length==0)
          return -1;
-                    
+
     bool inOrig1,inOrig2;
-    
+
     inOrig1=inOriginalV(theEdge.returnEnd1(),theCluster);
     inOrig2=inOriginalV(theEdge.returnEnd2(),theCluster);
 	outf << "inorig1 = " << inOrig1 << "    inOrig2 = " << inOrig2 << endl;
@@ -3839,7 +3841,7 @@ int getEdgeCodeDRPlanner(Edge &theEdge, Cluster &theCluster)
     }
 
     if(isEnd) return 0;
-          
+
     for(i=1;i<=length;i++)
     {
        if(inOriginalV(theEdge.returnEnd1(), (theCluster.children).retrieve(i)))
@@ -3847,19 +3849,19 @@ int getEdgeCodeDRPlanner(Edge &theEdge, Cluster &theCluster)
        if(inOriginalV(theEdge.returnEnd2(), (theCluster.children).retrieve(i)))
          childrenWithEnd2.append(i);
     }
-                    
+
     cout<<endl;
     cout<<"End1 List: ";
     for(i=1;i<=childrenWithEnd1.returnLen();i++)
         cout<<childrenWithEnd1.retrieve(i);
-          
+
     cout<<endl;
     cout<<"End2 List: ";
     for(i=1;i<=childrenWithEnd2.returnLen();i++)
         cout<<childrenWithEnd2.retrieve(i);
     cout<<endl;
-                    
-/*   
+
+/*
     for(i=1;i<=childrenWithEnd1.returnLen();i++)
        if(childrenWithEnd2.hasElem(childrenWithEnd1.retrieve(i))) return -1;
 */
@@ -3870,10 +3872,10 @@ int getEdgeCodeDRPlanner(Edge &theEdge, Cluster &theCluster)
                 childrenWithEnd1.deleteElem(i);
                 childrenWithEnd2.deleteElem(i);
         }
-    
+
     if(childrenWithEnd1.returnLen()!=0 && childrenWithEnd2.returnLen()!=0) return 1;
     else return 0;
-    
+
 }
 
 /* switchString takes an string as input then replaces all of the variables from a given cluster
@@ -3888,7 +3890,7 @@ string switchString(Vertex &theVertex, int type, int shapeName, int clusterName,
     string clusterV1, clusterV2, clusterV3, clusterV4;
     string clusterV5, clusterV6, clusterV7, clusterV8, clusterV9;
     string output;
-	
+
     ofstream outf;
 //	outf.open("switchString.out", ios::app);
     outf<<"IN SWITCHSTRING"<<endl;
@@ -3904,7 +3906,7 @@ string switchString(Vertex &theVertex, int type, int shapeName, int clusterName,
       clusterV4="s"+toString(clusterName);
 
       if(graphDimen==3)
-      {	
+      {
         clusterV5="f"+toString(clusterName);
         clusterV6="h"+toString(clusterName);
         clusterV7="j"+toString(clusterName);
@@ -3928,7 +3930,7 @@ string switchString(Vertex &theVertex, int type, int shapeName, int clusterName,
 
     switch(type)
     {
-          case 4:  
+          case 4:
           case 0:  repStr1="x"+toString(shapeName);
                    repStr2="y"+toString(shapeName);
                    if(solveOrValue)
@@ -4121,18 +4123,18 @@ string switchString(Vertex &theVertex, int type, int shapeName, int clusterName,
                      repStrb1.insert(1,"?");
                      repStrb2.insert(1,"?");
                      repStrb3.insert(1,"?");
-			
-                     
+
+
                      newStr1="(("+repStrb1+"*"+clusterV6+"*"+clusterV8+")+";
                      newStr1+="("+repStrb2+"*"+clusterV6+"*"+clusterV9+")-";
                      newStr1+="("+repStrb3+"*"+clusterV7+")+"+clusterV1+")";
-                     
+
                      newStr2="(("+repStrb1+"*("+clusterV4+"*"+clusterV7+"*"+clusterV8+"-"+clusterV3+"*"+clusterV9+"))+";
                      newStr2+="("+repStrb2+"*("+clusterV3+"*"+clusterV8+"+"+clusterV4+"*"+clusterV7+"*"+clusterV9+"))+";
                      newStr2+="("+repStrb3+"*"+clusterV4+"*"+clusterV6+")+"+clusterV2+")";
                      newStr3="(("+repStrb1+"*("+clusterV4+"*"+clusterV9+"+"+clusterV3+"*"+clusterV7+"*"+clusterV8+"))+";
                      newStr3+="("+repStrb2+"*(-"+clusterV4+"*"+clusterV8+"+"+clusterV3+"*"+clusterV7+"*"+clusterV9+"))+";
-                     newStr3+="("+repStrb3+"*"+clusterV3+"*"+clusterV6+")+"+clusterV5+")"; 
+                     newStr3+="("+repStrb3+"*"+clusterV3+"*"+clusterV6+")+"+clusterV5+")";
 		   }
                    else
                    {
@@ -4181,7 +4183,7 @@ outf << "After replaceall, the output is: " << output << endl;
                      newStr2+="("+repStrb3+"*"+clusterV4+"*"+clusterV6+")+"+clusterV2+")";
                      newStr3="(("+repStrb1+"*("+clusterV4+"*"+clusterV9+"+"+clusterV3+"*"+clusterV7+"*"+clusterV8+"))+";
                      newStr3+="("+repStrb2+"*(-"+clusterV4+"*"+clusterV8+"+"+clusterV3+"*"+clusterV7+"*"+clusterV9+"))+";
-                     newStr3+="("+repStrb3+"*"+clusterV3+"*"+clusterV6+")+"+clusterV5+")"; 
+                     newStr3+="("+repStrb3+"*"+clusterV3+"*"+clusterV6+")+"+clusterV5+")";
                      newStr4="(("+repStrb4+"*"+clusterV6+"*"+clusterV8+")+";
                      newStr4+="("+repStrb5+"*"+clusterV6+"*"+clusterV9+")-";
                      newStr4+="("+repStrb6+"*"+clusterV7+")+"+clusterV1+")";
@@ -4260,14 +4262,14 @@ string getEquationBetweenClusters(Graph& graph0, Edge &theEdge, Cluster &theClus
 	  case 6: outString=getDistance3DEQ(vEnd1, vEnd2, theEdge, "");
 		  break;
           case 8: outString=getAngle3DEQ(vEnd1,vEnd2,theEdge);
-	          break;    
+	          break;
     }
     end1C=getChildNameWithVertex(theCluster, v1Name);
     end2C=getChildNameWithVertex(theCluster, v2Name);
     setValueInCluster(graph0,theCluster.children.retrieve(getChildIndexByName(theCluster, end1C)), vEnd1);
     setValueInCluster(graph0,theCluster.children.retrieve(getChildIndexByName(theCluster, end2C)), vEnd2);
     if (end1C==-1 || end2C==-1) return "";
-    if (end1C!=v1Name) 
+    if (end1C!=v1Name)
     {
        outString=switchString(vEnd1, vEnd1.returnType(), v1Name, end1C, outString, end1C!=withHeldCluster);
        if(end1C!=withHeldCluster)
@@ -4320,7 +4322,7 @@ string getEquationInCluster(Graph& graph0, Edge &theEdge, Cluster &theCluster)
           case 6: outString=getDistance3DEQ(vEnd1,vEnd2,theEdge,"");
 		  break;
           case 8: outString=getAngle3DEQ(vEnd1,vEnd2,theEdge);
-	          break;	  
+	          break;
     }
 
     return(outString);
@@ -4461,7 +4463,7 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
   outf<<"EqnCount="<<equationCount<<endl;
   if(test.length==0)
 	over.erase(0,1);
-  
+
   outputString+=over;
 
 	outf<< "after getOver, vars are: (" << vars.returnLen() << ")" << endl;
@@ -4484,12 +4486,12 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
   string originTemp;
 
 
- 
+
 
   for(int i=1;i<=theCluster.children.returnLen();i++)
   {
-	if(theCluster.children.retrieve(i).returnType()!=2 
-	   && theCluster.children.retrieve(i).returnType()!=5) 
+	if(theCluster.children.retrieve(i).returnType()!=2
+	   && theCluster.children.retrieve(i).returnType()!=5)
 		continue;
 
 	int cName=theCluster.children.retrieve(i).returnName();
@@ -4518,7 +4520,7 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
 	        s5="d"+toString(repName);
         	s6="e"+toString(repName);
 		outf << "s1 - s6 are: " << s1 << "  " << s2 << "  " << s3 << "  " << s4 << "  " << s5 << "  " << s6 << endl;
-        
+
 	        outputString=replaceAll(outputString,s1,r1, true);
         	outputString=replaceAll(outputString,s2,r2, true);
         	outputString=replaceAll(outputString,s3,r3, true);
@@ -4527,13 +4529,13 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
         	outputString=replaceAll(outputString,s6,r6, true);
 
 		if(!vars.hasElem(r1)) vars.append(r1);
-		if(!vars.hasElem(r2)) vars.append(r2);       
-		if(!vars.hasElem(r4)) vars.append(r4);       
-		if(!vars.hasElem(r5)) vars.append(r5);      
-		if(theCluster.children.retrieve(i).returnType()==2) 
+		if(!vars.hasElem(r2)) vars.append(r2);
+		if(!vars.hasElem(r4)) vars.append(r4);
+		if(!vars.hasElem(r5)) vars.append(r5);
+		if(theCluster.children.retrieve(i).returnType()==2)
 		{//z in 3D
 			if(!vars.hasElem(r6)) vars.append(r6);
-			if(!vars.hasElem(r3)) vars.append(r3);       
+			if(!vars.hasElem(r3)) vars.append(r3);
 		}
 
 		if(vars.hasElem(s1)) vars.deleteElem(s1);
@@ -4543,12 +4545,12 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
                 if(vars.hasElem(s5)) vars.deleteElem(s5);
                 if(vars.hasElem(s6)) vars.deleteElem(s6);
 	}
-			
+
 
 	for(int q=1;q<=theCluster.children.retrieve(i).left.returnLen();q++)
 	{
 		repName=theCluster.children.retrieve(i).left.retrieve(q)*1000+cName;
-		
+
 		s1="x"+toString(repName);
 	        s2="y"+toString(repName);
         	s3="z"+toString(repName);
@@ -4559,45 +4561,45 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
 
                 if(!vars.hasElem(r1)) vars.append(r1);
                 if(!vars.hasElem(r2)) vars.append(r2);
-		if(theCluster.children.retrieve(i).returnType()==2) 
+		if(theCluster.children.retrieve(i).returnType()==2)
 		{//z in 3D
 	                if(!vars.hasElem(r3)) vars.append(r3);
  		}
-       
+
                 if(vars.hasElem(s1)) vars.deleteElem(s1);
                 if(vars.hasElem(s2)) vars.deleteElem(s2);
                 if(vars.hasElem(s3)) vars.deleteElem(s3);
- 
+
 	}
 
         for(int q=1;q<=theCluster.children.retrieve(i).right.returnLen();q++)
         {
                 repName=theCluster.children.retrieve(i).right.retrieve(q)*1000+cName;
-        
+
                 s1="x"+toString(repName);
                 s2="y"+toString(repName);
                 s3="z"+toString(repName);
 		outf << "In right part, s1 - s3 are: " << s1 << "  " << s2 << "  " << s3 << endl;
-   
+
                 outputString=replaceAll(outputString,s1,r4, true);
                 outputString=replaceAll(outputString,s2,r5, true);
                 outputString=replaceAll(outputString,s3,r6, true);
 
                 if(!vars.hasElem(r1)) vars.append(r4);
                 if(!vars.hasElem(r2)) vars.append(r5);
-		if(theCluster.children.retrieve(i).returnType()==2) 
+		if(theCluster.children.retrieve(i).returnType()==2)
 		{//z in 3D
 	                if(!vars.hasElem(r3)) vars.append(r6);
  		}
-        
+
                 if(vars.hasElem(s1)) vars.deleteElem(s1);
                 if(vars.hasElem(s2)) vars.deleteElem(s2);
                 if(vars.hasElem(s3)) vars.deleteElem(s3);
- 
+
         }
 
 	float theValue=findDist(graph0,theCluster.children.retrieve(i));
-	theValue=rint(theValue);	
+	theValue=rint(theValue);
 	outf << "theValue is: " << theValue << endl;
 	outputString+=",("+toString(theValue)+")^2";
 	if(theCluster.children.retrieve(i).returnType()==2)
@@ -4608,11 +4610,11 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
 	outf << "outputstring is: " << endl << outputString << endl;
 	outf << "equation number is: " << equationCount << endl;
    }
-		
+
 
    outf<<"After alias Output String: "<<outputString<<endl;
 	//UGLY CODE, REMOVE IT LATER
-	if(graph0.returnDimen()==2 && theCluster.children.returnLen()==6 && graph0.returnNumVer()>6)	
+	if(graph0.returnDimen()==2 && theCluster.children.returnLen()==6 && graph0.returnNumVer()>6)
 	{
 		outputString+=",x33=0,y33=0,c33=0";
 		equationCount+=3;
@@ -4653,7 +4655,7 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
 			case 	'h':
 			case 	'k':	if(outputString.length()>1)
 						outputString+=",";
-					outputString+=vars.retrieve(i)+"=1"; 
+					outputString+=vars.retrieve(i)+"=1";
                                         count++;
 					break;
 		}
@@ -4661,11 +4663,11 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
 	}
 	equationCount=9;
 
-  }			
+  }
 
   if(vars.returnLen()>equationCount && originTemp=="")
         outputString+=","+getSpecialCaseEquations(graph0, theCluster, 1, outputString);
-                
+
   outf<<"After Special Output String: "<<outputString<<endl;
 
   outputString+="},";
@@ -4676,7 +4678,7 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
   outf<<"OUTPUT FILE WRITTEN"<<endl;
 
   int loc=60;
-  
+
   while(loc<outputString.size())
   {
 	loc=outputString.find_first_of("*+-/",loc);
@@ -4687,7 +4689,7 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
   }
 
   outf<<outputString<<endl;
-	
+
   return outputString;
 }
 
@@ -5189,7 +5191,7 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
 	    valueName=toString(tempVertex1.returnName()*1000+tempCluster1.returnName());
 	    newStr1a="x"+valueName;
 	    newStr2a="y"+valueName;
-	    newStr3a="z"+valueName;           
+	    newStr3a="z"+valueName;
 	  }
 
           if(clustint1==withHeldCluster && !end1Over)
@@ -5233,7 +5235,7 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
               newStr2a+="("+repStrb3+"*"+clusterV4+"*"+clusterV6+")+"+clusterV2+")";
               newStr3a="(("+repStrb1+"*("+clusterV4+"*"+clusterV9+"+"+clusterV3+"*"+clusterV7+"*"+clusterV8+"))+";
               newStr3a+="("+repStrb2+"*(-("+clusterV4+"*"+clusterV8+")+"+clusterV3+"*"+clusterV7+"*"+clusterV9+"))+";
-              newStr3a+="("+repStrb3+"*"+clusterV3+"*"+clusterV6+")+"+clusterV5+")";              
+              newStr3a+="("+repStrb3+"*"+clusterV3+"*"+clusterV6+")+"+clusterV5+")";
             }
           }//if(clustint1!=withHeldCluster && !end1Over)
 
@@ -5255,7 +5257,7 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
             newStr1b="x"+valueName;
             newStr2b="y"+valueName;
             newStr3b="z"+valueName;
-          }	  
+          }
 
           if(clustint2==withHeldCluster && !end2Over)
           {
@@ -5274,7 +5276,7 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
               newStr1b="(("+toString(tempVertex2.returnDegValueByName(0))+")*"+clusterV3+"-("+toString(tempVertex2.returnDegValueByName(1))+")*"+clusterV4+"+"+clusterV1+")";
               newStr2b="(("+toString(tempVertex2.returnDegValueByName(1))+")*"+clusterV3+"+("+toString(tempVertex2.returnDegValueByName(0))+")*"+clusterV4+"+"+clusterV2+")";
               newStr3b="((("+toString(tempVertex2.returnDegValueByName(2))+")*"+clusterV3+"+"+clusterV4+")/(("+toString(tempVertex2.returnDegValueByName(2))+")*"+clusterV4+"+"+clusterV3+"))";
-            }   
+            }
             else
             {
               if(!vars.hasElem(clusterV1)) vars.append(clusterV1);
@@ -5302,11 +5304,11 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
           }//if(clustint2!=withHeldCluster && !end2Over)
 
 	  outf<<"Before closing switch"<<endl;
-	  List<int> tempList;     
+	  List<int> tempList;
           switch(type)
           {
                 case 4:
-                case 0:  if(availOver>=1) 
+                case 0:  if(availOver>=1)
 			 {
 				temp+=newStr1a+"="+newStr1b;
 				equationCount++;
@@ -5333,7 +5335,7 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
                                 equationCount++;
                          }
                          break;
-               case 6:  
+               case 6:
 
 			getContainedChildList(theCluster, currOrig, tempList);
 			if(tempList.returnLen()>2)
@@ -5343,20 +5345,20 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
 					temp+=newStr1a+"="+newStr1b;
 					equationCount++;
 					temp+=","+newStr2a+"="+newStr2b;
-			                equationCount++;			
+			                equationCount++;
 					temp+=","+newStr3a+"="+newStr3b;
 		  	                equationCount++;
 					addUsedChildren(currOrig, child1, child2, vUsedList);
 				}
 			}
-			else 
+			else
 		 	{
 			   switch(flagTrees[overLapClusterIndex])
 		 	   {
-		 		case 1:                	 
-		                	 if(availOver>=1) 
+		 		case 1:
+		                	 if(availOver>=1)
 					 {
-		
+
 						temp+=newStr1a+"="+newStr1b;
 						equationCount++;
 					 }
@@ -5371,12 +5373,12 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
 		                         {
 						temp+=","+newStr3a+"="+newStr3b;
 		                                equationCount++;
-		                         }		                         
+		                         }
 		                         break;
-		 		case 2: 
+		 		case 2:
 					 if(testSolverTrees.retrieve(overLapClusterIndex).returnType()==2)
 		                         {
-			                	 if(availOver>=1) 
+			                	 if(availOver>=1)
 						 {
 							temp+=newStr1a+"="+newStr1b;
 							equationCount++;
@@ -5386,12 +5388,12 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
 							temp+=","+newStr2a+"="+newStr2b;
 			                                equationCount++;
 			                         }
-		                         }	
+		                         }
 		                         else
-		                         {               	 
-			                	 if(availOver>=1) 
+		                         {
+			                	 if(availOver>=1)
 						 {
-			
+
 							temp+=newStr2a+"="+newStr2b;
 							equationCount++;
 						 }
@@ -5402,8 +5404,8 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
 			                         }
 			                 }
 		                         break;
-		 		case 3:                	 
-		                	 if(availOver>=1) 
+		 		case 3:
+		                	 if(availOver>=1)
 					 {
 						temp+=newStr3a+"="+newStr3b;
 						equationCount++;
@@ -5419,7 +5421,7 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
                 	    if(flagTrees[overLapClusterIndex]==3)
                 	 	flagTrees[overLapClusterIndex] = 1;
 			 }//else for type 6
-                         break;	
+                         break;
                 default: temp="";
                          break;
           }//switch(type)
@@ -5437,7 +5439,7 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
     if(equationCount==0) output.erase(0,1);
 
     return output;
-}	
+}
 
 //get the number of the extra constraints between these 2 children
 int getExtraNum(Graph &graph0, Cluster &theCluster, List<int> &overlappedList, int ch1, int ch2)
@@ -5510,7 +5512,7 @@ void setPartDof(int needEqNum, int numEqPair, Cluster &theCluster, int PartMaxDo
 string getOverlapConstraint(Graph &graph0, Cluster &theCluster, int totalExtra)
 {
 	string output="";
-	
+
 	if(theCluster.returnOrig().returnLen()==theCluster.children.returnLen()) return "";
 	ofstream outf;
 	outf.open("getOverlapConstraint.out", ios::app);
@@ -5615,7 +5617,7 @@ string getLineConstraint(Graph &graph0, List<Cluster> &theChildren)
          if(theVert.returnType()>0 && theVert.returnType()<3 && vars.hasElem(name))
          {
 	   outString+=",x"+toString(theCluster.returnName())+"=0";
-	   equationCount++;       
+	   equationCount++;
 	 }
 
          if(theVert.returnType()==3)
@@ -5632,7 +5634,7 @@ string getLineConstraint(Graph &graph0, List<Cluster> &theChildren)
     return outString;
 }
 
-//Each solved cluster has three remaining degrees of freedom, two translational degrees and one 
+//Each solved cluster has three remaining degrees of freedom, two translational degrees and one
 //rotation, this program expresses these degrees of freedom in four variables, x translation,
 //y translation, sine of rotation angle, and cosine of rotation angle.  To insure that when the
 //equations are solved, the relationship between the sine and cosine is maintained, this method
@@ -5654,18 +5656,18 @@ string getRotationEquations(Cluster &theCluster)
     {
        childName=theCluster.children.retrieve(i).returnName();
        if(theCluster.children.retrieve(i).children.returnLen()!=0 && childName!=withHeldCluster &&
-	  theCluster.children.retrieve(i).returnType()!=2 
+	  theCluster.children.retrieve(i).returnType()!=2
 	  && theCluster.children.retrieve(i).returnType()!=5)
        {
          temp=toString(childName);
 	 temp2="f"+temp;
          if(vars.hasElem(temp2))
-         {   
-	   outString+=",s"+temp+"^2+t"+temp+"^2=1,h"+temp+"^2+j"+temp+"^2=1,k"+temp+"^2+n"+temp+"^2=1";        
+         {
+	   outString+=",s"+temp+"^2+t"+temp+"^2=1,h"+temp+"^2+j"+temp+"^2=1,k"+temp+"^2+n"+temp+"^2=1";
            equationCount+=3;
 	 }
 	 else
-         { 
+         {
 	   outString+=",s"+temp+"^2+t"+temp+"^2=1";
 	   equationCount++;
          }
@@ -5684,7 +5686,7 @@ void verifyOrigsets(Graph &graph0, int &n1, int &n2, int &n3)
 	v1 = graph0.returnVertByName(n1).numIncid();
 	v2 = graph0.returnVertByName(n2).numIncid();
 	v3 = graph0.returnVertByName(n3).numIncid();
-	
+
 	int swap;
 	if(v1>v2)
 	{
@@ -5699,9 +5701,9 @@ void verifyOrigsets(Graph &graph0, int &n1, int &n2, int &n3)
 		n3 = n1;
 		n1 = swap;
 	}
-}	
-	
-	
+}
+
+
 //after all of the equations for a cluster have been generated, if the cluster is rigid, exactly
 //three degrees of freedom will still remain.  This method generates simple equations which fix those
 //degrees of freedom, so Maple will generate exact answers
@@ -5711,15 +5713,15 @@ string getOriginEquations(Edge &theEdge, Edge &theEdge2, Graph &graph0, int clus
 	Vertex vEnd1, vEnd2, vEnd3, vEnd4;
 	int v1Name, v2Name, v3Name, v4Name, thirdName;
 	int type1, type2, type3, type4;
-	
+
 	ofstream outf;
 	outf.open("getOriginEquations.out", ios::app);
 	outf << "The beginning************" << endl;
-	
+
 	outString="";
-	
+
 	if(theEdge2.returnName()==0) theEdge2=theEdge;
-	
+
 	if(clusterName>0)
 	{
 		tempString=toString(clusterName);
@@ -5729,12 +5731,12 @@ string getOriginEquations(Edge &theEdge, Edge &theEdge2, Graph &graph0, int clus
 	outf << " TheEdge: " << theEdge << endl;
 	outf << " TheEdge2: " << theEdge2 << endl;
 	graph0.output(outf);
-	
+
 	vEnd1=graph0.returnVertByName(theEdge.returnEnd1());
 	vEnd2=graph0.returnVertByName(theEdge.returnEnd2());
 	vEnd3=graph0.returnVertByName(theEdge2.returnEnd1());
 	vEnd4=graph0.returnVertByName(theEdge2.returnEnd2());
-	
+
 	v1Name=vEnd1.returnName();
 	v2Name=vEnd2.returnName();
 	v3Name=vEnd3.returnName();
@@ -5743,19 +5745,19 @@ string getOriginEquations(Edge &theEdge, Edge &theEdge2, Graph &graph0, int clus
 	if(v1Name==v3Name || v2Name==v3Name)
 		thirdName=v4Name;
 	else thirdName=v3Name;
-	
+
 	type1=vEnd1.returnType();
 	type2=vEnd2.returnType();
 	type3=vEnd3.returnType();
 	type4=vEnd4.returnType();
-	
+
 	if(type2==2 || type2==1)
 		secondName="y";
 	else secondName="x";
-	
+
 	outf<<"in getOrigin after getting all data"<<endl;
 	verifyOrigsets(graph0, v1Name, v2Name, thirdName);
-	
+
 	switch(type1)
 	{
 		case 5:
@@ -5770,7 +5772,7 @@ string getOriginEquations(Edge &theEdge, Edge &theEdge2, Graph &graph0, int clus
 		case 1: outString="y"+toString(v1Name)+"=0,m"+toString(v1Name)+"=0,"+secondName+toString(v2Name)+"=0";
 			break;
 		case 2: outString="y"+toString(v1Name)+"=0,w"+toString(v1Name)+"=0,"+secondName+toString(v2Name)+"=0";
-			break;		
+			break;
 		case 6: if(clusterType!=2)
 			{
 			  outString="x"+toString(v1Name)+"=0,y"+toString(v1Name)+"=0,z"+toString(v1Name)+"=0";
@@ -5786,10 +5788,10 @@ string getOriginEquations(Edge &theEdge, Edge &theEdge2, Graph &graph0, int clus
 	outf << "after switch, the outstring is: " << endl << outString << endl;
 	varsToZero=outString;
 	varsToZero=replaceAll(varsToZero,"=0","");
-	varsToZero=replaceAll(varsToZero,",","");	
-	
+	varsToZero=replaceAll(varsToZero,",","");
+
 	outf << "Origin Output: "<<outString<<endl;
-	
+
 	return(outString);
 }
 
@@ -5816,7 +5818,7 @@ int getFreeDegIndex(char keyChar, Vertex &theVertex)
 
     if(theVertex.returnType()<6)
     	switch(keyChar) {
-	
+
         	  case 'p':
 	          case 'x': out=0;
                 	    break;
@@ -5824,7 +5826,7 @@ int getFreeDegIndex(char keyChar, Vertex &theVertex)
 	          case 'y': out=1;
         	            break;
 	          case 'c':
-        	  case 'r': 
+        	  case 'r':
 	          case 'f': out=2;
                 	    break;
 	          case 'd':
@@ -5832,14 +5834,14 @@ int getFreeDegIndex(char keyChar, Vertex &theVertex)
 		  case 't': out=3;
                        	    break;
 	          case 'v':
-	          case 'm': 
+	          case 'm':
         	  case 's': out=4;
         	            break;
 	          case 'w':
-        	  case 'l': 
+        	  case 'l':
 		  case 'h': out=5;
         	            break;
-	          case 'a': 
+	          case 'a':
 		  case 'j': out=6;
                 	    break;
 	          case 'b':
@@ -5850,7 +5852,7 @@ int getFreeDegIndex(char keyChar, Vertex &theVertex)
           }
     else
           switch(keyChar) {
-                  
+
                   case 'p':
                   case 'x': out=0;
                             break;
@@ -5884,7 +5886,7 @@ int getFreeDegIndex(char keyChar, Vertex &theVertex)
                   case 'n': out=8;
                             break;
           }
-	
+
     return out;
 }
 
@@ -5978,7 +5980,7 @@ void outputDRDAG(List<Cluster> &theCluster, ostream &output, bool first)
     int i, j, length, lengthOrig, lengthChild;
 
     length=theCluster.returnLen();
-    
+
     if(first)
     {
       output<<-2<<endl;
@@ -6005,7 +6007,7 @@ void outputDRDAG(List<Cluster> &theCluster, ostream &output, bool first)
 
 	-2			-- signal to sketcher that the DRDag is coming
 	<number of trees in the DAG>
-	
+
 	then recursively, each node before its children the following is output:
 
       <cluster ID>
@@ -6048,7 +6050,7 @@ void outputDRDAGToArray(List<Cluster> &theCluster, int &index, int*& theInts, bo
     if(first) theInts[index]=-1;
 }
 
-//outputs the fin state of every cluster.  Fin flags are used to tell the solver which 
+//outputs the fin state of every cluster.  Fin flags are used to tell the solver which
 //clusters have and have not been solved.  This method visits each node in the tree, and
 //at each visit outputs the clusters name, then fin start 0 for solved, 1 for not solved,
 //before recursively continuing for each of its children
@@ -6078,7 +6080,7 @@ bool getNextBifurcation(Graph &graph0, Cluster &theCluster)
          theCluster.children.retrieve(i).setCurrBifur(1);
          parseBifurString(graph0, theCluster.children.retrieve(i));
          updateGraph(graph0, theCluster.children.retrieve(i));
-      }	     
+      }
       return(true);
     }
 
@@ -6111,12 +6113,12 @@ bool getNextBifurcation(Graph &graph0, Cluster &theCluster)
 
     In any other case, the method outputs the information about the clusters to the sketcher
     which queries the user for the correct bifurcation.  The format for this output is:
-  
+
     <ID of the cluster whose bifurcations are being chosen>
     <number of bifurcations>
-    
+
     for each bifurcation:
- 
+
     <output of the generateOutput method above called with theCluster set to the correct bifur.>
 
 */
@@ -6164,13 +6166,13 @@ int selectBifurcation(Graph &graph0, Cluster &theCluster, bool &useFile)
     if(totalSingle==0 && validToSkip) return 1;
 
     useFile=true;
-   
+
     int temp=currPosI;
- 
+
     inputInts[currPosI++]=theCluster.returnName();
     inputInts[currPosI++]=numBifurs;
-    for(i=1;i<=numBifurs;i++)   
-    {  
+    for(i=1;i<=numBifurs;i++)
+    {
        theCluster.setCurrBifur(i);
        parseBifurString(graph0, theCluster);
        updateGraph(graph0, theCluster);
@@ -6216,8 +6218,8 @@ int selectBifurcation(Graph &graph0, Cluster &theCluster, bool &useFile)
        infile>>answer;
        infile.close();
     }
-    
-    return answer+1; 
+
+    return answer+1;
 
     answerString="";
 
@@ -6233,10 +6235,10 @@ int selectBifurcation(Graph &graph0, Cluster &theCluster, bool &useFile)
     }
     cout<<endl;
     keys.append(answer);
-    return (answer); 
+    return (answer);
 
-END REMOVE OLD SELECTION METHODS */ 
- 
+END REMOVE OLD SELECTION METHODS */
+
 }
 
 //chooses the largest child of theCluster and sets it to be withheld, meaning
@@ -6306,7 +6308,7 @@ void setValueReduction(Graph &graph0, Cluster &theCluster)
        if(!graph0.hasEdge(i)) continue;
        tempEdge=graph0.EdgeAddr(i);
        end1=tempEdge->returnEnd1();
-       end2=tempEdge->returnEnd2();    
+       end2=tempEdge->returnEnd2();
        type=tempEdge->returnType();
        value=tempEdge->returnValue();
        in1=inOriginalV(end1, theCluster);
@@ -6362,10 +6364,10 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
     }
 
     //solver the children of this cluster and store the return value in tag
-    tag=solveForest(graph0, theCluster.children);   
+    tag=solveForest(graph0, theCluster.children);
 
     outf <<"Children Solved"<<endl;
- 
+
     //if the return from the children is -2, then no solution is found, pass this up the calling stack
     if(tag==-2) return(-2);
 
@@ -6383,26 +6385,26 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
 	   //empty the lists of variables and imaginary constaints
          vars.makeEmpty();
          theImags.makeEmpty();
-     
+
          outf <<"Solving Cluster "<<theCluster.returnName()<<"..."<<endl;
          answer=0;
          totalBifur=0;
-         
+
 	   //output the current cluster to the screen
          print(graph0, theCluster.children);
-	 
+
 	 outf << "The graph0 is:" << endl;
 	 graph0.output(outf);
 	 outf << "The Cluster is:" << endl;
 	 theCluster.output(outf);
-	 
+
 	   //count the total number of bifurcations availible to the children
          for(i=1;i<=childLength;i++)
             if(theCluster.children.retrieve(i).returnOrigLen()==0)
               totalBifur++;
- 
+
          outf << "The totalBifur is: " << totalBifur << endl;
-    
+
          outf <<"Bifurcations counted."<<endl;
 
          bool getNextB;
@@ -6416,8 +6418,8 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
            if(getNextB)
              while(currChild<=childLength && solveCluster(graph0,theCluster.children.retrieve(currChild),true)==-1)
                   currChild++;
-           if(currChild>childLength) return(-1); 
-         }        
+           if(currChild>childLength) return(-1);
+         }
          //if not set in autosolve, and the bifurcation answers returned from the sketcher have not been placed
          else if(usedBifurs)
          {
@@ -6432,21 +6434,21 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
                 inputInts[0]++;
                 currPosI=inputInts[0]+2;
                 currPosF=(int) inputFloats[0];
-                inputInts[inputInts[0]-1]=0;               
+                inputInts[inputInts[0]-1]=0;
 
 		int count=0, currPosBackUp=currPosI++;
 		int theNumTrees=toSolverTrees->returnLen();
                 for(i=1;i<=theNumTrees;i++)
                    outputFinState(toSolverTrees->retrieve(i), currPosI, inputInts, count);
-		    
+
                 inputInts[currPosBackUp]=count;
 
                 for(i=1;i<=childLength;i++)
-                {  
+                {
 		       outf <<"Child processed: "<<i<<endl;
                    selectBifurcation(graph0,theCluster.children.retrieve(i),useFileToBifur);
                    useFileTotal=(useFileTotal || useFileToBifur);
-                   if(useFileToBifur) 
+                   if(useFileToBifur)
                    {
                      outf <<"useFileToBifur is true"<<endl;
                      inputInts[inputInts[0]-1]++;
@@ -6468,10 +6470,10 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
 
 	//if the bifurcations have not been placed yet set the children of this cluster
 	//to have those bifurcation values
-	else 
+	else
 	{
 		outf <<"Solver not usedBifur"<<endl;
-		
+
 		tag=0;
 		for(i=1;i<=childLength;i++)
 		{
@@ -6483,7 +6485,7 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
 			updateGraph(graph0, theCluster.children.retrieve(i));
 			usedBifurs=true;
 		}
-	}                   
+	}
 
          //useFileTotal is set if any of the children have bifurcations, meaning that output to
          //the sketcher has been generated, and the method must be closed and control returned to
@@ -6491,7 +6493,7 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
          if(useFileTotal) outf <<"Bifurs written, returning"<<endl;
          if(useFileTotal) return -2;
 
-	 print(graph0,theCluster.children);	 
+	 print(graph0,theCluster.children);
 
 	   //name of input file generated for Maple
          temp="input.txt";
@@ -6512,25 +6514,25 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
             outf <<graph0.returnVertByIndex(i).returnType()<<endl;
             theVName=graph0.returnVertByIndex(i).returnName();
             if(getChildNameWithVertex(theCluster, theVName)!=theVName) continue;
-            if(graph0.returnVertByIndex(i).returnType()!=0 && 
+            if(graph0.returnVertByIndex(i).returnType()!=0 &&
 	       graph0.returnVertByIndex(i).returnType()!=6  ) useReduction=false;
          }
-      
+
          if(useReduction) setValueReduction(graph0, theCluster);
-         
+
          ofstream inputFile;
 
 	   //delete the old input file
          remove(temp.c_str());
 
-         outf <<"Input File opened"<<endl;   
+         outf <<"Input File opened"<<endl;
          inputFile.open(temp.c_str());
 
 	 string outputString;
 
          //generate equations
 	 outputString=getEquation(graph0, theCluster, inputFile);
-	 
+
 	 inputFile<<outputString<<endl;
 	 inputFile.close();
 
@@ -6582,13 +6584,13 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
          }
 	   outTest.close();
 
-	   //generated equations output to the screen         
+	   //generated equations output to the screen
          outTest.open(temp.c_str());
          outTest>>in;
          while(in!='{') outTest>>in;
          outTest>>in;
-         while(in!='}')  
-         { 
+         while(in!='}')
+         {
            if(in==',' || in==';') outf <<endl;
            else outf <<in;
            outTest>>in;
@@ -6641,7 +6643,7 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
          theCluster.setCurrBifur(-1);
 
 	   //if when autosolving no valid bifurcations are found, terminate
-         if(theCluster.returnNumBifurs()==0 && !useFileTotal && !autoSolve) 
+         if(theCluster.returnNumBifurs()==0 && !useFileTotal && !autoSolve)
          {
 	     string fName;
 
@@ -6676,18 +6678,18 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
 			 break;
 	     }
 
-	     //used a canned answer file	
+	     //used a canned answer file
 	     if(loadData)
 	     {
 	       ifstream theData;
-		
+
     	       theData.open(fName.c_str());
 
                saveState(graph0);
-		
+
                currPosI=inputInts[0];
                currPosF=(int) inputFloats[0];
-		
+
                int inputNum;
 
 	       theData>>inputNum;
@@ -6696,12 +6698,12 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
 	          inputInts[currPosI++]=inputNum;
 	  	  theData>>inputNum;
 	       }
-		
+
 	       int countFloat, i;
 	       float inputFlt;
 
 	       theData>>countFloat;
-		
+
 	       for(i=0;i<countFloat;i++)
 	       {
 	  	  theData>>inputFlt;
@@ -6709,7 +6711,7 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
 	       }
 
 	       theData.close();
-		
+
 		outf << "At the canned file end, the graph0 is:" << endl;
 		graph0.output(outf);
 
@@ -6727,7 +6729,7 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
 		graph0.output(outf);
     		return(-2);
 	     }
-         } 
+         }
 
 	   //if there are no bifurcations and in autosolve, resolve this cluster with different bifurcations
          if(theCluster.returnNumBifurs()==0 && autoSolve) answer=1;
@@ -6736,7 +6738,7 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
          if(theCluster.returnNumBifurs()!=0 && autoSolve) answer=3;
          if(!autoSolve) answer=3;
     }
-  
+
     //set the fin flag of this cluster to true
     theCluster.setSolved(true);
     outf << "At the end, the graph0 is:" << endl;
@@ -6957,13 +6959,13 @@ void getGraphFromFile(Graph &graph0, List<Cluster> &SolverTrees)
 
    cout<<"Enter a filename: ";
    cin>>filename;
- 
+
    dataIn.open(filename.c_str());
 
    dataIn>>s;
 
    if(s=='Y' || s=='y') toSolve=true;
-   else toSolve =false;   
+   else toSolve =false;
 
    dataIn>>numShapes;
 
@@ -7023,7 +7025,7 @@ void getGraphFromFile(Graph &graph0, List<Cluster> &SolverTrees)
    dataIn.close();
 }
 
-//stores a string in the output arrays by storing the ascii value of each of its chars in 
+//stores a string in the output arrays by storing the ascii value of each of its chars in
 //consequtive integers
 void stringToArray(string theString, int*& theInts)
 {
@@ -7038,7 +7040,7 @@ void stringToArray(string theString, int*& theInts)
 //reads a string in the above format
 string readStringFromArray(int& start, int* theInts)
 {
-    string output="";    
+    string output="";
 
     while(theInts[start]!=-1)
          output+=(char) theInts[start++];
@@ -7082,8 +7084,8 @@ void vertexToArray(Vertex &theVertex, int*& theInts, float*& theFloats)
 
 //reads a vertex from the output arrays
 void readVertexFromArray(Vertex &theVertex, int &startI, int* theInts, int& startF, float* theFloats)
-{   
-    int i, count;    
+{
+    int i, count;
 
     theVertex.setName(theInts[startI++]);
     theVertex.setType(theInts[startI++]);
@@ -7101,7 +7103,7 @@ void readVertexFromArray(Vertex &theVertex, int &startI, int* theInts, int& star
     for(i=0;i<count;i++)
        theVertex.appendIncid(theInts[startI++]);
     theVertex.setPredEdg(theInts[startI++]);
-    for(i=0;i<9;i++) 
+    for(i=0;i<9;i++)
     {
        theVertex.initialValue(i,theFloats[startF++],theInts[startI++]);
     }
@@ -7111,14 +7113,14 @@ void readVertexFromArray(Vertex &theVertex, int &startI, int* theInts, int& star
     count=theInts[startI++];
     for(i=0;i<count;i++)
         theVertex.rightEndIncid.append(theInts[startI++]);
-}    
-    
+}
+
 //outputs an edge to the output arrays
 void edgeToArray(Edge &theEdge, int*& theInts, float*& theFloats)
 {
     int indexI=theInts[0];
     int indexF=(int) theFloats[0];
-    
+
     theInts[indexI++]=theEdge.returnName();
     theInts[indexI++]=theEdge.returnType();
     theInts[indexI++]=theEdge.returnWeight();
@@ -7140,7 +7142,7 @@ void edgeToArray(Edge &theEdge, int*& theInts, float*& theFloats)
 
 //reads an edge from the output arrays
 void readEdgeFromArray(Edge &theEdge, int &startI, int* theInts, int &startF, float* theFloats)
-{    
+{
     theEdge.setName(theInts[startI++]);
     theEdge.setType(theInts[startI++]);
     theEdge.setWeight(theInts[startI++]);
@@ -7152,18 +7154,18 @@ void readEdgeFromArray(Edge &theEdge, int &startI, int* theInts, int &startF, fl
     theEdge.setEnd(0,theInts[startI++]);
     theEdge.setPart(0,theInts[startI++]);
     theEdge.setEnd(1,theInts[startI++]);
-    theEdge.setPart(1,theInts[startI++]);    
+    theEdge.setPart(1,theInts[startI++]);
     theEdge.setPredVer(theInts[startI++]);
     theEdge.setValue(theFloats[startF++]);
 }
-    
+
 //outputs a graph to an array
 void graphToArray(Graph &graph0, int*& theInts, float*& theFloats)
 {
     int indexI=theInts[0];
     int indexF=(int) theFloats[0];
     int i, count;
-   
+
     theInts[indexI++]=graph0.returnDimen();
     theInts[indexI++]=graph0.returnDepth();
     count=theInts[indexI++]=graph0.returnNumVer();
@@ -7196,8 +7198,8 @@ void readGraphFromArray(Graph &graph0, int &startI, int* theInts, int &startF, f
        Edge newEdge;
        readEdgeFromArray(newEdge, startI, theInts, startF, theFloats);
        graph0.appendEdge(newEdge);
-    }    
-}        
+    }
+}
 
 //outputs a cluster to the arrays
 void clusterToArray(Cluster &theCluster, int*& theInts, float*& theFloats)
@@ -7207,7 +7209,7 @@ void clusterToArray(Cluster &theCluster, int*& theInts, float*& theFloats)
    int indexI=theInts[0];
    int indexF=(int) theFloats[0];
    int i, j, count, mem;
-   
+
    theInts[indexI++]=theCluster.returnGroup();
    theInts[indexI++]=theCluster.returnType();
    count=theInts[indexI++]=theCluster.returnFronLen();
@@ -7230,7 +7232,7 @@ void clusterToArray(Cluster &theCluster, int*& theInts, float*& theFloats)
    {
       theCluster.setCurrBifur(i);
       stringToArray(theCluster.returnCurrBifurString(), theInts);
-   }   
+   }
    theCluster.setCurrBifur(mem);
    indexI=theInts[0];
    theInts[indexI++]=theCluster.currAlias;
@@ -7280,7 +7282,7 @@ void readClusterFromArray(Cluster &theCluster, int &startI, int* theInts, int &s
 
    count=theInts[startI++];
    for(i=0;i<count;i++) fronts.append(theInts[startI++]);
-   
+
    count=theInts[startI++];
    for(i=0;i<count;i++)
    {
@@ -7308,7 +7310,7 @@ void readClusterFromArray(Cluster &theCluster, int &startI, int* theInts, int &s
    count=theInts[startI++];
    currBifur=theInts[startI++];
    for(i=0;i<count;i++)
-   { 
+   {
       string test=readStringFromArray(startI, theInts);
       strings.append(test);
    }
@@ -7359,7 +7361,7 @@ void readClusterFromArray(Cluster &theCluster, int &startI, int* theInts, int &s
 THE JNI ARRAYS BEING LOADED AND UNLOADED WITH THE TREE INFORMATION
 
 
-//stores the root of the Conversion Tree in the output arrays by storing the pointer to the Root node of the Tree 
+//stores the root of the Conversion Tree in the output arrays by storing the pointer to the Root node of the Tree
 void treeToArray(Node *Root, int*& theInts)
 {
     int indexI=theInts[0];
@@ -7387,7 +7389,7 @@ void outputArrays(int* theInts, float* theFloats)
 
    for(i=0;i<INTSIZE;i++)
       arrayOut<<theInts[i]<<endl;
-   
+
    for(i=0;i<FLOATSIZE;i++)
       arrayOut<<theFloats[i]<<endl;
 
@@ -7404,13 +7406,13 @@ void inputArrays(int*& theInts, float*& theFloats)
 
    arrayIn.open("arrayOut.txt");
 
-   for(i=0;i<INTSIZE;i++) 
-   {  
+   for(i=0;i<INTSIZE;i++)
+   {
       arrayIn>>theInts[i];
       if(theInts[0]==-1) return;
    }
 
-   for(i=0;i<FLOATSIZE;i++) arrayIn>>theFloats[i];   
+   for(i=0;i<FLOATSIZE;i++) arrayIn>>theFloats[i];
 
    arrayIn.close();
 }
@@ -7459,7 +7461,7 @@ void saveState(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint*& 
      for(i=0;i<INTSIZE;i++)
         thejInts[i]=inputInts[i];
      for(i=0;i<FLOATSIZE;i++)
-        thejDoubles[i]=inputFloats[i];     
+        thejDoubles[i]=inputFloats[i];
 }
 
 */
@@ -7475,7 +7477,7 @@ int &startI, jint *thejInts, int &startF, jdouble *thejDoubles, jchar *thejChars
 
     for(i=0;i<INTSIZE;i++)
        inputInts[i]=thejInts[i];
- 
+
     for(i=0;i<FLOATSIZE;i++)
        inputFloats[i]=(float) thejDoubles[i];
 
@@ -7503,7 +7505,7 @@ int &startI, jint *thejInts, int &startF, jdouble *thejDoubles, jchar *thejChars
     startI++;
 }
 
-//Sets the contents of the globals inputInts and inputFloats 
+//Sets the contents of the globals inputInts and inputFloats
 //to output arrays inputTheInts and inputDouble
 void setArraysForOutput(jint*& theJInts, jdouble*& theJDoubles)
 {
@@ -7532,7 +7534,7 @@ void setArraysForInput(jint*& theJInts, jdouble*& theJDoubles, jchar*& theJChars
    inputFloats=new float[FLOATSIZE];
 
    for(i=0;i<FLOATSIZE;i++)
-      inputFloats[i]=(float) theJDoubles[i];   
+      inputFloats[i]=(float) theJDoubles[i];
 }
 
 //resets the fin state of all of the cluster in the DRTree above theCluster
@@ -7571,7 +7573,7 @@ void resetTrees(Graph &graph0, List<Cluster> &SolverTrees)
    SolverTrees.makeEmpty();
 
    length=graph0.returnNumVer();
-   
+
    for(i=1;i<=length;i++)
    {
       core=graph0.returnVertByIndex(i);
@@ -7657,7 +7659,7 @@ bool checkEdge(Edge &theEdge, Graph &graph0, List<Cluster> &SolverTrees)
    end2=theEdge.returnEnd2();
    v2=graph0.returnVertByName(end2);
    input=switchString(v1, v1.returnType(), v1.returnName(), 0, input, false);
-   input=switchString(v2, v2.returnType(), v2.returnName(), 0, input, false);	
+   input=switchString(v2, v2.returnType(), v2.returnName(), 0, input, false);
 
    input.replace(input.find("=",0),1,"-");
 
@@ -7668,17 +7670,17 @@ bool checkEdge(Edge &theEdge, Graph &graph0, List<Cluster> &SolverTrees)
    inputFile<<"evalb(abs("<<input<<")<0.00001);"<<endl;
    inputFile.close();
 
-   shellMaple();        
+   shellMaple();
 
    cout<<input<<endl;
    cout<<getVarString()<<endl;
 
    ifstream outputFile;
-   
+
    outputFile.open("output.txt");
 
    while(outputFile.get()!=';') if(outputFile.eof()) return false;
-   
+
    char in;
 
    outputFile>>in;
@@ -7698,9 +7700,9 @@ void deleteClusterWithEdge(Graph &graph0, List<Cluster> &SolverTrees, Edge &theE
 
    end1=theEdge.returnEnd1();
    end2=theEdge.returnEnd2();
-   
+
    int i=1, length=SolverTrees.returnLen();
-   
+
    while(i<=length)
    {
       print(graph0, SolverTrees);
@@ -7709,7 +7711,7 @@ void deleteClusterWithEdge(Graph &graph0, List<Cluster> &SolverTrees, Edge &theE
         int j,childLength;
 
         childLength=SolverTrees.retrieve(i).children.returnLen();
-        
+
         for(j=1;j<=childLength;j++)
            SolverTrees.append(SolverTrees.retrieve(i).children.retrieve(j));
 
@@ -7744,7 +7746,7 @@ string processMatlab(string input)
 	}
 
 	varsToZero=backup;
-	
+
 	int i, len;
 	len=vars.returnLen();
 	for(i=1;i<=len;i++)
@@ -7754,12 +7756,12 @@ string processMatlab(string input)
 	}
 
 	input=replaceAll(input,"\n0-0;","");
-	
+
 	int length=input.size();
 	input=input.insert(0,"F(#)=");
 	int count=0;
 	input=replaceAll(input,";\n",";\nF(#)=");
-	
+
 	int pos=0;
 	count=1;
 	pos=input.find("#");
@@ -7781,12 +7783,12 @@ void postProcessMatlab()
 {
 	ifstream input;
 	ofstream output;
-	
+
 	input.open("data.out");
 	output.open("output.txt");
 
 	output<<">>>>>{";
-	
+
 	int i, length=vars.returnLen();
 	float indata;
 
@@ -7795,8 +7797,8 @@ void postProcessMatlab()
 		input>>indata;
 		if(i!=0) output<<", ";
 		output<<vars.retrieve(i)<<" = "<<indata;
-		
-	} 
+
+	}
 
 	string temp;
 
@@ -7805,15 +7807,15 @@ void postProcessMatlab()
                 temp=varsToZero.substr(0,2);
                 varsToZero=varsToZero.erase(0,2);
 		output<<", "<<temp<<" = 0.0";
-        }	
+        }
 
 	output<<"}q";
-	
+
 	input.close();
 	output.close();
 }
 
-//get the number of the edges which are in the cluster, but not in its subcluster.	
+//get the number of the edges which are in the cluster, but not in its subcluster.
 int countEdges(Graph &graph0, Cluster &theCluster)
 {
 	int i, length;
@@ -7870,7 +7872,7 @@ ClustData& summCluster(Graph &graph0, Cluster &theCluster)
 		edge=graph0.returnEdgeByIndex(i);
 		eCode=getEdgeCode(edge, theCluster);
 		cout<<"eCode="<<eCode<<" Edge="<<edge<<endl;
-		
+
 		end1Name=edge.returnEnd1();
                 end2Name=edge.returnEnd2();
 
@@ -7893,23 +7895,23 @@ ClustData& summCluster(Graph &graph0, Cluster &theCluster)
         	                for(k=1;k<=currChild.left.returnLen();k++)
                 	                cout<<currChild.left.retrieve(k);
                         	cout<<endl;
-        
+
 	                        cout<<"Right  : ";
         	                for(k=1;k<=currChild.right.returnLen();k++)
                 	                cout<<currChild.right.retrieve(k);
-                        	cout<<endl;  
-        
+                        	cout<<endl;
+
 	                        cout<<"Lines  : ";
         	                for(k=1;k<=currChild.lines.returnLen();k++)
                 	                cout<<currChild.lines.retrieve(k);
                         	cout<<endl;
 
 
-				end1Value=(currChild.currAlias==end1Name 	|| 
+				end1Value=(currChild.currAlias==end1Name 	||
 					   currChild.left.hasElem(end1Name)	||
 					   currChild.right.hasElem(end1Name)	||
 					   currChild.lines.hasElem(end1Name));
-		
+
                                 end2Value=(currChild.currAlias==end2Name         ||
                                            currChild.left.hasElem(end2Name)     ||
                                            currChild.right.hasElem(end2Name)    ||
@@ -7928,12 +7930,12 @@ ClustData& summCluster(Graph &graph0, Cluster &theCluster)
 			    continue;
 			}
 		}
-	
+
 		if(eCode==1)
 		{
 			int j;
 			int countSet=0;
-			
+
 			for(j=1;j<=theCluster.children.returnLen();j++)
 			{
 				cout<<"Current Item: "<<j<<endl;
@@ -7941,12 +7943,12 @@ ClustData& summCluster(Graph &graph0, Cluster &theCluster)
 					|| theCluster.children.retrieve(j).returnType()==5)
 				{
 					if(inOriginalV(end1Name,theCluster.children.retrieve(j)))
-					{	
+					{
 						countSet++;
 						end1Name=end1Name*1000+theCluster.children.retrieve(j).returnName();
 					}
  					if(inOriginalV(end2Name,theCluster.children.retrieve(j)))
-                                        {       
+                                        {
                                                 countSet++;
 						end2Name=end2Name*1000+theCluster.children.retrieve(j).returnName();
 					}
@@ -8238,7 +8240,7 @@ void parseForExternalOverCons(Graph &graph0, List<Cluster> *SolverTrees)
 							cout<<"Part 1 is 1"<<endl;
 							SolverTrees->addrByIndex(i)->setValue(6,origName);
 						}
-						else	
+						else
 						{
 							cout<<"Part 1 is 2"<<endl;
 							SolverTrees->addrByIndex(i)->setValue(7,origName);
@@ -8253,7 +8255,7 @@ void parseForExternalOverCons(Graph &graph0, List<Cluster> *SolverTrees)
 							SolverTrees->addrByIndex(i)->setValue(6,origName);
 						}
                                                 else
-						{	
+						{
 							cout<<"Part 2 is 2"<<endl;
 							SolverTrees->addrByIndex(i)->setValue(7,origName);
 						}
@@ -8273,7 +8275,7 @@ int buildGraphFromList(Graph &newGraph, Graph &graph0, List<int> &vertList)
 	int weight = 0;
 	int i;
 	Vertex v;
-	
+
 	graph0.output(cout);
 
 	for(i=1;i<=vertList.returnLen();i++)
@@ -8293,7 +8295,7 @@ int buildGraphFromList(Graph &newGraph, Graph &graph0, List<int> &vertList)
 		end2=tempEdge.returnEnd2();
 
 		if(!vertList.hasElem(end1)) continue;
-		if(!vertList.hasElem(end2)) continue; 
+		if(!vertList.hasElem(end2)) continue;
 
 		newGraph.appendEdge(tempEdge);
 		weight -= tempEdge.returnWeight();
@@ -8319,8 +8321,8 @@ void getOverlapList(Graph graph0, Cluster &theCluster, List<int> &outputList, in
 	if(containedList.returnLen()>=2)
 	{
 		if(child1==0 && child2==0)
-			outputList.append(currOrig);		 
-		else 
+			outputList.append(currOrig);
+		else
 		{
 			int child1Name = theCluster.children.retrieve(child1).returnName();
 			int child2Name = theCluster.children.retrieve(child2).returnName();
@@ -8344,7 +8346,7 @@ void getOverlapList(Graph graph0, Cluster &theCluster, List<int> &outputList, in
 		}
 	}
    }
-}	
+}
 
 void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inputTheInts, jdouble* inputDouble, jchar* inputChar)
 {
@@ -8366,7 +8368,7 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
 	printForest(SolverTrees, outf, 0);
 
 //   parseForExternalOverCons(graph0,&SolverTrees);
-   
+
    setArraysForInput(inputTheInts, inputDouble, inputChar);
 
    graphDimen=graph0.returnDimen();
@@ -8393,7 +8395,7 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
      cout<<"State Saved"<<endl;
      inputInts[inputInts[0]]=-1;
      inputInts[0]++;
-     
+
      int backupIndex=inputInts[0];
 
      outf <<"DRDAG Output"<<endl;
@@ -8408,7 +8410,7 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
      setArraysForOutput(inputTheInts, inputDouble);
      outf <<"Arrays output, Solver returns"<<endl;
      return;
-   }          
+   }
 
    //runs the solver on the DRDag and if necessary sets the bifurcation of the root nodes in the DRDag
    if(usingArrays)
@@ -8417,7 +8419,7 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
      SolverTrees.makeEmpty();
      gGraph1.makeEmpty();
 //     Tree.copyArrayIntoTree(startI, inputInts, inputChars);
-     
+
      for(i=startI;i<startI+100;i++)
 	outf <<"Integer after Tree: "<<inputInts[i]<<endl;
 
@@ -8425,8 +8427,8 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
      readGraphFromArray(graph0, startI, inputInts, startF, inputFloats);
 
      graphDimen=graph0.returnDimen();
-     
-     int length=inputInts[startI++]; 
+
+     int length=inputInts[startI++];
 
      for(i=0;i<length;i++)
      {
@@ -8434,9 +8436,9 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
           readClusterFromArray(newClust, startI, inputInts, startF, inputFloats);
           SolverTrees.append(newClust);
      }
-    
+
      outf <<"Graph and Cluster are read:"<<endl;
-     
+
      outf << "The graph0 is: " << endl;
      numTrees=SolverTrees.returnLen();
      graph0.output(outf);
@@ -8451,7 +8453,7 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
      outf <<"value at startI="<<inputInts[startI]<<endl;
      count=inputInts[startI];
      if(count>0) bifurAnswers=new int[count];
-     
+
      int temp;
 
      for(i=1;i<=count;i++)
@@ -8462,7 +8464,7 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
 		resetFinByClusterName(SolverTrees.retrieve(j),inputInts[startI+2]);
 	   break;
 	}
-	usedBifurs=false;	
+	usedBifurs=false;
         bifurAnswers[i-1]=inputInts[startI+i]+1;
         outf <<bifurAnswers[i-1]<<endl;
      }
@@ -8476,7 +8478,7 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
         tag=solveForest(graph0, SolverTrees);
         if(tag==-2)
         {
-          outf <<"Return by tag"<<endl; 
+          outf <<"Return by tag"<<endl;
           setArraysForOutput(inputTheInts, inputDouble);
           return;
         }
@@ -8485,12 +8487,12 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
      outf <<"Solver ran, return value="<<tag<<endl;
 
      useFileToBifur=true;
-     useFileTotal=false;     
+     useFileTotal=false;
 
      outf <<"usedBifurs="<<(usedBifurs ? "true" : "false")<<endl;
 
      if(usedBifurs && !autoSolve)
-     { 
+     {
        saveState(graph0);
        inputInts[0]++;
        currPosI=inputInts[0]+2;
@@ -8510,9 +8512,9 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
           {
             inputInts[inputInts[0]-1]++;
             continue;
-          } 
+          }
           parseBifurString(graph0, SolverTrees.retrieve(i));
-          updateGraph(graph0, SolverTrees.retrieve(i));  
+          updateGraph(graph0, SolverTrees.retrieve(i));
        }
        inputInts[inputInts[0]]=0;
        inputInts[inputInts[0]+1]=inputInts[inputInts[0]-1];
@@ -8529,7 +8531,7 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
        }
      }
 
-     if(useFileTotal && !autoSolve) 
+     if(useFileTotal && !autoSolve)
      {
        outf <<"Return by useFileTotal"<<endl;
        setArraysForOutput(inputTheInts, inputDouble);
@@ -8555,7 +8557,7 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
      inputInts[currPosI++]=numTrees;
      for(i=1;i<=numTrees;i++)
      {
-	updateGraph(graph0, SolverTrees.retrieve(i));	
+	updateGraph(graph0, SolverTrees.retrieve(i));
         inputInts[currPosI++]=SolverTrees.retrieve(i).returnName();
         generateOutputToArray(graph0, SolverTrees.retrieve(i), true);
      }
@@ -8568,8 +8570,8 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
    outf <<"Final Bifurcation Return"<<endl;
 
    graph0.output(outf);
-   print(graph0,SolverTrees);   
-   
+   print(graph0,SolverTrees);
+
    return;
 }
 
