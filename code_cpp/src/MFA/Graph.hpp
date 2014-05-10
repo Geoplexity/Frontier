@@ -1,6 +1,7 @@
 #ifndef GRAPH_HPP
 #define GRAPH_HPP
 
+#include "../../ext/JNI/jni.h"
 
 #include "List.hpp"
 #include "Vertex.hpp"
@@ -102,8 +103,8 @@ public:
 
 
 
-   // // reads data from the arrays sent by the sketcher
-   // int sketchInput(int &idx, jint *inputData, int &indxDbl, jdouble *dbleData); //from sketch to graph
+   // reads data from the arrays sent by the sketcher
+   int sketchInput(int &idx, jint *inputData, int &indxDbl, jdouble *dbleData); //from sketch to graph
 
 
 

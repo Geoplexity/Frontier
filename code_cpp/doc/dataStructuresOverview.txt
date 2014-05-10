@@ -1,34 +1,12 @@
-The purpose of this document is to describe the different datastructures used by the UTU/DR-Planner/ESM and how
-they are converted into integer and double arrays to be passed to the sketcher. 
+The purpose of this document is to describe the different datastructures used by the UTU/DR-Planner/ESM and how they are converted into integer and double arrays to be passed to the sketcher. 
 
- There will be one section
-dedicated to each of the major classes described in the mfa2Clas.h file, the header file for these classes
-interface and declaraion.  Each section will have to following format, first a quick overview of the purpose of
-each class.  Then, a copy of the variables section of the interface.  It can be assumed that each class includes
-accessor and modification methods to access each of these variables, and that all of these methods are described
-by the documentation in the mfa2Clas.h file.  Any other methods in the classes are not pertinent to this
-discussion of datastructures and are not included in this file.  They can be found as well in the documentation
-in mfa2Clas.h.  The final part of each section will be the order and manner that each of these objects is coded
-into integers and double.  This part will be two separate lists, one for integers and one for doubles,
-demonstrating the order presented. 
+There will be one section dedicated to each of the major classes described in the mfa2Clas.h file, the header file for these classes interface and declaration.  Each section will have to following format, first a quick overview of the purpose of each class.  Then, a copy of the variables section of the interface.  It can be assumed that each class includes accessor and modification methods to access each of these variables, and that all of these methods are described by the documentation in the mfa2Clas.h file.  Any other methods in the classes are not pertinent to This discussion of datastructures and are not included in this file.  They can be found as well in the documentation in mfa2Clas.h.  The final part of each section will be the order and manner that each of these objects is coded into integers and double.  This part will be two separate lists, one for integers and one for doubles, demonstrating the order presented. 
 
-I want to note here that all of the output to the arrays starts at index 1, not 0, in the arrays.  The first integer 
-is reserved for a count of the number of elements in the array when outputting and a flag to select the mode of 
-operation of the UTU and solver when inputting.  In application, the output of consecutive structures makes use 
-of this element count to assure that different are successfully concatenated within the array.  For example
-suppose I must output the three vertex structures, the first vertex is output starting at index 1 in both the
-double and the integer arrays, after all the data has been written, the output method places the number of
-doubles output as the first int in the double array and the number of integers output in the integer array.
-When the next vertex must be output, it reads the first item in each array and skips this many entries before
-beginning output, assuring that all the objects are output one after each other with no overlap.
+I want to note here that all of the output to the arrays starts at index 1, not 0, in the arrays.  The first integer is reserved for a count of the number of elements in the array when outputting and a flag to select the mode of operation of the UTU and solver when inputting.  In application, the output of consecutive structures makes use of this element count to assure that different are successfully concatenated within the array.  For example suppose I must output the three vertex structures, the first vertex is output starting at index 1 in both the double and the integer arrays, after all the data has been written, the output method places the number of doubles output as the first int in the double array and the number of integers output in the integer array. When the next vertex must be output, it reads the first item in each array and skips this many entries before beginning output, assuring that all the objects are output one after each other with no overlap.
 
-All of this input and output is handled by a set of methods in the mfa9Solver.cpp file.  These files are
-named ObjectToArray, for output, and ReadObjectFromArray, for input, where object represents the specific class
-to be written or read, vertex, edge, graph or cluster.
+All of this input and output is handled by a set of methods in the mfa9Solver.cpp file.  These files are named ObjectToArray, for output, and ReadObjectFromArray, for input, where object represents the specific class to be written or read, vertex, edge, graph or cluster.
 
-Finally, all of the communication that takes places between the skecker and the UTU/DR-Planner/ESM is appended
-to the end of the arrays created by the methods below.  This data is passed back, exactly, to the
-UTU/DR-Planner/ESM later, so this description is valid both for input and output.
+Finally, all of the communication that takes places between the Sketcher and the UTU/DR-Planner/ESM is appended to the end of the arrays created by the methods below.  This data is passed back, exactly, to the UTU/DR-Planner/ESM later, so this description is valid both for input and output.
 
 
 
@@ -153,8 +131,7 @@ Graph:
 
 Overview:
 
-The graph structure is used by the DR-Planner to calculate the minimal subgraph decomposition of the constraint
-system.  It consists mainly of list of vertices and edges which consistute the graph itself.
+The graph structure is used by the DR-Planner to calculate the minimal subgraph decomposition of the constraint system.  It consists mainly of list of vertices and edges which consistute the graph itself.
 
 
 Interface Variables:
@@ -180,8 +157,7 @@ Integers:
 
 Floats:
 
-No special floats are output for the graph structure except those included in the output of the edge and vertex
-structures
+No special floats are output for the graph structure except those included in the output of the edge and vertex structures
 
 
 Cluster:

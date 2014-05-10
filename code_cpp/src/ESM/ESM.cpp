@@ -3,11 +3,16 @@
 /*The entire equation and solution manager ESM*/
 
 
+#include <iostream>
+#include <fstream>
+#include <math.h>
 
-
-//#include "mfa10Solver.h"
+#include "ESM.hpp"
 //#include "mfaTree.cpp"
 
+#include "../MFA/Cluster_Print.hpp"
+
+using namespace std;
 
 #define INTSIZE		16000
 #define FLOATSIZE	4000
@@ -398,6 +403,8 @@ bool isValidRayIncidence(Vertex &theRay, Vertex &theOther, int part1, int part2)
                     }
           default:  return true;
     }
+
+    return true; // I PUT THIS IN?!?!?!
 }
 
 //given a line segment and another object, returns true if the object is incident with the line segment
@@ -531,6 +538,8 @@ bool isValidLSIncidence(Vertex &theLS, Vertex &theOther, int part1, int part2)
                     }
           default:  return true;
     }
+
+    return true;
 }
 
 //given a circle and another object, returns true if the object is incident upon the circle
@@ -588,6 +597,8 @@ bool isValidCircleIncidence(Vertex &theCircle, Vertex &theOther, int part1, int 
                     }
           default:  return true;
     }
+
+    return true;
 }
 
 //given an arc and another object, returns true if the object is incident on the arc
@@ -670,6 +681,8 @@ bool isValidArcIncidence(Vertex &theArc, Vertex &theOther, int part1, int part2)
           case 33: return true;
                    break;
     }
+
+    return true;
 }
 
 // given the edge, if it is not imaginary returns true (if the constraint
@@ -745,6 +758,8 @@ bool isValidConstraint(Graph &graph0, Edge &theEdge, Cluster &theCluster)
           case 55: return(isValidArcIncidence(end1,end2,part1,part2));
                    break;
     }
+
+    return true;
 }
 
 //returns true if the constraint theEdge, is imaginary and must be checked to see if it is satisfied

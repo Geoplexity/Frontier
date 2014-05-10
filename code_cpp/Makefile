@@ -9,7 +9,8 @@ AR=ar r
 
 # MFA
 MODULE = MFA
-_DEPS  = List.hpp Random.hpp Vertex.hpp Edge.hpp Graph.hpp Cluster.hpp Cluster_Print.hpp
+_DEPS  = List.hpp Random.hpp Vertex.hpp Edge.hpp Graph.hpp \
+	Cluster.hpp Cluster_Print.hpp Cluster_Data.hpp
 _OBJ   = Vertex.o Edge.o Graph.o Cluster.o
 
 INC_DIR = $(SRC_DIR)/$(MODULE)
