@@ -127,7 +127,7 @@ int distributEdge(Edge &edge, Graph &F, std::ostream &file2)
   }
   else
   {
-     K=copyG(F, CF);   // copy F to CF and return K value
+     K=F.copyInto(CF);   // copy F to CF and return K value
      CF.delEdg(edge);
      edge.setWeight(K);
      a=CF.distribute0(edge, file2);
@@ -259,7 +259,7 @@ int pushOutside(Cluster &C, Graph &F, Graph &graph0, std::ostream &file1, std::o
 
    file2<<"OUTER DISTRIBUTE END"<<std::endl;
 
-   K=copyG(F, CF);    // copy from F to CF
+   K=F.copyInto(CF);    // copy from F to CF
 
    file2<<"INNER DISTRIBUTE"<<std::endl;
 
@@ -305,12 +305,12 @@ int pushOutside(Cluster &C, Graph &F, Graph &graph0, std::ostream &file1, std::o
         innerEdge=C.returnInnerE(i);
         innerName=innerEdge.returnName();
         innerEdge.incrsWt(i<=highBreak ? per+1 : per);
-        copyG(CF, oldCF);
+        CF.copyInto(oldCF);
         a=CF.distribute0(innerEdge, file2);
         if(a==1)
         {//fail to distribute inner edge
             //restore CF
-            copyG(oldCF, CF);
+            oldCF.copyInto(CF);
             rmEdgeName = removeFlow(C, CF, graph0);
         file2 << "remove edge is: " << rmEdgeName << std::endl;
             //restore i to distribute the inner edge again.
@@ -409,7 +409,7 @@ int pushOutside(Cluster &C, Graph &F, Graph &graph0, std::ostream &file1, std::o
                     }
           }
 
-                  copyG(CF, CCF);  // copy from CF to CCF
+                  CF.copyInto(CCF);  // copy from CF to CCF
                   CCF.delEdgeByName(targetName);
           int type=C.returnType();
           file2<<"type value read in pushOutside="<<type<<std::endl;
@@ -455,7 +455,7 @@ int pushOutside0(Graph &F, std::ostream &file2)
    file2<<"Contents of F"<<std::endl;
    F.output(file2);
 
-   copyG(F, CF);    // copy from F to CF
+   F.copyInto(CF);    // copy from F to CF
    nVerF=F.returnNumVer(); // # of vertices in F
 
    //find the vertices belong to trivial dense subgraph
@@ -509,7 +509,7 @@ int pushOutside0(Graph &F, std::ostream &file2)
          outName=outEdge.returnName();
          if(v2.returnLabel()==0&&(!v2.isFrozen())&&outName)
          {
-             copyG(CF,CCF); // from CF to CCF
+             CF.copyInto(CCF); // from CF to CCF
              CCF.delEdgeByName(outName);
          if(checkSpecialExtensionCase(CCF, std::cout))
         outEdge.setWeight(2);

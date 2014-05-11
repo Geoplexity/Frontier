@@ -125,7 +125,7 @@ JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj, jintArray arr
 
 			outf<<"Groups read"<<std::endl;
 
-			copyG(graph0, graph1);  // copy Graph from graph0 to graph1
+			graph0.copyInto(graph1);  // copy Graph from graph0 to graph1
 			graph1.simplify();      // merge multi-edges and remove zero-weight edges
 
 			outf<<"Graph Copied"<<std::endl;
@@ -216,7 +216,7 @@ JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj, jintArray arr
 				break;
 			}
 
-			copyG(graph0, graph1);
+			graph0.copyInto(graph1);
 			graph1.simplify();
 
 			resetTrees(graph0, DRTrees);
@@ -245,7 +245,7 @@ JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj, jintArray arr
 			deleteClusterWithEdge(graph0, SolverTrees, graph0.returnEdgeByName(deleteEdgeName));
 			graph0.delEdgeByName(deleteEdgeName);
 			dataInt[0]=0;
-			copyG(graph0, graph1);
+			graph0.copyInto(graph1);
 			graph1.simplify();
 			resetTrees(graph0, DRTrees);
 			SolverTrees = mfaAlgo(graph1, DRTrees, outfile1, outfile2);
@@ -262,7 +262,7 @@ JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj, jintArray arr
 
 			graph0.sketchInput(startI, dataInt, startF, dataDouble);
 
-			copyG(graph0, graph1);
+			graph0.copyInto(graph1);
 			graph1.simplify();
 
 			resetTrees(graph0, DRTrees);

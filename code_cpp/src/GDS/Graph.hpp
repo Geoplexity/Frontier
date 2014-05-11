@@ -8,12 +8,17 @@
 #include "Edge.hpp"
 
 
+const int K_FOR_2D = 4;
+const int K_FOR_3D = 7;
+
+
+
 class Graph
 {
 private:
    int dimension;       // dimension=2 or 3
    int NumVert;         // # of vertices
-   int NumEdge;         // # of edges 
+   int NumEdge;         // # of edges
    int depth;           // depth of the largest cluster in the graph
    List<Vertex> vertices;   // list of the vertices in the graph
    List<Edge> edges;        // list of the edges in the graph
@@ -30,7 +35,7 @@ public:
    void setDepth(int d) { depth=d; }
    void setVlist(List<Vertex> &vl) { NumVert=vl.returnLen(); vertices=vl; }
    void setElist(List<Edge> &el) {  NumEdge=el.returnLen(); edges=el; }
-   
+
    // merge multi-edges and remove zero-weight edges
    void simplify();
 
@@ -40,9 +45,9 @@ public:
    // defrost vertices if any of them are frozen
    void defrostGraph();
 
-   // freeze the vertex with ID vName forever (set frozen to 2) 
+   // freeze the vertex with ID vName forever (set frozen to 2)
    void freezeVertForever(int vName);
-   
+
    //defrost the vertex with ID vName
    void defrostOneVert(int vName);
 
@@ -69,7 +74,7 @@ public:
          NumEdge--;
       }
    }
- 
+
    //find either edge or vertex by ID and remover from vertex or edge list
    void delVerByName(int vName);
    void delEdgeByName(int eName);
@@ -122,10 +127,41 @@ public:
 
    // see the attached paper for complete documentation
    int distribute0(Edge &edge, std::ostream &file2);
-   
+
    // returns the difference between the total weight of the edges and the weight of the vertices
    // less the number of degrees of freedom of a rigid object in space, 2D = 3, 3D = 6
    int constrainDegree();
+
+
+
+
+
+   ///////////////////////////
+   // came from DRP originally
+
+   // copy a graph and return K value
+   int copyInto(Graph &g1)
+   {
+       int i, nVer, nEdg, dimen;
+
+       g1.delAllVer();
+       g1.delAllEdg();
+
+       dimen=this->returnDimen();
+       g1.setDimen(dimen);
+
+       nVer=this->returnNumVer();
+       nEdg=this->returnNumEdg();
+
+       for(i=1;i<=nVer;i++)
+          g1.appendVertex(this->returnVertByIndex(i));
+
+       for(i=1;i<=nEdg;i++)
+          g1.appendEdge(this->returnEdgeByIndex(i));
+
+       if(dimen==3) return K_FOR_3D;  //K=7 for 3-D problem
+       else return K_FOR_2D;          //K=4 for 2-D problem
+   }
 };
 
 

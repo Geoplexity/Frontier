@@ -8,29 +8,29 @@
 #include <fstream>
 
 
-// copy a graph and return K value
-int copyG(Graph &g0, Graph &g1)
-{
-    int i, nVer, nEdg, dimen;
+// // copy a graph and return K value
+// int copyG(Graph &g0, Graph &g1)
+// {
+//     int i, nVer, nEdg, dimen;
 
-    g1.delAllVer();
-    g1.delAllEdg();
+//     g1.delAllVer();
+//     g1.delAllEdg();
 
-    dimen=g0.returnDimen();
-    g1.setDimen(dimen);
+//     dimen=g0.returnDimen();
+//     g1.setDimen(dimen);
 
-    nVer=g0.returnNumVer();
-    nEdg=g0.returnNumEdg();
+//     nVer=g0.returnNumVer();
+//     nEdg=g0.returnNumEdg();
 
-    for(i=1;i<=nVer;i++)
-       g1.appendVertex(g0.returnVertByIndex(i));
+//     for(i=1;i<=nVer;i++)
+//        g1.appendVertex(g0.returnVertByIndex(i));
 
-    for(i=1;i<=nEdg;i++)
-       g1.appendEdge(g0.returnEdgeByIndex(i));
+//     for(i=1;i<=nEdg;i++)
+//        g1.appendEdge(g0.returnEdgeByIndex(i));
 
-    if(dimen==3) return 7;  //K=7 for 3-D problem
-    else return 4;          //K=4 for 2-D problem
-}
+//     if(dimen==3) return 7;  //K=7 for 3-D problem
+//     else return 4;          //K=4 for 2-D problem
+// }
 
 //checks for special cases that should be extended
 bool checkSpecialExtensionCase(Graph &F, std::ostream &out)

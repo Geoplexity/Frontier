@@ -7,6 +7,7 @@
 #include "List.hpp"
 #include "Vertex.hpp"
 #include "Edge.hpp"
+#include "Graph.hpp"
 
 
 class Cluster {
@@ -201,7 +202,9 @@ public:
 
 
 
+	///////////////////////////
 	// came from ESM originally
+
 	//returns true if Name is a child of theCluster
 	bool inOriginalV(int Name)
 	{
@@ -247,6 +250,50 @@ public:
 	       if(this->children.retrieve(i).inOriginalV(vName))
 	         theList.append(this->children.retrieve(i).returnName());
 	}
+
+
+	void getOverlapList(Graph g, List<int> &outList, int child1=0, int child2=0)
+	{
+	  List<int> containedList;
+
+	  int i,currOrig;
+
+	  outList.makeEmpty();
+
+	  for(i=1;i<=this->returnOrigLen();i++)
+	  {
+	    containedList.makeEmpty();
+	    currOrig=this->returnOrigV(i);
+	    this->getContainedChildList(currOrig,containedList);
+	    if(containedList.returnLen()>=2)
+	    {
+	      if(child1==0 && child2==0)
+	        outList.append(currOrig);
+	      else
+	      {
+	        int child1Name = this->children.retrieve(child1).returnName();
+	        int child2Name = this->children.retrieve(child2).returnName();
+	        if(containedList.hasElem(child1Name) && containedList.hasElem(child2Name))
+	          outList.append(currOrig);
+	      }
+	    }
+	  }
+	  //check the incident part
+	  for(i=1; i<=this->returnOrigLen(); i++)
+	  {
+	    int v1 = this->returnOrig().retrieve(i);
+	    if(!outList.hasElem(v1))
+	    {
+	      for(int j=1; j<=outList.returnLen(); j++)
+	      {
+	        int v2 = outList.retrieve(j);
+	        std::cout << "LLOOOO" << g.returnEdgeByEnds(v1, v2) << std::endl;
+	        if(g.returnEdgeByEnds(v1, v2).returnType()==1)
+	          outList.append(v1);
+	      }
+	    }
+	  }
+}
 };
 
 

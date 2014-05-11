@@ -11,8 +11,6 @@ for incorporating  input groups */
 #include "Cluster_Get.hpp"
 #include "Dist_Edge_Flow_Method.hpp"
 
-// #include "../ESM/ESM.hpp"
-
 
 //recursively defrosts and entire forest, used with defrostTree
 
@@ -1453,7 +1451,7 @@ int setConstrain(Graph &G, Cluster &theCluster)
         return -1;
 
     List<int> overList;
-    getOverlapList(G, theCluster, overList);
+    theCluster.getOverlapList(G, overList);
     outf << "The over list contains:" << std::endl;
     for(int i=1; i<=overList.returnLen(); i++)
         outf << "   " << overList.retrieve(i);
@@ -1593,7 +1591,7 @@ List<Cluster> &distributeForest(List<Cluster> &DR_Trees, Graph &F,
           file2<<"Right before deleting inner edges"<<std::endl;
       F.output(file2);
       Graph tempGraph;
-      copyG(F,tempGraph);
+      F.copyInto(tempGraph);
       tempGraph.removeLabels();
           delInnerVer(F, graph0);
       std::cout<<"after deleting inner edges"<<std::endl;
@@ -1628,7 +1626,7 @@ List<Cluster> &distributeForest(List<Cluster> &DR_Trees, Graph &F,
         case 0:     DR_Trees.makeEmpty();
                 file2<<"After DR_Trees.makeEmpty()"<<std::endl;
                 file2<<"Length: "<<tempDR_Trees.returnLen()<<std::endl;
-                copyG(tempGraph,F);
+                tempGraph.copyInto(F);
                 //restore the original DR_Trees
                 for(int i=1;i<=tempDR_Trees.returnLen();i++)
                 {

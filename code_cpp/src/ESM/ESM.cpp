@@ -1631,7 +1631,7 @@ int verifyBifurs(Graph graph0, Cluster theCluster, List<string> &theList)
 	if(theCluster.children.returnLen()>2) return 1;
 
 	List<int> overlappedList;
-	getOverlapList(graph0, theCluster, overlappedList, 1, 2);
+	theCluster.getOverlapList(graph0, overlappedList, 1, 2);
 
 	if(overlappedList.returnLen()==0) return 1;
 	ofstream outf;
@@ -4885,562 +4885,576 @@ Cluster createSP2Cluster(Graph &newGraph)
 
 string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUsedList, int child1, int child2, int totalDof)
 {
-    int i, j, k, length, type, currOrig;
-    int clustint1, clustint2;
-    string cluster1, cluster2, origStr, nameStr;
-    string newStr1a, newStr2a, newStr3a, newStr1b, newStr2b, newStr3b;
-    string clusterV1, clusterV2, clusterV3, clusterV4;
-    string clusterV5, clusterV6, clusterV7, clusterV8, clusterV9;
-    string repStrb1, repStrb2, repStrb3;
-    List<int> theOrig, in, theClust;
-    Cluster tempCluster1, tempCluster2;
-    Vertex tempVertex1, tempVertex2;
-    string output="";
-    string temp="", valueName="";
+	int i, j, k, length, type, currOrig;
+	int clustint1, clustint2;
+	string cluster1, cluster2, origStr, nameStr;
+	string newStr1a, newStr2a, newStr3a, newStr1b, newStr2b, newStr3b;
+	string clusterV1, clusterV2, clusterV3, clusterV4;
+	string clusterV5, clusterV6, clusterV7, clusterV8, clusterV9;
+	string repStrb1, repStrb2, repStrb3;
+	List<int> theOrig, in, theClust;
+	Cluster tempCluster1, tempCluster2;
+	Vertex tempVertex1, tempVertex2;
+	string output="";
+	string temp="", valueName="";
 
-    ofstream outf;
-    outf.open("getParOverEqution.out", ios::app);
+	ofstream outf;
+	outf.open("getParOverEqution.out", ios::app);
 
-    outf<<"The beginning+++++++++++ " <<endl;
-    outf << "child 1 is: ";
-    theCluster.children.retrieve(child1).output(outf);
+	outf<<"The beginning+++++++++++ " <<endl;
+	outf << "child 1 is: ";
+	theCluster.children.retrieve(child1).output(outf);
 	outf << "Its children are: " << endl;
 	Cluster tempcc1 = theCluster.children.retrieve(child1);
 	for(i=1; i<= tempcc1.children.returnLen(); i++)
 		tempcc1.children.retrieve(i).output(outf);
 
-    outf << "child 2 is: ";
-    theCluster.children.retrieve(child2).output(outf);
-        outf << "Its children are: " << endl;
-        tempcc1 = theCluster.children.retrieve(child2);
-        for(i=1; i<= tempcc1.children.returnLen(); i++)
-                tempcc1.children.retrieve(i).output(outf);
+	outf << "child 2 is: ";
+	theCluster.children.retrieve(child2).output(outf);
+	outf << "Its children are: " << endl;
+	tempcc1 = theCluster.children.retrieve(child2);
+	for(i=1; i<= tempcc1.children.returnLen(); i++)
+		tempcc1.children.retrieve(i).output(outf);
 
 
-    List<int> overlappedList;
+	List<int> overlappedList;
 
-    getOverlapList(graph0, theCluster, overlappedList, child1, child2);
-    outf<<"Overlapped Vertices: ";
-    for(i=1;i<=overlappedList.returnLen();i++)
-	outf<<overlappedList.retrieve(i)<<" ";
-    outf<<endl;
+	theCluster.getOverlapList(graph0, overlappedList, child1, child2);
+	outf<<"Overlapped Vertices: ";
+	for(i=1;i<=overlappedList.returnLen();i++)
+		outf<<overlappedList.retrieve(i)<<" ";
+	outf<<endl;
 
-    ofstream testFile1, testFile2;
+	ofstream testFile1, testFile2;
 
-    testFile1.open("testFile1.txt");
-    testFile2.open("testFile2.txt");
+	testFile1.open("testFile1.txt");
+	testFile2.open("testFile2.txt");
 
-    Graph newGraph;
+	Graph newGraph;
 
-    List<Cluster> test_DR_Trees;
-    List<Cluster> testSolverTrees;
+	List<Cluster> test_DR_Trees;
+	List<Cluster> testSolverTrees;
 
-    buildGraphFromList(newGraph,graph0,overlappedList);
+	buildGraphFromList(newGraph,graph0,overlappedList);
 
-    resetTrees(newGraph,test_DR_Trees);
+	resetTrees(newGraph,test_DR_Trees);
 
-    outf << " The new Graph is: " << endl;
-    newGraph.output(outf);
-    outf << "totalDof is: " << totalDof << endl;
+	outf << " The new Graph is: " << endl;
+	newGraph.output(outf);
+	outf << "totalDof is: " << totalDof << endl;
 
-    if(newGraph.returnNumVer()==0)
-	return output;
+	if(newGraph.returnNumVer()==0)
+		return output;
 	outf << "before call mfaAlgo" << endl;
 
 	outf << "num ver is: " << newGraph.returnNumVer() << " and edge num is: " << newGraph.returnNumEdg() << endl;
-    bool check2=false;
-    //check whether need to create the second special cluster by hand
-    if(newGraph.returnNumVer()==3 && newGraph.returnNumEdg()==3 && graph0.returnDimen()==3)
-    {
-    	int type6=0;
-	int type7=0;
-	for(int i=1; i<=3; i++)
- 	{	if(newGraph.returnVertByIndex(i).returnType()==6)
-			type6++;
-		else if(newGraph.returnVertByIndex(i).returnType()==7)
-			type7++;
+	bool check2=false;
+	//check whether need to create the second special cluster by hand
+	if(newGraph.returnNumVer()==3 && newGraph.returnNumEdg()==3 && graph0.returnDimen()==3)
+	{
+		int type6=0;
+		int type7=0;
+		for(int i=1; i<=3; i++)
+		{
+			if(newGraph.returnVertByIndex(i).returnType()==6)
+				type6++;
+			else if(newGraph.returnVertByIndex(i).returnType()==7)
+				type7++;
+		}
+		if(type6==2 && type7==1)
+			check2=true;
 	}
-	if(type6==2 && type7==1)
-		check2=true;
-    }
 
-    Cluster clSpecial;
-    if(newGraph.returnNumVer()==2 && newGraph.returnNumEdg()==1 && graph0.returnDimen()==3)
-    {
-    	outf << "We are createing the special cluster" << endl;
-	clSpecial = createSPCluster(newGraph);
-	testSolverTrees.append(clSpecial);
-    }
-    else if(check2)
-    {
-    	outf << "We are createing the second special cluster" << endl;
-	clSpecial = createSP2Cluster(newGraph);
-	testSolverTrees.append(clSpecial);
-    }
-    else
-	testSolverTrees = mfaAlgo(newGraph, test_DR_Trees, testFile1, testFile2);
-    outf << "After call mfaAlgo" << endl;
-    if(testSolverTrees.returnLen()==1 && totalDof==6
-	&&testSolverTrees.retrieve(1).returnType()==2)
-	totalDof--;
+	Cluster clSpecial;
+	if(newGraph.returnNumVer()==2 && newGraph.returnNumEdg()==1 && graph0.returnDimen()==3)
+	{
+		outf << "We are createing the special cluster" << endl;
+		clSpecial = createSPCluster(newGraph);
+		testSolverTrees.append(clSpecial);
+	}
+	else if(check2)
+	{
+		outf << "We are createing the second special cluster" << endl;
+		clSpecial = createSP2Cluster(newGraph);
+		testSolverTrees.append(clSpecial);
+	}
+	else
+		testSolverTrees = mfaAlgo(newGraph, test_DR_Trees, testFile1, testFile2);
+	outf << "After call mfaAlgo" << endl;
+	if(testSolverTrees.returnLen()==1 && totalDof==6
+		&&testSolverTrees.retrieve(1).returnType()==2)
+			totalDof--;
 
-    outf << "The TOTAL DOF is: :: " << totalDof;
+	outf << "The TOTAL DOF is: :: " << totalDof;
 
-    int numTrees = testSolverTrees.returnLen();
-    int maxOverArray[10];
-    int flagTrees[10];
+	int numTrees = testSolverTrees.returnLen();
+	int maxOverArray[10];
+	int flagTrees[10];
 
-    for(int j=1; j<10; j++)
-    {
-    	maxOverArray[j] = 0;
-    	flagTrees[j] = 1;
-    }
+	for(int j=1; j<10; j++)
+	{
+		maxOverArray[j] = 0;
+		flagTrees[j] = 1;
+	}
 
-    //decide the max equations numbers of each cluster.
-    int odd = totalDof % numTrees;
-    int base = totalDof / numTrees;
-    outf << "odd is: " << odd << "\t base is: " << base << endl;
+	//decide the max equations numbers of each cluster.
+	int odd = totalDof % numTrees;
+	int base = totalDof / numTrees;
+	outf << "odd is: " << odd << "\t base is: " << base << endl;
 
-    for(int j=1; j<=numTrees; j++)
-    {
-    	maxOverArray[j] = base;
-    	if(j<=odd)
-    	{
-    		if(base>5 && testSolverTrees.retrieve(j).returnType() == 2)
-    			odd++;
-    		else
-    			maxOverArray[j]++;
-    	}
-    }
+	for(int j=1; j<=numTrees; j++)
+	{
+		maxOverArray[j] = base;
+		if(j<=odd)
+		{
+			if(base>5 && testSolverTrees.retrieve(j).returnType() == 2)
+				odd++;
+			else
+				maxOverArray[j]++;
+		}
+	}
 
-    outf << "the maxOver array is: ";
-    for(int j=1; j<10; j++)
-    	 outf << "\t" << maxOverArray[j] << endl;
+	outf << "the maxOver array is: ";
+	for(int j=1; j<10; j++)
+		outf << "\t" << maxOverArray[j] << endl;
 
-    outf << "The testsolverTrees are:" << endl;
-    for(int ii=1; ii <= testSolverTrees.returnLen(); ii++)
-    {
-	outf << " tree:::::" << endl;
-        printTree(testSolverTrees.retrieve(ii), outf, 1);
-    }
-    print(newGraph, testSolverTrees);
+	outf << "The testsolverTrees are:" << endl;
+	for(int ii=1; ii <= testSolverTrees.returnLen(); ii++)
+	{
+		outf << " tree:::::" << endl;
+		printTree(testSolverTrees.retrieve(ii), outf, 1);
+	}
+	print(newGraph, testSolverTrees);
 
-    testFile1.close();
-    testFile2.close();
+	testFile1.close();
+	testFile2.close();
 
-    for(i=1;i<=testSolverTrees.returnLen();i++)
-  	testSolverTrees.retrieve(i).currAlias=0;
+	for(i=1;i<=testSolverTrees.returnLen();i++)
+		testSolverTrees.retrieve(i).currAlias=0;
 
-    if(theCluster.returnOrig().returnLen()==theCluster.children.returnLen()) return "";
+	if(theCluster.returnOrig().returnLen()==theCluster.children.returnLen())
+		return "";
 
-    theOrig=overlappedList;
+	theOrig=overlappedList;
 
-    outf<<"Vars before getOverlap"<<endl;
-    outf<<getVarString()<<endl;
+	outf<<"Vars before getOverlap"<<endl;
+	outf<<getVarString()<<endl;
 
-    length=theOrig.returnLen();
-    for(i=1; i<=length; i++)
-    {
-        currOrig=theOrig.retrieve(i);
-        theCluster.getContainedChildList(currOrig,in);
- 	int treeIndex=1;
-	//find the index of the tree which contains the vertex
-	while(!testSolverTrees.retrieve(treeIndex).inOriginalV(currOrig)
-              && treeIndex<testSolverTrees.returnLen())
-       		treeIndex++;
-	if(in.returnLen()>=3 && graph0.returnDimen()==3)
-		testSolverTrees.retrieve(treeIndex).currAlias+=3;
-    }
+	length=theOrig.returnLen();
+	for(i=1; i<=length; i++)
+	{
+		currOrig=theOrig.retrieve(i);
+		theCluster.getContainedChildList(currOrig,in);
+		int treeIndex=1;
+		//find the index of the tree which contains the vertex
+		while(!testSolverTrees.retrieve(treeIndex).inOriginalV(currOrig)
+			&& treeIndex<testSolverTrees.returnLen())
+				treeIndex++;
+		if(in.returnLen()>=3 && graph0.returnDimen()==3)
+			testSolverTrees.retrieve(treeIndex).currAlias+=3;
+	}
 
-    for(i=1; i<=length; i++)
-    {
-       outf<<"Start Get Over Loop"<<endl;
-       currOrig=theOrig.retrieve(i);
-       outf<<"CurrOrig: "<<currOrig<<endl;
-       //skip the line object
-       if(graph0.returnVertByName(currOrig).returnType()==7)
-       {	outf<<"SKIP IT...." << endl;
-       		continue;}
+	for(i=1; i<=length; i++)
+	{
+		outf<<"Start Get Over Loop"<<endl;
+		currOrig=theOrig.retrieve(i);
+		outf<<"CurrOrig: "<<currOrig<<endl;
+		//skip the line object
+		if(graph0.returnVertByName(currOrig).returnType()==7)
+		{
+			outf<<"SKIP IT...." << endl;
+			continue;
+		}
 
-       theCluster.getContainedChildList(currOrig,in);
-       if(in.returnLen()<2) continue;
+		theCluster.getContainedChildList(currOrig,in);
+		if(in.returnLen()<2) continue;
 
-       type=graph0.returnVertByName(currOrig).returnType();
+		type=graph0.returnVertByName(currOrig).returnType();
 
-       int overLapClusterIndex=1;
-       int availOver=-1, neededOver=0, currOver=0, maxOver;
+		int overLapClusterIndex=1;
+		int availOver=-1, neededOver=0, currOver=0, maxOver;
 
-       while(!testSolverTrees.retrieve(overLapClusterIndex).inOriginalV(currOrig)
-              && overLapClusterIndex<testSolverTrees.returnLen())
-       		outf<<overLapClusterIndex++<<endl;
+		while(!testSolverTrees.retrieve(overLapClusterIndex).inOriginalV(currOrig)
+			&& overLapClusterIndex<testSolverTrees.returnLen())
+				outf<<overLapClusterIndex++<<endl;
 
-       outf<<"overLapClusterIndex: "<<overLapClusterIndex<<endl;
+		outf<<"overLapClusterIndex: "<<overLapClusterIndex<<endl;
 
-       if(overLapClusterIndex<=testSolverTrees.returnLen() && graph0.returnDimen()>=2)
-       {
-             if((testSolverTrees.retrieve(overLapClusterIndex).currAlias==6 &&
-                testSolverTrees.retrieve(overLapClusterIndex).returnType()!=2) ||
-                (testSolverTrees.retrieve(overLapClusterIndex).currAlias==5 &&
-                testSolverTrees.retrieve(overLapClusterIndex).returnType()==2))
-	     {
-		     outf<<"Skipping..."<<endl;
-                     continue;
-	     }
-             else
-             {
-		     switch(type)
-                     {
-
-//                             case 6:neededOver=3;
-//				     break;
-			     case 6:
-			     case 4:
-			     case 0: neededOver=2;
-                                     break;
-
-                             case 1:
-                             case 2: neededOver=3;
-                                     break;
-                             case 3: neededOver=4;
-                                     break;
-                             case 5: neededOver=5;
-                                     break;
-                             case 7: neededOver=6;
-                                     break;
-                     }
-
-
-                     outf << "The current overlapped sub_cluster is: " << endl;
-                     testSolverTrees.retrieve(overLapClusterIndex).output(outf);
-
-		     maxOver = maxOverArray[overLapClusterIndex];
-
-		     //for single vertex
-		     if(testSolverTrees.retrieve(overLapClusterIndex).returnOrigLen()==1
-			&& graph0.returnDimen()==3)
-				neededOver = 3;
-                     currOver=testSolverTrees.retrieve(overLapClusterIndex).currAlias;
-                     availOver=maxOver-currOver;
-
-                     if(type==6 && availOver>=3
-                        && testSolverTrees.retrieve(overLapClusterIndex).returnType()==2)
-                     	neededOver = 3;
-
-      		     outf<<"maxOver:    "<<maxOver<<endl;
-		     outf<<"neededOver: "<<neededOver<<endl;
-		     outf<<"currOver:   "<<currOver<<endl;
-		     outf<<"availOver:  "<<availOver<<endl;
-
-                     if(neededOver<=availOver)
-                     {
-                             testSolverTrees.retrieve(overLapClusterIndex).currAlias+=neededOver;
-                     }
-                     else
-                     {
-                             testSolverTrees.retrieve(overLapClusterIndex).currAlias+=availOver;
-                     }
-             }//else
-       }//if(overLapClusterIndex<=testSolverTrees.returnLen() && graph0.returnDimen()>2)
-
-       outf<<"currOrig: "<<currOrig<<endl;
-       outf<<"type:     "<<type<<endl;
-       for(k=1;k<=testSolverTrees.returnLen();k++)
-             outf<<"CurrAlias "<<k<<": "<<testSolverTrees.retrieve(k).currAlias<<endl;
-
-       for(j=1; j<in.returnLen();j++)
-       {
-          outf<<"Start of inner for loop"<<endl;
-	  clustint1=in.retrieve(j);
-          clustint2=in.retrieve(j+1);
-	  if(child1!=getChildIndexByName(theCluster, clustint1)||
-	      child2!=getChildIndexByName(theCluster, clustint2))
-	      continue;
-          if(clustint1!=withHeldCluster) if(!theClust.hasElem(clustint1)) theClust.append(clustint1);
-          if(clustint2!=withHeldCluster) if(!theClust.hasElem(clustint2)) theClust.append(clustint2);
-          tempCluster1=theCluster.children.retrieve(getChildIndexByName(theCluster, clustint1));
-          tempCluster2=theCluster.children.retrieve(getChildIndexByName(theCluster, clustint2));
-          tempVertex1.setName(currOrig);
-          tempVertex2.setName(currOrig);
-	  outf<<"Right before set value"<<endl;
-          setValueInCluster(graph0, tempCluster1, tempVertex1);
-          setValueInCluster(graph0, tempCluster2, tempVertex2);
-	  outf<<"Right after set value"<<endl;
-          if(aOverlap==0 && clustint1!=withHeldCluster) aOverlap=clustint1;
-          else if(aOverlap==0) aOverlap=clustint2;
-          cluster1=toString(clustint1);
-          cluster2=toString(clustint2);
-          origStr=toString(currOrig);
-          clusterV1="p"+cluster1;
-          clusterV2="q"+cluster1;
-          clusterV3="t"+cluster1;
-          clusterV4="s"+cluster1;
-          clusterV5="f"+cluster1;
-          clusterV6="h"+cluster1;
-          clusterV7="j"+cluster1;
-          clusterV8="k"+cluster1;
-          clusterV9="n"+cluster1;
-
-	  outf<<"THIS IS IN OVERLAP"<<endl;
-	  outf<<tempVertex1<<endl;
-	  outf<<tempVertex2<<endl;
-
-	  bool end1Over=(tempCluster1.returnType()==2 || tempCluster1.returnType()==5);
-	  bool end2Over=(tempCluster2.returnType()==2 || tempCluster2.returnType()==5);
-
-	  if(end1Over)
-	  {
-	    valueName=toString(tempVertex1.returnName()*1000+tempCluster1.returnName());
-	    newStr1a="x"+valueName;
-	    newStr2a="y"+valueName;
-	    newStr3a="z"+valueName;
-	  }
-
-          if(clustint1==withHeldCluster && !end1Over)
-          {
-            newStr1a="("+toString(tempVertex1.returnDegValueByName(0))+")";
-            newStr2a="("+toString(tempVertex1.returnDegValueByName(1))+")";
-            newStr3a="("+toString(tempVertex1.returnDegValueByName(2))+")";
-          }
-
-	  if(clustint1!=withHeldCluster && !end1Over)
-          {
-            if(type<6)
-            {
-              if(!vars.hasElem(clusterV1)) vars.append(clusterV1);
-              if(!vars.hasElem(clusterV2)) vars.append(clusterV2);
-              if(!vars.hasElem(clusterV3)) vars.append(clusterV3);
-              if(!vars.hasElem(clusterV4)) vars.append(clusterV4);
-              newStr1a="(("+toString(tempVertex1.returnDegValueByName(0))+")*"+clusterV3+"-("+toString(tempVertex1.returnDegValueByName(1))+")*"+clusterV4+"+"+clusterV1+")";
-              newStr2a="(("+toString(tempVertex1.returnDegValueByName(1))+")*"+clusterV3+"+("+toString(tempVertex1.returnDegValueByName(0))+")*"+clusterV4+"+"+clusterV2+")";
-              newStr3a="((("+toString(tempVertex1.returnDegValueByName(2))+")*"+clusterV3+"+"+clusterV4+")/(("+toString(tempVertex1.returnDegValueByName(2))+")*"+clusterV4+"+"+clusterV3+"))";
-            }
-            else
-            {
-              if(!vars.hasElem(clusterV1)) vars.append(clusterV1);
-              if(!vars.hasElem(clusterV2)) vars.append(clusterV2);
-              if(!vars.hasElem(clusterV3)) vars.append(clusterV3);
-              if(!vars.hasElem(clusterV4)) vars.append(clusterV4);
-              if(!vars.hasElem(clusterV5)) vars.append(clusterV5);
-              if(!vars.hasElem(clusterV6)) vars.append(clusterV6);
-              if(!vars.hasElem(clusterV7)) vars.append(clusterV7);
-              if(!vars.hasElem(clusterV8)) vars.append(clusterV8);
-              if(!vars.hasElem(clusterV9)) vars.append(clusterV9);
-              repStrb1=toString(tempVertex1.returnDegValueByName(0));
-              repStrb2=toString(tempVertex1.returnDegValueByName(1));
-              repStrb3=toString(tempVertex1.returnDegValueByName(2));
-              newStr1a="(("+repStrb1+"*"+clusterV6+"*"+clusterV8+")+";
-              newStr1a+="("+repStrb2+"*"+clusterV6+"*"+clusterV9+")-";
-              newStr1a+="("+repStrb3+"*"+clusterV7+")+"+clusterV1+")";
-              newStr2a="(("+repStrb1+"*("+clusterV4+"*"+clusterV7+"*"+clusterV8+"-"+clusterV3+"*"+clusterV9+"))+";
-              newStr2a+="("+repStrb2+"*("+clusterV3+"*"+clusterV8+"+"+clusterV4+"*"+clusterV7+"*"+clusterV9+"))+";
-              newStr2a+="("+repStrb3+"*"+clusterV4+"*"+clusterV6+")+"+clusterV2+")";
-              newStr3a="(("+repStrb1+"*("+clusterV4+"*"+clusterV9+"+"+clusterV3+"*"+clusterV7+"*"+clusterV8+"))+";
-              newStr3a+="("+repStrb2+"*(-("+clusterV4+"*"+clusterV8+")+"+clusterV3+"*"+clusterV7+"*"+clusterV9+"))+";
-              newStr3a+="("+repStrb3+"*"+clusterV3+"*"+clusterV6+")+"+clusterV5+")";
-            }
-          }//if(clustint1!=withHeldCluster && !end1Over)
-
-	  outf<<"Between end1 and end2"<<endl;
-
-          clusterV1="p"+cluster2;
-          clusterV2="q"+cluster2;
-          clusterV3="t"+cluster2;
-          clusterV4="s"+cluster2;
-          clusterV5="f"+cluster2;
-          clusterV6="h"+cluster2;
-          clusterV7="j"+cluster2;
-          clusterV8="k"+cluster2;
-          clusterV9="n"+cluster2;
-
-          if(end2Over)
-          {
-	    valueName=toString(tempVertex2.returnName()*1000+tempCluster2.returnName());
-            newStr1b="x"+valueName;
-            newStr2b="y"+valueName;
-            newStr3b="z"+valueName;
-          }
-
-          if(clustint2==withHeldCluster && !end2Over)
-          {
-            newStr1b="("+toString(tempVertex2.returnDegValueByName(0))+")";
-            newStr2b="("+toString(tempVertex2.returnDegValueByName(1))+")";
-            newStr3b="("+toString(tempVertex2.returnDegValueByName(2))+")";
-          }
-	  if(clustint2!=withHeldCluster && !end2Over)
-          {
-            if(type<6)
-            {
-              if(!vars.hasElem(clusterV1)) vars.append(clusterV1);
-              if(!vars.hasElem(clusterV2)) vars.append(clusterV2);
-              if(!vars.hasElem(clusterV3)) vars.append(clusterV3);
-              if(!vars.hasElem(clusterV4)) vars.append(clusterV4);
-              newStr1b="(("+toString(tempVertex2.returnDegValueByName(0))+")*"+clusterV3+"-("+toString(tempVertex2.returnDegValueByName(1))+")*"+clusterV4+"+"+clusterV1+")";
-              newStr2b="(("+toString(tempVertex2.returnDegValueByName(1))+")*"+clusterV3+"+("+toString(tempVertex2.returnDegValueByName(0))+")*"+clusterV4+"+"+clusterV2+")";
-              newStr3b="((("+toString(tempVertex2.returnDegValueByName(2))+")*"+clusterV3+"+"+clusterV4+")/(("+toString(tempVertex2.returnDegValueByName(2))+")*"+clusterV4+"+"+clusterV3+"))";
-            }
-            else
-            {
-              if(!vars.hasElem(clusterV1)) vars.append(clusterV1);
-              if(!vars.hasElem(clusterV2)) vars.append(clusterV2);
-              if(!vars.hasElem(clusterV3)) vars.append(clusterV3);
-              if(!vars.hasElem(clusterV4)) vars.append(clusterV4);
-              if(!vars.hasElem(clusterV5)) vars.append(clusterV5);
-              if(!vars.hasElem(clusterV6)) vars.append(clusterV6);
-              if(!vars.hasElem(clusterV7)) vars.append(clusterV7);
-              if(!vars.hasElem(clusterV8)) vars.append(clusterV8);
-              if(!vars.hasElem(clusterV9)) vars.append(clusterV9);
-              repStrb1=toString(tempVertex2.returnDegValueByName(0));
-              repStrb2=toString(tempVertex2.returnDegValueByName(1));
-              repStrb3=toString(tempVertex2.returnDegValueByName(2));
-              newStr1b="(("+repStrb1+"*"+clusterV6+"*"+clusterV8+")+";
-              newStr1b+="("+repStrb2+"*"+clusterV6+"*"+clusterV9+")-";
-              newStr1b+="("+repStrb3+"*"+clusterV7+")+"+clusterV1+")";
-              newStr2b="(("+repStrb1+"*("+clusterV4+"*"+clusterV7+"*"+clusterV8+"-"+clusterV3+"*"+clusterV9+"))+";
-              newStr2b+="("+repStrb2+"*("+clusterV3+"*"+clusterV8+"+"+clusterV4+"*"+clusterV7+"*"+clusterV9+"))+";
-              newStr2b+="("+repStrb3+"*"+clusterV4+"*"+clusterV6+")+"+clusterV2+")";
-              newStr3b="(("+repStrb1+"*("+clusterV4+"*"+clusterV9+"+"+clusterV3+"*"+clusterV7+"*"+clusterV8+"))+";
-              newStr3b+="("+repStrb2+"*(-("+clusterV4+"*"+clusterV8+")+"+clusterV3+"*"+clusterV7+"*"+clusterV9+"))+";
-              newStr3b+="("+repStrb3+"*"+clusterV3+"*"+clusterV6+")+"+clusterV5+")";
-            }//else
-          }//if(clustint2!=withHeldCluster && !end2Over)
-
-	  outf<<"Before closing switch"<<endl;
-	  List<int> tempList;
-          switch(type)
-          {
-                case 4:
-                case 0:  if(availOver>=1)
-			 {
-				temp+=newStr1a+"="+newStr1b;
-				equationCount++;
-			 }
-			 if(availOver>=2)
-                         {
-				temp+=","+newStr2a+"="+newStr2b;
-                                equationCount++;
-                         }
-                         break;
-                case 1:  if(availOver>=1)
-                         {
-                                temp+=newStr1a+"="+newStr1b;
-                                equationCount++;
-                         }
-                         if(availOver>=2)
-                         {
-			        temp+=","+newStr2a+"="+newStr2b;
-                                equationCount++;
-                         }
-			 if(availOver>=3)
-                         {
-                                temp+=","+newStr3a+"="+newStr3b;
-                                equationCount++;
-                         }
-                         break;
-               case 6:
-
-			theCluster.getContainedChildList(currOrig, tempList);
-			if(tempList.returnLen()>2)
+		if(overLapClusterIndex<=testSolverTrees.returnLen() && graph0.returnDimen()>=2)
+		{
+			if((testSolverTrees.retrieve(overLapClusterIndex).currAlias==6 &&
+				testSolverTrees.retrieve(overLapClusterIndex).returnType()!=2) ||
+				(testSolverTrees.retrieve(overLapClusterIndex).currAlias==5 &&
+				testSolverTrees.retrieve(overLapClusterIndex).returnType()==2))
 			{
-				if(!childrenUsed(currOrig, child1, child2, vUsedList))
-				{
-					temp+=newStr1a+"="+newStr1b;
-					equationCount++;
-					temp+=","+newStr2a+"="+newStr2b;
-			                equationCount++;
-					temp+=","+newStr3a+"="+newStr3b;
-		  	                equationCount++;
-					addUsedChildren(currOrig, child1, child2, vUsedList);
-				}
+				outf<<"Skipping..."<<endl;
+				continue;
 			}
 			else
-		 	{
-			   switch(flagTrees[overLapClusterIndex])
-		 	   {
-		 		case 1:
-		                	 if(availOver>=1)
-					 {
+			{
+				switch(type)
+				{
+					// case 6:neededOver=3; break;
+					case 6:
+					case 4:
+					case 0: neededOver=2; break;
+					case 1:
+					case 2: neededOver=3; break;
+					case 3: neededOver=4; break;
+					case 5: neededOver=5; break;
+					case 7: neededOver=6; break;
+				}
 
+
+				outf << "The current overlapped sub_cluster is: " << endl;
+				testSolverTrees.retrieve(overLapClusterIndex).output(outf);
+
+				maxOver = maxOverArray[overLapClusterIndex];
+
+				//for single vertex
+				if(testSolverTrees.retrieve(overLapClusterIndex).returnOrigLen()==1
+					&& graph0.returnDimen()==3)
+						neededOver = 3;
+				currOver=testSolverTrees.retrieve(overLapClusterIndex).currAlias;
+				availOver=maxOver-currOver;
+
+				if(type==6 && availOver>=3
+					&& testSolverTrees.retrieve(overLapClusterIndex).returnType()==2)
+						neededOver = 3;
+
+				outf<<"maxOver:    "<<maxOver<<endl;
+				outf<<"neededOver: "<<neededOver<<endl;
+				outf<<"currOver:   "<<currOver<<endl;
+				outf<<"availOver:  "<<availOver<<endl;
+
+				if(neededOver<=availOver)
+				{
+					testSolverTrees.retrieve(overLapClusterIndex).currAlias+=neededOver;
+				}
+				else
+				{
+					testSolverTrees.retrieve(overLapClusterIndex).currAlias+=availOver;
+				}
+			}//else
+		}//if(overLapClusterIndex<=testSolverTrees.returnLen() && graph0.returnDimen()>2)
+
+		outf<<"currOrig: "<<currOrig<<endl;
+		outf<<"type:     "<<type<<endl;
+		for(k=1;k<=testSolverTrees.returnLen();k++)
+			outf<<"CurrAlias "<<k<<": "<<testSolverTrees.retrieve(k).currAlias<<endl;
+
+		for(j=1; j<in.returnLen();j++)
+		{
+			outf<<"Start of inner for loop"<<endl;
+			clustint1=in.retrieve(j);
+			clustint2=in.retrieve(j+1);
+			if(child1!=getChildIndexByName(theCluster, clustint1)||
+				child2!=getChildIndexByName(theCluster, clustint2))
+					continue;
+			if(clustint1!=withHeldCluster) if(!theClust.hasElem(clustint1)) theClust.append(clustint1);
+			if(clustint2!=withHeldCluster) if(!theClust.hasElem(clustint2)) theClust.append(clustint2);
+			tempCluster1=theCluster.children.retrieve(getChildIndexByName(theCluster, clustint1));
+			tempCluster2=theCluster.children.retrieve(getChildIndexByName(theCluster, clustint2));
+			tempVertex1.setName(currOrig);
+			tempVertex2.setName(currOrig);
+			outf<<"Right before set value"<<endl;
+			setValueInCluster(graph0, tempCluster1, tempVertex1);
+			setValueInCluster(graph0, tempCluster2, tempVertex2);
+			outf<<"Right after set value"<<endl;
+			if(aOverlap==0 && clustint1!=withHeldCluster) aOverlap=clustint1;
+			else if(aOverlap==0) aOverlap=clustint2;
+			cluster1=toString(clustint1);
+			cluster2=toString(clustint2);
+			origStr=toString(currOrig);
+			clusterV1="p"+cluster1;
+			clusterV2="q"+cluster1;
+			clusterV3="t"+cluster1;
+			clusterV4="s"+cluster1;
+			clusterV5="f"+cluster1;
+			clusterV6="h"+cluster1;
+			clusterV7="j"+cluster1;
+			clusterV8="k"+cluster1;
+			clusterV9="n"+cluster1;
+
+			outf<<"THIS IS IN OVERLAP"<<endl;
+			outf<<tempVertex1<<endl;
+			outf<<tempVertex2<<endl;
+
+			bool end1Over=(tempCluster1.returnType()==2 || tempCluster1.returnType()==5);
+			bool end2Over=(tempCluster2.returnType()==2 || tempCluster2.returnType()==5);
+
+			if(end1Over)
+			{
+				valueName=toString(tempVertex1.returnName()*1000+tempCluster1.returnName());
+				newStr1a="x"+valueName;
+				newStr2a="y"+valueName;
+				newStr3a="z"+valueName;
+			}
+
+			if(clustint1==withHeldCluster && !end1Over)
+			{
+				newStr1a="("+toString(tempVertex1.returnDegValueByName(0))+")";
+				newStr2a="("+toString(tempVertex1.returnDegValueByName(1))+")";
+				newStr3a="("+toString(tempVertex1.returnDegValueByName(2))+")";
+			}
+
+			if(clustint1!=withHeldCluster && !end1Over)
+			{
+				if(type<6)
+				{
+					if(!vars.hasElem(clusterV1)) vars.append(clusterV1);
+					if(!vars.hasElem(clusterV2)) vars.append(clusterV2);
+					if(!vars.hasElem(clusterV3)) vars.append(clusterV3);
+					if(!vars.hasElem(clusterV4)) vars.append(clusterV4);
+					newStr1a="(("+toString(tempVertex1.returnDegValueByName(0))+")*"+clusterV3+"-("+toString(tempVertex1.returnDegValueByName(1))+")*"+clusterV4+"+"+clusterV1+")";
+					newStr2a="(("+toString(tempVertex1.returnDegValueByName(1))+")*"+clusterV3+"+("+toString(tempVertex1.returnDegValueByName(0))+")*"+clusterV4+"+"+clusterV2+")";
+					newStr3a="((("+toString(tempVertex1.returnDegValueByName(2))+")*"+clusterV3+"+"+clusterV4+")/(("+toString(tempVertex1.returnDegValueByName(2))+")*"+clusterV4+"+"+clusterV3+"))";
+				}
+				else
+				{
+					if(!vars.hasElem(clusterV1)) vars.append(clusterV1);
+					if(!vars.hasElem(clusterV2)) vars.append(clusterV2);
+					if(!vars.hasElem(clusterV3)) vars.append(clusterV3);
+					if(!vars.hasElem(clusterV4)) vars.append(clusterV4);
+					if(!vars.hasElem(clusterV5)) vars.append(clusterV5);
+					if(!vars.hasElem(clusterV6)) vars.append(clusterV6);
+					if(!vars.hasElem(clusterV7)) vars.append(clusterV7);
+					if(!vars.hasElem(clusterV8)) vars.append(clusterV8);
+					if(!vars.hasElem(clusterV9)) vars.append(clusterV9);
+					repStrb1=toString(tempVertex1.returnDegValueByName(0));
+					repStrb2=toString(tempVertex1.returnDegValueByName(1));
+					repStrb3=toString(tempVertex1.returnDegValueByName(2));
+					newStr1a="(("+repStrb1+"*"+clusterV6+"*"+clusterV8+")+";
+					newStr1a+="("+repStrb2+"*"+clusterV6+"*"+clusterV9+")-";
+					newStr1a+="("+repStrb3+"*"+clusterV7+")+"+clusterV1+")";
+					newStr2a="(("+repStrb1+"*("+clusterV4+"*"+clusterV7+"*"+clusterV8+"-"+clusterV3+"*"+clusterV9+"))+";
+					newStr2a+="("+repStrb2+"*("+clusterV3+"*"+clusterV8+"+"+clusterV4+"*"+clusterV7+"*"+clusterV9+"))+";
+					newStr2a+="("+repStrb3+"*"+clusterV4+"*"+clusterV6+")+"+clusterV2+")";
+					newStr3a="(("+repStrb1+"*("+clusterV4+"*"+clusterV9+"+"+clusterV3+"*"+clusterV7+"*"+clusterV8+"))+";
+					newStr3a+="("+repStrb2+"*(-("+clusterV4+"*"+clusterV8+")+"+clusterV3+"*"+clusterV7+"*"+clusterV9+"))+";
+					newStr3a+="("+repStrb3+"*"+clusterV3+"*"+clusterV6+")+"+clusterV5+")";
+				}
+			}//if(clustint1!=withHeldCluster && !end1Over)
+
+			outf<<"Between end1 and end2"<<endl;
+
+			clusterV1="p"+cluster2;
+			clusterV2="q"+cluster2;
+			clusterV3="t"+cluster2;
+			clusterV4="s"+cluster2;
+			clusterV5="f"+cluster2;
+			clusterV6="h"+cluster2;
+			clusterV7="j"+cluster2;
+			clusterV8="k"+cluster2;
+			clusterV9="n"+cluster2;
+
+			if(end2Over)
+			{
+				valueName=toString(tempVertex2.returnName()*1000+tempCluster2.returnName());
+				newStr1b="x"+valueName;
+				newStr2b="y"+valueName;
+				newStr3b="z"+valueName;
+			}
+
+			if(clustint2==withHeldCluster && !end2Over)
+			{
+				newStr1b="("+toString(tempVertex2.returnDegValueByName(0))+")";
+				newStr2b="("+toString(tempVertex2.returnDegValueByName(1))+")";
+				newStr3b="("+toString(tempVertex2.returnDegValueByName(2))+")";
+			}
+			if(clustint2!=withHeldCluster && !end2Over)
+			{
+				if(type<6)
+				{
+					if(!vars.hasElem(clusterV1)) vars.append(clusterV1);
+					if(!vars.hasElem(clusterV2)) vars.append(clusterV2);
+					if(!vars.hasElem(clusterV3)) vars.append(clusterV3);
+					if(!vars.hasElem(clusterV4)) vars.append(clusterV4);
+					newStr1b="(("+toString(tempVertex2.returnDegValueByName(0))+")*"+clusterV3+"-("+toString(tempVertex2.returnDegValueByName(1))+")*"+clusterV4+"+"+clusterV1+")";
+					newStr2b="(("+toString(tempVertex2.returnDegValueByName(1))+")*"+clusterV3+"+("+toString(tempVertex2.returnDegValueByName(0))+")*"+clusterV4+"+"+clusterV2+")";
+					newStr3b="((("+toString(tempVertex2.returnDegValueByName(2))+")*"+clusterV3+"+"+clusterV4+")/(("+toString(tempVertex2.returnDegValueByName(2))+")*"+clusterV4+"+"+clusterV3+"))";
+				}
+				else
+				{
+					if(!vars.hasElem(clusterV1)) vars.append(clusterV1);
+					if(!vars.hasElem(clusterV2)) vars.append(clusterV2);
+					if(!vars.hasElem(clusterV3)) vars.append(clusterV3);
+					if(!vars.hasElem(clusterV4)) vars.append(clusterV4);
+					if(!vars.hasElem(clusterV5)) vars.append(clusterV5);
+					if(!vars.hasElem(clusterV6)) vars.append(clusterV6);
+					if(!vars.hasElem(clusterV7)) vars.append(clusterV7);
+					if(!vars.hasElem(clusterV8)) vars.append(clusterV8);
+					if(!vars.hasElem(clusterV9)) vars.append(clusterV9);
+					repStrb1=toString(tempVertex2.returnDegValueByName(0));
+					repStrb2=toString(tempVertex2.returnDegValueByName(1));
+					repStrb3=toString(tempVertex2.returnDegValueByName(2));
+					newStr1b="(("+repStrb1+"*"+clusterV6+"*"+clusterV8+")+";
+					newStr1b+="("+repStrb2+"*"+clusterV6+"*"+clusterV9+")-";
+					newStr1b+="("+repStrb3+"*"+clusterV7+")+"+clusterV1+")";
+					newStr2b="(("+repStrb1+"*("+clusterV4+"*"+clusterV7+"*"+clusterV8+"-"+clusterV3+"*"+clusterV9+"))+";
+					newStr2b+="("+repStrb2+"*("+clusterV3+"*"+clusterV8+"+"+clusterV4+"*"+clusterV7+"*"+clusterV9+"))+";
+					newStr2b+="("+repStrb3+"*"+clusterV4+"*"+clusterV6+")+"+clusterV2+")";
+					newStr3b="(("+repStrb1+"*("+clusterV4+"*"+clusterV9+"+"+clusterV3+"*"+clusterV7+"*"+clusterV8+"))+";
+					newStr3b+="("+repStrb2+"*(-("+clusterV4+"*"+clusterV8+")+"+clusterV3+"*"+clusterV7+"*"+clusterV9+"))+";
+					newStr3b+="("+repStrb3+"*"+clusterV3+"*"+clusterV6+")+"+clusterV5+")";
+				}//else
+			}//if(clustint2!=withHeldCluster && !end2Over)
+
+			outf<<"Before closing switch"<<endl;
+			List<int> tempList;
+			switch(type)
+			{
+				case 4:
+				case 0:
+					if(availOver>=1)
+					{
 						temp+=newStr1a+"="+newStr1b;
 						equationCount++;
-					 }
-					 if(availOver>=2)
-		                         {
+					}
+					if(availOver>=2)
+					{
 						temp+=","+newStr2a+"="+newStr2b;
-		                                equationCount++;
-		                         }
-					 if((testSolverTrees.retrieve(overLapClusterIndex).returnType()==2
-					    || testSolverTrees.retrieve(overLapClusterIndex).returnOrigLen()==1)
-					    && availOver>=3)
-		                         {
+						equationCount++;
+					}
+					break;
+				case 1:
+					if(availOver>=1)
+					{
+						temp+=newStr1a+"="+newStr1b;
+						equationCount++;
+					}
+					if(availOver>=2)
+					{
+						temp+=","+newStr2a+"="+newStr2b;
+						equationCount++;
+					}
+					if(availOver>=3)
+					{
 						temp+=","+newStr3a+"="+newStr3b;
-		                                equationCount++;
-		                         }
-		                         break;
-		 		case 2:
-					 if(testSolverTrees.retrieve(overLapClusterIndex).returnType()==2)
-		                         {
-			                	 if(availOver>=1)
-						 {
+						equationCount++;
+					}
+					break;
+				case 6:
+					theCluster.getContainedChildList(currOrig, tempList);
+					if(tempList.returnLen()>2)
+					{
+						if(!childrenUsed(currOrig, child1, child2, vUsedList))
+						{
 							temp+=newStr1a+"="+newStr1b;
 							equationCount++;
-						 }
-						 if(availOver>=2)
-			                         {
 							temp+=","+newStr2a+"="+newStr2b;
-			                                equationCount++;
-			                         }
-		                         }
-		                         else
-		                         {
-			                	 if(availOver>=1)
-						 {
-
-							temp+=newStr2a+"="+newStr2b;
 							equationCount++;
-						 }
-						 if(availOver>=2)
-			                         {
 							temp+=","+newStr3a+"="+newStr3b;
-			                                equationCount++;
-			                         }
-			                 }
-		                         break;
-		 		case 3:
-		                	 if(availOver>=1)
-					 {
-						temp+=newStr3a+"="+newStr3b;
-						equationCount++;
-					 }
-					 if(availOver>=2)
-		                         {
-						temp+=","+newStr1a+"="+newStr1b;
-		                                equationCount++;
-		                         }
-		                         break;
-		            }//switch
-		            flagTrees[overLapClusterIndex]++;
-                	    if(flagTrees[overLapClusterIndex]==3)
-                	 	flagTrees[overLapClusterIndex] = 1;
-			 }//else for type 6
-                         break;
-                default: temp="";
-                         break;
-          }//switch(type)
-	  outf<<"after switch"<<endl;
-	  if(temp.length() != 0)
-                output+=","+temp;
-          temp="";
-	  outf<<"output at end of inner loop: "<<output<<endl;
-       }//for(j=1; j<in.returnLen();j++)
-       outf<<"clearing in"<<endl;
-       in.makeEmpty();
-       outf<<"End of Get Over loop"<<endl;
-    }//for(i=1; i<=length; i++)
+							equationCount++;
+							addUsedChildren(currOrig, child1, child2, vUsedList);
+						}
+					}
+					else
+					{
+						switch(flagTrees[overLapClusterIndex])
+						{
+							case 1:
+								if(availOver>=1)
+								{
+									temp+=newStr1a+"="+newStr1b;
+									equationCount++;
+								}
+								if(availOver>=2)
+								{
+									temp+=","+newStr2a+"="+newStr2b;
+									equationCount++;
+								}
+								if((testSolverTrees.retrieve(overLapClusterIndex).returnType()==2
+									|| testSolverTrees.retrieve(overLapClusterIndex).returnOrigLen()==1)
+									&& availOver>=3)
+								{
+									temp+=","+newStr3a+"="+newStr3b;
+									equationCount++;
+								}
+								break;
+							case 2:
+								if(testSolverTrees.retrieve(overLapClusterIndex).returnType()==2)
+								{
+									if(availOver>=1)
+									{
+										temp+=newStr1a+"="+newStr1b;
+										equationCount++;
+									}
+									if(availOver>=2)
+									{
+										temp+=","+newStr2a+"="+newStr2b;
+										equationCount++;
+									}
+								}
+								else
+								{
+									if(availOver>=1)
+									{
+										temp+=newStr2a+"="+newStr2b;
+										equationCount++;
+									}
+									if(availOver>=2)
+									{
+										temp+=","+newStr3a+"="+newStr3b;
+										equationCount++;
+									}
+								}
+								break;
+							case 3:
+								if(availOver>=1)
+								{
+									temp+=newStr3a+"="+newStr3b;
+									equationCount++;
+								}
+								if(availOver>=2)
+								{
+									temp+=","+newStr1a+"="+newStr1b;
+									equationCount++;
+								}
+								break;
+						}//switch
+						flagTrees[overLapClusterIndex]++;
+						if(flagTrees[overLapClusterIndex]==3)
+							flagTrees[overLapClusterIndex] = 1;
+					}//else for type 6
+					break;
+				default:
+					temp="";
+					break;
+			}//switch(type)
+			outf<<"after switch"<<endl;
+			if(temp.length() != 0)
+				output+=","+temp;
+			temp="";
+			outf<<"output at end of inner loop: "<<output<<endl;
+		}//for(j=1; j<in.returnLen();j++)
+		outf<<"clearing in"<<endl;
+		in.makeEmpty();
+		outf<<"End of Get Over loop"<<endl;
+	}//for(i=1; i<=length; i++)
 
-    if(equationCount==0) output.erase(0,1);
+	if(equationCount==0) output.erase(0,1);
 
-    return output;
+	return output;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //get the number of the extra constraints between these 2 children
 int getExtraNum(Graph &graph0, Cluster &theCluster, List<int> &overlappedList, int ch1, int ch2)
@@ -5540,7 +5554,7 @@ string getOverlapConstraint(Graph &graph0, Cluster &theCluster, int totalExtra)
 		{
    			List<int> overlappedList;
 
-    			getOverlapList(graph0, theCluster, overlappedList, i, j);
+    			theCluster.getOverlapList(graph0, overlappedList, i, j);
 			outf << "child1:" << i << "    child2: " << j << endl;
 		        outf<<"Overlapped Vertices: ";
     			for(int k=1;k<=overlappedList.returnLen();k++)
@@ -8306,49 +8320,49 @@ int buildGraphFromList(Graph &newGraph, Graph &graph0, List<int> &vertList)
 	return weight;
 }
 
-void getOverlapList(Graph graph0, Cluster &theCluster, List<int> &outputList,
-  int child1=0, int child2=0)
-{
-  List<int> containedList;
+// void getOverlapList(Graph graph0, Cluster &theCluster, List<int> &outputList,
+//   int child1=0, int child2=0)
+// {
+//   List<int> containedList;
 
-  int i,currOrig;
+//   int i,currOrig;
 
-  outputList.makeEmpty();
+//   outputList.makeEmpty();
 
-  for(i=1;i<=theCluster.returnOrigLen();i++)
-  {
-    containedList.makeEmpty();
-    currOrig=theCluster.returnOrigV(i);
-    theCluster.getContainedChildList(currOrig,containedList);
-    if(containedList.returnLen()>=2)
-    {
-      if(child1==0 && child2==0)
-        outputList.append(currOrig);
-      else
-      {
-        int child1Name = theCluster.children.retrieve(child1).returnName();
-        int child2Name = theCluster.children.retrieve(child2).returnName();
-        if(containedList.hasElem(child1Name) && containedList.hasElem(child2Name))
-          outputList.append(currOrig);
-      }
-    }
-  }
-  //check the incident part
-  for(i=1; i<=theCluster.returnOrigLen(); i++)
-  {
-    int v1 = theCluster.returnOrig().retrieve(i);
-    if(!outputList.hasElem(v1))
-    {
-      for(int j=1; j<=outputList.returnLen(); j++)
-      {
-        int v2 = outputList.retrieve(j);
-        cout << "LLOOOO" << graph0.returnEdgeByEnds(v1, v2) << endl;
-        if(graph0.returnEdgeByEnds(v1, v2).returnType()==1)
-          outputList.append(v1);
-      }
-    }
-  }
-}
+//   for(i=1;i<=theCluster.returnOrigLen();i++)
+//   {
+//     containedList.makeEmpty();
+//     currOrig=theCluster.returnOrigV(i);
+//     theCluster.getContainedChildList(currOrig,containedList);
+//     if(containedList.returnLen()>=2)
+//     {
+//       if(child1==0 && child2==0)
+//         outputList.append(currOrig);
+//       else
+//       {
+//         int child1Name = theCluster.children.retrieve(child1).returnName();
+//         int child2Name = theCluster.children.retrieve(child2).returnName();
+//         if(containedList.hasElem(child1Name) && containedList.hasElem(child2Name))
+//           outputList.append(currOrig);
+//       }
+//     }
+//   }
+//   //check the incident part
+//   for(i=1; i<=theCluster.returnOrigLen(); i++)
+//   {
+//     int v1 = theCluster.returnOrig().retrieve(i);
+//     if(!outputList.hasElem(v1))
+//     {
+//       for(int j=1; j<=outputList.returnLen(); j++)
+//       {
+//         int v2 = outputList.retrieve(j);
+//         cout << "LLOOOO" << graph0.returnEdgeByEnds(v1, v2) << endl;
+//         if(graph0.returnEdgeByEnds(v1, v2).returnType()==1)
+//           outputList.append(v1);
+//       }
+//     }
+//   }
+// }
 
 void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inputTheInts, jdouble* inputDouble, jchar* inputChar)
 {
@@ -8362,7 +8376,7 @@ void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inpu
    ofstream testFile1, testFile2;
 
 
-   copyG(graph1, gGraph1);
+   graph1.copyInto(gGraph1);
 
 	ofstream outf;
 //	outf.open("solver.out", ios::app);

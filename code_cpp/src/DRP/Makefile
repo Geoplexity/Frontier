@@ -9,8 +9,8 @@ AR=ar r
 
 # GDS
 MODULE = DRP
-_DEPS  = Cluster_Print.hpp Group.hpp Cluster_Get.hpp Dist_Edge_Flow_Method.hpp \
-	Dist_Methods.hpp Dense_Algo.hpp
+_DEPS  = ../GDS/GDS.hpp Cluster_Print.hpp Group.hpp Cluster_Get.hpp \
+	Dist_Edge_Flow_Method.hpp Dist_Methods.hpp Dense_Algo.hpp
 _OBJ   = Group.o Cluster_Get.o Dist_Edge_Flow_Method.o \
 	Dist_Methods.o Dense_Algo.o
 

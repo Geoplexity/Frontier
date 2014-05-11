@@ -11,8 +11,9 @@
 #include "../GDS/GDS.hpp"
 
 
-// copy a graph and return K value
-int copyG(Graph &g0, Graph &g1);
+// moved into GDS/Graph.hpp as a method
+// // copy a graph and return K value
+// int copyG(Graph &g0, Graph &g1);
 
 
 
@@ -37,10 +38,11 @@ int extension(Graph &F, Graph &graph0, bool firstTime, int groupID,
 
 
 
-//After distribute has been run, Graph F contains vertices labeled for the creation of a new cluster
-//this method isolates those vertices, performs any reductions to the interior vertices and edges
-//as necessary, and creates a new Cluster object, returning a pointer to it
-//for more on the specifics of this reduction process, see attached paper documentation
+// After distribute has been run, Graph F contains vertices labeled for the
+// creation of a new cluster this method isolates those vertices, performs any
+// reductions to the interior vertices and edges as necessary, and creates a
+// new Cluster object, returning a pointer to it for more on the specifics of
+// his reduction process, see attached paper documentation
 Cluster * getCluster(Graph &F, Graph &graph0);
 
 
