@@ -7,8 +7,6 @@
 
 // Things that shouldn't be in UTU, maybe...
 
-// For getGroups
-#include "Group.hpp"
 // For printForest
 #include "Cluster_Print.hpp"
 

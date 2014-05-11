@@ -3,6 +3,8 @@
 
 // #include "../../ext/JNI/jni.h"
 #include "utuJava.h"
+#include "Group.hpp"
+#include "makeGraphFromInput.hpp"
 
 #include "../GDS/GDS.hpp"
 #include "../DRP/DRP.hpp"
@@ -10,10 +12,24 @@
 #include "../ESM/ESM.hpp"
 #include "../ESM/mfaTree.hpp"
 
+
+namespace input_flags {
+	const int
+		NORMAL_SOLUTION   = 0,
+		CHANGE_CONSTRAINT = 3,
+		ADD_CONSTRAINT    = 4,
+		DEL_CONSTRAINT    = 5,
+		ADD_DECOMP_TREE   = 100, // unimplemented
+		ADD_VERTEX_OBJECT = 100; // unimplemented
+}
+
+using namespace input_flags;
+
 the_Tree Tree;
 int treeFlag;
 
-JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj, jintArray arrInt, jdoubleArray arrDbl, jcharArray arrChar)
+JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj,
+	jintArray arrInt, jdoubleArray arrDbl, jcharArray arrChar)
 {
 	std::ofstream outf("utuc.out", std::ios::app);
 	outf<<"OPEN UTU"<<std::endl;
@@ -21,17 +37,14 @@ JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj, jintArray arr
 	// Get int and double arrays from Java
 	jsize intLen = env->GetArrayLength(arrInt);
 	jint *dataInt = env->GetIntArrayElements(arrInt, 0);
-
 	outf<<"INTS"<<std::endl;
 
 	jsize dblLen = env->GetArrayLength(arrDbl);
 	jdouble *dataDouble = env->GetDoubleArrayElements(arrDbl, 0);
-
 	outf<<"DOUBLES"<<std::endl;
 
 	jsize strLen = env->GetArrayLength(arrChar);
 	jchar *dataChar = env->GetCharArrayElements(arrChar, 0);
-
 	outf<<"CHARS"<<std::endl;
 
 	//   const char* equ = env->GetStringUTFChars(equations, NULL);
@@ -89,7 +102,8 @@ JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj, jintArray arr
 		//     break;
 		case 6:
 		case 7:
-		case 0:         // Initialize graph0 and DR_Trees based on input file (utu.bin or utu.txt)
+		case NORMAL_SOLUTION:
+			// Initialize graph0 and DR_Trees based on input file (utu.bin or utu.txt)
 			startI=2;
 			startF=0;
 
@@ -97,7 +111,7 @@ JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj, jintArray arr
 			outf << "Tree Flag in utuC.cpp: " << treeFlag << std::endl;
 			Tree.build_Tree(treeFlag); //build the Tree here
 
-			startGroup=graph0.sketchInput(startI, dataInt, startF, dataDouble);
+			startGroup=sketchInput(graph0, startI, dataInt, startF, dataDouble);
 
 			outf<<"StartGroup: "<<startGroup<<std::endl;
 
@@ -146,7 +160,7 @@ JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj, jintArray arr
 
 			break;
 
-		case 3:
+		case CHANGE_CONSTRAINT:
 			startI=2;
 			startF=1;
 
@@ -173,7 +187,7 @@ JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj, jintArray arr
 			dataInt[0]=0;
 			break;
 
-		case 4:
+		case ADD_CONSTRAINT:
 			outf<<"Start Add"<<std::endl;
 			startI=2;
 			startF=1;
@@ -235,7 +249,7 @@ JNIEXPORT void JNICALL Java_utuJava_utuC(JNIEnv *env, jobject obj, jintArray arr
 
 			break;
 
-		case 5:
+		case DEL_CONSTRAINT:
 			startI=2;
 			startF=1;
 			loadState(graph1, graph0, SolverTrees, startI, dataInt, startF, dataDouble, dataChar);

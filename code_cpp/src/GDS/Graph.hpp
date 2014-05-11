@@ -1,7 +1,7 @@
 #ifndef GRAPH_HPP
 #define GRAPH_HPP
 
-#include "../../ext/JNI/jni.h"
+// #include "../../ext/JNI/jni.h"
 
 #include "List.hpp"
 #include "Vertex.hpp"
@@ -16,17 +16,24 @@ const int K_FOR_3D = 7;
 class Graph
 {
 private:
-   int dimension;       // dimension=2 or 3
-   int NumVert;         // # of vertices
-   int NumEdge;         // # of edges
    int depth;           // depth of the largest cluster in the graph
-   List<Vertex> vertices;   // list of the vertices in the graph
-   List<Edge> edges;        // list of the edges in the graph
 
    //see separate pseudocode and paper documentation of explanation
    void augment(Vertex *, Edge *);
 
 public:
+   // DO NOT WANT TO LEAVES THESE PUBLIC
+   int NumVert;         // # of vertices
+   List<Vertex> vertices;   // list of the vertices in the graph
+
+   int NumEdge;         // # of edges
+   List<Edge> edges;        // list of the edges in the graph
+
+   int dimension;       // dimension=2 or 3
+
+
+
+
 
    //constructor
    Graph() { dimension=3; NumVert=0; NumEdge=0; depth=0; }
@@ -108,8 +115,8 @@ public:
 
 
 
-   // reads data from the arrays sent by the sketcher
-   int sketchInput(int &idx, jint *inputData, int &indxDbl, jdouble *dbleData); //from sketch to graph
+   // // reads data from the arrays sent by the sketcher
+   // int sketchInput(int &idx, jint *inputData, int &indxDbl, jdouble *dbleData); //from sketch to graph
 
 
 
