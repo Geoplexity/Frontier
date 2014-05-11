@@ -5,8 +5,7 @@
 #include "utuJava.h"
 
 #include "../GDS/GDS.hpp"
-
-#include "../DRP/Dense_Algo.hpp"
+#include "../DRP/DRP.hpp"
 
 #include "../ESM/ESM.hpp"
 #include "../ESM/mfaTree.hpp"

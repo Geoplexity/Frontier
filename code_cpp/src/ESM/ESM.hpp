@@ -79,7 +79,7 @@ int getChildIndexByName(Cluster &theCluster, int vName);
 int getChildNameWithVertex(Cluster &theCluster, int theV);
 bool inOriginalV(int Name, Cluster &theCluster);
 void setValue(Vertex &theVertex, int index, float theValue);
-void getContainedChildList(Cluster &theCluster, int vName, List<int> &theList);
+// void getContainedChildList(Cluster &theCluster, int vName, List<int> &theList);
 void setValue(Cluster &theCluster, int ID, float theValue, int index);
 int getFreeDegIndex(char keyChar, Vertex &theVertex);
 bool resetFinByClusterName(Cluster &theCluster, int name);
@@ -193,5 +193,10 @@ void outputDRDAGToArray(List<Cluster> &theCluster, int& index, int*& theInts, bo
 void treeToArray(Node *Root, int*& theInts);
 Node* readTreeFromArray(int*& start, int* theInts);
 */
+
+//Things in UTU
+bool checkEdge(Edge &theEdge, Graph &graph0, List<Cluster> &SolverTrees);
+void deleteClusterWithEdge(Graph &graph0, List<Cluster> &SolverTrees, Edge &theEdge);
+void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inputTheInts, jdouble* inputDouble, jchar* inputChar);
 
 #endif

@@ -149,7 +149,7 @@ public:
 	}
 
 	Vertex & returnCore() {  return core; }
-	int returnDepth() {return core.returnDepth();}   
+	int returnDepth() {return core.returnDepth();}
 	int returnType() { return type; }
 	int returnName() {return core.returnName(); }
 	int returnGroup() { return group; }
@@ -197,6 +197,56 @@ public:
 
 	// stream output
 	void output(std::ostream&);
+
+
+
+
+	// came from ESM originally
+	//returns true if Name is a child of theCluster
+	bool inOriginalV(int Name)
+	{
+	    List<int> theOrig;
+
+	    theOrig=this->returnOrig();
+
+	    if (theOrig.hasElem(Name)) return true;
+
+	    return false;
+	}
+
+	//returns the ID of the first immediate child of theCluster to contain the given original vertex ID theV
+	int getChildNameWithVertex(int theV)
+	{
+
+	    int length, i;
+	    List<int> theOrig;
+
+	    length=this->children.returnLen();
+
+	    for(i=1;i<=length;i++)
+	    {
+	       if(inOriginalV(theV))
+	       {
+	          return this->children.retrieve(i).returnName();
+	       }
+	    }
+	    return -1;
+
+	}
+
+	//returns in theList, the names of all the children in theCluster that contain
+	//vName as an original Vertex
+	void getContainedChildList(int vName, List<int> &theList)
+	{
+	    List<int> output;
+	    int i, length;
+
+	    theList.makeEmpty();
+	    length=this->children.returnLen();
+	    for(i=1; i<=length; i++)
+	       if(this->children.retrieve(i).inOriginalV(vName))
+	         theList.append(this->children.retrieve(i).returnName());
+	}
 };
 
 

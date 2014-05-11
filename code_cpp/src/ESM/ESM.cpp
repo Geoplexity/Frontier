@@ -835,37 +835,37 @@ int getChildIndexByName(Cluster &theCluster, int vName)
     return -1;
 }
 
-//returns true if Name is a clild of theCluster
-bool inOriginalV(int Name, Cluster &theCluster)
-{
-    List<int> theOrig;
+// //returns true if Name is a clild of theCluster
+// bool inOriginalV(int Name, Cluster &theCluster)
+// {
+//     List<int> theOrig;
 
-    theOrig=theCluster.returnOrig();
+//     theOrig=theCluster.returnOrig();
 
-    if (theOrig.hasElem(Name)) return true;
+//     if (theOrig.hasElem(Name)) return true;
 
-    return false;
-}
+//     return false;
+// }
 
-//returns the ID of the first immediate child of theCluster to contain the given original vertex ID theV
-int getChildNameWithVertex(Cluster &theCluster, int theV)
-{
+// //returns the ID of the first immediate child of theCluster to contain the given original vertex ID theV
+// int getChildNameWithVertex(Cluster &theCluster, int theV)
+// {
 
-    int length, i;
-    List<int> theOrig;
+//     int length, i;
+//     List<int> theOrig;
 
-    length=theCluster.children.returnLen();
+//     length=theCluster.children.returnLen();
 
-    for(i=1;i<=length;i++)
-    {
-       if(inOriginalV(theV,theCluster.children.retrieve(i)))
-       {
-          return theCluster.children.retrieve(i).returnName();
-       }
-    }
-    return -1;
+//     for(i=1;i<=length;i++)
+//     {
+//        if(inOriginalV(theV,theCluster.children.retrieve(i)))
+//        {
+//           return theCluster.children.retrieve(i).returnName();
+//        }
+//     }
+//     return -1;
 
-}
+// }
 
 //rotates the object stored in v0, and rotates using the rotation matrix stored in theCluster
 void rotate(Cluster &theCluster, Vertex &v0)
@@ -1076,7 +1076,7 @@ void setValueInCluster(Graph &graph0, Cluster &theCluster, Vertex &theVertex, in
    else
    {
 	outf << "in else" << endl;
-     childIndex=getChildIndexByName(theCluster, getChildNameWithVertex(theCluster, theVertex.returnName()));
+     childIndex=getChildIndexByName(theCluster, theCluster.getChildNameWithVertex(theVertex.returnName()));
 	outf << "childIndex is: " << childIndex << endl;
      //theCluster.children.retrieve(childIndex).setToCluster(theCluster);
      setValueInCluster(graph0, theCluster.children.retrieve(childIndex), theVertex, location+1);
@@ -1151,7 +1151,7 @@ void generateOutput(Graph &graph0, Cluster &theCluster, ostream &outfile, bool p
    {
 
       currVert=graph0.returnVertByIndex(i);
-      if(inOriginalV(currVert.returnName(),theCluster))
+      if(theCluster.inOriginalV(currVert.returnName()))
       {
         outfile<<currVert.returnName()<<endl;
         x=currVert.returnDegValueByName(0);
@@ -1232,7 +1232,7 @@ void generateOutputToArray(Graph &graph0, Cluster &theCluster, bool printNum)
       else cout<<"Ignore=false for vertex="<<currVert.returnName()<<endl;
 
       if(currVert.returnIgnore()) continue;
-      if(inOriginalV(currVert.returnName(),theCluster))
+      if(theCluster.inOriginalV(currVert.returnName()))
       {
 	outCount++;
         inputInts[currPosI++]=currVert.returnName();
@@ -1552,7 +1552,7 @@ bool isIdentical(Graph &graph0, Cluster &theCluster, List<int> &overlappedList, 
 		vName = overlappedList.retrieve(i);
 		outf << " we are checking: " << vName << endl;
 
-		getContainedChildList(theCluster, vName, tempList);
+		theCluster.getContainedChildList(vName, tempList);
 		if(tempList.returnLen()>2) continue;
 
 		clustint1 = tempList.retrieve(1);
@@ -3670,8 +3670,8 @@ int getEdgeCode(Edge &theEdge, Cluster &theCluster)
 
     bool inOrig1,inOrig2;
 
-    inOrig1=inOriginalV(theEdge.returnEnd1(),theCluster);
-    inOrig2=inOriginalV(theEdge.returnEnd2(),theCluster);
+    inOrig1=theCluster.inOriginalV(theEdge.returnEnd1());
+    inOrig2=theCluster.inOriginalV(theEdge.returnEnd2());
 
     if((!inOrig1) || (!inOrig2))
     {
@@ -3682,9 +3682,9 @@ int getEdgeCode(Edge &theEdge, Cluster &theCluster)
 
     for(i=1;i<=length;i++)
     {
-       if(inOriginalV(theEdge.returnEnd1(), (theCluster.children).retrieve(i)))
+       if((theCluster.children).retrieve(i).inOriginalV(theEdge.returnEnd1()))
          childrenWithEnd1.append(i);
-       if(inOriginalV(theEdge.returnEnd2(), (theCluster.children).retrieve(i)))
+       if((theCluster.children).retrieve(i).inOriginalV(theEdge.returnEnd2()))
          childrenWithEnd2.append(i);
     }
 
@@ -3721,162 +3721,163 @@ int getEdgeCode(Edge &theEdge, Cluster &theCluster)
 //returns  1 if the edge is between two clusters ch1 and ch2
 int getEdgeCode(Edge &theEdge, Cluster &theCluster, int ch1, int ch2)
 {
-    int i, length, childLength, origLength;
-    bool isEnd;
-    List<int> childrenWithEnd1, childrenWithEnd2;
+  int i, length, childLength, origLength;
+  bool isEnd;
+  List<int> childrenWithEnd1, childrenWithEnd2;
 
-	ofstream outf;
-//    outf.open("getEdgeCode.out", ios::app);
-	outf << "The beginning+++++++++++++" << endl;
-	outf << "The edge is: " << theEdge << endl;
-	outf << "The cluster is: " << endl;
-	theCluster.output(outf);
+  ofstream outf;
+  //    outf.open("getEdgeCode.out", ios::app);
+  outf << "The beginning+++++++++++++" << endl;
+  outf << "The edge is: " << theEdge << endl;
+  outf << "The cluster is: " << endl;
+  theCluster.output(outf);
 
-    childrenWithEnd1.makeEmpty();
-    childrenWithEnd2.makeEmpty();
+  childrenWithEnd1.makeEmpty();
+  childrenWithEnd2.makeEmpty();
 
-    childLength=(theCluster.children).returnLen();
-    origLength=theCluster.returnOrigLen();
+  childLength=(theCluster.children).returnLen();
+  origLength=theCluster.returnOrigLen();
 
-   	outf << "childLenth = " << childLength << endl;
- 	outf << "origLength = " << origLength << endl;
+  outf << "childLenth = " << childLength << endl;
+  outf << "origLength = " << origLength << endl;
 
-    isEnd=(childLength==origLength);
+  isEnd=(childLength==origLength);
 
-    length=(theCluster.children).returnLen();
+  length=(theCluster.children).returnLen();
 
-    if(length==0)
-	 return -1;
+  if(length==0)
+    return -1;
 
-    bool inOrig1,inOrig2;
+  bool inOrig1,inOrig2;
 
-    inOrig1=inOriginalV(theEdge.returnEnd1(),theCluster);
-    inOrig2=inOriginalV(theEdge.returnEnd2(),theCluster);
+  inOrig1=theCluster.inOriginalV(theEdge.returnEnd1());
+  inOrig2=theCluster.inOriginalV(theEdge.returnEnd2());
 
-    if((!inOrig1) || (!inOrig2))
+  if((!inOrig1) || (!inOrig2))
+  {
+    return -1;
+  }
+
+  if(isEnd) return 0;
+
+  for(i=1;i<=length;i++)
+  {
+    if((theCluster.children).retrieve(i).inOriginalV(theEdge.returnEnd1()))
+      childrenWithEnd1.append(i);
+    if((theCluster.children).retrieve(i).inOriginalV(theEdge.returnEnd2()))
+      childrenWithEnd2.append(i);
+  }
+
+  outf <<endl;
+  outf<<"Before End1 List: ";
+  for(i=1;i<=childrenWithEnd1.returnLen();i++)
+    outf<<childrenWithEnd1.retrieve(i);
+
+  outf<<endl;
+  outf<<"Before End2 List: ";
+  for(i=1;i<=childrenWithEnd2.returnLen();i++)
+    outf<<childrenWithEnd2.retrieve(i);
+  outf<<endl;
+
+  for(i=1;i<=childLength;i++)
+  {
+    //the edge is contained in one child cluster, return 0
+    if(childrenWithEnd1.hasElem(i) && childrenWithEnd2.hasElem(i))
     {
-      	return -1;
+      childrenWithEnd1.deleteElem(i);
+      childrenWithEnd2.deleteElem(i);
+      outf << "the common child cluster index is: " << i << endl;
+
+      return 0;
     }
+  }
+  //The edge is between ch1 and ch2
+  if((childrenWithEnd1.hasElem(ch1) && childrenWithEnd2.hasElem(ch2))
+    || (childrenWithEnd1.hasElem(ch2) && childrenWithEnd2.hasElem(ch1)))
+    return 1;
 
-    if(isEnd) return 0;
-
-    for(i=1;i<=length;i++)
-    {
-       if(inOriginalV(theEdge.returnEnd1(), (theCluster.children).retrieve(i)))
-         childrenWithEnd1.append(i);
-       if(inOriginalV(theEdge.returnEnd2(), (theCluster.children).retrieve(i)))
-         childrenWithEnd2.append(i);
-    }
-
-    outf <<endl;
-    outf<<"Before End1 List: ";
-    for(i=1;i<=childrenWithEnd1.returnLen();i++)
-	outf<<childrenWithEnd1.retrieve(i);
-
-    outf<<endl;
-    outf<<"Before End2 List: ";
-    for(i=1;i<=childrenWithEnd2.returnLen();i++)
-        outf<<childrenWithEnd2.retrieve(i);
-    outf<<endl;
-
-    for(i=1;i<=childLength;i++)
-    {
-    	//the edge is contained in one child cluster, return 0
-	if(childrenWithEnd1.hasElem(i) && childrenWithEnd2.hasElem(i))
-	{
-		childrenWithEnd1.deleteElem(i);
-		childrenWithEnd2.deleteElem(i);
-		outf << "the common child cluster index is: " << i << endl;
-
-			return 0;
-	}
-    }
-    //The edge is between ch1 and ch2
-    if((childrenWithEnd1.hasElem(ch1) && childrenWithEnd2.hasElem(ch2))
-	|| (childrenWithEnd1.hasElem(ch2) && childrenWithEnd2.hasElem(ch1)))
-	return 1;
-
-    return 2;
+  return 2;
 
 }
 
-//When the DR-Planner needs to know whether an edge is between or in a cluster, the case
-//where it is in must take precedence over the case where it is between.  Of course,
-//the solver needs the opposite, thus two methods.
-int getEdgeCodeDRPlanner(Edge &theEdge, Cluster &theCluster)
-{
-    int i, length, childLength, origLength;
-    bool isEnd;
-    List<int> childrenWithEnd1, childrenWithEnd2;
+// // When the DRP needs to know whether an edge is between or within a cluster,
+// // the case where it is within must take precedence over the case where it is
+// // between.  Of course, the solver needs the opposite, thus two methods.
+// int getEdgeCodeDRPlanner(Edge &theEdge, Cluster &theCluster)
+// {
+//   int i, length, childLength, origLength;
+//   bool isEnd;
+//   List<int> childrenWithEnd1, childrenWithEnd2;
 
-    ofstream outf;
-//    outf.open("getEdgeCodeDRPlanner.out", ios::app);
-    outf << "The beginning:" << endl;
-    outf << "The edge is:" << theEdge << endl;
-    outf << "The cluster is:" << endl;
-    theCluster.output(outf);
+//   ofstream outf;
+//   //    outf.open("getEdgeCodeDRPlanner.out", ios::app);
+//   outf << "The beginning:" << endl;
+//   outf << "The edge is:" << theEdge << endl;
+//   outf << "The cluster is:" << endl;
+//   theCluster.output(outf);
 
-    childrenWithEnd1.makeEmpty();
-    childrenWithEnd2.makeEmpty();
+//   childrenWithEnd1.makeEmpty();
+//   childrenWithEnd2.makeEmpty();
 
-    childLength=(theCluster.children).returnLen();
-    origLength=theCluster.returnOrigLen();
+//   childLength=(theCluster.children).returnLen();
+//   origLength=theCluster.returnOrigLen();
 
-    isEnd=(childLength==origLength);
+//   isEnd=(childLength==origLength);
 
-    length=(theCluster.children).returnLen();
-    outf << "length = " << length << endl;
-    if(length==0)
-         return -1;
+//   length=(theCluster.children).returnLen();
+//   outf << "length = " << length << endl;
+//   if(length==0)
+//     return -1;
 
-    bool inOrig1,inOrig2;
+//   bool inOrig1,inOrig2;
 
-    inOrig1=inOriginalV(theEdge.returnEnd1(),theCluster);
-    inOrig2=inOriginalV(theEdge.returnEnd2(),theCluster);
-	outf << "inorig1 = " << inOrig1 << "    inOrig2 = " << inOrig2 << endl;
+//   inOrig1=theCluster.inOriginalV(theEdge.returnEnd1());
+//   inOrig2=theCluster.inOriginalV(theEdge.returnEnd2());
+//   outf << "inorig1 = " << inOrig1 << "    inOrig2 = " << inOrig2 << endl;
 
-    if((!inOrig1) || (!inOrig2))
-    {
-        return -1;
-    }
+//   if((!inOrig1) || (!inOrig2))
+//   {
+//     return -1;
+//   }
 
-    if(isEnd) return 0;
+//   if(isEnd) return 0;
 
-    for(i=1;i<=length;i++)
-    {
-       if(inOriginalV(theEdge.returnEnd1(), (theCluster.children).retrieve(i)))
-         childrenWithEnd1.append(i);
-       if(inOriginalV(theEdge.returnEnd2(), (theCluster.children).retrieve(i)))
-         childrenWithEnd2.append(i);
-    }
+//   for(i=1;i<=length;i++)
+//   {
+//     if((theCluster.children).retrieve(i).inOriginalV(theEdge.returnEnd1()))
+//       childrenWithEnd1.append(i);
+//     if((theCluster.children).retrieve(i).inOriginalV(theEdge.returnEnd2()))
+//       childrenWithEnd2.append(i);
+//   }
 
-    cout<<endl;
-    cout<<"End1 List: ";
-    for(i=1;i<=childrenWithEnd1.returnLen();i++)
-        cout<<childrenWithEnd1.retrieve(i);
+//   cout<<endl;
+//   cout<<"End1 List: ";
+//   for(i=1;i<=childrenWithEnd1.returnLen();i++)
+//     cout<<childrenWithEnd1.retrieve(i);
 
-    cout<<endl;
-    cout<<"End2 List: ";
-    for(i=1;i<=childrenWithEnd2.returnLen();i++)
-        cout<<childrenWithEnd2.retrieve(i);
-    cout<<endl;
+//   cout<<endl;
+//   cout<<"End2 List: ";
+//   for(i=1;i<=childrenWithEnd2.returnLen();i++)
+//     cout<<childrenWithEnd2.retrieve(i);
+//   cout<<endl;
 
-/*
-    for(i=1;i<=childrenWithEnd1.returnLen();i++)
-       if(childrenWithEnd2.hasElem(childrenWithEnd1.retrieve(i))) return -1;
-*/
+//   /*
+//   for(i=1;i<=childrenWithEnd1.returnLen();i++)
+//   if(childrenWithEnd2.hasElem(childrenWithEnd1.retrieve(i))) return -1;
+//   */
 
-    for(i=1;i<=childLength;i++)
-        if(childrenWithEnd1.hasElem(i) && childrenWithEnd2.hasElem(i))
-        {
-                childrenWithEnd1.deleteElem(i);
-                childrenWithEnd2.deleteElem(i);
-        }
+//   for(i=1;i<=childLength;i++)
+//     if(childrenWithEnd1.hasElem(i) && childrenWithEnd2.hasElem(i))
+//     {
+//       childrenWithEnd1.deleteElem(i);
+//       childrenWithEnd2.deleteElem(i);
+//     }
 
-    if(childrenWithEnd1.returnLen()!=0 && childrenWithEnd2.returnLen()!=0) return 1;
-    else return 0;
+//   if(childrenWithEnd1.returnLen()!=0 && childrenWithEnd2.returnLen()!=0)
+//     return 1;
+//   else return 0;
 
-}
+// }
 
 /* switchString takes an string as input then replaces all of the variables from a given cluster
    with an expression for that variable times the 2D rotation matrix.
@@ -4264,8 +4265,8 @@ string getEquationBetweenClusters(Graph& graph0, Edge &theEdge, Cluster &theClus
           case 8: outString=getAngle3DEQ(vEnd1,vEnd2,theEdge);
 	          break;
     }
-    end1C=getChildNameWithVertex(theCluster, v1Name);
-    end2C=getChildNameWithVertex(theCluster, v2Name);
+    end1C=theCluster.getChildNameWithVertex(v1Name);
+    end2C=theCluster.getChildNameWithVertex(v2Name);
     setValueInCluster(graph0,theCluster.children.retrieve(getChildIndexByName(theCluster, end1C)), vEnd1);
     setValueInCluster(graph0,theCluster.children.retrieve(getChildIndexByName(theCluster, end2C)), vEnd2);
     if (end1C==-1 || end2C==-1) return "";
@@ -4694,19 +4695,19 @@ string getEquation(Graph &graph0, Cluster &theCluster, ostream &inputFile)
 }
 
 
-//returns in theList, the names of all the children in theCluster that contain
-//vName as an original Vertex
-void getContainedChildList(Cluster &theCluster, int vName, List<int> &theList)
-{
-    List<int> output;
-    int i, length;
+// //returns in theList, the names of all the children in theCluster that contain
+// //vName as an original Vertex
+// void getContainedChildList(Cluster &theCluster, int vName, List<int> &theList)
+// {
+//     List<int> output;
+//     int i, length;
 
-    theList.makeEmpty();
-    length=theCluster.children.returnLen();
-    for(i=1; i<=length; i++)
-       if(inOriginalV(vName, theCluster.children.retrieve(i)))
-         theList.append(theCluster.children.retrieve(i).returnName());
-}
+//     theList.makeEmpty();
+//     length=theCluster.children.returnLen();
+//     for(i=1; i<=length; i++)
+//        if(theCluster.children.retrieve(i).inOriginalV(vName))
+//          theList.append(theCluster.children.retrieve(i).returnName());
+// }
 
 
 //Ray objects use the sine and cosine of the angle of the ray compared to the positive x
@@ -5041,10 +5042,10 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
     for(i=1; i<=length; i++)
     {
         currOrig=theOrig.retrieve(i);
-        getContainedChildList(theCluster,currOrig,in);
+        theCluster.getContainedChildList(currOrig,in);
  	int treeIndex=1;
 	//find the index of the tree which contains the vertex
-	while(!inOriginalV(currOrig,testSolverTrees.retrieve(treeIndex))
+	while(!testSolverTrees.retrieve(treeIndex).inOriginalV(currOrig)
               && treeIndex<testSolverTrees.returnLen())
        		treeIndex++;
 	if(in.returnLen()>=3 && graph0.returnDimen()==3)
@@ -5061,7 +5062,7 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
        {	outf<<"SKIP IT...." << endl;
        		continue;}
 
-       getContainedChildList(theCluster,currOrig,in);
+       theCluster.getContainedChildList(currOrig,in);
        if(in.returnLen()<2) continue;
 
        type=graph0.returnVertByName(currOrig).returnType();
@@ -5069,7 +5070,7 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
        int overLapClusterIndex=1;
        int availOver=-1, neededOver=0, currOver=0, maxOver;
 
-       while(!inOriginalV(currOrig,testSolverTrees.retrieve(overLapClusterIndex))
+       while(!testSolverTrees.retrieve(overLapClusterIndex).inOriginalV(currOrig)
               && overLapClusterIndex<testSolverTrees.returnLen())
        		outf<<overLapClusterIndex++<<endl;
 
@@ -5337,7 +5338,7 @@ string getPartOverEquation(Graph &graph0, Cluster &theCluster, List<VUsed> &vUse
                          break;
                case 6:
 
-			getContainedChildList(theCluster, currOrig, tempList);
+			theCluster.getContainedChildList(currOrig, tempList);
 			if(tempList.returnLen()>2)
 			{
 				if(!childrenUsed(currOrig, child1, child2, vUsedList))
@@ -5958,7 +5959,7 @@ void updateGraph(Graph &graph0, Cluster &theCluster)
        vName=theCluster.returnOrigV(i);
 	outf << "i = " << i << endl;
 	outf << "vName = " << vName << endl;
-       cName=getChildNameWithVertex(theCluster, vName);
+       cName=theCluster.getChildNameWithVertex(vName);
 	outf << "cName = " << cName << endl;
        if(vName==cName)
          for(j=0; j<9; j++)
@@ -6311,8 +6312,8 @@ void setValueReduction(Graph &graph0, Cluster &theCluster)
        end2=tempEdge->returnEnd2();
        type=tempEdge->returnType();
        value=tempEdge->returnValue();
-       in1=inOriginalV(end1, theCluster);
-       in2=inOriginalV(end2, theCluster);
+       in1=theCluster.inOriginalV(end1);
+       in2=theCluster.inOriginalV(end2);
        cout<<"end1: "<<end1<<" end2: "<<end2<<" type: "<<type<<" in1: "
            <<in1<<" in2: "<<in2<<" value: "<<value<<endl;
        if(in1 && in2 && (type==0 || type==6) && value>longestDist)
@@ -6513,7 +6514,7 @@ int solveCluster(Graph &graph0, Cluster &theCluster, bool resolve)
             outf <<useReduction<<" ";
             outf <<graph0.returnVertByIndex(i).returnType()<<endl;
             theVName=graph0.returnVertByIndex(i).returnName();
-            if(getChildNameWithVertex(theCluster, theVName)!=theVName) continue;
+            if(theCluster.getChildNameWithVertex(theVName)!=theVName) continue;
             if(graph0.returnVertByIndex(i).returnType()!=0 &&
 	       graph0.returnVertByIndex(i).returnType()!=6  ) useReduction=false;
          }
@@ -7636,7 +7637,7 @@ int resetTreesByEdge(List<Cluster> SolverTrees, Edge &theEdge)
    end2=theEdge.returnEnd2();
 
    for(i=1;i<=length;i++)
-      if(inOriginalV(end1, SolverTrees.retrieve(i)) && inOriginalV(end2, SolverTrees.retrieve(i)))
+      if(SolverTrees.retrieve(i).inOriginalV(end1) && SolverTrees.retrieve(i).inOriginalV(end2))
       {
         SolverTrees.retrieve(i).setSolved(false);
         count+=1+resetTreesByEdge(SolverTrees.retrieve(i).children, theEdge);
@@ -7706,7 +7707,7 @@ void deleteClusterWithEdge(Graph &graph0, List<Cluster> &SolverTrees, Edge &theE
    while(i<=length)
    {
       print(graph0, SolverTrees);
-      if(inOriginalV(end1,SolverTrees.retrieve(i)) && inOriginalV(end2,SolverTrees.retrieve(i)))
+      if(SolverTrees.retrieve(i).inOriginalV(end1) && SolverTrees.retrieve(i).inOriginalV(end2))
       {
         int j,childLength;
 
@@ -7942,12 +7943,12 @@ ClustData& summCluster(Graph &graph0, Cluster &theCluster)
 				if(theCluster.children.retrieve(j).returnType()==2
 					|| theCluster.children.retrieve(j).returnType()==5)
 				{
-					if(inOriginalV(end1Name,theCluster.children.retrieve(j)))
+					if(theCluster.children.retrieve(j).inOriginalV(end1Name))
 					{
 						countSet++;
 						end1Name=end1Name*1000+theCluster.children.retrieve(j).returnName();
 					}
- 					if(inOriginalV(end2Name,theCluster.children.retrieve(j)))
+ 					if(theCluster.children.retrieve(j).inOriginalV(end2Name))
                                         {
                                                 countSet++;
 						end2Name=end2Name*1000+theCluster.children.retrieve(j).returnName();
@@ -8021,8 +8022,8 @@ float findDist(Graph &graph0, Cluster &theCluster)
 	for(i=1;i<=length;i++)
 	{
 		tempEdge=graph0.returnEdgeByIndex(i);
-		if(!inOriginalV(tempEdge.returnEnd1(),theCluster) ||
-		   !inOriginalV(tempEdge.returnEnd2(),theCluster))
+		if(!theCluster.inOriginalV(tempEdge.returnEnd1()) ||
+		   !theCluster.inOriginalV(tempEdge.returnEnd2()))
 			continue;
 
 		if(tempEdge.returnType()==6 || tempEdge.returnType()==0)
@@ -8305,47 +8306,48 @@ int buildGraphFromList(Graph &newGraph, Graph &graph0, List<int> &vertList)
 	return weight;
 }
 
-void getOverlapList(Graph graph0, Cluster &theCluster, List<int> &outputList, int child1=0, int child2=0)
+void getOverlapList(Graph graph0, Cluster &theCluster, List<int> &outputList,
+  int child1=0, int child2=0)
 {
-   List<int> containedList;
+  List<int> containedList;
 
-   int i,currOrig;
+  int i,currOrig;
 
-   outputList.makeEmpty();
+  outputList.makeEmpty();
 
-   for(i=1;i<=theCluster.returnOrigLen();i++)
-   {
-	containedList.makeEmpty();
-  	currOrig=theCluster.returnOrigV(i);
-  	getContainedChildList(theCluster,currOrig,containedList);
-	if(containedList.returnLen()>=2)
-	{
-		if(child1==0 && child2==0)
-			outputList.append(currOrig);
-		else
-		{
-			int child1Name = theCluster.children.retrieve(child1).returnName();
-			int child2Name = theCluster.children.retrieve(child2).returnName();
-			if(containedList.hasElem(child1Name) && containedList.hasElem(child2Name))
-				outputList.append(currOrig);
-		}
-	}
-   }
-   //check the incident part
-   for(i=1; i<=theCluster.returnOrigLen(); i++)
-   {
-	int v1 = theCluster.returnOrig().retrieve(i);
-        if(!outputList.hasElem(v1))
-	{
-		for(int j=1; j<=outputList.returnLen(); j++)
-		{
-			int v2 = outputList.retrieve(j);
-			cout << "LLOOOO" << graph0.returnEdgeByEnds(v1, v2) << endl;
-			if(graph0.returnEdgeByEnds(v1, v2).returnType()==1)
-				outputList.append(v1);
-		}
-	}
-   }
+  for(i=1;i<=theCluster.returnOrigLen();i++)
+  {
+    containedList.makeEmpty();
+    currOrig=theCluster.returnOrigV(i);
+    theCluster.getContainedChildList(currOrig,containedList);
+    if(containedList.returnLen()>=2)
+    {
+      if(child1==0 && child2==0)
+        outputList.append(currOrig);
+      else
+      {
+        int child1Name = theCluster.children.retrieve(child1).returnName();
+        int child2Name = theCluster.children.retrieve(child2).returnName();
+        if(containedList.hasElem(child1Name) && containedList.hasElem(child2Name))
+          outputList.append(currOrig);
+      }
+    }
+  }
+  //check the incident part
+  for(i=1; i<=theCluster.returnOrigLen(); i++)
+  {
+    int v1 = theCluster.returnOrig().retrieve(i);
+    if(!outputList.hasElem(v1))
+    {
+      for(int j=1; j<=outputList.returnLen(); j++)
+      {
+        int v2 = outputList.retrieve(j);
+        cout << "LLOOOO" << graph0.returnEdgeByEnds(v1, v2) << endl;
+        if(graph0.returnEdgeByEnds(v1, v2).returnType()==1)
+          outputList.append(v1);
+      }
+    }
+  }
 }
 
 void Solver(Graph &graph1, Graph &graph0, List<Cluster> &SolverTrees, jint* inputTheInts, jdouble* inputDouble, jchar* inputChar)
