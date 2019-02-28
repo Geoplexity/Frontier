@@ -1,5 +1,0 @@
-echo "compiling java code..."
-/usr/local/old/bin/javac -d "./UTU/classes" ./UTU/src/utuJava.java
-/usr/local/old/bin/javac -classpath "./UTU/classes:./Sketcher/classes" -d "./Sketcher/classes"  ./Sketcher/src/sketcher/*.java
-/usr/local/old/bin/javah -d "./UTU/classes" -jni -classpath "./UTU/classes/" utuJava
-

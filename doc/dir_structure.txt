@@ -1,0 +1,13 @@
+http://programmers.stackexchange.com/questions/81899/how-should-i-organize-my-source-tree
+
+
+bin - compiled library and executable
+doc
+ext - external libraries
+	gui_stuff - 3rd party interface stuff
+	solver - from ruijin, see todo
+src
+	DRP - Decomp-recomb planner (talks to UTU)
+	ESM - Equation and solutions manager (talks to external solver)
+	GUI - Graphical user inteface (talks to UTU)
+	UTU - Universal transfer unit

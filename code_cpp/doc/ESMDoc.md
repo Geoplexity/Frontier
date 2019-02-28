@@ -1,0 +1,10 @@
+Equation and Solutions Manager
+==============================
+
+Input
+-----
+The ESM takes as input one graph structure which specifies all of the vertices and constraints in the original constraint system drawn in the sketcher, and a decomposition tree that was the output of the DR-Planner.  At input, Deg_values fields in both the vertices contained in the graph and the Deg_values field in the clusters are initialized but empty.
+
+Output
+------
+The ESM caluculates the position and orientation of each of the vertices and then clusters in the system and stores these values in the degvalues fields of the clusters in the DR_Tree. Directly before returning to the sketcher, the solver transfers all of these values into the degvalues field in the vertices of the graph, eliminating the copies of the singleton vertices in the DR-Tree, and placing all in the values in a list rather than a tree, making access to the individual values more convenient.  In addition after the solver has completed, the solved field in each of the clusters in the DR_Tree has been set to true to reflect the fact that each cluster had been solved.

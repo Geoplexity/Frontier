@@ -1,0 +1,63 @@
+Purpose of this file
+======================
+Breakdown of the reorganization between the main branch and this branch
+
+Breakdown
+=============
+mfa1 -> GDS/List.hpp
+mfa2 -> GDS/Random, Vertex, Edge, Graph, Cluster
+	only graph needs random?
+
+mfa3 -> DRP/Cluster_Print.hpp
+
+mfa4 -> UTU/Group.hpp
+
+mfa5 -> DRP/Cluster_Get.hpp
+mfa6 -> DRP/Dist_Flow_Edge_Method.hpp
+mfa7 -> DRP/Dist_Methods.hpp
+mfa8 -> DRP/Dense_Algo.cpp
+
+mfa9 -> ESM/ESM.cpp
+mfa10 -> ESM/ESM.hpp
+mfaTree -> ESM/mfaTree.hpp
+cData -> ESM/Cluster_Data.hpp
+
+
+
+GDS = Graph Data Structures
+
+
+
+
+
+
+
+ESM.cpp line 407,542,601,685,762 what to return?
+
+
+
+Moving functions
+=================
+    Dist_Methods needs from ESM:
+        getContainedChildList
+            -> moved into GDS/Cluster.hpp (with inOriginalV and getChildNameWithVertex) now a method
+        getEdgeCodeDRPlanner
+            -> moved to DRP/Dist_Methods, now called getEdgeCodeDRP
+        getOverlapList
+            -> moved to GDS/Cluster.hpp (added include graph in there... wonder if there's a way to do it without giving clusters a knowledge of graphs?)
+
+    Cluster_Get@copyG
+        -> moved into GDS/Graph as method copyInto
+
+    Graph@Graph@sketchInput
+        -> moved into UTU/makeGraphFromInput.hpp, no longer a method
+        Had to make dimension, numvert, vertices, numedge and edges public... would like to change that once I can test
+
+
+ESM.cpp@getPartOverEquation uses mfaAlgo... this belongs in utu
+
+
+
+
+
+Just make the code crash if it ever gets to the part where it needs DRP
