@@ -8,15 +8,20 @@ Modifications and dates
 -----------------------
 The FRONTIER software is undergoing continuous transformation. Watch this space for version changes as well as pointers to changes and additions to documentation and publications.
 
+Versions
+--------
+This repository has 3 versions of the Frontier software, each organized in a separate folder. 
+1. FRONTIER 2D - This version has a working GUI and accepts 2D input. However, it has JNI issues and as such cannot
+communicate with the backend solver. Since JNI is very platform sensitive, we recommend that a new GUI be written in C++ for the same (possibly using the QT framework).
+2. FRONTIER 3D and Frontier 3D with module rigidity - These versions allow 3D input but, they were written with an old version of Java 3D and hence certain libraries (javax/media/j3d/TransformGroup) don't seem to work.
+
+
+
 Installation (for unix):
 ------------------------
 NOTE: Currently, to run FRONTIER, you need Maple V or a later version.
 
-- copy the FRONTIER.tar.gz file
-- do `gunzip FRONTIER.tar.gz`
-- do `tar -xvf FRONTIER.tar`
-
-You should now have a directory called FRONTIER-gnu that contains all the source code and documentation.
+- From the root directory FRONTIER-gnu that contains all the source code and documentation.
 	(the gnu public license can be found in the documentation index in the documentation directory in the FRONTIER-gnu directory).
 
 The documentation folder within it gives you all documentation about the various modules
@@ -38,6 +43,10 @@ Many of FRONTIER's strengths rely on  the degree-of-freedom-graph-based decompos
 5. Planning Geometric constraint decompositions via graph transformations; C. Hoffman, A. Lomonosov, M. Sitharam, Proceedings of AGTIVE '99 (Graph Transformations with Industrial Relevance), Springer lecture notes, LNCS 1779, eds Nagl, Schurr, Munch, pp. 309-324, 1999.
 6. FRONTIER, a 3d geometric constraint solver Part I: architecture, Sitharam, Oung, Arbree, Kohareswaran. Submitted.
 7. FRONTIER, a 3d geometric constraint solver Part II: algorithms; Sitharam, Arbree, Zhou. Submitted.
+8. [Solution space navigation for geometric constraint systems](https://www.cise.ufl.edu/~sitharam/pdfs/esm.pdf) (ACM Transactions on Graphics 2006)
+9. [Combinatorial approahes to Geometri Constraint Solving:
+Problems, Progress and Diretions](https://www.cise.ufl.edu/~sitharam/pdfs/dimacs.pdf)  (DIMACS survey 2006)
+
 
 I/O specifications and further documentation
 --------------------------------------------
