@@ -12,21 +12,17 @@ Versions
 --------
 This repository has 3 versions of the Frontier software, each organized in a separate folder. 
 1. FRONTIER 2D - This version has a working GUI and accepts 2D input. However, it has JNI issues and as such cannot
-communicate with the backend solver. Since JNI is very platform sensitive, we recommend that a new GUI be written in C++ for the same (possibly using the QT framework).
-2. FRONTIER 3D and Frontier 3D with module rigidity - These versions allow 3D input but, they were written with an old version of Java 3D and hence certain libraries (javax/media/j3d/TransformGroup) don't seem to work.
+communicate with the backend solver. 
+2. FRONTIER 3D and Frontier 3D with module rigidity - These versions allow 3D input but, they were written with an old version of Java 3D and hence certain libraries (javax/media/j3d/TransformGroup) don't seem to work. The only difference between these two version is that Frontier3D does not have module rigidity.
 
+Currently, the frontier software consists of a backend solver written in C++ and GUI written in Java. JNI is used to connect the two. Since JNI is extremly platform sensitive, we recommend that a new GUI be written in C++ for the same (possibly using a cross platform framework like QT).
 
 
 Installation (for unix):
 ------------------------
 NOTE: Currently, to run FRONTIER, you need Maple V or a later version.
 
-- From the root directory FRONTIER-gnu that contains all the source code and documentation.
-	(the gnu public license can be found in the documentation index in the documentation directory in the FRONTIER-gnu directory).
-
-The documentation folder within it gives you all documentation about the various modules
-
-Inside the FRONTIER-gnu directory, type `run` (or `./run` depending on your configuration) to start the FRONTIER geometric constraint solver.
+- From the root directory of any of the versions mentined above, type `./run` to start the FRONTIER geometric constraint solver.
 
 Description of FRONTIER's overall strengths
 -------------------------------------------
