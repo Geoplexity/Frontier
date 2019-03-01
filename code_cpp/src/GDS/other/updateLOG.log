@@ -1,4 +1,0 @@
-1.correct the content of the message window.
-  4 tetras form 2bananas in which there are 4 cases: Over&under-constrainted, overconstraint, under and well.
-  These four depend on whether there is a distance constraint between the overlapped 2 points and whether
-  there is one distance constraint between 2 clusters. (over.skr, over&under.skr, well.skr, under.skr)

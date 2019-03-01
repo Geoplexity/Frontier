@@ -1,4 +1,0 @@
-rm textSpecCase.txt
-cd ..
-./run
-cd MFA

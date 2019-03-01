@@ -1,4 +1,0 @@
-echo "compiling java code..."
-javac -d "src/UTU/classes" src/UTU/utuJava.java
-javac -classpath "src/UTU/classes:src/Sketcher/classes" -d "src/Sketcher/classes"  src/Sketcher/src/sketcher/*.java
-javah -d "src/UTU/classes" -jni -classpath "src/UTU/classes/" utuJava

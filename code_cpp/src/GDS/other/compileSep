@@ -1,2 +1,0 @@
-g++ -g -I/usr/local/java/include -I/usr/local/java/include/solaris -o do_it_separate Tree_call.cpp
-
