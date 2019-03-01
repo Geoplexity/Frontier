@@ -1,0 +1,396 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  SIGFPE (0x8) at pc=0xff2c0e58, pid=20957, tid=19
+#
+# Java VM: Java HotSpot(TM) Client VM (1.5.0_05-b05 mixed mode, sharing)
+# Problematic frame:
+# C  [libc.so.1+0xc0e58]  .div+0x20
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x001c3710):  JavaThread "AWT-EventQueue-0" [_thread_in_native, id=19]
+
+siginfo:si_signo=8, si_errno=0, si_code=1, si_addr=0xff2c0e58
+
+Registers:
+ O0=0x00000006 O1=0x00000000 O2=0x00000000 O3=0xf7f4064c
+ O4=0x81010100 O5=0x0000ff00 O6=0xf72fccb8 O7=0xf6f64170
+ G1=0xf6f64170 G2=0xf72fc820 G3=0x00000001 G4=0x00000007
+ G5=0xd0bec8a8 G6=0xff37c000 G7=0xf7301d98 Y=0x00000000
+ PC=0xff2c0e58 nPC=0xff2c0e5c
+
+
+Top of Stack: (sp=0xf72fccb8)
+0xf72fccb8:   01604f98 f72fdfbc f72fce40 00000020
+0xf72fccc8:   00000000 00000000 f7f55160 f7f65b04
+0xf72fccd8:   f72fd6a0 f72fd860 f72fe0a8 f72fe080
+0xf72fcce8:   f72fe008 0000000a f72fd0e0 f6f6658c
+0xf72fccf8:   00000000 f72fd860 f72fe008 f72fe008
+0xf72fcd08:   f7f55160 f7f65b04 f72fdfbc 01862c60
+0xf72fcd18:   0000000f 00000001 00000000 0000000a
+0xf72fcd28:   f72fcd60 f7f40610 00000008 00000019 
+
+Instructions: (pc=0xff2c0e58)
+0xff2c0e48:   81 80 00 0a 01 00 00 00 01 00 00 00 01 00 00 00
+0xff2c0e58:   90 fa 00 09 2e 80 00 02 90 3a 00 00 81 c3 e0 08 
+
+Stack: [0xf7282000,0xf7301d98),  sp=0xf72fccb8,  free space=491k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.1+0xc0e58]  .div+0x20
+C  [libutu.so+0xe6594]  distributeCl__FR7ClusterR5GraphT1R7ostreamT3+0x308
+C  [libutu.so+0xf03a0]  distributeForest__FRt4List1Z7ClusterR5GraphT1R7ostreamT3ii+0x8b0
+C  [libutu.so+0xf2718]  mfaAlgo__FR5GraphRt4List1Z7ClusterR7ostreamT2+0x28c
+C  [libutu.so+0x15e2a0]  getPartOverEquation__FR5GraphR7ClusterRt4List1Z5VUsediii+0xe54
+C  [libutu.so+0x16abd0]  getOverlapConstraint__FR5GraphR7Clusteri+0x7f8
+C  [libutu.so+0x157718]  getEquation__FR5GraphR7ClusterR7ostream+0xd74
+C  [libutu.so+0x172d40]  solveCluster__FR5GraphR7Clusterb+0x1334
+C  [libutu.so+0x174328]  solveForest__FR5GraphRt4List1Z7Cluster+0x94
+C  [libutu.so+0x180f6c]  Solver__FR5GraphT0Rt4List1Z7ClusterPiPdPUs+0xcc8
+C  [libutu.so+0x18460c]  Java_utuJava_utuC+0x12a4
+j  utuJava.utuC([I[D[C)V+39
+j  utuJava.utuC([I[D[C)V+0
+j  sketcher.SKMainFrame.solve()V+3061
+j  sketcher.SKMainFrame.mniTest()V+203
+j  sketcher.SKMainFrame.mniTest_actionPerformed(Ljava/awt/event/ActionEvent;)V+1
+j  sketcher.SKMainFrame$79.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.AbstractButton.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+84
+j  javax.swing.AbstractButton$Handler.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.DefaultButtonModel.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+35
+j  javax.swing.DefaultButtonModel.setPressed(Z)V+117
+j  javax.swing.AbstractButton.doClick(I)V+64
+j  javax.swing.plaf.basic.BasicMenuItemUI.doClick(Ljavax/swing/MenuSelectionManager;)V+53
+j  javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Ljava/awt/event/MouseEvent;)V+62
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+64
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+J  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V
+J  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z
+J  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.EventDispatchThread.pumpOneEventForHierarchy(ILjava/awt/Component;)Z
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+26
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0xda004]
+V  [libjvm.so+0xf1838]
+V  [libjvm.so+0xf1694]
+V  [libjvm.so+0xf1518]
+V  [libjvm.so+0x420a60]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  utuJava.utuC([I[D[C)V+0
+j  sketcher.SKMainFrame.solve()V+3061
+j  sketcher.SKMainFrame.mniTest()V+203
+j  sketcher.SKMainFrame.mniTest_actionPerformed(Ljava/awt/event/ActionEvent;)V+1
+j  sketcher.SKMainFrame$79.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.AbstractButton.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+84
+j  javax.swing.AbstractButton$Handler.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.DefaultButtonModel.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+35
+j  javax.swing.DefaultButtonModel.setPressed(Z)V+117
+j  javax.swing.AbstractButton.doClick(I)V+64
+j  javax.swing.plaf.basic.BasicMenuItemUI.doClick(Ljavax/swing/MenuSelectionManager;)V+53
+j  javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Ljava/awt/event/MouseEvent;)V+62
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+64
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+J  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V
+J  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z
+J  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.EventDispatchThread.pumpOneEventForHierarchy(ILjava/awt/Component;)Z
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+26
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00e60e90 JavaThread "J3D-InputDeviceScheduler-17" [_thread_blocked, id=250]
+  0x00e60140 JavaThread "J3D-SoundSchedulerUpdateThread-17" [_thread_blocked, id=249]
+  0x00e5f3f0 JavaThread "J3D-RenderStructureUpdateThread-17" [_thread_blocked, id=248]
+  0x00e5e6d0 JavaThread "J3D-BehaviorScheduler-17" [_thread_blocked, id=247]
+  0x0186d7e0 JavaThread "J3D-TransformStructureUpdateThread-17" [_thread_blocked, id=246]
+  0x0186ca90 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-17" [_thread_blocked, id=245]
+  0x0186b538 JavaThread "J3D-SoundStructureUpdateThread-17" [_thread_blocked, id=244]
+  0x0186a7e8 JavaThread "J3D-GeometryStructureUpdateThread-17" [_thread_blocked, id=243]
+  0x0186a328 JavaThread "J3D-BehaviorStructureUpdateThread-17" [_thread_blocked, id=242]
+  0x018d0b60 JavaThread "J3D-InputDeviceScheduler-16" [_thread_blocked, id=241]
+  0x018cff48 JavaThread "J3D-SoundSchedulerUpdateThread-16" [_thread_blocked, id=240]
+  0x019f2678 JavaThread "J3D-RenderStructureUpdateThread-16" [_thread_blocked, id=239]
+  0x019f1a00 JavaThread "J3D-BehaviorScheduler-16" [_thread_blocked, id=238]
+  0x019ed780 JavaThread "J3D-TransformStructureUpdateThread-16" [_thread_blocked, id=237]
+  0x00e6aa30 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-16" [_thread_blocked, id=236]
+  0x00e6a470 JavaThread "J3D-SoundStructureUpdateThread-16" [_thread_blocked, id=235]
+  0x019f3648 JavaThread "J3D-GeometryStructureUpdateThread-16" [_thread_blocked, id=234]
+  0x019ef568 JavaThread "J3D-BehaviorStructureUpdateThread-16" [_thread_blocked, id=233]
+  0x018cd358 JavaThread "J3D-InputDeviceScheduler-15" [_thread_blocked, id=232]
+  0x018cc2d8 JavaThread "J3D-SoundSchedulerUpdateThread-15" [_thread_blocked, id=231]
+  0x018cb660 JavaThread "J3D-RenderStructureUpdateThread-15" [_thread_blocked, id=230]
+  0x018caaa0 JavaThread "J3D-BehaviorScheduler-15" [_thread_blocked, id=229]
+  0x01877110 JavaThread "J3D-TransformStructureUpdateThread-15" [_thread_blocked, id=228]
+  0x01876498 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-15" [_thread_blocked, id=227]
+  0x01875820 JavaThread "J3D-SoundStructureUpdateThread-15" [_thread_blocked, id=226]
+  0x01874ba8 JavaThread "J3D-GeometryStructureUpdateThread-15" [_thread_blocked, id=225]
+  0x018747e8 JavaThread "J3D-BehaviorStructureUpdateThread-15" [_thread_blocked, id=224]
+  0x017ecc28 JavaThread "J3D-InputDeviceScheduler-14" [_thread_blocked, id=223]
+  0x018f0420 JavaThread "J3D-SoundSchedulerUpdateThread-14" [_thread_blocked, id=222]
+  0x018eefa0 JavaThread "J3D-RenderStructureUpdateThread-14" [_thread_blocked, id=221]
+  0x01879480 JavaThread "J3D-BehaviorScheduler-14" [_thread_blocked, id=220]
+  0x018788c0 JavaThread "J3D-TransformStructureUpdateThread-14" [_thread_blocked, id=219]
+  0x017c7398 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-14" [_thread_blocked, id=218]
+  0x018e2708 JavaThread "J3D-SoundStructureUpdateThread-14" [_thread_blocked, id=217]
+  0x018e3578 JavaThread "J3D-GeometryStructureUpdateThread-14" [_thread_blocked, id=216]
+  0x018e33b8 JavaThread "J3D-BehaviorStructureUpdateThread-14" [_thread_blocked, id=215]
+  0x00f4ee90 JavaThread "J3D-InputDeviceScheduler-13" [_thread_blocked, id=214]
+  0x00f4e218 JavaThread "J3D-SoundSchedulerUpdateThread-13" [_thread_blocked, id=213]
+  0x00f4d5a0 JavaThread "J3D-RenderStructureUpdateThread-13" [_thread_blocked, id=212]
+  0x00f4c988 JavaThread "J3D-BehaviorScheduler-13" [_thread_blocked, id=211]
+  0x018e70e0 JavaThread "J3D-TransformStructureUpdateThread-13" [_thread_blocked, id=210]
+  0x00f53af8 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-13" [_thread_blocked, id=209]
+  0x018e9128 JavaThread "J3D-SoundStructureUpdateThread-13" [_thread_blocked, id=208]
+  0x018e4458 JavaThread "J3D-GeometryStructureUpdateThread-13" [_thread_blocked, id=207]
+  0x018e41f8 JavaThread "J3D-BehaviorStructureUpdateThread-13" [_thread_blocked, id=206]
+  0x018bc580 JavaThread "J3D-InputDeviceScheduler-12" [_thread_blocked, id=205]
+  0x018bb908 JavaThread "J3D-SoundSchedulerUpdateThread-12" [_thread_blocked, id=204]
+  0x018bac90 JavaThread "J3D-RenderStructureUpdateThread-12" [_thread_blocked, id=203]
+  0x018ba018 JavaThread "J3D-BehaviorScheduler-12" [_thread_blocked, id=202]
+  0x010d68b0 JavaThread "J3D-TransformStructureUpdateThread-12" [_thread_blocked, id=201]
+  0x010d5c38 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-12" [_thread_blocked, id=200]
+  0x010d4fc0 JavaThread "J3D-SoundStructureUpdateThread-12" [_thread_blocked, id=199]
+  0x010d4348 JavaThread "J3D-GeometryStructureUpdateThread-12" [_thread_blocked, id=198]
+  0x010d3ed0 JavaThread "J3D-BehaviorStructureUpdateThread-12" [_thread_blocked, id=197]
+  0x0163d150 JavaThread "J3D-InputDeviceScheduler-11" [_thread_blocked, id=196]
+  0x0163c4d8 JavaThread "J3D-SoundSchedulerUpdateThread-11" [_thread_blocked, id=195]
+  0x0163b860 JavaThread "J3D-RenderStructureUpdateThread-11" [_thread_blocked, id=194]
+  0x017f0e20 JavaThread "J3D-BehaviorScheduler-11" [_thread_blocked, id=193]
+  0x017f01a8 JavaThread "J3D-TransformStructureUpdateThread-11" [_thread_blocked, id=192]
+  0x017efea8 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-11" [_thread_blocked, id=191]
+  0x010aeeb8 JavaThread "J3D-SoundStructureUpdateThread-11" [_thread_blocked, id=190]
+  0x017e1978 JavaThread "J3D-GeometryStructureUpdateThread-11" [_thread_blocked, id=189]
+  0x017e17b8 JavaThread "J3D-BehaviorStructureUpdateThread-11" [_thread_blocked, id=188]
+  0x01676608 JavaThread "J3D-InputDeviceScheduler-10" [_thread_blocked, id=187]
+  0x01675aa8 JavaThread "J3D-SoundSchedulerUpdateThread-10" [_thread_blocked, id=186]
+  0x01670690 JavaThread "J3D-RenderStructureUpdateThread-10" [_thread_blocked, id=185]
+  0x016721c8 JavaThread "J3D-BehaviorScheduler-10" [_thread_blocked, id=184]
+  0x01671608 JavaThread "J3D-TransformStructureUpdateThread-10" [_thread_blocked, id=183]
+  0x01661078 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-10" [_thread_blocked, id=182]
+  0x0167b690 JavaThread "J3D-SoundStructureUpdateThread-10" [_thread_blocked, id=181]
+  0x01666e38 JavaThread "J3D-GeometryStructureUpdateThread-10" [_thread_blocked, id=180]
+  0x01666b38 JavaThread "J3D-BehaviorStructureUpdateThread-10" [_thread_blocked, id=179]
+  0x01651060 JavaThread "J3D-InputDeviceScheduler-9" [_thread_blocked, id=178]
+  0x01262388 JavaThread "J3D-SoundSchedulerUpdateThread-9" [_thread_blocked, id=177]
+  0x0166b380 JavaThread "J3D-RenderStructureUpdateThread-9" [_thread_blocked, id=176]
+  0x01669ea8 JavaThread "J3D-BehaviorScheduler-9" [_thread_blocked, id=175]
+  0x0166c740 JavaThread "J3D-TransformStructureUpdateThread-9" [_thread_blocked, id=174]
+  0x0166c580 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-9" [_thread_blocked, id=173]
+  0x0167a3f0 JavaThread "J3D-SoundStructureUpdateThread-9" [_thread_blocked, id=172]
+  0x01679b48 JavaThread "J3D-GeometryStructureUpdateThread-9" [_thread_blocked, id=171]
+  0x01679988 JavaThread "J3D-BehaviorStructureUpdateThread-9" [_thread_blocked, id=170]
+  0x016777f8 JavaThread "J3D-InputDeviceScheduler-8" [_thread_blocked, id=169]
+  0x01677238 JavaThread "J3D-SoundSchedulerUpdateThread-8" [_thread_blocked, id=168]
+  0x016482a8 JavaThread "J3D-RenderStructureUpdateThread-8" [_thread_blocked, id=167]
+  0x01602e08 JavaThread "J3D-BehaviorScheduler-8" [_thread_blocked, id=166]
+  0x01637cd8 JavaThread "J3D-TransformStructureUpdateThread-8" [_thread_blocked, id=165]
+  0x0163a620 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-8" [_thread_blocked, id=164]
+  0x0163a460 JavaThread "J3D-SoundStructureUpdateThread-8" [_thread_blocked, id=163]
+  0x0163a2a0 JavaThread "J3D-GeometryStructureUpdateThread-8" [_thread_blocked, id=162]
+  0x010b2248 JavaThread "J3D-BehaviorStructureUpdateThread-8" [_thread_blocked, id=161]
+  0x00e4c390 JavaThread "J3D-InputDeviceScheduler-7" [_thread_blocked, id=139]
+  0x00e4b640 JavaThread "J3D-SoundSchedulerUpdateThread-7" [_thread_blocked, id=138]
+  0x00e4a9c8 JavaThread "J3D-RenderStructureUpdateThread-7" [_thread_blocked, id=137]
+  0x00e49d50 JavaThread "J3D-BehaviorScheduler-7" [_thread_blocked, id=136]
+  0x00e488d0 JavaThread "J3D-TransformStructureUpdateThread-7" [_thread_blocked, id=135]
+  0x00e47c58 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-7" [_thread_blocked, id=134]
+  0x00e46e28 JavaThread "J3D-SoundStructureUpdateThread-7" [_thread_blocked, id=133]
+  0x00e5dcd0 JavaThread "J3D-GeometryStructureUpdateThread-7" [_thread_blocked, id=132]
+  0x00e5d858 JavaThread "J3D-BehaviorStructureUpdateThread-7" [_thread_blocked, id=131]
+  0x00cf2f78 JavaThread "J3D-InputDeviceScheduler-6" [_thread_blocked, id=130]
+  0x00cf25b8 JavaThread "J3D-SoundSchedulerUpdateThread-6" [_thread_blocked, id=129]
+  0x00cf1bf8 JavaThread "J3D-RenderStructureUpdateThread-6" [_thread_blocked, id=128]
+  0x00e55988 JavaThread "J3D-BehaviorScheduler-6" [_thread_blocked, id=127]
+  0x01076868 JavaThread "J3D-TransformStructureUpdateThread-6" [_thread_blocked, id=126]
+  0x0108f7f8 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-6" [_thread_blocked, id=125]
+  0x010766a8 JavaThread "J3D-SoundStructureUpdateThread-6" [_thread_blocked, id=124]
+  0x010671a8 JavaThread "J3D-GeometryStructureUpdateThread-6" [_thread_blocked, id=123]
+  0x01066fe8 JavaThread "J3D-BehaviorStructureUpdateThread-6" [_thread_blocked, id=122]
+  0x00eb5068 JavaThread "J3D-InputDeviceScheduler-5" [_thread_blocked, id=107]
+  0x00eb4318 JavaThread "J3D-SoundSchedulerUpdateThread-5" [_thread_blocked, id=106]
+  0x00eb35c8 JavaThread "J3D-RenderStructureUpdateThread-5" [_thread_blocked, id=105]
+  0x00eb2878 JavaThread "J3D-BehaviorScheduler-5" [_thread_blocked, id=104]
+  0x00c9e5b8 JavaThread "J3D-TransformStructureUpdateThread-5" [_thread_blocked, id=103]
+  0x00c9d868 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-5" [_thread_blocked, id=102]
+  0x00c9cb48 JavaThread "J3D-SoundStructureUpdateThread-5" [_thread_blocked, id=101]
+  0x00e3c8a0 JavaThread "J3D-GeometryStructureUpdateThread-5" [_thread_blocked, id=100]
+  0x00e3c540 JavaThread "J3D-BehaviorStructureUpdateThread-5" [_thread_blocked, id=99]
+  0x00f17a18 JavaThread "J3D-InputDeviceScheduler-4" [_thread_blocked, id=98]
+  0x00f16cc8 JavaThread "J3D-SoundSchedulerUpdateThread-4" [_thread_blocked, id=97]
+  0x00c86c10 JavaThread "J3D-RenderStructureUpdateThread-4" [_thread_blocked, id=96]
+  0x00c85ec0 JavaThread "J3D-BehaviorScheduler-4" [_thread_blocked, id=95]
+  0x00c851a0 JavaThread "J3D-TransformStructureUpdateThread-4" [_thread_blocked, id=94]
+  0x00f116f8 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-4" [_thread_blocked, id=93]
+  0x00f10a38 JavaThread "J3D-SoundStructureUpdateThread-4" [_thread_blocked, id=92]
+  0x00f0fdc0 JavaThread "J3D-GeometryStructureUpdateThread-4" [_thread_blocked, id=91]
+  0x00f07250 JavaThread "J3D-BehaviorStructureUpdateThread-4" [_thread_blocked, id=90]
+  0x00ab7d40 JavaThread "J3D-InputDeviceScheduler-3" [_thread_blocked, id=89]
+  0x00ab7080 JavaThread "J3D-SoundSchedulerUpdateThread-3" [_thread_blocked, id=88]
+  0x00b86598 JavaThread "J3D-RenderStructureUpdateThread-3" [_thread_blocked, id=87]
+  0x00b85848 JavaThread "J3D-BehaviorScheduler-3" [_thread_blocked, id=86]
+  0x00ab4d20 JavaThread "J3D-TransformStructureUpdateThread-3" [_thread_blocked, id=85]
+  0x00ab3fd0 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-3" [_thread_blocked, id=84]
+  0x00c62338 JavaThread "J3D-SoundStructureUpdateThread-3" [_thread_blocked, id=83]
+  0x00c60248 JavaThread "J3D-GeometryStructureUpdateThread-3" [_thread_blocked, id=82]
+  0x00c5fee8 JavaThread "J3D-BehaviorStructureUpdateThread-3" [_thread_blocked, id=81]
+  0x00ba4db0 JavaThread "J3D-InputDeviceScheduler-2" [_thread_blocked, id=80]
+  0x00c66be8 JavaThread "J3D-SoundSchedulerUpdateThread-2" [_thread_blocked, id=79]
+  0x00c65f28 JavaThread "J3D-RenderStructureUpdateThread-2" [_thread_blocked, id=78]
+  0x00c65268 JavaThread "J3D-BehaviorScheduler-2" [_thread_blocked, id=77]
+  0x00f220c8 JavaThread "J3D-TransformStructureUpdateThread-2" [_thread_blocked, id=76]
+  0x00f21408 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-2" [_thread_blocked, id=75]
+  0x00f20800 JavaThread "J3D-SoundStructureUpdateThread-2" [_thread_blocked, id=74]
+  0x00c516b0 JavaThread "J3D-GeometryStructureUpdateThread-2" [_thread_blocked, id=73]
+  0x00c51450 JavaThread "J3D-BehaviorStructureUpdateThread-2" [_thread_blocked, id=72]
+  0x00910f48 JavaThread "J3D-InputDeviceScheduler-1" [_thread_blocked, id=71]
+  0x0092e8d8 JavaThread "J3D-SoundSchedulerUpdateThread-1" [_thread_blocked, id=70]
+  0x0092dd18 JavaThread "J3D-RenderStructureUpdateThread-1" [_thread_blocked, id=69]
+  0x0092ee00 JavaThread "J3D-BehaviorScheduler-1" [_thread_blocked, id=68]
+  0x00c06750 JavaThread "J3D-TransformStructureUpdateThread-1" [_thread_blocked, id=67]
+  0x00c05d90 JavaThread "J3D-RenderingEnvironmentStructureUpdateThread-1" [_thread_blocked, id=66]
+  0x00c117c8 JavaThread "J3D-SoundStructureUpdateThread-1" [_thread_blocked, id=65]
+  0x00c11608 JavaThread "J3D-GeometryStructureUpdateThread-1" [_thread_blocked, id=64]
+  0x00c0d450 JavaThread "J3D-BehaviorStructureUpdateThread-1" [_thread_blocked, id=63]
+  0x0033a558 JavaThread "TimerQueue" daemon [_thread_blocked, id=24]
+  0x00037428 JavaThread "DestroyJavaVM" [_thread_blocked, id=1]
+=>0x001c3710 JavaThread "AWT-EventQueue-0" [_thread_in_native, id=19]
+  0x001c4390 JavaThread "AWT-Shutdown" [_thread_blocked, id=18]
+  0x001b14c0 JavaThread "J3D-Renderer-1" [_thread_blocked, id=17]
+  0x0016d3c0 JavaThread "J3D-MasterControl" [_thread_blocked, id=16]
+  0x0017aea8 JavaThread "J3D-TimerThread" [_thread_blocked, id=15]
+  0x001af118 JavaThread "J3D-RenderingAttributesStructureUpdateThread" [_thread_blocked, id=14]
+  0x001a4dc8 JavaThread "AWT-Motif" daemon [_thread_in_native, id=13]
+  0x0011c120 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=11]
+  0x000e5378 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=9]
+  0x000e4370 JavaThread "CompilerThread0" daemon [_thread_blocked, id=8]
+  0x000e35b0 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7]
+  0x000dc8d0 JavaThread "Finalizer" daemon [_thread_blocked, id=6]
+  0x000dbcc0 JavaThread "Reference Handler" daemon [_thread_blocked, id=5]
+
+Other Threads:
+  0x000d94e8 VMThread [id=4]
+  0x000e6b30 WatcherThread [id=10]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 7040K, used 5700K [0xcc800000, 0xccf10000, 0xccf10000)
+  eden space 6848K,  83% used [0xcc800000, 0xccd911d0, 0xcceb0000)
+  from space 192K,   0% used [0xcceb0000, 0xcceb0000, 0xccee0000)
+  to   space 192K,   0% used [0xccee0000, 0xccee0000, 0xccf10000)
+ tenured generation   total 58304K, used 43855K [0xccf10000, 0xd0800000, 0xd0800000)
+   the space 58304K,  75% used [0xccf10000, 0xcf9e3e08, 0xcf9e4000, 0xd0800000)
+ compacting perm gen  total 8192K, used 4709K [0xd0800000, 0xd1000000, 0xd4800000)
+   the space 8192K,  57% used [0xd0800000, 0xd0c995d0, 0xd0c99600, 0xd1000000)
+    ro space 8192K,  64% used [0xd4800000, 0xd4d23140, 0xd4d23200, 0xd5000000)
+    rw space 12288K,  44% used [0xd5000000, 0xd5557888, 0xd5557a00, 0xd5c00000)
+
+Dynamic libraries:
+0x00010000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/bin/java
+0xff350000 	/usr/lib/libthread.so.1
+0xff340000 	/usr/lib/libdl.so.1
+0xff200000 	/usr/lib/libc.so.1
+0xff390000 	/usr/platform/SUNW,Sun-Blade-1500/lib/libc_psr.so.1
+0xfe000000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/client/libjvm.so
+0xff2e0000 	/usr/lib/libsocket.so.1
+0xff1e0000 	/usr/lib/libsched.so.1
+0xff1b0000 	/usr/lib/libCrun.so.1
+0xff160000 	/usr/lib/libm.so.1
+0xff080000 	/usr/lib/libnsl.so.1
+0xff140000 	/usr/lib/libmp.so.2
+0xff040000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/native_threads/libhpi.so
+0xfe7d0000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/libverify.so
+0xfe790000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/libjava.so
+0xfe770000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/libzip.so
+0xf8100000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/libawt.so
+0xf7f80000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/libmlib_image.so
+0xfb480000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/motif21/libmawt.so
+0xf7d00000 	/usr/dt/lib/libXm.so.4
+0xfdeb0000 	/usr/openwin/lib/libXp.so.1
+0xfb690000 	/usr/openwin/lib/libXt.so.4
+0xfb5d0000 	/usr/openwin/lib/libXext.so.0
+0xfb790000 	/usr/openwin/lib/libXtst.so.1
+0xf7c00000 	/usr/openwin/lib/libX11.so.4
+0xfb5b0000 	/usr/openwin/lib/libSM.so.6
+0xfb450000 	/usr/openwin/lib/libICE.so.6
+0xfa880000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/libfontmanager.so
+0xfabc0000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/libJ3D.so
+0xfaba0000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/libjawt.so
+0xfaad0000 	/usr/openwin/lib/libdga.so.1
+0xf7780000 	/usr/openwin/lib/libGL.so.1
+0xfaaa0000 	/usr/openwin/lib/libXmu.so.4
+0xfa9d0000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/libnet.so
+0xfa860000 	/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/libnio.so
+0xfa840000 	/usr/lib/librt.so.1
+0xfa820000 	/usr/lib/libaio.so.1
+0xf8560000 	/usr/lib/libsendfile.so.1
+0xf6e80000 	/amd/netapp1/vol/vol0/research37/constraints/GNU/FRONTIER-gnu/UTU/classes/libutu.so
+0xf7f10000 	/usr/local/old/lib/libstdc++.so.2.10.0
+
+VM Arguments:
+jvm_args: -Djava.library.path=../UTU/classes
+java_command: sketcher.SKMainFrame
+
+Environment Variables:
+CLASSPATH=.:/usr/local/java:/usr/local/java/classes
+PATH=/cise/homes/yozhou/bin:/usr/local/bin:/bin:/usr/bin:/usr/ccs/bin:/usr/openwin/bin:/usr/dt/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/ucb
+LD_LIBRARY_PATH=/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc/client:/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/lib/sparc:/depot/c1/JAVA/JDK-1.5.0/java-1.5.0/jre/../lib/sparc
+SHELL=/local/bin/tcsh
+DISPLAY=:0.0
+HOSTTYPE=sun4
+OSTYPE=solaris
+MACHTYPE=sparc
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x4a5900], sa_mask[0]=0xffbffeff, sa_flags=0x00000004
+SIGBUS: [libjvm.so+0x4a5900], sa_mask[0]=0xffbffeff, sa_flags=0x00000004
+SIGFPE: [libjvm.so+0x210fc4], sa_mask[0]=0xffbffeff, sa_flags=0x0000000c
+SIGPIPE: [libjvm.so+0x210fc4], sa_mask[0]=0xffbffeff, sa_flags=0x0000000c
+SIGILL: [libjvm.so+0x210fc4], sa_mask[0]=0xffbffeff, sa_flags=0x0000000c
+SIGUSR1: [libjvm.so+0x42297c], sa_mask[0]=0x00008000, sa_flags=0x00000008
+SIGUSR2: [libjvm.so+0x210fc4], sa_mask[0]=0xffbffeff, sa_flags=0x0000000c
+SIGHUP: [libjvm.so+0x421a34], sa_mask[0]=0xffbffeff, sa_flags=0x00000004
+SIGINT: [libjvm.so+0x421a34], sa_mask[0]=0xffbffeff, sa_flags=0x00000004
+SIGQUIT: [libjvm.so+0x421a34], sa_mask[0]=0xffbffeff, sa_flags=0x00000004
+SIGTERM: [libjvm.so+0x421a34], sa_mask[0]=0xffbffeff, sa_flags=0x00000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:                     Solaris 8 HW 7/03 s28s_hw3wos_05a SPARC
+           Copyright 2003 Sun Microsystems, Inc.  All Rights Reserved.
+                             Assembled 11 June 2003
+
+uname:SunOS 5.8 Generic_117350-27 sun4u  (T1 libthread)
+rlimit: STACK 8192k, CORE infinity, NOFILE 1024, AS infinity
+load average:0.76 0.38 0.23
+
+CPU:total 1 has_v8, has_v9, has_vis1, has_vis2, is_ultra3
+
+Memory: 8k page, physical 524288k(193656k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.5.0_05-b05) for solaris-sparc, built on Aug 26 2005 17:26:14 by unknown with unknown Workshop:0x550
+

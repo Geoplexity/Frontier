@@ -1,0 +1,870 @@
+Distance Equations:
+ End 1 is a/an Point
+  End 2 is a/an Point:           (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line:            (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Circle (arb):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (arb):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt1):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt2):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (center):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Line
+  End 2 is a/an Point:           (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line:            (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (arb):    (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (center): (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (arb):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt1):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt2):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (center):    (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+ End 1 is a/an Ray (arb)
+  End 2 is a/an Point:           (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Line:            (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Circle (arb):    (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Circle (center): (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (arb):       (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (Pt1):       (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (Pt2):       (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (center):    (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+ End 1 is a/an Ray (Pt1)
+  End 2 is a/an Point:           (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Line:            (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Circle (arb):    (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Circle (center): (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (arb):       (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (Pt1):       (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (Pt2):       (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (center):    (2.236068)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+ End 1 is a/an Line Seg (arb)
+  End 2 is a/an Point:           (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line:            (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (arb):    (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (center): (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (arb):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt1):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt2):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (center):    (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+ End 1 is a/an Line Seg (Pt1)
+  End 2 is a/an Point:           (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line:            (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (arb):    (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (center): (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (arb):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt1):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt2):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (center):    (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+ End 1 is a/an Line Seg (Pt2)
+  End 2 is a/an Point:           (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line:            (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (arb):    (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (center): (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (arb):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt1):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt2):       (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (center):    (2.236068)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+ End 1 is a/an Circle (arb)
+  End 2 is a/an Point:           (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line:            (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Circle (arb):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (arb):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt1):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt2):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (center):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Circle (center)
+  End 2 is a/an Point:           (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line:            (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Circle (arb):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (arb):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt1):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt2):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (center):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Arc (arb)
+  End 2 is a/an Point:           (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line:            (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Circle (arb):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (arb):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt1):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt2):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (center):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Arc (Pt1)
+  End 2 is a/an Point:           (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line:            (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Circle (arb):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (arb):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt1):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt2):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (center):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Arc (Pt2)
+  End 2 is a/an Point:           (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line:            (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Circle (arb):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (arb):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt1):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt2):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (center):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Arc (Center)
+  End 2 is a/an Point:           (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line:            (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (2.236068)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (2.236068)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Circle (arb):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (arb):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt1):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt2):       (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (center):    (5.000000)^2=((x1-x2)^2+(y1-y2)^2)
+Incidence Equations:
+ End 1 is a/an Point
+  End 2 is a/an Point:           x1=x2,y1=y2
+  End 2 is a/an Line:            (y1-y2)=m2*(x1-x2)
+  End 2 is a/an Ray (arb):       (y1-y2)=m2*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x1=x2,y1=y2
+  End 2 is a/an Line Seg (arb):  (y1-y2)=m2*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x1=x2,y1=y2
+  End 2 is a/an Line Seg (Pt2):  x1=c2,y1=d2
+  End 2 is a/an Circle (arb):    (r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): x1=x2,y1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x2=x1+v1*r1,y2=y1+w1*r1
+  End 2 is a/an Arc (Pt2):       x1=x2+a2*r2,y1=y2+b2*r2
+  End 2 is a/an Arc (center):    x1=x2,y1=y2
+ End 1 is a/an Line
+  End 2 is a/an Point:           (y2-y1)=m1*(x2-x1)
+  End 2 is a/an Line:             *** IMAGINARY ***
+  End 2 is a/an Ray (arb):        *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       (y1-y2)=m1*(x1-x2)
+  End 2 is a/an Line Seg (arb):   *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  (y1-y2)=m1*(x1-x2)
+  End 2 is a/an Line Seg (Pt2):  (y1-d2)=m1*(x1-c2)
+  End 2 is a/an Circle (arb):     *** IMAGINARY ***
+  End 2 is a/an Circle (center): (y1-y2)=m1*(x1-x2)
+  End 2 is a/an Arc (arb):        *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       (y1-(y2+r2*w2))=m1*(x1-(x2+r2*v2))
+  End 2 is a/an Arc (Pt2):       (y1-(y2+r2*b2))=m1*(x1-(x2+r2*a2))
+  End 2 is a/an Arc (center):    (y1-y2)=m1*(x1-x2)
+ End 1 is a/an Ray (arb)
+  End 2 is a/an Point:           (y2-y1)=(w1/v1)*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Line:             *** IMAGINARY ***
+  End 2 is a/an Ray (arb):        *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       (y2-y1)=(w1/v1)*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Line Seg (arb):   *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  (y2-y1)=(w1/v1)*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt2):  (d2-y1)=(w1/v1)*(c2-x1) *** IMAGINARY ***
+  End 2 is a/an Circle (arb):     *** IMAGINARY ***
+  End 2 is a/an Circle (center): (y2-y1)=(w1/v1)*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Arc (arb):        *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       (y1-(y2+r2*w2))=(w1/v1)*(x1-(x2+r2*v2)) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt2):       (y1-(y2+r2*b2))=(w1/v1)*(x1-(x2+r2*a2)) *** IMAGINARY ***
+  End 2 is a/an Arc (center):    (y2-y1)=(w1/v1)*(x2-x1) *** IMAGINARY ***
+ End 1 is a/an Ray (Pt1)
+  End 2 is a/an Point:           x1=x2,y1=y2
+  End 2 is a/an Line:            (y2-y1)=m2*(x2-x1)
+  End 2 is a/an Ray (arb):       (y1-y2)=(w2/v2)*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x1=x2,y1=y2
+  End 2 is a/an Line Seg (arb):  (y2-y1)=m2*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x1=x2,y1=y2
+  End 2 is a/an Line Seg (Pt2):  x1=c2,y1=d2
+  End 2 is a/an Circle (arb):    (r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): x1=x2,y1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x1=x2+v2*r2,y1=y2+w2*r2
+  End 2 is a/an Arc (Pt2):       x1=x2+a2*r2,y1=y2+b2*r2
+  End 2 is a/an Arc (center):    x1=x2,y1=y2
+ End 1 is a/an Line Seg (arb)
+  End 2 is a/an Point:           (y1-y2)=m1*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line:             *** IMAGINARY ***
+  End 2 is a/an Ray (arb):        *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       (y2-y1)=m1*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Line Seg (arb):   *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  (y1-y2)=m1*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt2):  (y1-d2)=m1*(x1-c2) *** IMAGINARY ***
+  End 2 is a/an Circle (arb):     *** IMAGINARY ***
+  End 2 is a/an Circle (center): (y1-y2)=m1*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Arc (arb):        *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       (y1-(y2+r2*w2))=m1*(x1-(x2+r2*v2)) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt2):       (y1-(y2+r2*b2))=m1*(x1-(x2+r2*a2)) *** IMAGINARY ***
+  End 2 is a/an Arc (center):    (y1-y2)=m1*(x1-x2) *** IMAGINARY ***
+ End 1 is a/an Line Seg (Pt1)
+  End 2 is a/an Point:           x1=x2,y1=y2
+  End 2 is a/an Line:            (y1-y2)=m2*(x1-x2)
+  End 2 is a/an Ray (arb):       (y1-y2)=(w2/v2)*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x1=x2,y1=y2
+  End 2 is a/an Line Seg (arb):  (y1-y2)=m2*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x1=x2,y1=y2
+  End 2 is a/an Line Seg (Pt2):  x1=c2,y1=d2
+  End 2 is a/an Circle (arb):    (r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): x1=x2,y1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x1=x2+v2*r2,y1=y2+w2*r2
+  End 2 is a/an Arc (Pt2):       x1=x2+a2*r2,y1=y2+b2*r2
+  End 2 is a/an Arc (center):    x1=x2,y1=y2
+ End 1 is a/an Line Seg (Pt2)
+  End 2 is a/an Point:           c1=x2,d1=y2
+  End 2 is a/an Line:            (d1-y2)=m2*(c1-x2)
+  End 2 is a/an Ray (arb):       (d1-y2)=(w2/v2)*(c1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x2=c1,y2=d1
+  End 2 is a/an Line Seg (arb):  (y1-d2)=m2*(x1-c2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  c1=x2,d1=y2
+  End 2 is a/an Line Seg (Pt2):  c1=c2,d1=d2
+  End 2 is a/an Circle (arb):    (r2)^2=((c1-x2)^2+(d1-y2)^2)
+  End 2 is a/an Circle (center): c1=x2,d1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((c1-x2)^2+(d1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       c1=x2+v2*r2,d1=y2+w2*r2
+  End 2 is a/an Arc (Pt2):       c1=x2+a2*r2,d1=y2+b2*r2
+  End 2 is a/an Arc (center):    c1=x2,d1=y2
+ End 1 is a/an Circle (arb)
+  End 2 is a/an Point:           (r1)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line:             *** IMAGINARY ***
+  End 2 is a/an Ray (arb):        *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       (r1)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line Seg (arb):   *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  (r1)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line Seg (Pt2):  (r1)^2=((c2-x1)^2+(d2-y1)^2)
+  End 2 is a/an Circle (arb):     *** IMAGINARY ***
+  End 2 is a/an Circle (center): (r1)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (arb):        *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       (r1)^2=((x2+v2*r2-x1)^2+(y2+w2*r2-y1)^2)
+  End 2 is a/an Arc (Pt2):       (r1)^2=((x2+a2*r2-x1)^2+(y2+b2*r2-y1)^2)
+  End 2 is a/an Arc (center):    (r1)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Circle (center)
+  End 2 is a/an Point:           x1=x2,y1=y2
+  End 2 is a/an Line:            (y1-y2)=m2*(x1-x2)
+  End 2 is a/an Ray (arb):       (y1-y2)=(w2/v2)*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x1=x2,y1=y2
+  End 2 is a/an Line Seg (arb):  (y1-y2)=m2*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x1=x2,y1=y2
+  End 2 is a/an Line Seg (Pt2):  c2=x1,d2=y1
+  End 2 is a/an Circle (arb):    (r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): x1=x2,y1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x1=x2+v2*r2,y1=y2+w2*r2
+  End 2 is a/an Arc (Pt2):       x1=x2+a2*r2,y1=y2+b2*r2
+  End 2 is a/an Arc (center):    x1=x2,y1=y2
+ End 1 is a/an Arc (arb)
+  End 2 is a/an Point:           (r1)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Line:             *** IMAGINARY ***
+  End 2 is a/an Ray (arb):        *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       (r1)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (arb):   *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  (r1)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt2):  (r1)^2=((c2-x1)^2+(d2-y1)^2) *** IMAGINARY ***
+  End 2 is a/an Circle (arb):     *** IMAGINARY ***
+  End 2 is a/an Circle (center): (r1)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (arb):        *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       (r1)^2=((x2+v2*r2-x1)^2+(y2+w2*r2-y1)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt2):       (r1)^2=((x2+a2*r2-x1)^2+(y2+b2*r2-y1)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (center):    (r1)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+ End 1 is a/an Arc (Pt1)
+  End 2 is a/an Point:           x2=x1+v1*r1,y2=y1+w1*r1
+  End 2 is a/an Line:            (y2-(y1+r1*w1))=m2*(x2-(x1+r1*v1))
+  End 2 is a/an Ray (arb):       (y2-(y1+r1*w1))=(w2/v2)*(x2-(x1+r1*v1)) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x2=x1+v1*r1,y2=y1+w1*r1
+  End 2 is a/an Line Seg (arb):  (y2-(y1+r1*w1))=m2*(x2-(x1+r1*v1)) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x2=x1+v1*r1,y2=y1+w1*r1
+  End 2 is a/an Line Seg (Pt2):  c2=x1+v1*r1,d2=y1+w1*r1
+  End 2 is a/an Circle (arb):    (r2)^2=((x1+v1*r1-x2)^2+(y1+w1*r1-y2)^2)
+  End 2 is a/an Circle (center): x2=x1+v1*r1,y2=y1+w1*r1
+  End 2 is a/an Arc (arb):       (r2)^2=((x1+v1*r1-x2)^2+(y1+w1*r1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x2+v2*r2=x1+v1*r1,y2+w2*r2=y1+w1*r1
+  End 2 is a/an Arc (Pt2):       x1+v1*r1=x2+a2*r2,y1+w1*r1=y2+b2*r2
+  End 2 is a/an Arc (center):    x2=x1+v1*r1,y2=y1+w1*r1
+ End 1 is a/an Arc (Pt2)
+  End 2 is a/an Point:           x2=x1+a1*r1,y2=y1+b1*r1
+  End 2 is a/an Line:            (y2-(y1+r1*b1))=m2*(x2-(x1+r1*a1))
+  End 2 is a/an Ray (arb):       (y2-(y1+r1*b1))=(w2/v2)*(x2-(x1+r1*a1)) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x2=x1+a1*r1,y2=y1+b1*r1
+  End 2 is a/an Line Seg (arb):  (y2-(y1+r1*b1))=m2*(x2-(x1+r1*a1)) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x2=x1+a1*r1,y2=y1+b1*r1
+  End 2 is a/an Line Seg (Pt2):  c2=x1+a1*r1,d2=y1+b1*r1
+  End 2 is a/an Circle (arb):    (r2)^2=((x1+a1*r1-x2)^2+(y1+b1*r1-y2)^2)
+  End 2 is a/an Circle (center): x2=x1+a1*r1,y2=y1+b1*r1
+  End 2 is a/an Arc (arb):       (r2)^2=((x1+a1*r1-x2)^2+(y1+b1*r1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x2+v2*r2=x1+a1*r1,y2+w2*r2=y1+b1*r1
+  End 2 is a/an Arc (Pt2):       x1+a1*r1=x2+a2*r2,y1+b1*r1=y2+b2*r2
+  End 2 is a/an Arc (center):    x2=x1+a1*r1,y2=y1+b1*r1
+ End 1 is a/an Arc (Center)
+  End 2 is a/an Point:           x1=x2,y1=y2
+  End 2 is a/an Line:            (y1-y2)=m2*(x1-x2)
+  End 2 is a/an Ray (arb):       (y1-y2)=(w2/v2)*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x1=x2,y1=y2
+  End 2 is a/an Line Seg (arb):  (y1-y2)=m2*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x1=x2,y1=y2
+  End 2 is a/an Line Seg (Pt2):  c2=x1,d2=y1
+  End 2 is a/an Circle (arb):    (r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): x1=x2,y1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x1=x2+v2*r2,y1=y2+w2*r2
+  End 2 is a/an Arc (Pt2):       x1=x2+a2*r2,y1=y2+b2*r2
+  End 2 is a/an Arc (center):    x1=x2,y1=y2
+Incidence Equations:
+ End 1 is a/an Point
+  End 2 is a/an Point:           x1=x2,y1=y2
+  End 2 is a/an Line:            (y1-y2)=m2*(x1-x2)
+  End 2 is a/an Ray (arb):       (y1-y2)=m2*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x1=x2,y1=y2
+  End 2 is a/an Line Seg (arb):  (y1-y2)=m2*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x1=x2,y1=y2
+  End 2 is a/an Line Seg (Pt2):  x1=c2,y1=d2
+  End 2 is a/an Circle (arb):    (r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): x1=x2,y1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x2=x1+v1*r1,y2=y1+w1*r1
+  End 2 is a/an Arc (Pt2):       x1=x2+a2*r2,y1=y2+b2*r2
+  End 2 is a/an Arc (center):    x1=x2,y1=y2
+ End 1 is a/an Line
+  End 2 is a/an Point:           (y2-y1)=m1*(x2-x1)
+  End 2 is a/an Line:             *** IMAGINARY ***
+  End 2 is a/an Ray (arb):        *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       (y1-y2)=m1*(x1-x2)
+  End 2 is a/an Line Seg (arb):   *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  (y1-y2)=m1*(x1-x2)
+  End 2 is a/an Line Seg (Pt2):  (y1-d2)=m1*(x1-c2)
+  End 2 is a/an Circle (arb):     *** IMAGINARY ***
+  End 2 is a/an Circle (center): (y1-y2)=m1*(x1-x2)
+  End 2 is a/an Arc (arb):        *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       (y1-(y2+r2*w2))=m1*(x1-(x2+r2*v2))
+  End 2 is a/an Arc (Pt2):       (y1-(y2+r2*b2))=m1*(x1-(x2+r2*a2))
+  End 2 is a/an Arc (center):    (y1-y2)=m1*(x1-x2)
+ End 1 is a/an Ray (arb)
+  End 2 is a/an Point:           (y2-y1)=(w1/v1)*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Line:             *** IMAGINARY ***
+  End 2 is a/an Ray (arb):        *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       (y2-y1)=(w1/v1)*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Line Seg (arb):   *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  (y2-y1)=(w1/v1)*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt2):  (d2-y1)=(w1/v1)*(c2-x1) *** IMAGINARY ***
+  End 2 is a/an Circle (arb):     *** IMAGINARY ***
+  End 2 is a/an Circle (center): (y2-y1)=(w1/v1)*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Arc (arb):        *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       (y1-(y2+r2*w2))=(w1/v1)*(x1-(x2+r2*v2)) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt2):       (y1-(y2+r2*b2))=(w1/v1)*(x1-(x2+r2*a2)) *** IMAGINARY ***
+  End 2 is a/an Arc (center):    (y2-y1)=(w1/v1)*(x2-x1) *** IMAGINARY ***
+ End 1 is a/an Ray (Pt1)
+  End 2 is a/an Point:           x1=x2,y1=y2
+  End 2 is a/an Line:            (y2-y1)=m2*(x2-x1)
+  End 2 is a/an Ray (arb):       (y1-y2)=(w2/v2)*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x1=x2,y1=y2
+  End 2 is a/an Line Seg (arb):  (y2-y1)=m2*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x1=x2,y1=y2
+  End 2 is a/an Line Seg (Pt2):  x1=c2,y1=d2
+  End 2 is a/an Circle (arb):    (r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): x1=x2,y1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x1=x2+v2*r2,y1=y2+w2*r2
+  End 2 is a/an Arc (Pt2):       x1=x2+a2*r2,y1=y2+b2*r2
+  End 2 is a/an Arc (center):    x1=x2,y1=y2
+ End 1 is a/an Line Seg (arb)
+  End 2 is a/an Point:           (y1-y2)=m1*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line:             *** IMAGINARY ***
+  End 2 is a/an Ray (arb):        *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       (y2-y1)=m1*(x2-x1) *** IMAGINARY ***
+  End 2 is a/an Line Seg (arb):   *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  (y1-y2)=m1*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt2):  (y1-d2)=m1*(x1-c2) *** IMAGINARY ***
+  End 2 is a/an Circle (arb):     *** IMAGINARY ***
+  End 2 is a/an Circle (center): (y1-y2)=m1*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Arc (arb):        *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       (y1-(y2+r2*w2))=m1*(x1-(x2+r2*v2)) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt2):       (y1-(y2+r2*b2))=m1*(x1-(x2+r2*a2)) *** IMAGINARY ***
+  End 2 is a/an Arc (center):    (y1-y2)=m1*(x1-x2) *** IMAGINARY ***
+ End 1 is a/an Line Seg (Pt1)
+  End 2 is a/an Point:           x1=x2,y1=y2
+  End 2 is a/an Line:            (y1-y2)=m2*(x1-x2)
+  End 2 is a/an Ray (arb):       (y1-y2)=(w2/v2)*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x1=x2,y1=y2
+  End 2 is a/an Line Seg (arb):  (y1-y2)=m2*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x1=x2,y1=y2
+  End 2 is a/an Line Seg (Pt2):  x1=c2,y1=d2
+  End 2 is a/an Circle (arb):    (r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): x1=x2,y1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x1=x2+v2*r2,y1=y2+w2*r2
+  End 2 is a/an Arc (Pt2):       x1=x2+a2*r2,y1=y2+b2*r2
+  End 2 is a/an Arc (center):    x1=x2,y1=y2
+ End 1 is a/an Line Seg (Pt2)
+  End 2 is a/an Point:           c1=x2,d1=y2
+  End 2 is a/an Line:            (d1-y2)=m2*(c1-x2)
+  End 2 is a/an Ray (arb):       (d1-y2)=(w2/v2)*(c1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x2=c1,y2=d1
+  End 2 is a/an Line Seg (arb):  (y1-d2)=m2*(x1-c2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  c1=x2,d1=y2
+  End 2 is a/an Line Seg (Pt2):  c1=c2,d1=d2
+  End 2 is a/an Circle (arb):    (r2)^2=((c1-x2)^2+(d1-y2)^2)
+  End 2 is a/an Circle (center): c1=x2,d1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((c1-x2)^2+(d1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       c1=x2+v2*r2,d1=y2+w2*r2
+  End 2 is a/an Arc (Pt2):       c1=x2+a2*r2,d1=y2+b2*r2
+  End 2 is a/an Arc (center):    c1=x2,d1=y2
+ End 1 is a/an Circle (arb)
+  End 2 is a/an Point:           (r1)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line:             *** IMAGINARY ***
+  End 2 is a/an Ray (arb):        *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       (r1)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line Seg (arb):   *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  (r1)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Line Seg (Pt2):  (r1)^2=((c2-x1)^2+(d2-y1)^2)
+  End 2 is a/an Circle (arb):     *** IMAGINARY ***
+  End 2 is a/an Circle (center): (r1)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (arb):        *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       (r1)^2=((x2+v2*r2-x1)^2+(y2+w2*r2-y1)^2)
+  End 2 is a/an Arc (Pt2):       (r1)^2=((x2+a2*r2-x1)^2+(y2+b2*r2-y1)^2)
+  End 2 is a/an Arc (center):    (r1)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Circle (center)
+  End 2 is a/an Point:           x1=x2,y1=y2
+  End 2 is a/an Line:            (y1-y2)=m2*(x1-x2)
+  End 2 is a/an Ray (arb):       (y1-y2)=(w2/v2)*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x1=x2,y1=y2
+  End 2 is a/an Line Seg (arb):  (y1-y2)=m2*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x1=x2,y1=y2
+  End 2 is a/an Line Seg (Pt2):  c2=x1,d2=y1
+  End 2 is a/an Circle (arb):    (r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): x1=x2,y1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x1=x2+v2*r2,y1=y2+w2*r2
+  End 2 is a/an Arc (Pt2):       x1=x2+a2*r2,y1=y2+b2*r2
+  End 2 is a/an Arc (center):    x1=x2,y1=y2
+ End 1 is a/an Arc (arb)
+  End 2 is a/an Point:           (r1)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Line:             *** IMAGINARY ***
+  End 2 is a/an Ray (arb):        *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       (r1)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (arb):   *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  (r1)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt2):  (r1)^2=((c2-x1)^2+(d2-y1)^2) *** IMAGINARY ***
+  End 2 is a/an Circle (arb):     *** IMAGINARY ***
+  End 2 is a/an Circle (center): (r1)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (arb):        *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       (r1)^2=((x2+v2*r2-x1)^2+(y2+w2*r2-y1)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt2):       (r1)^2=((x2+a2*r2-x1)^2+(y2+b2*r2-y1)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (center):    (r1)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+ End 1 is a/an Arc (Pt1)
+  End 2 is a/an Point:           x2=x1+v1*r1,y2=y1+w1*r1
+  End 2 is a/an Line:            (y2-(y1+r1*w1))=m2*(x2-(x1+r1*v1))
+  End 2 is a/an Ray (arb):       (y2-(y1+r1*w1))=(w2/v2)*(x2-(x1+r1*v1)) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x2=x1+v1*r1,y2=y1+w1*r1
+  End 2 is a/an Line Seg (arb):  (y2-(y1+r1*w1))=m2*(x2-(x1+r1*v1)) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x2=x1+v1*r1,y2=y1+w1*r1
+  End 2 is a/an Line Seg (Pt2):  c2=x1+v1*r1,d2=y1+w1*r1
+  End 2 is a/an Circle (arb):    (r2)^2=((x1+v1*r1-x2)^2+(y1+w1*r1-y2)^2)
+  End 2 is a/an Circle (center): x2=x1+v1*r1,y2=y1+w1*r1
+  End 2 is a/an Arc (arb):       (r2)^2=((x1+v1*r1-x2)^2+(y1+w1*r1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x2+v2*r2=x1+v1*r1,y2+w2*r2=y1+w1*r1
+  End 2 is a/an Arc (Pt2):       x1+v1*r1=x2+a2*r2,y1+w1*r1=y2+b2*r2
+  End 2 is a/an Arc (center):    x2=x1+v1*r1,y2=y1+w1*r1
+ End 1 is a/an Arc (Pt2)
+  End 2 is a/an Point:           x2=x1+a1*r1,y2=y1+b1*r1
+  End 2 is a/an Line:            (y2-(y1+r1*b1))=m2*(x2-(x1+r1*a1))
+  End 2 is a/an Ray (arb):       (y2-(y1+r1*b1))=(w2/v2)*(x2-(x1+r1*a1)) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x2=x1+a1*r1,y2=y1+b1*r1
+  End 2 is a/an Line Seg (arb):  (y2-(y1+r1*b1))=m2*(x2-(x1+r1*a1)) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x2=x1+a1*r1,y2=y1+b1*r1
+  End 2 is a/an Line Seg (Pt2):  c2=x1+a1*r1,d2=y1+b1*r1
+  End 2 is a/an Circle (arb):    (r2)^2=((x1+a1*r1-x2)^2+(y1+b1*r1-y2)^2)
+  End 2 is a/an Circle (center): x2=x1+a1*r1,y2=y1+b1*r1
+  End 2 is a/an Arc (arb):       (r2)^2=((x1+a1*r1-x2)^2+(y1+b1*r1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x2+v2*r2=x1+a1*r1,y2+w2*r2=y1+b1*r1
+  End 2 is a/an Arc (Pt2):       x1+a1*r1=x2+a2*r2,y1+b1*r1=y2+b2*r2
+  End 2 is a/an Arc (center):    x2=x1+a1*r1,y2=y1+b1*r1
+ End 1 is a/an Arc (Center)
+  End 2 is a/an Point:           x1=x2,y1=y2
+  End 2 is a/an Line:            (y1-y2)=m2*(x1-x2)
+  End 2 is a/an Ray (arb):       (y1-y2)=(w2/v2)*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Ray (Pt1):       x1=x2,y1=y2
+  End 2 is a/an Line Seg (arb):  (y1-y2)=m2*(x1-x2) *** IMAGINARY ***
+  End 2 is a/an Line Seg (Pt1):  x1=x2,y1=y2
+  End 2 is a/an Line Seg (Pt2):  c2=x1,d2=y1
+  End 2 is a/an Circle (arb):    (r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): x1=x2,y1=y2
+  End 2 is a/an Arc (arb):       (r2)^2=((x1-x2)^2+(y1-y2)^2) *** IMAGINARY ***
+  End 2 is a/an Arc (Pt1):       x1=x2+v2*r2,y1=y2+w2*r2
+  End 2 is a/an Arc (Pt2):       x1=x2+a2*r2,y1=y2+b2*r2
+  End 2 is a/an Arc (center):    x1=x2,y1=y2
+Angle Equations:
+ End 1 is a/an Point
+ End 1 is a/an Line
+  End 2 is a/an Line:            (-1)=m1*m2
+  End 2 is a/an Ray (arb):       (-1)=m1*(w2/v2)
+  End 2 is a/an Ray (Pt1):       (-1)=m1*(w2/v2)
+  End 2 is a/an Line Seg (arb):  (-1)=m1*m2
+  End 2 is a/an Line Seg (Pt1):  (-1)=m1*m2
+  End 2 is a/an Line Seg (Pt2):  (-1)=m1*m2
+ End 1 is a/an Ray (arb)
+  End 2 is a/an Line:            (-1)=(w1/v1)*m2
+  End 2 is a/an Ray (arb):       (-1)=(w1/v1)*(w2/v2)
+  End 2 is a/an Ray (Pt1):       (-1)=(w1/v1)*(w2/v2)
+  End 2 is a/an Line Seg (arb):  (-1)=(w1/v1)*m2
+  End 2 is a/an Line Seg (Pt1):  (-1)=(w1/v1)*m2
+  End 2 is a/an Line Seg (Pt2):  (-1)=(w1/v1)*m2
+ End 1 is a/an Ray (Pt1)
+  End 2 is a/an Line:            (-1)=(w1/v1)*m2
+  End 2 is a/an Ray (arb):       (-1)=(w1/v1)*(w2/v2)
+  End 2 is a/an Ray (Pt1):       (-1)=(w1/v1)*(w2/v2)
+  End 2 is a/an Line Seg (arb):  (-1)=(w1/v1)*m2
+  End 2 is a/an Line Seg (Pt1):  (-1)=(w1/v1)*m2
+  End 2 is a/an Line Seg (Pt2):  (-1)=(w1/v1)*m2
+ End 1 is a/an Line Seg (arb)
+  End 2 is a/an Line:            (-1)=m1*m2
+  End 2 is a/an Ray (arb):       (-1)=m1*(w2/v2)
+  End 2 is a/an Ray (Pt1):       (-1)=m1*(w2/v2)
+  End 2 is a/an Line Seg (arb):  (-1)=m1*m2
+  End 2 is a/an Line Seg (Pt1):  (-1)=m1*m2
+  End 2 is a/an Line Seg (Pt2):  (-1)=m1*m2
+ End 1 is a/an Line Seg (Pt1)
+  End 2 is a/an Line:            (-1)=m1*m2
+  End 2 is a/an Ray (arb):       (-1)=m1*(w2/v2)
+  End 2 is a/an Ray (Pt1):       (-1)=m1*(w2/v2)
+  End 2 is a/an Line Seg (arb):  (-1)=m1*m2
+  End 2 is a/an Line Seg (Pt1):  (-1)=m1*m2
+  End 2 is a/an Line Seg (Pt2):  (-1)=m1*m2
+ End 1 is a/an Line Seg (Pt2)
+  End 2 is a/an Line:            (-1)=m1*m2
+  End 2 is a/an Ray (arb):       (-1)=m1*(w2/v2)
+  End 2 is a/an Ray (Pt1):       (-1)=m1*(w2/v2)
+  End 2 is a/an Line Seg (arb):  (-1)=m1*m2
+  End 2 is a/an Line Seg (Pt1):  (-1)=m1*m2
+  End 2 is a/an Line Seg (Pt2):  (-1)=m1*m2
+ End 1 is a/an Circle (arb)
+ End 1 is a/an Circle (center)
+ End 1 is a/an Arc (arb)
+ End 1 is a/an Arc (Pt1)
+ End 1 is a/an Arc (Pt2)
+ End 1 is a/an Arc (Center)
+Parallel Equations:
+ End 1 is a/an Point
+ End 1 is a/an Line
+  End 2 is a/an Line:            m1=m2
+  End 2 is a/an Ray (arb):       m1=(w2/v2)
+  End 2 is a/an Ray (Pt1):       m1=(w2/v2)
+  End 2 is a/an Line Seg (arb):  m1=m2
+  End 2 is a/an Line Seg (Pt1):  m1=m2
+  End 2 is a/an Line Seg (Pt2):  m1=m2
+ End 1 is a/an Ray (arb)
+  End 2 is a/an Line:            (w1/v1)=m2
+  End 2 is a/an Ray (arb):       (w1/v1)=(w2/v2)
+  End 2 is a/an Ray (Pt1):       (w1/v1)=(w2/v2)
+  End 2 is a/an Line Seg (arb):  (w1/v1)=m2
+  End 2 is a/an Line Seg (Pt1):  (w1/v1)=m2
+  End 2 is a/an Line Seg (Pt2):  (w1/v1)=m2
+ End 1 is a/an Ray (Pt1)
+  End 2 is a/an Line:            (w1/v1)=m2
+  End 2 is a/an Ray (arb):       (w1/v1)=(w2/v2)
+  End 2 is a/an Ray (Pt1):       (w1/v1)=(w2/v2)
+  End 2 is a/an Line Seg (arb):  (w1/v1)=m2
+  End 2 is a/an Line Seg (Pt1):  (w1/v1)=m2
+  End 2 is a/an Line Seg (Pt2):  (w1/v1)=m2
+ End 1 is a/an Line Seg (arb)
+  End 2 is a/an Line:            m1=m2
+  End 2 is a/an Ray (arb):       m1=(w2/v2)
+  End 2 is a/an Ray (Pt1):       m1=(w2/v2)
+  End 2 is a/an Line Seg (arb):  m1=m2
+  End 2 is a/an Line Seg (Pt1):  m1=m2
+  End 2 is a/an Line Seg (Pt2):  m1=m2
+ End 1 is a/an Line Seg (Pt1)
+  End 2 is a/an Line:            m1=m2
+  End 2 is a/an Ray (arb):       m1=(w2/v2)
+  End 2 is a/an Ray (Pt1):       m1=(w2/v2)
+  End 2 is a/an Line Seg (arb):  m1=m2
+  End 2 is a/an Line Seg (Pt1):  m1=m2
+  End 2 is a/an Line Seg (Pt2):  m1=m2
+ End 1 is a/an Line Seg (Pt2)
+  End 2 is a/an Line:            m1=m2
+  End 2 is a/an Ray (arb):       m1=(w2/v2)
+  End 2 is a/an Ray (Pt1):       m1=(w2/v2)
+  End 2 is a/an Line Seg (arb):  m1=m2
+  End 2 is a/an Line Seg (Pt1):  m1=m2
+  End 2 is a/an Line Seg (Pt2):  m1=m2
+ End 1 is a/an Circle (arb)
+ End 1 is a/an Circle (center)
+ End 1 is a/an Arc (arb)
+ End 1 is a/an Arc (Pt1)
+ End 1 is a/an Arc (Pt2)
+ End 1 is a/an Arc (Center)
+Perpendicular Equations:
+ End 1 is a/an Point
+ End 1 is a/an Line
+  End 2 is a/an Line:            (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Ray (arb):       (0.007600)=((m1-(w2/v2))/(1+m1*(w2/v2)))^2
+  End 2 is a/an Ray (Pt1):       (0.007600)=((m1-(w2/v2))/(1+m1*(w2/v2)))^2
+  End 2 is a/an Line Seg (arb):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Line Seg (Pt1):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Line Seg (Pt2):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Arc (arb):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt1):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt2):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (center):    (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+ End 1 is a/an Ray (arb)
+  End 2 is a/an Line:            (0.007600)=(((w1/v1)-m2)/(1+(w1/v1)*m2))^2
+  End 2 is a/an Ray (arb):       (0.007600)=(((w1/v1)-(w2/v2))/(1+(w1/v1)*(w2/v2)))^2
+  End 2 is a/an Ray (Pt1):       (0.007600)=(((w1/v1)-(w2/v2))/(1+(w1/v1)*(w2/v2)))^2
+  End 2 is a/an Line Seg (arb):  (0.007600)=(((w1/v1)-m2)/(1+(w1/v1)*m2))^2
+  End 2 is a/an Line Seg (Pt1):  (0.007600)=(((w1/v1)-m2)/(1+(w1/v1)*m2))^2
+  End 2 is a/an Line Seg (Pt2):  (0.007600)=(((w1/v1)-m2)/(1+(w1/v1)*m2))^2
+  End 2 is a/an Arc (arb):       (0.007600)=(((w1/v1)-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+(w1/v1)*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt1):       (0.007600)=(((w1/v1)-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+(w1/v1)*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt2):       (0.007600)=(((w1/v1)-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+(w1/v1)*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (center):    (0.007600)=(((w1/v1)-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+(w1/v1)*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+ End 1 is a/an Ray (Pt1)
+  End 2 is a/an Line:            (0.007600)=(((w1/v1)-m2)/(1+(w1/v1)*m2))^2
+  End 2 is a/an Ray (arb):       (0.007600)=(((w1/v1)-(w2/v2))/(1+(w1/v1)*(w2/v2)))^2
+  End 2 is a/an Ray (Pt1):       (0.007600)=(((w1/v1)-(w2/v2))/(1+(w1/v1)*(w2/v2)))^2
+  End 2 is a/an Line Seg (arb):  (0.007600)=(((w1/v1)-m2)/(1+(w1/v1)*m2))^2
+  End 2 is a/an Line Seg (Pt1):  (0.007600)=(((w1/v1)-m2)/(1+(w1/v1)*m2))^2
+  End 2 is a/an Line Seg (Pt2):  (0.007600)=(((w1/v1)-m2)/(1+(w1/v1)*m2))^2
+  End 2 is a/an Arc (arb):       (0.007600)=(((w1/v1)-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+(w1/v1)*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt1):       (0.007600)=(((w1/v1)-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+(w1/v1)*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt2):       (0.007600)=(((w1/v1)-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+(w1/v1)*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (center):    (0.007600)=(((w1/v1)-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+(w1/v1)*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+ End 1 is a/an Line Seg (arb)
+  End 2 is a/an Line:            (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Ray (arb):       (0.007600)=((m1-(w2/v2))/(1+m1*(w2/v2)))^2
+  End 2 is a/an Ray (Pt1):       (0.007600)=((m1-(w2/v2))/(1+m1*(w2/v2)))^2
+  End 2 is a/an Line Seg (arb):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Line Seg (Pt1):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Line Seg (Pt2):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Arc (arb):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt1):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt2):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (center):    (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+ End 1 is a/an Line Seg (Pt1)
+  End 2 is a/an Line:            (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Ray (arb):       (0.007600)=((m1-(w2/v2))/(1+m1*(w2/v2)))^2
+  End 2 is a/an Ray (Pt1):       (0.007600)=((m1-(w2/v2))/(1+m1*(w2/v2)))^2
+  End 2 is a/an Line Seg (arb):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Line Seg (Pt1):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Line Seg (Pt2):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Arc (arb):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt1):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt2):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (center):    (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+ End 1 is a/an Line Seg (Pt2)
+  End 2 is a/an Line:            (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Ray (arb):       (0.007600)=((m1-(w2/v2))/(1+m1*(w2/v2)))^2
+  End 2 is a/an Ray (Pt1):       (0.007600)=((m1-(w2/v2))/(1+m1*(w2/v2)))^2
+  End 2 is a/an Line Seg (arb):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Line Seg (Pt1):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Line Seg (Pt2):  (0.007600)=((m1-m2)/(1+m1*m2))^2
+  End 2 is a/an Arc (arb):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt1):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt2):       (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (center):    (0.007600)=((m1-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+m1*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+ End 1 is a/an Circle (arb)
+ End 1 is a/an Circle (center)
+ End 1 is a/an Arc (arb)
+  End 2 is a/an Line:            (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Ray (arb):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-(w2/v2))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*(w2/v2)))^2
+  End 2 is a/an Ray (Pt1):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-(w2/v2))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*(w2/v2)))^2
+  End 2 is a/an Line Seg (arb):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Line Seg (Pt1):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Line Seg (Pt2):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Arc (arb):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt1):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt2):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (center):    (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+ End 1 is a/an Arc (Pt1)
+  End 2 is a/an Line:            (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Ray (arb):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-(w2/v2))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*(w2/v2)))^2
+  End 2 is a/an Ray (Pt1):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-(w2/v2))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*(w2/v2)))^2
+  End 2 is a/an Line Seg (arb):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Line Seg (Pt1):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Line Seg (Pt2):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Arc (arb):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt1):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt2):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (center):    (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+ End 1 is a/an Arc (Pt2)
+  End 2 is a/an Line:            (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Ray (arb):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-(w2/v2))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*(w2/v2)))^2
+  End 2 is a/an Ray (Pt1):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-(w2/v2))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*(w2/v2)))^2
+  End 2 is a/an Line Seg (arb):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Line Seg (Pt1):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Line Seg (Pt2):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Arc (arb):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt1):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt2):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (center):    (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+ End 1 is a/an Arc (Center)
+  End 2 is a/an Line:            (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Ray (arb):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-(w2/v2))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*(w2/v2)))^2
+  End 2 is a/an Ray (Pt1):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-(w2/v2))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*(w2/v2)))^2
+  End 2 is a/an Line Seg (arb):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Line Seg (Pt1):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Line Seg (Pt2):  (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-m2)/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*m2))^2
+  End 2 is a/an Arc (arb):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt1):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (Pt2):       (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+  End 2 is a/an Arc (center):    (0.007600)=((((1-v1*a1+w1*b1)/(w1*a1+v1*b1))-((1-v2*a2+w2*b2)/(w2*a2+v2*b2)))/(1+((1-v1*a1+w1*b1)/(w1*a1+v1*b1))*((1-v2*a2+w2*b2)/(w2*a2+v2*b2))))^2
+Tangency Equations:
+ End 1 is a/an Point
+ End 1 is a/an Line
+  End 2 is a/an Circle (arb):    (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (center): (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (arb):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt1):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt2):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (center):    (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+ End 1 is a/an Ray (arb)
+  End 2 is a/an Circle (arb):    (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Circle (center): (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (arb):       (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (Pt1):       (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (Pt2):       (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (center):    (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+ End 1 is a/an Ray (Pt1)
+  End 2 is a/an Circle (arb):    (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Circle (center): (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (arb):       (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (Pt1):       (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (Pt2):       (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+  End 2 is a/an Arc (center):    (r2)^2=((y1+y2-(w1/v1)*(x1-x2))/(1+(w1/v1)^2))
+ End 1 is a/an Line Seg (arb)
+  End 2 is a/an Circle (arb):    (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (center): (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (arb):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt1):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt2):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (center):    (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+ End 1 is a/an Line Seg (Pt1)
+  End 2 is a/an Circle (arb):    (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (center): (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (arb):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt1):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt2):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (center):    (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+ End 1 is a/an Line Seg (Pt2)
+  End 2 is a/an Circle (arb):    (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Circle (center): (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (arb):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt1):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (Pt2):       (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+  End 2 is a/an Arc (center):    (r2)^2=((y1+y2-m1*(x1-x2))/(1+m1^2))
+ End 1 is a/an Circle (arb)
+  End 2 is a/an Line:            (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Circle (arb):    (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Circle (center)
+  End 2 is a/an Line:            (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Circle (arb):    (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Circle (center): (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Arc (arb)
+  End 2 is a/an Line:            (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Arc (arb):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt1):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt2):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (center):    (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Arc (Pt1)
+  End 2 is a/an Line:            (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Arc (arb):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt1):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt2):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (center):    (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Arc (Pt2)
+  End 2 is a/an Line:            (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Arc (arb):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt1):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt2):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (center):    (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+ End 1 is a/an Arc (Center)
+  End 2 is a/an Line:            (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Ray (arb):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Ray (Pt1):       (r1)^2=((y2+y1-(w2/v2)*(x2-x1))/(1+(w2/v2)^2))
+  End 2 is a/an Line Seg (arb):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt1):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Line Seg (Pt2):  (r1)^2=((y2+y1-m2*(x2-x1))/(1+m2^2))
+  End 2 is a/an Arc (arb):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt1):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (Pt2):       (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+  End 2 is a/an Arc (center):    (r1+r2)^2=((x1-x2)^2+(y1-y2)^2)
+{x1,y1,x2,y2,m2,v2,w2,m1,v1,w1,c2,d2,r2,r1,a2,b2,c1,d1,a1,b1}

@@ -1,0 +1,5118 @@
+ Added a shape...!
+ Added a shape...!
+ Added a shape...!
+ Added a shape...!
+111 added group Groups shapes size=0
+size = 4
+OPEN UTU
+INTS
+DOUBLES
+CHARS
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+*FLAG: 0
+Tree Flag in utuC.cpp: 1
+1. Find mode
+2. Input Mode
+Enter selection:
+backup
+old
+original
+test
+test2
+test3
+/amd/avocado/export/research4/constraints/Version8.10.6Adam/datafiles/original
+/amd/avocado/export/research4/constraints/Version8.10.6Adam/datafiles/original
+The available data files directories are:
+Give name of the required data files directory : In req. dirGraph is Empty.
+shapeType=6
+shapeID=1
+shapeType=6
+shapeID=2
+shapeType=6
+shapeID=3
+shapeType=6
+shapeID=4
+4
+-1
+constraintType=7
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 24
+Total weight of edges   : 13
+Total flowed weight     : 0
+constraintType=6
+constraintID=3
+Constraint Type=6 part=1
+Constraint Type=6 part=1
+constraintType=6
+constraintID=6
+Constraint Type=6 part=1
+Constraint Type=6 part=1
+constraintType=6
+constraintID=5
+Constraint Type=6 part=1
+Constraint Type=6 part=1
+constraintType=6
+constraintID=4
+Constraint Type=6 part=1
+Constraint Type=6 part=1
+constraintType=7
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+StartGroup: 58
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+original graph:
+data 58 -1
+data 58 0
+data 58 0
+data 58 -1
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+data 58 0
+
+8 Solver Input Trees
+---------
+Tree 1
+**Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 4
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 5
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 6
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 7
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 8
+**Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+Groups read
+Graph Copied
+Dimension=3
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+SolverTrees called
+Start of DR_Trees Loop
+**Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+Before extension
+In distributeCL path
+Start of DR_Trees Loop
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+Before extension
+In distributeCL path
+Start of DR_Trees Loop
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+Before extension
+In distributeCL path
+Getting Cluster 12
+Contents of F before new labeling
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=10, PF=0, F1=1, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=1009,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edg=1008,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=1, EF=1, edge:1001 3 6 PD=6 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=1, edge:6 5 1009 PD=5 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:1004 5 4 1007 1008 PD=5 DOF=un un un NA NA NA un unun
+Ver=8,T=7, W=6, d=0, LSFI=1001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 15
+Total weight of edges   : 8
+Total flowed weight     : 2
+Calculating Inner Edges
+Calculating Inner Edges
+Calculating Inner Edges
+END GETCLUSTER
+After addchild
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+IN PSEUDOMINDENSE
+Cluster(core):12, depth=1, type=0, over constrained
+Frontiers: 2 3 8 
+Previous clusters: 8 3 2 
+Original Vertices: 8 3 2 
+Inner Edge: 7(1,2-12) 8(1,3-12) 9(1,8-12) 
+Onter Edge: 5(1,2-3) 1009(3,2-8) 1008(3,3-8) 
+Bifurcations (Current Selection: None):
+
+Cluster 1: 8
+Cluster(core):8, depth=0, type=0, under constrained
+Frontiers: 8 
+Previous clusters: 
+Original Vertices: 8 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 3
+Cluster(core):3, depth=0, type=0, under constrained
+Frontiers: 3 
+Previous clusters: 
+Original Vertices: 3 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edge Weight: 3
+Vert Weight: 9
+Cluster 1: 8
+Cluster(core):8, depth=0, type=0, under constrained
+Frontiers: 8 
+Previous clusters: 
+Original Vertices: 8 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 2
+Cluster(core):2, depth=0, type=0, under constrained
+Frontiers: 2 
+Previous clusters: 
+Original Vertices: 2 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edge Weight: 3
+Vert Weight: 9
+Cluster 1: 3
+Cluster(core):3, depth=0, type=0, under constrained
+Frontiers: 3 
+Previous clusters: 
+Original Vertices: 3 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 2
+Cluster(core):2, depth=0, type=0, under constrained
+Frontiers: 2 
+Previous clusters: 
+Original Vertices: 2 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edge Weight: 1
+Vert Weight: 6
+Getting list of overlapping vertices: 
+After line check
+After line remove
+after deleting inner edges
+appending newTree
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+****Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+CheckBananas value: -1
+Before ClusterType
+Edge Name: 1000
+Edge Code: -1
+Edge Type: 8
+Edge Name: 1001
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1002
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1003
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1004
+Edge Code: -1
+Edge Type: 1
+Edge Name: 3
+Edge Code: -1
+Edge Type: 6
+Edge Name: 6
+Edge Code: -1
+Edge Type: 6
+Edge Name: 5
+Edge Code: 0
+Edge Type: 6
+Edge Name: 4
+Edge Code: -1
+Edge Type: 6
+Edge Name: 1005
+Edge Code: -1
+Edge Type: 8
+Edge Name: 1006
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1007
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1008
+Edge Code: 0
+Edge Type: 1
+Edge Name: 1009
+Edge Code: 0
+Edge Type: 1
+Getting Cluster 12 Type: 
+LSCount:     1
+distCount:   1
+pointCount:  2
+totalCount:  3
+notIncid:    0
+Type set to 2 (2)
+After ClusterType
+After checkValue switch
+Alias found: 8
+Line appended: 8
+Checking Edge: Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Right appended: 3
+Checking Edge: Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Left appended: 2
+After aliasing for cluster: 12
+Alias: 8
+Left: 2 
+Right: 3 
+Lines: 8 
+end of check bananas if
+End of DR_Trees loop
+Start of DR_Trees Loop
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 12,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+****Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+Before extension
+In distributeCL path
+Getting Cluster 13
+Contents of F before new labeling
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=3,T=6, W=1,V=1, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=1001,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=2, edge:1001 3 6 PD=3 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=1, edge:6 5 1009 7 PD=5 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:1004 5 4 1007 1008 8 PD=5 DOF=un un un NA NA NA un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 9 PD=0 DOF=un un un un un un un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:1002 1003 3 4 1006 PD=3 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=1001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 24
+Total weight of edges   : 15
+Total flowed weight     : 3
+Calculating Inner Edges
+Calculating Inner Edges
+Calculating Inner Edges
+END GETCLUSTER
+After addchild
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+IN PSEUDOMINDENSE
+Cluster(core):13, depth=1, type=0, over constrained
+Frontiers: 1 4 5 
+Previous clusters: 5 4 1 
+Original Vertices: 5 4 1 
+Inner Edge: 10(1,1-13) 11(1,4-13) 12(1,5-13) 
+Onter Edge: 3(1,1-4) 1001(3,1-5) 1002(3,4-5) 
+Bifurcations (Current Selection: None):
+
+Cluster 1: 5
+Cluster(core):5, depth=0, type=0, under constrained
+Frontiers: 5 
+Previous clusters: 
+Original Vertices: 5 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 4
+Cluster(core):4, depth=0, type=0, under constrained
+Frontiers: 4 
+Previous clusters: 
+Original Vertices: 4 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edge Weight: 3
+Vert Weight: 9
+Cluster 1: 5
+Cluster(core):5, depth=0, type=0, under constrained
+Frontiers: 5 
+Previous clusters: 
+Original Vertices: 5 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 1
+Cluster(core):1, depth=0, type=0, under constrained
+Frontiers: 1 
+Previous clusters: 
+Original Vertices: 1 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edge Weight: 3
+Vert Weight: 9
+Cluster 1: 4
+Cluster(core):4, depth=0, type=0, under constrained
+Frontiers: 4 
+Previous clusters: 
+Original Vertices: 4 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 1
+Cluster(core):1, depth=0, type=0, under constrained
+Frontiers: 1 
+Previous clusters: 
+Original Vertices: 1 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edge Weight: 1
+Vert Weight: 6
+Getting list of overlapping vertices: 
+After line check
+After line remove
+after deleting inner edges
+appending newTree
+**Core: 12,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+****Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 13,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+CheckBananas value: -1
+Before ClusterType
+Edge Name: 1000
+Edge Code: -1
+Edge Type: 8
+Edge Name: 1001
+Edge Code: 0
+Edge Type: 1
+Edge Name: 1002
+Edge Code: 0
+Edge Type: 1
+Edge Name: 1003
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1004
+Edge Code: -1
+Edge Type: 1
+Edge Name: 3
+Edge Code: 0
+Edge Type: 6
+Edge Name: 6
+Edge Code: -1
+Edge Type: 6
+Edge Name: 5
+Edge Code: -1
+Edge Type: 6
+Edge Name: 4
+Edge Code: -1
+Edge Type: 6
+Edge Name: 1005
+Edge Code: -1
+Edge Type: 8
+Edge Name: 1006
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1007
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1008
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1009
+Edge Code: -1
+Edge Type: 1
+Getting Cluster 13 Type: 
+LSCount:     1
+distCount:   1
+pointCount:  2
+totalCount:  3
+notIncid:    0
+Type set to 2 (2)
+After ClusterType
+After checkValue switch
+Alias found: 5
+Line appended: 5
+Checking Edge: Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Right appended: 4
+Checking Edge: Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Left appended: 1
+After aliasing for cluster: 13
+Alias: 5
+Left: 1 
+Right: 4 
+Lines: 5 
+end of check bananas if
+End of DR_Trees loop
+Start of DR_Trees Loop
+**Core: 12,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+****Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+Before extension
+In distributeCL path
+Getting Cluster 14
+Contents of F before new labeling
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=4,T=6, W=1,V=1, LS=10, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1004,T=1, W=3,V=0, LS=10, PF=0, F1=3, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=1003,T=1, W=3,V=0, LS=10, PF=0, F1=3, F2=0, Ends: 4(1) 6(2) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=1, edge:6 5 1009 7 PD=5 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1004 5 4 1007 1008 8 PD=1004 DOF=un un un NA NA NA un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 9 PD=0 DOF=un un un un un un un unun
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=1, EF=2, edge:1001 3 6 10 PD=3 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1002 1003 3 4 1006 11 PD=1003 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 12 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=1001, PF=3, EF=0, edge:1000 1003 1004 PD=1003 DOF=un un un un un un un unun
+Total weight of vertices: 30
+Total weight of edges   : 22
+Total flowed weight     : 9
+Calculating Inner Edges
+Calculating Inner Edges
+Calculating Inner Edges
+END GETCLUSTER
+After addchild
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+IN PSEUDOMINDENSE
+Cluster(core):14, depth=1, type=0, over constrained
+Frontiers: 3 4 6 
+Previous clusters: 6 3 4 
+Original Vertices: 3 4 6 
+Inner Edge: 13(1,3-14) 14(1,4-14) 15(1,6-14) 
+Onter Edge: 4(1,3-4) 1004(3,3-6) 1003(3,4-6) 
+Bifurcations (Current Selection: None):
+
+Cluster 1: 6
+Cluster(core):6, depth=0, type=0, under constrained
+Frontiers: 6 
+Previous clusters: 
+Original Vertices: 6 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 3
+Cluster(core):3, depth=0, type=0, under constrained
+Frontiers: 3 
+Previous clusters: 
+Original Vertices: 3 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edge Weight: 3
+Vert Weight: 9
+Cluster 1: 6
+Cluster(core):6, depth=0, type=0, under constrained
+Frontiers: 6 
+Previous clusters: 
+Original Vertices: 6 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 4
+Cluster(core):4, depth=0, type=0, under constrained
+Frontiers: 3 4 
+Previous clusters: 
+Original Vertices: 3 4 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edge Weight: 7
+Vert Weight: 12
+Getting list of overlapping vertices: 
+After line check
+After line remove
+after deleting inner edges
+appending newTree
+**Core: 12,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+****Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+**Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 14,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+CheckBananas value: -1
+Before ClusterType
+Edge Name: 1000
+Edge Code: -1
+Edge Type: 8
+Edge Name: 1001
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1002
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1003
+Edge Code: 0
+Edge Type: 1
+Edge Name: 1004
+Edge Code: 0
+Edge Type: 1
+Edge Name: 3
+Edge Code: -1
+Edge Type: 6
+Edge Name: 6
+Edge Code: -1
+Edge Type: 6
+Edge Name: 5
+Edge Code: -1
+Edge Type: 6
+Edge Name: 4
+Edge Code: 0
+Edge Type: 6
+Edge Name: 1005
+Edge Code: -1
+Edge Type: 8
+Edge Name: 1006
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1007
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1008
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1009
+Edge Code: -1
+Edge Type: 1
+Getting Cluster 14 Type: 
+LSCount:     1
+distCount:   1
+pointCount:  2
+totalCount:  3
+notIncid:    0
+Type set to 2 (2)
+After ClusterType
+After checkValue switch
+Alias found: 6
+Checking Edge: Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Left appended: 3
+Checking Edge: Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Right appended: 4
+Line appended: 6
+After aliasing for cluster: 14
+Alias: 6
+Left: 3 
+Right: 4 
+Lines: 6 
+end of check bananas if
+End of DR_Trees loop
+Start of DR_Trees Loop
+**Core: 12,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+****Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+**Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+Before extension
+Getting Cluster 15
+Contents of F before new labeling
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=4,T=6, W=1,V=1, LS=10, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1004,T=1, W=3,V=0, LS=10, PF=0, F1=3, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=1003,T=1, W=3,V=0, LS=10, PF=0, F1=3, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1007,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1006,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=1, edge:6 5 1009 7 PD=5 DOF=un un un NA NA NA un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 9 PD=0 DOF=un un un un un un un unun
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=1, EF=2, edge:1001 3 6 10 PD=3 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 12 PD=0 DOF=un un un un un un un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1004 5 4 1007 1008 8 13 PD=1004 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1002 1003 3 4 1006 11 14 PD=1003 DOF=un un un NA NA NA un unun
+Ver=6,T=7, W=6, d=0, LSFI=1001, PF=3, EF=0, edge:1000 1003 1004 15 PD=1003 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=1001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 9
+Calculating Inner Edges
+Calculating Inner Edges
+Calculating Inner Edges
+Calculating Inner Edges
+END GETCLUSTER
+Getting Cluster 16
+Contents of F before new labeling
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=4,T=6, W=1,V=1, LS=10, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1004,T=1, W=3,V=0, LS=10, PF=0, F1=3, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=1003,T=1, W=3,V=0, LS=10, PF=0, F1=3, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1007,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1006,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=13,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 14(0) PD=0
+Edg=14,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 14(0) PD=0
+Edg=15,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 14(0) PD=0
+Edg=16,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 15(0) PD=0
+Edg=17,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 15(0) PD=0
+Edg=18,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 15(0) PD=0
+Edg=19,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 15(0) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=1, edge:6 5 1009 7 PD=5 DOF=un un un NA NA NA un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 9 PD=0 DOF=un un un un un un un unun
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=1, EF=2, edge:1001 3 6 10 PD=3 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 12 PD=0 DOF=un un un un un un un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1004 5 4 1007 1008 8 13 16 PD=1004 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1002 1003 3 4 1006 11 14 17 PD=1003 DOF=un un un NA NA NA un unun
+Ver=6,T=7, W=6, d=0, LSFI=1001, PF=3, EF=0, edge:1000 1003 1004 15 18 PD=1003 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=1001, PF=0, EF=0, edge:1005 1006 1007 19 PD=0 DOF=un un un un un un un unun
+Ver=14,T=0, W=3, d=1, LSFI=1000, PF=0, EF=0, edge:13 14 15 PD=0 DOF=un un un un un un un unun
+Ver=15,T=0, W=5, d=1, LSFI=1000, PF=0, EF=0, edge:16 17 18 19 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 44
+Total weight of edges   : 37
+Total flowed weight     : 9
+Labeled core: 14
+Labeled core: 15
+Calculating Inner Edges
+Edg=13,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 14(0) PD=0
+Edg=16,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 15(0) PD=0
+Calculating Inner Edges
+Edg=14,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 14(0) PD=0
+Edg=17,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 15(0) PD=0
+Calculating Inner Edges
+Edg=15,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 14(0) PD=0
+Edg=18,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 15(0) PD=0
+Calculating Inner Edges
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=19,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 15(0) PD=0
+END GETCLUSTER
+After addchild
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+IN PSEUDOMINDENSE
+Cluster(core):16, depth=2, type=0, over constrained
+Frontiers: 3 4 6 7 
+Previous clusters: 7 14 
+Original Vertices: 3 4 6 7 
+Inner Edge: 20(2,3-16) 21(2,4-16) 22(2,6-16) 23(1,7-16) 
+Onter Edge: 4(1,3-4) 1004(3,3-6) 1007(3,3-7) 1003(3,4-6) 1006(3,4-7) 
+Bifurcations (Current Selection: None):
+
+after deleting inner edges
+appending newTree
+**Core: 12,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+****Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+**Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+**Core: 16,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+****Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+Getting list of overlapping vertices: 
+After line check
+After line remove
+CheckBananas value: -1
+Before ClusterType
+Edge Name: 1000
+Edge Code: -1
+Edge Type: 8
+Edge Name: 1001
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1002
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1003
+Edge Code: 
+End1 List: 2
+End2 List: 2
+0
+Edge Type: 1
+
+End1 List: 2
+End2 List: 2
+
+End1 List: 2
+End2 List: 2
+Edge Name: 1004
+Edge Code: 
+End1 List: 2
+End2 List: 2
+0
+Edge Type: 1
+
+End1 List: 2
+End2 List: 2
+
+End1 List: 2
+End2 List: 2
+Edge Name: 3
+Edge Code: -1
+Edge Type: 6
+Edge Name: 6
+Edge Code: -1
+Edge Type: 6
+Edge Name: 5
+Edge Code: -1
+Edge Type: 6
+Edge Name: 4
+Edge Code: 
+End1 List: 2
+End2 List: 2
+0
+Edge Type: 6
+
+End1 List: 2
+End2 List: 2
+
+End1 List: 2
+End2 List: 2
+Edge Name: 1005
+Edge Code: -1
+Edge Type: 8
+Edge Name: 1006
+Edge Code: 
+End1 List: 2
+End2 List: 1
+1
+Edge Type: 1
+
+End1 List: 2
+End2 List: 1
+
+End1 List: 2
+End2 List: 1
+Edge Name: 1007
+Edge Code: 
+End1 List: 2
+End2 List: 1
+1
+Edge Type: 1
+
+End1 List: 2
+End2 List: 1
+
+End1 List: 2
+End2 List: 1
+Edge Name: 1008
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1009
+Edge Code: -1
+Edge Type: 1
+Getting Cluster 16 Type: 
+LSCount:     2
+distCount:   1
+pointCount:  2
+totalCount:  4
+notIncid:    0
+Type set to 2 (2)
+After ClusterType
+After checkValue switch
+Alias found: 6
+Checking Edge: Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Left appended: 3
+Checking Edge: Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Right appended: 4
+Line appended: 6
+Line appended: 7
+After aliasing for cluster: 16
+Alias: 6
+Left: 3 
+Right: 4 
+Lines: 6 7 
+end of check bananas if
+End of DR_Trees loop
+Start of DR_Trees Loop
+**Core: 12,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+****Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+**Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+**Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+****Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+Before extension
+In distributeCL path
+Start of DR_Trees Loop
+**Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+**Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+****Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+Before extension
+In distributeCL path
+Getting Cluster 17
+Contents of F before new labeling
+Edg=6,T=6, W=1,V=1, LS=00, PF=1, F1=1, F2=0, Ends: 1(1) 2(1) PD=1
+Edg=5,T=6, W=1,V=1, LS=00, PF=1, F1=1, F2=0, Ends: 2(1) 3(1) PD=2
+Edg=3,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 1(1) 4(1) PD=1
+Edg=1004,T=1, W=3,V=0, LS=10, PF=2, F1=2, F2=1, Ends: 3(1) 6(1) PD=3
+Edg=1003,T=1, W=3,V=0, LS=10, PF=3, F1=3, F2=0, Ends: 4(1) 6(2) PD=4
+Edg=1009,T=1, W=3,V=0, LS=00, PF=1, F1=2, F2=1, Ends: 2(1) 8(1) PD=2
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=3, Ends: 3(1) 8(2) PD=0
+Edg=7,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 2(0) 12(0) PD=0
+Edg=8,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 3(0) 12(0) PD=0
+Edg=9,T=0, W=1,V=0, LS=00, PF=0, F1=1, F2=0, Ends: 8(0) 12(0) PD=0
+Edg=4,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 3(1) 4(1) PD=3
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=3, Ends: 3(1) 7(2) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=1, Ends: 7(0) 8(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=10, PF=1, F1=1, F2=2, Ends: 1(1) 5(1) PD=5
+Edg=1002,T=1, W=3,V=0, LS=10, PF=1, F1=0, F2=3, Ends: 4(1) 5(2) PD=5
+Edg=10,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=1, Ends: 1(0) 13(0) PD=0
+Edg=11,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=1, Ends: 4(0) 13(0) PD=0
+Edg=12,T=0, W=1,V=0, LS=10, PF=1, F1=1, F2=0, Ends: 5(0) 13(0) PD=5
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=3, Ends: 4(1) 7(1) PD=0
+Edg=1000,T=8, W=1,V=90, LS=10, PF=0, F1=0, F2=1, Ends: 5(0) 6(0) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=3, edge:6 5 1009 7 PD=7 DOF=un un un NA NA NA un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=1, EF=6, edge:1005 1008 1009 9 PD=1005 DOF=un un un un un un un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=3, edge:1001 3 6 10 PD=10 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=1001, PF=1, EF=6, edge:1000 1001 1002 12 PD=1000 DOF=un un un un un un un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1004 5 4 1007 1008 8 20 PD=1007 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1002 1003 3 4 1006 11 21 PD=1006 DOF=un un un NA NA NA un unun
+Ver=6,T=7, W=6, d=0, LSFI=1001, PF=1, EF=2, edge:1000 1003 1004 22 PD=1000 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=3, EF=6, edge:1005 1006 1007 23 PD=1006 DOF=un un un un un un un unun
+Ver=12,T=0, W=3, d=1, LSFI=0000, PF=1, EF=2, edge:7 8 9 PD=9 DOF=un un un un un un un unun
+Ver=13,T=0, W=3, d=1, LSFI=1000, PF=1, EF=2, edge:10 11 12 PD=12 DOF=un un un un un un un unun
+Total weight of vertices: 42
+Total weight of edges   : 36
+Total flowed weight     : 36
+Labeled core: 13
+Calculating Inner Edges
+Edg=1001,T=1, W=3,V=0, LS=10, PF=1, F1=1, F2=2, Ends: 1(1) 5(1) PD=5
+Edg=10,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=1, Ends: 1(0) 13(0) PD=0
+Calculating Inner Edges
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Calculating Inner Edges
+Edg=1002,T=1, W=3,V=0, LS=10, PF=1, F1=0, F2=3, Ends: 4(1) 5(2) PD=5
+Edg=11,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=1, Ends: 4(0) 13(0) PD=0
+Calculating Inner Edges
+Edg=1000,T=8, W=1,V=90, LS=10, PF=0, F1=0, F2=1, Ends: 5(0) 6(0) PD=0
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+END GETCLUSTER
+After addchild
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+IN PSEUDOMINDENSE
+Cluster(core):17, depth=2, type=0, well constrained
+Frontiers: 1 3 4 6 
+Previous clusters: 13 3 6 
+Original Vertices: 1 5 3 4 6 
+Inner Edge: 24(4,1-17) 25(1,3-17) 26(4,4-17) 27(1,6-17) 
+Onter Edge: 3(1,1-4) 4(1,3-4) 1004(3,3-6) 1003(3,4-6) 
+Bifurcations (Current Selection: None):
+
+Cluster 1: 13
+Cluster(core):13, depth=1, type=2, over constrained
+Frontiers: 1 4 5 
+Previous clusters: 5 4 1 
+Original Vertices: 5 4 1 
+Inner Edge: 10(1,1-13) 11(1,4-13) 12(1,5-13) 
+Onter Edge: 3(1,1-4) 1001(3,1-5) 1002(3,4-5) 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 3
+Cluster(core):3, depth=0, type=0, under constrained
+Frontiers: 3 
+Previous clusters: 
+Original Vertices: 3 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edge Weight: 8
+Vert Weight: 15
+Cluster 1: 13
+Cluster(core):13, depth=1, type=2, over constrained
+Frontiers: 1 4 5 
+Previous clusters: 5 4 1 
+Original Vertices: 5 4 1 
+Inner Edge: 10(1,1-13) 11(1,4-13) 12(1,5-13) 
+Onter Edge: 3(1,1-4) 1001(3,1-5) 1002(3,4-5) 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 6
+Cluster(core):6, depth=0, type=0, under constrained
+Frontiers: 3 6 
+Previous clusters: 
+Original Vertices: 3 6 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edge Weight: 15
+Vert Weight: 21
+Cluster 1: 3
+Cluster(core):3, depth=0, type=0, under constrained
+Frontiers: 3 
+Previous clusters: 
+Original Vertices: 3 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 6
+Cluster(core):6, depth=0, type=0, under constrained
+Frontiers: 3 6 
+Previous clusters: 
+Original Vertices: 3 6 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Edge Weight: 3
+Vert Weight: 9
+after deleting inner edges
+appending newTree
+**Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+****Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+**Core: 17,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 13 3 6 
+****Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+CheckBananas value: -1
+Before ClusterType
+Edge Name: 1000
+Edge Code: 
+End1 List: 1
+End2 List: 3
+1
+Edge Type: 8
+
+End1 List: 1
+End2 List: 3
+
+End1 List: 1
+End2 List: 3
+Edge Name: 1001
+Edge Code: 
+End1 List: 1
+End2 List: 1
+0
+Edge Type: 1
+
+End1 List: 1
+End2 List: 1
+
+End1 List: 1
+End2 List: 1
+Edge Name: 1002
+Edge Code: 
+End1 List: 1
+End2 List: 1
+0
+Edge Type: 1
+
+End1 List: 1
+End2 List: 1
+
+End1 List: 1
+End2 List: 1
+Edge Name: 1003
+Edge Code: 
+End1 List: 1
+End2 List: 3
+1
+Edge Type: 1
+
+End1 List: 1
+End2 List: 3
+
+End1 List: 1
+End2 List: 3
+Edge Name: 1004
+Edge Code: 
+End1 List: 23
+End2 List: 3
+1
+Edge Type: 1
+
+End1 List: 23
+End2 List: 3
+
+End1 List: 23
+End2 List: 3
+Edge Name: 3
+Edge Code: 
+End1 List: 1
+End2 List: 1
+0
+Edge Type: 6
+
+End1 List: 1
+End2 List: 1
+
+End1 List: 1
+End2 List: 1
+Edge Name: 6
+Edge Code: -1
+Edge Type: 6
+Edge Name: 5
+Edge Code: -1
+Edge Type: 6
+Edge Name: 4
+Edge Code: 
+End1 List: 23
+End2 List: 1
+1
+Edge Type: 6
+
+End1 List: 23
+End2 List: 1
+
+End1 List: 23
+End2 List: 1
+Edge Name: 1005
+Edge Code: -1
+Edge Type: 8
+Edge Name: 1006
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1007
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1008
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1009
+Edge Code: -1
+Edge Type: 1
+Getting Cluster 17 Type: 
+LSCount:     2
+distCount:   1
+pointCount:  3
+totalCount:  5
+notIncid:    2
+Type set to 0
+After ClusterType
+After checkValue switch
+end of check bananas if
+End of DR_Trees loop
+Start of DR_Trees Loop
+**Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+****Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+**Core: 17,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 13 3 6 
+****Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+Before extension
+Getting Cluster 18
+Contents of F before new labeling
+Edg=6,T=6, W=1,V=1, LS=00, PF=1, F1=1, F2=0, Ends: 1(1) 2(1) PD=1
+Edg=5,T=6, W=1,V=1, LS=00, PF=1, F1=1, F2=0, Ends: 2(1) 3(1) PD=2
+Edg=3,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 1(1) 4(1) PD=1
+Edg=1004,T=1, W=3,V=0, LS=10, PF=2, F1=2, F2=1, Ends: 3(1) 6(1) PD=3
+Edg=1003,T=1, W=3,V=0, LS=10, PF=3, F1=3, F2=0, Ends: 4(1) 6(2) PD=4
+Edg=1009,T=1, W=3,V=0, LS=00, PF=1, F1=2, F2=1, Ends: 2(1) 8(1) PD=2
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=3, Ends: 3(1) 8(2) PD=0
+Edg=7,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 2(0) 12(0) PD=0
+Edg=8,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 3(0) 12(0) PD=0
+Edg=9,T=0, W=1,V=0, LS=00, PF=0, F1=1, F2=0, Ends: 8(0) 12(0) PD=0
+Edg=4,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 3(1) 4(1) PD=3
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=1, Ends: 7(0) 8(0) PD=0
+Edg=1007,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=3, Ends: 3(1) 7(2) PD=0
+Edg=1006,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=3, Ends: 4(1) 7(1) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=3, edge:6 5 1009 7 PD=7 DOF=un un un NA NA NA un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=1, EF=6, edge:1005 1008 1009 9 PD=1005 DOF=un un un un un un un unun
+Ver=12,T=0, W=3, d=1, LSFI=0000, PF=1, EF=2, edge:7 8 9 PD=9 DOF=un un un un un un un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=2, edge:3 6 24 PD=10 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1004 5 4 1007 1008 8 20 25 PD=1007 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1003 3 4 1006 21 26 PD=1006 DOF=un un un NA NA NA un unun
+Ver=6,T=7, W=6, d=0, LSFI=1001, PF=1, EF=1, edge:1003 1004 22 27 PD=1000 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=2001, PF=3, EF=6, edge:1005 1006 1007 23 PD=1006 DOF=un un un un un un un unun
+Total weight of vertices: 33
+Total weight of edges   : 26
+Total flowed weight     : 26
+Calculating Inner Edges
+Calculating Inner Edges
+Calculating Inner Edges
+Calculating Inner Edges
+Calculating Inner Edges
+END GETCLUSTER
+Getting Cluster 19
+Contents of F before new labeling
+Edg=6,T=6, W=1,V=1, LS=00, PF=1, F1=1, F2=0, Ends: 1(1) 2(1) PD=1
+Edg=5,T=6, W=1,V=1, LS=00, PF=1, F1=1, F2=0, Ends: 2(1) 3(1) PD=2
+Edg=3,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 1(1) 4(1) PD=1
+Edg=1004,T=1, W=3,V=0, LS=10, PF=2, F1=2, F2=1, Ends: 3(1) 6(1) PD=3
+Edg=1003,T=1, W=3,V=0, LS=10, PF=3, F1=3, F2=0, Ends: 4(1) 6(2) PD=4
+Edg=1009,T=1, W=3,V=0, LS=00, PF=1, F1=2, F2=1, Ends: 2(1) 8(1) PD=2
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=3, Ends: 3(1) 8(2) PD=0
+Edg=7,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 2(0) 12(0) PD=0
+Edg=8,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 3(0) 12(0) PD=0
+Edg=9,T=0, W=1,V=0, LS=00, PF=0, F1=1, F2=0, Ends: 8(0) 12(0) PD=0
+Edg=4,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 3(1) 4(1) PD=3
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=1, Ends: 7(0) 8(0) PD=0
+Edg=1007,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=3, Ends: 3(1) 7(2) PD=0
+Edg=1006,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=3, Ends: 4(1) 7(1) PD=0
+Edg=20,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 16(0) PD=0
+Edg=21,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 16(0) PD=0
+Edg=22,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 16(0) PD=0
+Edg=23,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 16(0) PD=0
+Edg=28,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 1(0) 18(0) PD=0
+Edg=29,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 18(0) PD=0
+Edg=30,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 18(0) PD=0
+Edg=31,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 18(0) PD=0
+Edg=32,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 18(0) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=3, edge:6 5 1009 7 PD=7 DOF=un un un NA NA NA un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=1, EF=6, edge:1005 1008 1009 9 PD=1005 DOF=un un un un un un un unun
+Ver=12,T=0, W=3, d=1, LSFI=0000, PF=1, EF=2, edge:7 8 9 PD=9 DOF=un un un un un un un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=2, edge:3 6 24 28 PD=10 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1004 5 4 1007 1008 8 20 25 29 PD=1007 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1003 3 4 1006 21 26 30 PD=1006 DOF=un un un NA NA NA un unun
+Ver=6,T=7, W=6, d=0, LSFI=1001, PF=1, EF=1, edge:1003 1004 22 27 31 PD=1000 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=2001, PF=3, EF=6, edge:1005 1006 1007 23 32 PD=1006 DOF=un un un un un un un unun
+Ver=16,T=0, W=7, d=2, LSFI=1000, PF=0, EF=0, edge:20 21 22 23 PD=0 DOF=un un un un un un un unun
+Ver=18,T=0, W=4, d=1, LSFI=1000, PF=0, EF=0, edge:28 29 30 31 32 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 44
+Total weight of edges   : 38
+Total flowed weight     : 26
+Labeled core: 16
+Labeled core: 18
+Calculating Inner Edges
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=28,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 1(0) 18(0) PD=0
+Calculating Inner Edges
+Edg=20,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 16(0) PD=0
+Edg=29,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 18(0) PD=0
+Calculating Inner Edges
+Edg=21,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 16(0) PD=0
+Edg=30,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 18(0) PD=0
+Calculating Inner Edges
+Edg=22,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 16(0) PD=0
+Edg=31,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 18(0) PD=0
+Calculating Inner Edges
+Edg=23,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 16(0) PD=0
+Edg=32,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 18(0) PD=0
+END GETCLUSTER
+Getting Cluster 20
+Contents of F before new labeling
+Edg=6,T=6, W=1,V=1, LS=00, PF=1, F1=1, F2=0, Ends: 1(1) 2(1) PD=1
+Edg=5,T=6, W=1,V=1, LS=00, PF=1, F1=1, F2=0, Ends: 2(1) 3(1) PD=2
+Edg=3,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 1(1) 4(1) PD=1
+Edg=1004,T=1, W=3,V=0, LS=10, PF=2, F1=2, F2=1, Ends: 3(1) 6(1) PD=3
+Edg=1003,T=1, W=3,V=0, LS=10, PF=3, F1=3, F2=0, Ends: 4(1) 6(2) PD=4
+Edg=1009,T=1, W=3,V=0, LS=00, PF=1, F1=2, F2=1, Ends: 2(1) 8(1) PD=2
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=3, Ends: 3(1) 8(2) PD=0
+Edg=7,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 2(0) 12(0) PD=0
+Edg=8,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 3(0) 12(0) PD=0
+Edg=9,T=0, W=1,V=0, LS=00, PF=0, F1=1, F2=0, Ends: 8(0) 12(0) PD=0
+Edg=4,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 3(1) 4(1) PD=3
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=1, Ends: 7(0) 8(0) PD=0
+Edg=1007,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=3, Ends: 3(1) 7(2) PD=0
+Edg=1006,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=3, Ends: 4(1) 7(1) PD=0
+Edg=20,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 16(0) PD=0
+Edg=21,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 16(0) PD=0
+Edg=22,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 16(0) PD=0
+Edg=23,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 16(0) PD=0
+Edg=28,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 1(0) 18(0) PD=0
+Edg=29,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 18(0) PD=0
+Edg=30,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 18(0) PD=0
+Edg=31,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 18(0) PD=0
+Edg=32,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 18(0) PD=0
+Edg=24,T=0, W=4,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 1(0) 17(0) PD=0
+Edg=25,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 17(0) PD=0
+Edg=26,T=0, W=4,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 17(0) PD=0
+Edg=27,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 17(0) PD=0
+Edg=33,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 1(0) 19(0) PD=0
+Edg=34,T=0, W=3,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 19(0) PD=0
+Edg=35,T=0, W=3,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 4(0) 19(0) PD=0
+Edg=36,T=0, W=3,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 6(0) 19(0) PD=0
+Edg=37,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 19(0) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=3, edge:6 5 1009 7 PD=7 DOF=un un un NA NA NA un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=1, EF=6, edge:1005 1008 1009 9 PD=1005 DOF=un un un un un un un unun
+Ver=12,T=0, W=3, d=1, LSFI=0000, PF=1, EF=2, edge:7 8 9 PD=9 DOF=un un un un un un un unun
+Ver=16,T=0, W=7, d=2, LSFI=1-100, PF=0, EF=0, edge:20 21 22 23 PD=0 DOF=un un un un un un un unun
+Ver=18,T=0, W=4, d=1, LSFI=1-100, PF=0, EF=0, edge:28 29 30 31 32 PD=0 DOF=un un un un un un un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=2, edge:3 6 24 33 PD=10 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1004 5 4 1007 1008 8 25 34 PD=1007 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=3, EF=3, edge:1003 3 4 1006 26 35 PD=1006 DOF=un un un NA NA NA un unun
+Ver=6,T=7, W=6, d=0, LSFI=1001, PF=1, EF=1, edge:1003 1004 27 36 PD=1000 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=2001, PF=3, EF=6, edge:1005 1006 1007 37 PD=1006 DOF=un un un un un un un unun
+Ver=17,T=0, W=9, d=2, LSFI=1000, PF=0, EF=0, edge:24 25 26 27 PD=0 DOF=un un un un un un un unun
+Ver=19,T=0, W=11, d=3, LSFI=1000, PF=0, EF=0, edge:33 34 35 36 37 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 64
+Total weight of edges   : 60
+Total flowed weight     : 26
+Labeled core: 16
+Labeled core: 18
+Labeled core: 17
+Labeled core: 19
+Calculating Inner Edges
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=28,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 1(0) 18(0) PD=0
+Edg=3,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 1(1) 4(1) PD=1
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=24,T=0, W=4,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 1(0) 17(0) PD=0
+Edg=33,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 1(0) 19(0) PD=0
+Calculating Inner Edges
+Edg=20,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 16(0) PD=0
+Edg=29,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 18(0) PD=0
+Edg=4,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 3(1) 4(1) PD=3
+Edg=1004,T=1, W=3,V=0, LS=10, PF=2, F1=2, F2=1, Ends: 3(1) 6(1) PD=3
+Edg=25,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 17(0) PD=0
+Edg=34,T=0, W=3,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 19(0) PD=0
+Calculating Inner Edges
+Edg=23,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 16(0) PD=0
+Edg=32,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 18(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=3, Ends: 4(1) 7(1) PD=0
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=37,T=0, W=2,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 7(0) 19(0) PD=0
+END GETCLUSTER
+After addchild
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0021, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+IN PSEUDOMINDENSE
+Cluster(core):20, depth=4, type=0, well constrained
+Frontiers: 1 3 7 
+Previous clusters: 16 17 
+Original Vertices: 1 3 4 6 7 5 
+Inner Edge: 38(7,1-20) 39(11,3-20) 40(7,7-20) 
+Onter Edge: 1007(3,3-7) 
+Bifurcations (Current Selection: None):
+
+after deleting inner edges
+appending newTree
+**Core: 20,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 16 17 
+****Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+******Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+****Core: 17,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 13 3 6 
+******Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+********Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+Getting list of overlapping vertices: 3 4 6 
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0020, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=6,T=7, W=6, d=0, LSFI=0021, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+After line check
+After line remove
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0020, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0021, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0021, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+
+End1 List: 2
+End2 List: 12
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+value=1
+typeValue=8
+Edgebetween=true
+
+End1 List: 2
+End2 List: 2
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+value=0
+typeValue=1
+Edgebetween=true
+
+End1 List: 12
+End2 List: 2
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+value=1
+typeValue=1
+Edgebetween=true
+
+End1 List: 12
+End2 List: 12
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+value=0
+typeValue=1
+Edgebetween=true
+
+End1 List: 12
+End2 List: 12
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+value=0
+typeValue=1
+Edgebetween=true
+
+End1 List: 2
+End2 List: 12
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+value=1
+typeValue=6
+Edgebetween=true
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+value=-1
+typeValue=6
+Edgebetween=true
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+value=-1
+typeValue=6
+Edgebetween=true
+
+End1 List: 12
+End2 List: 12
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+value=0
+typeValue=6
+Edgebetween=true
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+value=-1
+typeValue=8
+Edgebetween=true
+
+End1 List: 12
+End2 List: 1
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+value=1
+typeValue=1
+Edgebetween=true
+
+End1 List: 12
+End2 List: 1
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+value=1
+typeValue=1
+Edgebetween=true
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+value=-1
+typeValue=1
+Edgebetween=true
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+value=-1
+typeValue=1
+Edgebetween=true
+Final Edgebetween=true
+After edge between
+OverlappedVerts: 3 4 
+OverLap: 4 Over1: 3
+After partitionable
+Over1: 3
+Over2: 4
+CheckBananas value: 3
+TYPE SET TO 3
+Before ClusterType
+Edge Name: 1000
+Edge Code: 
+End1 List: 2
+End2 List: 12
+1
+Edge Type: 8
+
+End1 List: 2
+End2 List: 12
+
+End1 List: 2
+End2 List: 12
+Edge Name: 1001
+Edge Code: 
+End1 List: 2
+End2 List: 2
+0
+Edge Type: 1
+
+End1 List: 2
+End2 List: 2
+
+End1 List: 2
+End2 List: 2
+Edge Name: 1002
+Edge Code: 
+End1 List: 12
+End2 List: 2
+1
+Edge Type: 1
+
+End1 List: 12
+End2 List: 2
+
+End1 List: 12
+End2 List: 2
+Edge Name: 1003
+Edge Code: 
+End1 List: 12
+End2 List: 12
+0
+Edge Type: 1
+
+End1 List: 12
+End2 List: 12
+
+End1 List: 12
+End2 List: 12
+Edge Name: 1004
+Edge Code: 
+End1 List: 12
+End2 List: 12
+0
+Edge Type: 1
+
+End1 List: 12
+End2 List: 12
+
+End1 List: 12
+End2 List: 12
+Edge Name: 3
+Edge Code: 
+End1 List: 2
+End2 List: 12
+1
+Edge Type: 6
+
+End1 List: 2
+End2 List: 12
+
+End1 List: 2
+End2 List: 12
+Edge Name: 6
+Edge Code: -1
+Edge Type: 6
+Edge Name: 5
+Edge Code: -1
+Edge Type: 6
+Edge Name: 4
+Edge Code: 
+End1 List: 12
+End2 List: 12
+0
+Edge Type: 6
+
+End1 List: 12
+End2 List: 12
+
+End1 List: 12
+End2 List: 12
+Edge Name: 1005
+Edge Code: -1
+Edge Type: 8
+Edge Name: 1006
+Edge Code: 
+End1 List: 12
+End2 List: 1
+1
+Edge Type: 1
+
+End1 List: 12
+End2 List: 1
+
+End1 List: 12
+End2 List: 1
+Edge Name: 1007
+Edge Code: 
+End1 List: 12
+End2 List: 1
+1
+Edge Type: 1
+
+End1 List: 12
+End2 List: 1
+
+End1 List: 12
+End2 List: 1
+Edge Name: 1008
+Edge Code: -1
+Edge Type: 1
+Edge Name: 1009
+Edge Code: -1
+Edge Type: 1
+Getting Cluster 20 Type: 
+LSCount:     3
+distCount:   1
+pointCount:  3
+totalCount:  6
+notIncid:    2
+Type set to 0
+After ClusterType
+After checkValue switch
+end of check bananas if
+End of DR_Trees loop
+Start of DR_Trees Loop
+**Core: 20,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 16 17 
+****Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+******Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+****Core: 17,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 13 3 6 
+******Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+********Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+Before extension
+In distributeCL path
+Getting Cluster 21
+Contents of F before new labeling
+Edg=6,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 1(1) 2(1) PD=1
+Edg=5,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 2(1) 3(1) PD=2
+Edg=1009,T=1, W=3,V=0, LS=10, PF=1, F1=2, F2=1, Ends: 2(1) 8(1) PD=2
+Edg=1008,T=1, W=3,V=0, LS=10, PF=0, F1=0, F2=3, Ends: 3(1) 8(2) PD=0
+Edg=7,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 2(0) 12(0) PD=0
+Edg=8,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 3(0) 12(0) PD=0
+Edg=9,T=0, W=1,V=0, LS=00, PF=0, F1=1, F2=0, Ends: 8(0) 12(0) PD=0
+Edg=1005,T=8, W=1,V=90, LS=10, PF=0, F1=0, F2=1, Ends: 7(0) 8(0) PD=0
+Edg=1007,T=1, W=3,V=0, LS=10, PF=3, F1=0, F2=3, Ends: 3(1) 7(2) PD=7
+Edg=38,T=0, W=7,V=0, LS=10, PF=0, F1=2, F2=5, Ends: 1(0) 20(0) PD=0
+Edg=39,T=0, W=11,V=0, LS=10, PF=0, F1=3, F2=8, Ends: 3(0) 20(0) PD=0
+Edg=40,T=0, W=7,V=0, LS=10, PF=0, F1=3, F2=4, Ends: 7(0) 20(0) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=3, edge:6 5 1009 7 PD=7 DOF=un un un NA NA NA un unun
+Ver=8,T=7, W=6, d=0, LSFI=1001, PF=1, EF=6, edge:1005 1008 1009 9 PD=1005 DOF=un un un un un un un unun
+Ver=12,T=0, W=3, d=1, LSFI=0000, PF=1, EF=2, edge:7 8 9 PD=9 DOF=un un un un un un un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=5, EF=3, edge:6 38 PD=38 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=8, EF=3, edge:5 1007 1008 8 39 PD=39 DOF=un un un NA NA NA un unun
+Ver=7,T=7, W=6, d=0, LSFI=1001, PF=4, EF=6, edge:1005 1007 40 PD=40 DOF=un un un un un un un unun
+Ver=20,T=0, W=22, d=4, LSFI=1000, PF=4, EF=17, edge:38 39 40 PD=40 DOF=un un un un un un un unun
+Total weight of vertices: 46
+Total weight of edges   : 40
+Total flowed weight     : 40
+Labeled core: 20
+Calculating Inner Edges
+Edg=6,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 1(1) 2(1) PD=1
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Calculating Inner Edges
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=1005,T=8, W=1,V=90, LS=10, PF=0, F1=0, F2=1, Ends: 7(0) 8(0) PD=0
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Calculating Inner Edges
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=1007,T=1, W=3,V=0, LS=10, PF=3, F1=0, F2=3, Ends: 3(1) 7(2) PD=7
+Edg=39,T=0, W=11,V=0, LS=10, PF=0, F1=3, F2=8, Ends: 3(0) 20(0) PD=0
+END GETCLUSTER
+Getting Cluster 22
+Contents of F before new labeling
+Edg=6,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 1(1) 2(1) PD=1
+Edg=5,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 2(1) 3(1) PD=2
+Edg=1009,T=1, W=3,V=0, LS=10, PF=1, F1=2, F2=1, Ends: 2(1) 8(1) PD=2
+Edg=1008,T=1, W=3,V=0, LS=10, PF=0, F1=0, F2=3, Ends: 3(1) 8(2) PD=0
+Edg=7,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 2(0) 12(0) PD=0
+Edg=8,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 3(0) 12(0) PD=0
+Edg=9,T=0, W=1,V=0, LS=00, PF=0, F1=1, F2=0, Ends: 8(0) 12(0) PD=0
+Edg=1005,T=8, W=1,V=90, LS=10, PF=0, F1=0, F2=1, Ends: 7(0) 8(0) PD=0
+Edg=1007,T=1, W=3,V=0, LS=10, PF=3, F1=0, F2=3, Ends: 3(1) 7(2) PD=7
+Edg=38,T=0, W=7,V=0, LS=10, PF=0, F1=2, F2=5, Ends: 1(0) 20(0) PD=0
+Edg=39,T=0, W=11,V=0, LS=10, PF=0, F1=3, F2=8, Ends: 3(0) 20(0) PD=0
+Edg=40,T=0, W=7,V=0, LS=10, PF=0, F1=3, F2=4, Ends: 7(0) 20(0) PD=0
+Edg=7,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 2(0) 12(0) PD=0
+Edg=8,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 12(0) PD=0
+Edg=9,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 8(0) 12(0) PD=0
+Edg=41,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 2(0) 21(0) PD=0
+Edg=42,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 8(0) 21(0) PD=0
+Edg=43,T=0, W=14,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 21(0) PD=0
+Ver=12,T=0, W=3, d=1, LSFI=0000, PF=1, EF=2, edge:7 8 9 PD=9 DOF=un un un un un un un unun
+Ver=1,T=6, W=3, d=0, LSFI=1-100, PF=5, EF=3, edge:6 38 PD=38 DOF=un un un NA NA NA un unun
+Ver=7,T=7, W=6, d=0, LSFI=1-101, PF=4, EF=6, edge:1005 1007 40 PD=40 DOF=un un un un un un un unun
+Ver=20,T=0, W=22, d=4, LSFI=1-100, PF=4, EF=17, edge:38 39 40 PD=40 DOF=un un un un un un un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=3, edge:5 1009 7 41 PD=7 DOF=un un un NA NA NA un unun
+Ver=8,T=7, W=6, d=0, LSFI=1001, PF=1, EF=5, edge:1008 1009 9 42 PD=1005 DOF=un un un un un un un unun
+Flows do not match for vertex 8: Curr Flow=6 Est Flow=5
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=8, EF=0, edge:5 1008 8 43 PD=39 DOF=un un un NA NA NA un unun
+Flows do not match for vertex 3: Curr Flow=3 Est Flow=0
+Ver=12,T=0, W=3, d=1, LSFI=1000, PF=0, EF=0, edge:7 8 9 PD=0 DOF=un un un un un un un unun
+Flows do not match for vertex 12: Curr Flow=2 Est Flow=0
+Ver=21,T=0, W=17, d=5, LSFI=1000, PF=0, EF=0, edge:41 42 43 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 66
+Total weight of edges   : 59
+Total flowed weight     : 40
+Labeled core: 20
+Labeled core: 12
+Labeled core: 21
+Calculating Inner Edges
+Edg=6,T=6, W=1,V=1, LS=10, PF=1, F1=1, F2=0, Ends: 1(1) 2(1) PD=1
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=7,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 2(0) 12(0) PD=0
+Edg=41,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 2(0) 21(0) PD=0
+Calculating Inner Edges
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=1005,T=8, W=1,V=90, LS=10, PF=0, F1=0, F2=1, Ends: 7(0) 8(0) PD=0
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=9,T=0, W=1,V=0, LS=00, PF=0, F1=1, F2=0, Ends: 8(0) 12(0) PD=0
+Edg=42,T=0, W=1,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 8(0) 21(0) PD=0
+Calculating Inner Edges
+Edg=0,T=0, W=0,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 0(0) 0(0) PD=0
+Edg=1007,T=1, W=3,V=0, LS=10, PF=3, F1=0, F2=3, Ends: 3(1) 7(2) PD=7
+Edg=39,T=0, W=11,V=0, LS=10, PF=0, F1=3, F2=8, Ends: 3(0) 20(0) PD=0
+Edg=8,T=0, W=1,V=0, LS=00, PF=0, F1=0, F2=1, Ends: 3(0) 12(0) PD=0
+Edg=43,T=0, W=14,V=0, LS=10, PF=0, F1=0, F2=0, Ends: 3(0) 21(0) PD=0
+END GETCLUSTER
+After addchild
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0020, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0021, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0021, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+IN PSEUDOMINDENSE
+Cluster(core):22, depth=6, type=0, well constrained
+Frontiers: 2 8 3 
+Previous clusters: 20 12 
+Original Vertices: 2 8 1 3 7 4 6 5 
+Inner Edge: 44(3,2-22) 45(3,8-22) 46(29,3-22) 
+Onter Edge: 1009(3,2-8) 5(1,2-3) 7(1,2-12) 1008(3,3-8) 9(1,8-12) 8(1,3-12) 
+Bifurcations (Current Selection: None):
+
+after deleting inner edges
+appending newTree
+**Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 20 12 
+****Core: 20,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 16 17 
+******Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+********Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+**********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+******Core: 17,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 13 3 6 
+********Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+**********Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+****Core: 12,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+******Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+Getting list of overlapping vertices: 3 
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+After line check
+After line remove
+CheckBananas value: -1
+Before ClusterType
+Edge Name: 1000
+Edge Code: 
+End1 List: 1
+End2 List: 1
+0
+Edge Type: 8
+
+End1 List: 1
+End2 List: 1
+
+End1 List: 1
+End2 List: 1
+Edge Name: 1001
+Edge Code: 
+End1 List: 1
+End2 List: 1
+0
+Edge Type: 1
+
+End1 List: 1
+End2 List: 1
+
+End1 List: 1
+End2 List: 1
+Edge Name: 1002
+Edge Code: 
+End1 List: 1
+End2 List: 1
+0
+Edge Type: 1
+
+End1 List: 1
+End2 List: 1
+
+End1 List: 1
+End2 List: 1
+Edge Name: 1003
+Edge Code: 
+End1 List: 1
+End2 List: 1
+0
+Edge Type: 1
+
+End1 List: 1
+End2 List: 1
+
+End1 List: 1
+End2 List: 1
+Edge Name: 1004
+Edge Code: 
+End1 List: 12
+End2 List: 1
+1
+Edge Type: 1
+
+End1 List: 12
+End2 List: 1
+
+End1 List: 12
+End2 List: 1
+Edge Name: 3
+Edge Code: 
+End1 List: 1
+End2 List: 1
+0
+Edge Type: 6
+
+End1 List: 1
+End2 List: 1
+
+End1 List: 1
+End2 List: 1
+Edge Name: 6
+Edge Code: 
+End1 List: 1
+End2 List: 2
+1
+Edge Type: 6
+
+End1 List: 1
+End2 List: 2
+
+End1 List: 1
+End2 List: 2
+Edge Name: 5
+Edge Code: 
+End1 List: 2
+End2 List: 12
+1
+Edge Type: 6
+
+End1 List: 2
+End2 List: 12
+
+End1 List: 2
+End2 List: 12
+Edge Name: 4
+Edge Code: 
+End1 List: 12
+End2 List: 1
+1
+Edge Type: 6
+
+End1 List: 12
+End2 List: 1
+
+End1 List: 12
+End2 List: 1
+Edge Name: 1005
+Edge Code: 
+End1 List: 1
+End2 List: 2
+1
+Edge Type: 8
+
+End1 List: 1
+End2 List: 2
+
+End1 List: 1
+End2 List: 2
+Edge Name: 1006
+Edge Code: 
+End1 List: 1
+End2 List: 1
+0
+Edge Type: 1
+
+End1 List: 1
+End2 List: 1
+
+End1 List: 1
+End2 List: 1
+Edge Name: 1007
+Edge Code: 
+End1 List: 12
+End2 List: 1
+1
+Edge Type: 1
+
+End1 List: 12
+End2 List: 1
+
+End1 List: 12
+End2 List: 1
+Edge Name: 1008
+Edge Code: 
+End1 List: 12
+End2 List: 2
+1
+Edge Type: 1
+
+End1 List: 12
+End2 List: 2
+
+End1 List: 12
+End2 List: 2
+Edge Name: 1009
+Edge Code: 
+End1 List: 2
+End2 List: 2
+0
+Edge Type: 1
+
+End1 List: 2
+End2 List: 2
+
+End1 List: 2
+End2 List: 2
+Getting Cluster 22 Type: 
+LSCount:     4
+distCount:   1
+pointCount:  4
+totalCount:  8
+notIncid:    4
+Type set to 0
+After ClusterType
+After checkValue switch
+end of check bananas if
+
+1 Final DR output Trees
+---------
+DRTree 1
+**Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 20 12 
+****Core: 20,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 16 17 
+******Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+********Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+**********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+******Core: 17,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 13 3 6 
+********Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+**********Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+****Core: 12,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+******Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+---------------------------------------------
+SolverTrees returned
+Solver Start
+AutoSolve: false
+Variable Initialized usingArrays: false
+State Saved
+DRDAG Output
+-1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+DAG Output
+Arrays output, Solver returns
+SKUTU index2355
+treedia 2
+OPEN UTU
+INTS
+DOUBLES
+CHARS
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+*FLAG: 2
+Solver Start
+AutoSolve: false
+Variable Initialized usingArrays: true
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 8
+Integer after Tree: 1
+Integer after Tree: 6
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 1001
+Integer after Tree: 3
+Integer after Tree: 6
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 6
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 6
+Integer after Tree: 5
+Integer after Tree: 1009
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 6
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 5
+Integer after Tree: 1004
+Integer after Tree: 5
+Integer after Tree: 4
+Integer after Tree: 1007
+Integer after Tree: 1008
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 4
+Integer after Tree: 6
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 5
+Integer after Tree: 1002
+Integer after Tree: 1003
+Integer after Tree: 3
+Integer after Tree: 4
+Integer after Tree: 1006
+Integer after Tree: 0
+Graph and Cluster read:
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=un un un un un un un unun
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=un un un un un un un unun
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+
+1 Solver Input Trees
+---------
+Tree 1
+**Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 20 12 
+****Core: 20,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 16 17 
+******Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+********Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+**********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+******Core: 17,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 13 3 6 
+********Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+**********Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+****Core: 12,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+******Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+value at startI=-1
+Bifucations read, number=-1
+In Solve Forest Loop
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+Children Solved
+Solving Cluster 17...
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+---------
+Tree 2
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 13
+Graph updated
+Child processed: 2
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 3
+Graph updated
+Child processed: 3
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 6
+Graph updated
+Ending Solver usedBifurs
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 5 4 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+---------
+Tree 2
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+ABOUT TO SET REDUCTION
+1 6
+1 6
+1 6
+1 6
+1 7
+1 7
+0 7
+0 7
+Input File opened
+
+Before End1 List: 1
+Before End2 List: 3
+CountEdge Depth: 2
+One
+
+Before End1 List: 1
+Before End2 List: 1
+CountEdge Depth: 2
+One
+
+Before End1 List: 1
+Before End2 List: 1
+CountEdge Depth: 2
+One
+
+Before End1 List: 1
+Before End2 List: 3
+CountEdge Depth: 2
+One
+
+Before End1 List: 2
+Before End2 List: 3
+CountEdge Depth: 2
+One
+
+Before End1 List: 1
+Before End2 List: 1
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+
+Before End1 List: 2
+Before End2 List: 1
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdges=4
+BEGIN SUMM CLUSTER
+Depth=2
+graph Edge Lenght=14
+
+Before End1 List: 1
+Before End2 List: 3
+eCode=1 Edge=Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Current Item: 1
+Current Item: 2
+Current Item: 3
+Count Set=1
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+1
+1000
+8
+5013
+6
+7
+7
+0
+0
+90
+
+Before End1 List: 1
+Before End2 List: 1
+eCode=0 Edge=Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+
+Before End1 List: 1
+Before End2 List: 1
+eCode=0 Edge=Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+
+Before End1 List: 1
+Before End2 List: 3
+eCode=1 Edge=Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Alias  : 5
+Left   : 1
+Right  : 4
+Lines  : 5
+end1Value=true
+end2Value=false
+Alias  : -1
+Left   : 
+Right  : 
+Lines  : 
+end1Value=false
+end2Value=false
+Alias  : -1
+Left   : 
+Right  : 
+Lines  : 
+end1Value=false
+end2Value=false
+Current Item: 1
+Current Item: 2
+Current Item: 3
+Count Set=1
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+1
+1003
+1
+4013
+6
+6
+7
+1
+2
+0
+
+Before End1 List: 2
+Before End2 List: 3
+eCode=1 Edge=Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Alias  : 5
+Left   : 1
+Right  : 4
+Lines  : 5
+end1Value=false
+end2Value=false
+Alias  : -1
+Left   : 
+Right  : 
+Lines  : 
+end1Value=false
+end2Value=false
+Alias  : -1
+Left   : 
+Right  : 
+Lines  : 
+end1Value=false
+end2Value=false
+Current Item: 1
+Current Item: 2
+Current Item: 3
+Count Set=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+1
+1004
+1
+3
+6
+6
+7
+1
+1
+0
+
+Before End1 List: 1
+Before End2 List: 1
+eCode=0 Edge=Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+eCode=-1 Edge=Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+eCode=-1 Edge=Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+
+Before End1 List: 2
+Before End2 List: 1
+eCode=1 Edge=Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Current Item: 1
+Current Item: 2
+Current Item: 3
+Count Set=1
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+1
+4
+6
+3
+4013
+6
+6
+1
+1
+1
+eCode=-1 Edge=Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+eCode=-1 Edge=Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+eCode=-1 Edge=Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+eCode=-1 Edge=Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+eCode=-1 Edge=Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Displaying Temp
+Temp Length=4
+True  1000    8 5013    7    0    6    7    0   90
+True  1003    1 4013    6    1    6    7    2    0
+True  1004    1    3    6    1    6    7    1    0
+True     4    6    3    6    1 4013    6    1    1
+END SUMM CLUSTER
+SummCluster information: 
+True  1000    8 5013    7    0    6    7    0   90
+True  1003    1 4013    6    1    6    7    2    0
+True  1004    1    3    6    1    6    7    1    0
+True     4    6    3    6    1 4013    6    1    1
+Length : 4
+search_flag: 1
+
+Before End1 List: 1
+Before End2 List: 3
+CountEdge Depth: 2
+One
+
+Before End1 List: 1
+Before End2 List: 1
+CountEdge Depth: 2
+One
+
+Before End1 List: 1
+Before End2 List: 1
+CountEdge Depth: 2
+One
+
+Before End1 List: 1
+Before End2 List: 3
+CountEdge Depth: 2
+One
+
+Before End1 List: 2
+Before End2 List: 3
+CountEdge Depth: 2
+One
+
+Before End1 List: 1
+Before End2 List: 1
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+
+Before End1 List: 2
+Before End2 List: 1
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdge Depth: 2
+One
+CountEdges=4
+BEGIN SUMM CLUSTER
+Depth=2
+graph Edge Lenght=14
+
+Before End1 List: 1
+Before End2 List: 3
+eCode=1 Edge=Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Current Item: 1
+Current Item: 2
+Current Item: 3
+Count Set=1
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+1
+1000
+8
+5013
+6
+7
+7
+0
+0
+90
+
+Before End1 List: 1
+Before End2 List: 1
+eCode=0 Edge=Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+
+Before End1 List: 1
+Before End2 List: 1
+eCode=0 Edge=Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+
+Before End1 List: 1
+Before End2 List: 3
+eCode=1 Edge=Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Alias  : 5
+Left   : 1
+Right  : 4
+Lines  : 5
+end1Value=true
+end2Value=false
+Alias  : -1
+Left   : 
+Right  : 
+Lines  : 
+end1Value=false
+end2Value=false
+Alias  : -1
+Left   : 
+Right  : 
+Lines  : 
+end1Value=false
+end2Value=false
+Current Item: 1
+Current Item: 2
+Current Item: 3
+Count Set=1
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+1
+1003
+1
+4013
+6
+6
+7
+1
+2
+0
+
+Before End1 List: 2
+Before End2 List: 3
+eCode=1 Edge=Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Alias  : 5
+Left   : 1
+Right  : 4
+Lines  : 5
+end1Value=false
+end2Value=false
+Alias  : -1
+Left   : 
+Right  : 
+Lines  : 
+end1Value=false
+end2Value=false
+Alias  : -1
+Left   : 
+Right  : 
+Lines  : 
+end1Value=false
+end2Value=false
+Current Item: 1
+Current Item: 2
+Current Item: 3
+Count Set=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+1
+1004
+1
+3
+6
+6
+7
+1
+1
+0
+
+Before End1 List: 1
+Before End2 List: 1
+eCode=0 Edge=Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+eCode=-1 Edge=Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+eCode=-1 Edge=Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+
+Before End1 List: 2
+Before End2 List: 1
+eCode=1 Edge=Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Current Item: 1
+Current Item: 2
+Current Item: 3
+Count Set=1
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+1
+4
+6
+3
+4013
+6
+6
+1
+1
+1
+eCode=-1 Edge=Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+eCode=-1 Edge=Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+eCode=-1 Edge=Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+eCode=-1 Edge=Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+eCode=-1 Edge=Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Displaying Temp
+Temp Length=4
+True  1000    8 5013    7    0    6    7    0   90
+True  1003    1 4013    6    1    6    7    2    0
+True  1004    1    3    6    1    6    7    1    0
+True     4    6    3    6    1 4013    6    1    1
+END SUMM CLUSTER
+SECOND SOLVE TYPE
+Length : 4
+No_of_Searches : 4
+While Loop
+For Loop j=0
+Before searches
+Search No.1: (7,0,7,0,8): ((-0.000000))=((x5013-c5013)*(x6-c6)+(y5013-d5013)*(y6-d6)+(z5013-e5013)*(z6-e6))/sqrt(((x5013-c5013)^2+(y5013-d5013)^2+(z5013-e5013)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2))
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (6,1,7,2,1): x4013=c6,y4013=d6,z4013=e6
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (6,1,7,1,1): x3=x6,y3=y6,z3=z6
+  Search can continue
+For Loop j=3
+Before searches
+Search No.4: (6,1,6,1,6): (x3-x4013)^2+(y3-y4013)^2+(z3-z4013)^2=((1.000000))^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (7,0,7,0,8): ((-0.000000))=((x5013-c5013)*(x6-c6)+(y5013-d5013)*(y6-d6)+(z5013-e5013)*(z6-e6))/sqrt(((x5013-c5013)^2+(y5013-d5013)^2+(z5013-e5013)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2))
+  Search ends
+For Loop j=1
+Before searches
+Search No.2: (6,1,7,2,1): x4013=c6,y4013=d6,z4013=e6
+  Search ends
+For Loop j=2
+Before searches
+Search No.3: (6,1,7,1,1): x3=x6,y3=y6,z3=z6
+  Search ends
+For Loop j=3
+Before searches
+Search No.4: (6,1,6,1,6): (x3-x4013)^2+(y3-y4013)^2+(z3-z4013)^2=((1.000000))^2
+  Search ends
+outputString=interface(prettyprint=0);
+timelimit(10,solve({((-0.000000))=((x5013-c5013)*(x6-c6)+(y5013-d5013)*(y6-d6)+(z5013-e5013)*(z6-e6))/sqrt(((x5013-c5013)^2+(y5013-d5013)^2+(z5013-e5013)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2)),x4013=c6,y4013=d6,z4013=e6,x3=x6,y3=y6,z3=z6,(x3-x4013)^2+(y3-y4013)^2+(z3-z4013)^2=((1.000000))^2
+Vars right after search
+{x5013,y5013,c5013,d5013,z5013,e5013,x6,y6,c6,d6,z6,e6,x4013,y4013,z4013,x3,y3,z3}
+Original Output String: interface(prettyprint=0);
+timelimit(10,solve({((-0.000000))=((x5013-c5013)*(x6-c6)+(y5013-d5013)*(y6-d6)+(z5013-e5013)*(z6-e6))/sqrt(((x5013-c5013)^2+(y5013-d5013)^2+(z5013-e5013)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2)),x4013=c6,y4013=d6,z4013=e6,x3=x6,y3=y6,z3=z6,(x3-x4013)^2+(y3-y4013)^2+(z3-z4013)^2=((1.000000))^2
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+In Overlap
+Overlapped Vertices: 
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=0 0 0 NA NA NA 0 10
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=0 0 0 NA NA NA 0 10
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=0 0 0 NA NA NA 0 10
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=0 0 0 1 0 1 0 10
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=0 0 0 1 0 1 0 10
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+Graph is Empty.
+
+0 Final DR output Trees
+---------------------------------------------
+
+0 Solver Input Trees
+Vars before getOverlap
+{x5013,y5013,c5013,d5013,z5013,e5013,x6,y6,c6,d6,z6,e6,x4013,y4013,z4013,x3,y3,z3}
+Start Get Over Loop
+CurrOrig: 1
+Start Get Over Loop
+CurrOrig: 5
+Start Get Over Loop
+CurrOrig: 3
+Start Get Over Loop
+CurrOrig: 4
+Start Get Over Loop
+CurrOrig: 6
+After getOver Output String: interface(prettyprint=0);
+timelimit(10,solve({((-0.000000))=((x5013-c5013)*(x6-c6)+(y5013-d5013)*(y6-d6)+(z5013-e5013)*(z6-e6))/sqrt(((x5013-c5013)^2+(y5013-d5013)^2+(z5013-e5013)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2)),x4013=c6,y4013=d6,z4013=e6,x3=x6,y3=y6,z3=z6,(x3-x4013)^2+(y3-y4013)^2+(z3-z4013)^2=((1.000000))^2
+After more Output String: interface(prettyprint=0);
+timelimit(10,solve({((-0.000000))=((x5013-c5013)*(x6-c6)+(y5013-d5013)*(y6-d6)+(z5013-e5013)*(z6-e6))/sqrt(((x5013-c5013)^2+(y5013-d5013)^2+(z5013-e5013)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2)),x4013=c6,y4013=d6,z4013=e6,x3=x6,y3=y6,z3=z6,(x3-x4013)^2+(y3-y4013)^2+(z3-z4013)^2=((1.000000))^2
+Var Length = 18, Eq Count = 4
+after getOrigin Output String: interface(prettyprint=0);
+timelimit(10,solve({((-0.000000))=((x5013-c5013)*(x6-c6)+(y5013-d5013)*(y6-d6)+(z5013-e5013)*(z6-e6))/sqrt(((x5013-c5013)^2+(y5013-d5013)^2+(z5013-e5013)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2)),x4013=c6,y4013=d6,z4013=e6,x3=x6,y3=y6,z3=z6,(x3-x4013)^2+(y3-y4013)^2+(z3-z4013)^2=((1.000000))^2
+After alias Output String: interface(prettyprint=0);
+timelimit(10,solve({((-0.000000))=((x13-c13)*(x6-c6)+(y13-d13)*(y6-d6)+(z13-e13)*(z6-e6))/sqrt(((x13-c13)^2+(y13-d13)^2+(z13-e13)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2)),c13=c6,d13=d6,e13=e6,x3=x6,y3=y6,z3=z6,(x3-c13)^2+(y3-d13)^2+(z3-e13)^2=((1.000000))^2,(1.000000)^2=(x13-c13)^2+(y13-d13)^2+(z13-e13)^2
+Equation Count right before Special case=5
+i=2ID2=3 value=0
+i=ID2=6 value=1
+After Special Output String: interface(prettyprint=0);
+timelimit(10,solve({((-0.000000))=((x13-c13)*(x6-c6)+(y13-d13)*(y6-d6)+(z13-e13)*(z6-e6))/sqrt(((x13-c13)^2+(y13-d13)^2+(z13-e13)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2)),c13=c6,d13=d6,e13=e6,x3=x6,y3=y6,z3=z6,(x3-c13)^2+(y3-d13)^2+(z3-e13)^2=((1.000000))^2,(1.000000)^2=(x13-c13)^2+(y13-d13)^2+(z13-e13)^2,x13=1/rand(),y13=1/rand(),z13=1/rand(),c13=1/rand(),d13=1/rand(),x6=1/rand()
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({((-0.000000))=((x13
+-c13)*(x6-c6)+(y13-d13)*(y6-d6)+(z13-e13)*(z6-e6))/sqrt(((x13
+-c13)^2+(y13-d13)^2+(z13-e13)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2)),c13=c6,d13=d6,e13=e6,x3=x6,y3=y6,z3=z6,(x3
+-c13)^2+(y3-d13)^2+(z3-e13)^2=((1.000000))^2,(1.000000)^2=(x13
+-c13)^2+(y13-d13)^2+(z13-e13)^2,x13=1/rand(),y13=1/rand(),z13=1
+/rand(),c13=1/rand(),d13=1/rand(),x6=1/rand()},{x6,y6,c6,d6,z6,e6,x3,y3,z3,x13,y13,z13,c13,d13,e13}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+((-0.000000))=((x13-c13)*(x6-c6)+(y13-d13)*(y6-d6)+(z13-e13)*(z6-e6))/sqrt(((x13-c13)^2+(y13-d13)^2+(z13-e13)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2))
+c13=c6
+d13=d6
+e13=e6
+x3=x6
+y3=y6
+z3=z6
+(x3-c13)^2+(y3-d13)^2+(z3-e13)^2=((1.000000))^2
+(1.000000)^2=(x13-c13)^2+(y13-d13)^2+(z13-e13)^2
+x13=1/rand()
+y13=1/rand()
+z13=1/rand()
+c13=1/rand()
+d13=1/rand()
+x6=1/rand()
+{x6,y6,c6,d6,z6,e6,x3,y3,z3,x13,y13,z13,c13,d13,e13}
+String input data
+solve({((-0.000000))=((x13-c13)*(x6-c6)+(y13-d13)*(y6-d6)+(z13-e13)*(z6-e6))/sqrt(((x13-c13)^2+(y13-d13)^2+(z13-e13)^2)*((x6-c6)^2+(y6-d6)^2+(z6-e6)^2)),c13=c6,d13=d6,e13=e6,x3=x6,y3=y6,z3=z6,(x3-c13)^2+(y3-d13)^2+(z3-e13)^2=((1.000000))^2,(1.000000)^2=(x13-c13)^2+(y13-d13)^2+(z13-e13)^2,x13=1/rand(),y13=1/rand(),z13=1/rand(),c13=1/rand(),d13=1/rand(),x6=1/rand()},{x6,y6,c6,d6,z6,e6,x3,y3,z3,x13,y13,z13,c13,d13,e13}));
+
+After postprocesser
+After bifurcations set
+       y3=1.000000000,e13=-1.000000000,d6=.2339620921e-11,x3=.1339129388e-11,c6=.1790642649e-11,c13=.1790642649e-11,x6=.1339129388e-11,y13=.2910080771e-11,z13=.2108565200e-11,d13=.2339620921e-11,x13=.3114190904e-11,z6=-1.000000000,z3=-1.000000000,y6=1.000000000,e6=-1.000000000
+       y3=-1.000000000,e13=-1.000000000,d6=.2339620921e-11,x3=.1339129388e-11,c6=.1790642649e-11,c13=.1790642649e-11,x6=.1339129388e-11,y13=.2910080771e-11,z13=.2108565200e-11,d13=.2339620921e-11,x13=.3114190904e-11,z6=-1.000000000,z3=-1.000000000,e6=-1.000000000,y6=-1.000000000
+       y3=-1.000000000,d6=.2339620921e-11,x3=.1339129388e-11,c6=.1790642649e-11,c13=.1790642649e-11,x6=.1339129388e-11,y13=.2910080771e-11,z13=.2108565200e-11,d13=.2339620921e-11,x13=.3114190904e-11,z6=1.000000000,z3=1.000000000,e6=1.000000000,e13=1.000000000,y6=-1.000000000
+       y3=1.000000000,d6=.2339620921e-11,x3=.1339129388e-11,c6=.1790642649e-11,c13=.1790642649e-11,x6=.1339129388e-11,y13=.2910080771e-11,z13=.2108565200e-11,d13=.2339620921e-11,x13=.3114190904e-11,y6=1.000000000,z6=1.000000000,z3=1.000000000,e6=1.000000000,e13=1.000000000
+After printing bifurs
+In Second Parse
+Set Value in Cluster 3
+with value 1 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value -1 at index 5
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 3
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 2
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 2
+In Second Parse
+Set Value in Cluster 3
+with value -1 at index 2
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 1
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 5
+Cluster Being Updated: 17
+In Second Parse
+Set Value in Cluster 3
+with value -1 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value -1 at index 5
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 3
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 2
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 2
+In Second Parse
+Set Value in Cluster 3
+with value -1 at index 2
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 5
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 1
+Cluster Being Updated: 17
+In Second Parse
+Set Value in Cluster 3
+with value -1 at index 1
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 3
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 2
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 2
+In Second Parse
+Set Value in Cluster 3
+with value 1 at index 2
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 5
+In Second Parse
+Set Value in Cluster 13
+with value 1 at index 5
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 1
+Cluster Being Updated: 17
+In Second Parse
+Set Value in Cluster 3
+with value 1 at index 1
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 3
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 2
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 1
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 2
+In Second Parse
+Set Value in Cluster 3
+with value 1 at index 2
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 5
+In Second Parse
+Set Value in Cluster 13
+with value 1 at index 5
+Cluster Being Updated: 17
+Children Solved
+Solving Cluster 20...
+
+2 Solver Input Trees
+---------
+Tree 1
+**Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+****Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+---------
+Tree 2
+**Core: 17,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 13 3 6 
+****Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=true, Value=0 0 0 0 0 1 0 1    Children: 5 4 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 1 1 1 0 1 0 1 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 1 1 0 0 1 0 1 
+
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 16
+Graph updated
+Child processed: 2
+In Second Parse
+Set Value in Cluster 3
+with value 1 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value -1 at index 5
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 3
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 2
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 2
+In Second Parse
+Set Value in Cluster 3
+with value -1 at index 2
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 1
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 5
+Cluster Being Updated: 17
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=0 0 0 NA NA NA 0 10
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=0 1 -1 NA NA NA 0 10
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=0 0 -1 NA NA NA 0 10
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=0 0 0 0 0 -1 0 10
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=0 1 -1 0 0 -1 0 10
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=0 0 0 1 0 1 0 10
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+Memory location of count=3084
+Ignore=false for vertex=1
+Name: 1, x=0, y=0
+Ignore=false for vertex=2
+Ignore=false for vertex=3
+Name: 3, x=0, y=1
+Ignore=false for vertex=4
+Name: 4, x=0, y=0
+Ignore=true for vertex=5
+Ignore=true for vertex=6
+Ignore=true for vertex=7
+Ignore=true for vertex=8
+Count of bifurcations sent=3
+In Second Parse
+Set Value in Cluster 3
+with value -1 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value -1 at index 5
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 3
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 2
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 2
+In Second Parse
+Set Value in Cluster 3
+with value -1 at index 2
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 5
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 1
+Cluster Being Updated: 17
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=0 0 0 NA NA NA 0 10
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=0 -1 -1 NA NA NA 0 10
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=0 0 -1 NA NA NA 0 10
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=0 0 0 0 0 -1 0 10
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=0 -1 -1 0 0 -1 0 10
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=0 0 0 1 0 1 0 10
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+Memory location of count=3088
+Ignore=false for vertex=1
+Name: 1, x=0, y=0
+Ignore=false for vertex=2
+Ignore=false for vertex=3
+Name: 3, x=0, y=-1
+Ignore=false for vertex=4
+Name: 4, x=0, y=0
+Ignore=true for vertex=5
+Ignore=true for vertex=6
+Ignore=true for vertex=7
+Ignore=true for vertex=8
+Count of bifurcations sent=3
+In Second Parse
+Set Value in Cluster 3
+with value -1 at index 1
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 3
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 2
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 2
+In Second Parse
+Set Value in Cluster 3
+with value 1 at index 2
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 5
+In Second Parse
+Set Value in Cluster 13
+with value 1 at index 5
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 1
+Cluster Being Updated: 17
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=0 0 0 NA NA NA 0 10
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=0 -1 1 NA NA NA 0 10
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=0 0 1 NA NA NA 0 10
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=0 0 0 0 0 1 0 10
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=0 -1 1 0 0 1 0 10
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=0 0 0 1 0 1 0 10
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+Memory location of count=3091
+Ignore=false for vertex=1
+Name: 1, x=0, y=0
+Ignore=false for vertex=2
+Ignore=false for vertex=3
+Name: 3, x=0, y=-1
+Ignore=false for vertex=4
+Name: 4, x=0, y=0
+Ignore=true for vertex=5
+Ignore=true for vertex=6
+Ignore=true for vertex=7
+Ignore=true for vertex=8
+Count of bifurcations sent=3
+In Second Parse
+Set Value in Cluster 3
+with value 1 at index 1
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 3
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 2
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 1
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 2
+In Second Parse
+Set Value in Cluster 3
+with value 1 at index 2
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 5
+In Second Parse
+Set Value in Cluster 13
+with value 1 at index 5
+Cluster Being Updated: 17
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=0 0 0 NA NA NA 0 10
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=0 1 1 NA NA NA 0 10
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=0 0 1 NA NA NA 0 10
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=0 0 0 0 0 1 0 10
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=0 1 1 0 0 1 0 10
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=0 0 0 1 0 1 0 10
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+Memory location of count=3094
+Ignore=false for vertex=1
+Name: 1, x=0, y=0
+Ignore=false for vertex=2
+Ignore=false for vertex=3
+Name: 3, x=0, y=1
+Ignore=false for vertex=4
+Name: 4, x=0, y=0
+Ignore=true for vertex=5
+Ignore=true for vertex=6
+Ignore=true for vertex=7
+Ignore=true for vertex=8
+Count of bifurcations sent=3
+Values sent to sketcher
+17
+4
+3
+1
+3
+4
+1
+3
+4
+1
+3
+4
+1
+3
+4
+useFileToBifur is true
+Ending Solver usedBifurs
+Bifurs written, returning
+Children Solved
+Return by tag
+SKUTU index3041
+ Coming to the iteration 1  3082 17  3041 -1
+ Repick State is: -1-1
+Size::: 15
+111 cons size = 3
+111 0.0 0.0 0.0
+111 0.0 1.0 -1.0
+111 0.0 0.0 -1.0
+111 utu0.0 0.0 0.0
+111 utu0.0 1.0 -1.0
+111 utu0.0 0.0 -1.0
+111 before = 0.2
+111 after = 0.2
+111 before = 0.2
+111 after = 0.2
+111 before = 0.2
+111 after = 0.2
+111 doscale
+111 move null move true
+NULL!! 10 4
+NULL!! 10 9
+convex Hull
+0.08726646259971647
+0.17453292519943295
+0.2617993877991494
+0.3490658503988659
+0.4363323129985824
+0.5235987755982988
+0.6108652381980153
+0.6981317007977318
+0.7853981633974483
+0.8726646259971648
+0.9599310885968813
+1.0471975511965976
+1.134464013796314
+1.2217304763960304
+ Added in Array Index int,,, 17 3082
+ Index int here  ... 0  3097  17
+Going to the next iteration...!!!!
+OPEN UTU
+INTS
+DOUBLES
+CHARS
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+*FLAG: 2
+Solver Start
+AutoSolve: false
+Variable Initialized usingArrays: true
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 8
+Integer after Tree: 1
+Integer after Tree: 6
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 1001
+Integer after Tree: 3
+Integer after Tree: 6
+Integer after Tree: 0
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 6
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 6
+Integer after Tree: 5
+Integer after Tree: 1009
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 6
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 5
+Integer after Tree: 1004
+Integer after Tree: 5
+Integer after Tree: 4
+Integer after Tree: 1007
+Integer after Tree: 1008
+Integer after Tree: 0
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 4
+Integer after Tree: 6
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 5
+Integer after Tree: 1002
+Integer after Tree: 1003
+Graph and Cluster read:
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=0 0 0 NA NA NA 0 10
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=0 1 1 NA NA NA 0 10
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=0 0 1 NA NA NA 0 10
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=0 0 0 0 0 1 0 10
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=0 1 1 0 0 1 0 10
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=un un un un un un un unun
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+
+1 Solver Input Trees
+---------
+Tree 1
+**Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 20 12 
+****Core: 20,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 16 17 
+******Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+********Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+********Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+**********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+******Core: 17,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 13 3 6 
+********Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=true, Value=0 0 0 0 0 1 0 1    Children: 5 4 1 
+**********Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 1 1 1 0 1 0 1 
+********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 1 1 0 0 1 0 1 
+
+
+****Core: 12,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 3 2 
+******Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+value at startI=1
+1
+Bifucations read, number=1
+In Solve Forest Loop
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+Children Solved
+Solving Cluster 20...
+
+2 Solver Input Trees
+---------
+Tree 1
+**Core: 16,  Grp=0,  Type=2, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+****Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+---------
+Tree 2
+**Core: 17,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 13 3 6 
+****Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=true, Value=0 0 0 0 0 1 0 1    Children: 5 4 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 1 1 1 0 1 0 1 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 1 1 0 0 1 0 1 
+
+
+Bifurcations counted.
+Solver not usedBifur
+Bifur Used: 1
+Cluster Being Updated: 16
+Bifur Used: 0
+In Second Parse
+Set Value in Cluster 3
+with value 1 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value -1 at index 5
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 3
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 3
+In Second Parse
+Set Value in Cluster 6
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 1
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 2
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 4
+In Second Parse
+Set Value in Cluster 13
+with value 0 at index 0
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 2
+In Second Parse
+Set Value in Cluster 3
+with value -1 at index 2
+In Second Parse
+Set Value in Cluster 6
+with value 1 at index 1
+In Second Parse
+Set Value in Cluster 6
+with value -1 at index 5
+Cluster Being Updated: 17
+
+2 Solver Input Trees
+---------
+Tree 1
+**Core: 16,  Grp=0,  Type=2, CBifur=1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 7 14 
+****Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 14,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 3 4 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+---------
+Tree 2
+**Core: 17,  Grp=0,  Type=0, CBifur=0, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 13 3 6 
+****Core: 13,  Grp=0,  Type=2, CBifur=-1, Solved=true, Value=0 0 0 0 0 -1 0 1    Children: 5 4 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 1 -1 1 0 1 0 1 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 1 -1 0 0 -1 0 1 
+
+ABOUT TO SET REDUCTION
+1 6
+1 6
+1 6
+1 6
+1 7
+1 7
+1 7
+1 7
+end1: 1 end2: 4 type: 6 in1: 1 in2: 1 value: 1
+end1: 3 end2: 4 type: 6 in1: 1 in2: 1 value: 1
+end1: 2 end2: 3 type: 6 in1: 0 in2: 1 value: 1
+end1: 1 end2: 2 type: 6 in1: 1 in2: 0 value: 1
+longestIndex: 3
+Input File opened
+
+Before End1 List: 2
+Before End2 List: 12
+CountEdge Depth: 4
+One
+
+Before End1 List: 2
+Before End2 List: 2
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 2
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 12
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 12
+CountEdge Depth: 4
+One
+
+Before End1 List: 2
+Before End2 List: 12
+CountEdge Depth: 4
+One
+CountEdge Depth: 4
+One
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 12
+CountEdge Depth: 4
+One
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 1
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 1
+CountEdge Depth: 4
+One
+CountEdge Depth: 4
+One
+CountEdge Depth: 4
+One
+CountEdges=0
+BEGIN SUMM CLUSTER
+Depth=4
+graph Edge Lenght=14
+
+Before End1 List: 2
+Before End2 List: 12
+eCode=0 Edge=Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+
+Before End1 List: 2
+Before End2 List: 2
+eCode=0 Edge=Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+
+Before End1 List: 12
+Before End2 List: 2
+eCode=0 Edge=Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+
+Before End1 List: 12
+Before End2 List: 12
+eCode=0 Edge=Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+
+Before End1 List: 12
+Before End2 List: 12
+eCode=0 Edge=Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+
+Before End1 List: 2
+Before End2 List: 12
+eCode=0 Edge=Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+eCode=-1 Edge=Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+eCode=-1 Edge=Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+
+Before End1 List: 12
+Before End2 List: 12
+eCode=0 Edge=Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+eCode=-1 Edge=Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+
+Before End1 List: 12
+Before End2 List: 1
+eCode=0 Edge=Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+
+Before End1 List: 12
+Before End2 List: 1
+eCode=0 Edge=Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+eCode=-1 Edge=Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+eCode=-1 Edge=Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Displaying Temp
+Temp Length=0
+
+END SUMM CLUSTER
+SummCluster information: 
+
+Length : 0
+search_flag: 1
+
+Before End1 List: 2
+Before End2 List: 12
+CountEdge Depth: 4
+One
+
+Before End1 List: 2
+Before End2 List: 2
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 2
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 12
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 12
+CountEdge Depth: 4
+One
+
+Before End1 List: 2
+Before End2 List: 12
+CountEdge Depth: 4
+One
+CountEdge Depth: 4
+One
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 12
+CountEdge Depth: 4
+One
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 1
+CountEdge Depth: 4
+One
+
+Before End1 List: 12
+Before End2 List: 1
+CountEdge Depth: 4
+One
+CountEdge Depth: 4
+One
+CountEdge Depth: 4
+One
+CountEdges=0
+BEGIN SUMM CLUSTER
+Depth=4
+graph Edge Lenght=14
+
+Before End1 List: 2
+Before End2 List: 12
+eCode=0 Edge=Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+
+Before End1 List: 2
+Before End2 List: 2
+eCode=0 Edge=Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+
+Before End1 List: 12
+Before End2 List: 2
+eCode=0 Edge=Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+
+Before End1 List: 12
+Before End2 List: 12
+eCode=0 Edge=Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+
+Before End1 List: 12
+Before End2 List: 12
+eCode=0 Edge=Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+
+Before End1 List: 2
+Before End2 List: 12
+eCode=0 Edge=Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+eCode=-1 Edge=Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+eCode=-1 Edge=Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+
+Before End1 List: 12
+Before End2 List: 12
+eCode=0 Edge=Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+eCode=-1 Edge=Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+
+Before End1 List: 12
+Before End2 List: 1
+eCode=0 Edge=Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+
+Before End1 List: 12
+Before End2 List: 1
+eCode=0 Edge=Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+eCode=-1 Edge=Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+eCode=-1 Edge=Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Displaying Temp
+Temp Length=0
+
+END SUMM CLUSTER
+SECOND SOLVE TYPE
+Length : 0
+No_of_Searches : 0
+While Loop
+outputString=interface(prettyprint=0);
+timelimit(10,solve({
+Vars right after search
+{}
+Original Output String: interface(prettyprint=0);
+timelimit(10,solve({
+In Overlap
+Overlapped Vertices: 3 4 6 
+Edg=1000,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 5(0) 6(0) PD=0
+Edg=1001,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=1002,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(2) PD=0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1005,T=8, W=1,V=90, LS=00, PF=0, F1=0, F2=0, Ends: 7(0) 8(0) PD=0
+Edg=1006,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 7(1) PD=0
+Edg=1007,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(2) PD=0
+Edg=1008,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 8(2) PD=0
+Edg=1009,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 8(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1001 3 6 PD=0 DOF=0 0 0 NA NA NA 0 10
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:6 5 1009 PD=0 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=0 1 -1 NA NA NA 0 10
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=0 0 -1 NA NA NA 0 10
+Ver=5,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1001 1002 PD=0 DOF=0 0 0 0 0 -1 0 10
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=0 1 -1 0 0 -1 0 10
+Ver=7,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1006 1007 PD=0 DOF=0 0 0 1 0 1 0 10
+Ver=8,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1005 1008 1009 PD=0 DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 30
+Total flowed weight     : 0
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=0 1 -1 NA NA NA 0 10
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=0 0 -1 NA NA NA 0 10
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=0 1 -1 0 0 -1 0 10
+Total weight of vertices: 12
+Total weight of edges   : 7
+Total flowed weight     : 0
+Start of DR_Trees Loop
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+Before extension
+In distributeCL path
+Start of DR_Trees Loop
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+Before extension
+In distributeCL path
+Getting Cluster 23
+Contents of F before new labeling
+Edg=4,T=6, W=1,V=1, LS=10, PF=0, F1=1, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=1004,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=1003,T=1, W=3,V=0, LS=11, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=1, EF=1, edge:1004 5 4 1007 1008 PD=4 DOF=0 1 -1 NA NA NA 0 10
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:1002 1003 3 4 1006 PD=4 DOF=0 0 -1 NA NA NA 0 10
+Ver=6,T=7, W=6, d=0, LSFI=1001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=0 1 -1 0 0 -1 0 10
+Total weight of vertices: 12
+Total weight of edges   : 7
+Total flowed weight     : 1
+Calculating Inner Edges
+Calculating Inner Edges
+Calculating Inner Edges
+END GETCLUSTER
+After addchild
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=0 1 -1 NA NA NA 0 10
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=0 0 -1 NA NA NA 0 10
+Ver=6,T=7, W=6, d=0, LSFI=0001, PF=0, EF=0, edge:1000 1003 1004 PD=0 DOF=0 1 -1 0 0 -1 0 10
+Total weight of vertices: 12
+Total weight of edges   : 7
+Total flowed weight     : 0
+IN PSEUDOMINDENSE
+Cluster(core):23, depth=1, type=0, over constrained
+Frontiers: 3 4 6 
+Previous clusters: 6 4 3 
+Original Vertices: 6 4 3 
+Inner Edge: 47(1,3-23) 48(1,4-23) 49(1,6-23) 
+Onter Edge: 4(1,3-4) 1004(3,3-6) 1003(3,4-6) 
+Bifurcations (Current Selection: None):
+
+Cluster 1: 6
+Cluster(core):6, depth=0, type=0, under constrained
+Frontiers: 6 
+Previous clusters: 
+Original Vertices: 6 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 4
+Cluster(core):4, depth=0, type=0, under constrained
+Frontiers: 4 
+Previous clusters: 
+Original Vertices: 4 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edge Weight: 3
+Vert Weight: 9
+Cluster 1: 6
+Cluster(core):6, depth=0, type=0, under constrained
+Frontiers: 6 
+Previous clusters: 
+Original Vertices: 6 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 3
+Cluster(core):3, depth=0, type=0, under constrained
+Frontiers: 3 
+Previous clusters: 
+Original Vertices: 3 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edge Weight: 3
+Vert Weight: 9
+Cluster 1: 4
+Cluster(core):4, depth=0, type=0, under constrained
+Frontiers: 4 
+Previous clusters: 
+Original Vertices: 4 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+Cluster 2: 3
+Cluster(core):3, depth=0, type=0, under constrained
+Frontiers: 3 
+Previous clusters: 
+Original Vertices: 3 
+Inner Edge: 
+Onter Edge: 
+Bifurcations (Current Selection: None):
+
+IN DENSE
+Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edge Weight: 1
+Vert Weight: 6
+Getting list of overlapping vertices: 
+After line check
+After line remove
+after deleting inner edges
+appending newTree
+**Core: 23,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 4 3 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+CheckBananas value: -1
+Before ClusterType
+Edge Name: 1003
+Edge Code: 0
+Edge Type: 1
+Edge Name: 1004
+Edge Code: 0
+Edge Type: 1
+Edge Name: 4
+Edge Code: 0
+Edge Type: 6
+Getting Cluster 23 Type: 
+LSCount:     1
+distCount:   1
+pointCount:  2
+totalCount:  3
+notIncid:    0
+Type set to 2 (2)
+After ClusterType
+After checkValue switch
+Alias found: 6
+Line appended: 6
+Checking Edge: Edg=1003,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(2) PD=0
+Right appended: 4
+Checking Edge: Edg=1004,T=1, W=3,V=0, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Left appended: 3
+After aliasing for cluster: 23
+Alias: 6
+Left: 3 
+Right: 4 
+Lines: 6 
+end of check bananas if
+
+1 Final DR output Trees
+---------
+DRTree 1
+**Core: 23,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 4 3 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+---------------------------------------------
+
+1 Solver Input Trees
+---------
+Tree 1
+**Core: 23,  Grp=0,  Type=2, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 6 4 3 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+Vars before getOverlap
+{}
+Start Get Over Loop
+CurrOrig: 1
+Start Get Over Loop
+CurrOrig: 3
+overLapClusterIndex: 1
+maxOver:    5
+neededOver: 3
+currOver:   0
+availOver:  5
+currOrig: 3
+type:     6
+CurrAlias 1: 3
+Start of inner for loop
+Right before set value
+Right after set value
+THIS IS IN OVERLAP
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=0 0 0 NA NA NA 0 10
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1004 5 4 1007 1008 PD=0 DOF=0 1 -1 NA NA NA 0 10
+Between end1 and end2
+Before closing switch
+after switch
+output at end of inner loop: ,x3016=(0.000000),y3016=(1.000000),z3016=(-1.000000)
+clearing in
+End of Get Over loop
+Start Get Over Loop
+CurrOrig: 4
+overLapClusterIndex: 1
+maxOver:    5
+neededOver: 3
+currOver:   3
+availOver:  2
+currOrig: 4
+type:     6
+CurrAlias 1: 5
+Start of inner for loop
+Right before set value
+Right after set value
+THIS IS IN OVERLAP
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=1 0 1 NA NA NA 0 10
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1002 1003 3 4 1006 PD=0 DOF=0 0 -1 NA NA NA 0 10
+Between end1 and end2
+Before closing switch
+after switch
+output at end of inner loop: ,x3016=(0.000000),y3016=(1.000000),z3016=(-1.000000),,y4016=(0.000000),z4016=(-1.000000)
+clearing in
+End of Get Over loop
+Start Get Over Loop
+CurrOrig: 6
+overLapClusterIndex: 1
+Skipping...
+Start Get Over Loop
+CurrOrig: 7
+Start Get Over Loop
+CurrOrig: 5
+After getOver Output String: interface(prettyprint=0);
+timelimit(10,solve({
+After more Output String: interface(prettyprint=0);
+timelimit(10,solve({x3016=(0.000000),y3016=(1.000000),z3016=(-1.000000),,y4016=(0.000000),z4016=(-1.000000)
+Var Length = 0, Eq Count = 5
+after getOrigin Output String: interface(prettyprint=0);
+timelimit(10,solve({x3016=(0.000000),y3016=(1.000000),z3016=(-1.000000),,y4016=(0.000000),z4016=(-1.000000)
+After alias Output String: interface(prettyprint=0);
+timelimit(10,solve({x16=(0.000000),y16=(1.000000),z16=(-1.000000),,d16=(0.000000),e16=(-1.000000),(1.000000)^2=(x16-c16)^2+(y16-d16)^2+(z16-e16)^2
+Equation Count right before Special case=6
+After Special Output String: interface(prettyprint=0);
+timelimit(10,solve({x16=(0.000000),y16=(1.000000),z16=(-1.000000),,d16=(0.000000),e16=(-1.000000),(1.000000)^2=(x16-c16)^2+(y16-d16)^2+(z16-e16)^2
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({x16=(0.000000),y16=(1.000000),z16=(
+-1.000000),,d16=(0.000000),e16=(-1.000000),(1.000000)^2=(x16
+-c16)^2+(y16-d16)^2+(z16-e16)^2},{x16,y16,z16,c16,d16,e16}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+x16=(0.000000)
+y16=(1.000000)
+z16=(-1.000000)
+
+d16=(0.000000)
+e16=(-1.000000)
+(1.000000)^2=(x16-c16)^2+(y16-d16)^2+(z16-e16)^2
+{x16,y16,z16,c16,d16,e16}
+String input data
+solve({x16=(0.000000),y16=(1.000000),z16=(-1.000000),,d16=(0.000000),e16=(-1.000000),(1.000000)^2=(x16-c16)^2+(y16-d16)^2+(z16-e16)^2},{x16,y16,z16,c16,d16,e16}));
+
+After postprocesser
+After bifurcations set
+Using Numeric Solver
+After printing bifurs
+Num Edges=14
+Children Solved
+Return by tag
+SKUTU index3040

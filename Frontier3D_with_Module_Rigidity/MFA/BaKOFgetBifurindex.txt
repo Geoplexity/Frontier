@@ -1,0 +1,78 @@
+int getFreeDegIndex(char keyChar, Vertex &theVertex)
+{
+    int out;
+
+    if(theVertex.returnType()<6)
+    	switch(keyChar) {
+	
+        	  case 'p':
+	          case 'x': out=0;
+                	    break;
+        	  case 'q':
+	          case 'y': out=1;
+        	            break;
+	          case 'c':
+        	  case 'r': 
+	          case 'f': out=2;
+                	    break;
+	          case 'd':
+        	  case 'g':
+		  case 't': out=3;
+                       	    break;
+	          case 'v':
+	          case 'm': 
+        	  case 's': out=4;
+        	            break;
+	          case 'w':
+        	  case 'l': 
+		  case 'h': out=5;
+        	            break;
+	          case 'a': 
+		  case 'j': out=6;
+                	    break;
+	          case 'b':
+        	  case 'k': out=7;
+                	    break;
+	          case 'n': out=8;
+			    break;
+          }
+    else
+	  cout<<"In Second Parse"<<endl;
+          switch(keyChar) {
+                  
+                  case 'p':
+                  case 'x': out=0;
+                            break;
+                  case 'q':
+                  case 'y': out=1;
+                            break;
+                  case 'r':
+                  case 'f':
+                  case 'z': out=2;
+                            break;
+                  case 'c':
+                  case 'g':
+                  case 't': out=3;
+                            break;
+                  case 'v':
+                  case 'm':
+                  case 's':
+                  case 'd': out=4;
+                            break;
+		  case 'e':
+                  case 'w':
+                  case 'l':
+                  case 'h': out=5;
+                            break;
+                  case 'a':
+                  case 'j': out=6;
+                            break;
+                  case 'b':
+                  case 'k': out=7;
+                            break;
+                  case 'n': out=8;
+                            break;
+          }
+	
+    return out;
+}

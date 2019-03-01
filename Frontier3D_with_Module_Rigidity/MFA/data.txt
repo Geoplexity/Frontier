@@ -1,0 +1,12 @@
+Card File Return Info:
+
+$1:	Project Name: 		FNAL_MB_v2_0_4a
+$2: 	Number of Events:	100
+$3:	Card File Name:		http://cmsdoc.cern.ch/cms/production/www/cgi/SQL/../data/Pythiacards/MB_Id_38.txt
+$4:	Application:		pythia
+$5:	Version:		6.158
+$6:	Group:			SWtest
+
+282 kine_make_ntpl_pyt.exe
+
+

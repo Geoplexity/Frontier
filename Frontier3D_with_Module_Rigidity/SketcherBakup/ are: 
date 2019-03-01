@@ -1,0 +1,241 @@
+ter is: 
+is solved?
+d?
+value at startI=
+ons read, number=0
+, number=1
+ Forest Loop153
+Edg=1,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=13,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=16,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=17,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=18,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=2,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=15,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 5(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=7,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=12,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 8(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 7(1) PD=0
+Edg=11,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 8(1) PD=0
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 7(1) 8(1) PD=0
+Edg=14,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 7(1) 5(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 13 16 17 18 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:4 2 3 15 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 5 7 19 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:18 3 5 6 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:15 7 6 10 12 14 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=6,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:13 19 10 8 11 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=7,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:16 8 9 14 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=8,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:17 12 11 9 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Total weight of vertices: 24
+Total weight of edges   : 19
+Total flowed weight     : 0
+Return by tag
+Solver ran, return value=153 -1
+Solver ran, return value=153 0
+Solver ran, return value=153 2
+Solver ran, return value=153 1
+Solver ran, return value=153 5
+Solver ran, return value=153 1
+Solver ran, return value=153 2
+Solver ran, return value=153 3
+Solver ran, return value=153 4
+Solver ran, return value=153 5
+Solver ran, return value=153 0
+Solver ran, return value=153 2
+Solver ran, return value=153 5
+Solver ran, return value=153 1
+Solver ran, return value=153 5
+Solver ran, return value=153 6
+Solver ran, return value=153 7
+Solver ran, return value=153 8
+Solver ran, return value=153 0
+Solver ran, return value=153 -1
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+Solver ran, return value=153 0
+=
+rs=
+Dimension=3
+Edg=1,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=13,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=16,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=17,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=18,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=2,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=15,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 5(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=7,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=12,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 8(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 7(1) PD=0
+Edg=11,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 8(1) PD=0
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 7(1) 8(1) PD=0
+Edg=14,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 7(1) 5(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 13 16 17 18 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:4 2 3 15 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 5 7 19 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:18 3 5 6 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:15 7 6 10 12 14 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=6,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:13 19 10 8 11 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=7,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:16 8 9 14 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=8,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:17 12 11 9 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Total weight of vertices: 24
+Total weight of edges   : 19
+Total flowed weight     : 0
+y useFileTotal
+furcation Return
+ut
+**Core: 36,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 21 31 
+****Core: 21,  Grp=1,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 5 15 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+******Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 4 12 
+********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+********Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 3 2 1 
+**********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+
+
+
+****Core: 31,  Grp=2,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 5 25 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+******Core: 25,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 8 22 
+********Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+********Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 7 6 1 
+**********Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+
+
+
+
+C.cpp: 
+ead
+**Core: 36,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 21 31 
+****Core: 21,  Grp=1,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 5 15 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+******Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 4 12 
+********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+********Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 3 2 1 
+**********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+
+
+
+****Core: 31,  Grp=2,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 5 25 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+******Core: 25,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 8 22 
+********Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+********Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 7 6 1 
+**********Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+
+
+
+
+C.cpp: 
+ees called
+**Core: 36,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 21 31 
+****Core: 21,  Grp=1,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 5 15 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+******Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 4 12 
+********Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+********Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 3 2 1 
+**********Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+
+
+
+****Core: 31,  Grp=2,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 5 25 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+******Core: 25,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 8 22 
+********Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+********Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392    Children: 7 6 1 
+**********Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+**********Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 3.00392 
+
+
+
+
+ees returned
+Edg=1,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=13,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=16,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=17,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=18,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=2,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=15,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 5(1) PD=0
+Edg=5,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=7,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=12,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 8(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 7(1) PD=0
+Edg=11,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 8(1) PD=0
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 7(1) 8(1) PD=0
+Edg=14,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 7(1) 5(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 13 16 17 18 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:4 2 3 15 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 5 7 19 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:18 3 5 6 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:15 7 6 10 12 14 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=6,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:13 19 10 8 11 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=7,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:16 8 9 14 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Ver=8,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:17 12 11 9 PD=0 leftEnds: rightEnds: DOF=un un un NA NA NA un unun
+Total weight of vertices: 24
+Total weight of edges   : 19
+Total flowed weight     : 0
+ter is: 
+is solved?
+d?
+value at startI=
+ons read, number=2
+ut
+C.cpp: 
+ead
+C.cpp: 
+ees called

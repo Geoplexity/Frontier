@@ -1,0 +1,361 @@
+Solver Start
+AutoSolve: false
+Variable Initialized usingArrays: false
+DRDAG Output
+-1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+DAG Output
+Arrays output, Solver returns
+Solver Start
+AutoSolve: false
+Variable Initialized usingArrays: true
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 5
+Integer after Tree: 1
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 1
+Integer after Tree: 5
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 5
+Integer after Tree: 4
+Integer after Tree: 6
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 4
+Integer after Tree: 1
+Integer after Tree: 4
+Integer after Tree: 2
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 4
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 6
+Integer after Tree: 3
+Integer after Tree: 7
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: -2
+Integer after Tree: -2
+Graph and Cluster read:
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 5 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:5 4 6 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 2 3 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 3 7 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 7 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Total weight of vertices: 10
+Total weight of edges   : 7
+Total flowed weight     : 0
+value at startI=-1
+Bifucations read, number=-1
+In Solve Forest Loop
+Return by tag
+1111111111111111111111111111111111
+1111111111111111111111111111111111
+1111111111111111111111111111111111
+222222222222222222222222
+222222222222222222222222
+222222222222222222222222Solver Start
+AutoSolve: false
+Variable Initialized usingArrays: true
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 5
+Integer after Tree: 1
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 1
+Integer after Tree: 5
+Integer after Tree: 0
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 5
+Integer after Tree: 4
+Integer after Tree: 6
+Integer after Tree: 0
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 4
+Integer after Tree: 1
+Integer after Tree: 4
+Integer after Tree: 2
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 1
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 4
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 6
+Integer after Tree: 3
+Integer after Tree: 7
+Integer after Tree: 0
+Graph and Cluster read:
+Edg=1,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=4,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=3,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 5 PD=0 leftEnds: rightEnds: DOF=0 0 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:5 4 6 PD=0 leftEnds: rightEnds: DOF=-0.866024 0.500001 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 2 3 PD=0 leftEnds: rightEnds: DOF=0 0 NA NA NA NA 0 10
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 3 7 PD=0 leftEnds: rightEnds: DOF=-0.866025 -0.499999 NA NA NA NA 0 10
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 7 PD=0 leftEnds: rightEnds: DOF=0 -0.999999 NA NA NA NA 0 10
+Total weight of vertices: 10
+Total weight of edges   : 7
+Total flowed weight     : 0
+value at startI=2
+1
+2
+Bifucations read, number=2
+In Solve Forest Loop
+Solver ran, return value=0
+usedBifurs=true
+Return by useFileTotal

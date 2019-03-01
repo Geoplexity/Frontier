@@ -1,0 +1,198 @@
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=13,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 10(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=14,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 13(2) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=16,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 16(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(1) PD=0
+Edg=17,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 16(2) PD=0
+Edg=18,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 19(1) PD=0
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=20,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 22(1) PD=0
+Edg=21,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 22(2) PD=0
+Edg=7,T=4, W=1,V=60, LS=00, PF=0, F1=0, F2=0, Ends: 7(2) 13(1) PD=0
+Edg=9,T=4, W=1,V=60, LS=00, PF=0, F1=0, F2=0, Ends: 7(1) 19(2) PD=0
+Edg=10,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 7(2) 6(1) PD=0
+Edg=11,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 7(1) 1(1) PD=0
+Edg=12,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 10(2) 2(1) PD=0
+Edg=8,T=4, W=1,V=60, LS=00, PF=0, F1=0, F2=0, Ends: 13(2) 19(1) PD=0
+Edg=15,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=19,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 19(2) 5(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:5 6 13 11 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:5 4 14 12 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 3 16 15 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:3 2 17 18 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 1 20 19 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 1 21 10 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=7,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 10 11 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Ver=10,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:13 12 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Ver=13,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:14 7 8 15 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Ver=16,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Ver=19,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:18 9 8 19 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Ver=22,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:20 21 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 33
+Total flowed weight     : 0
+---------------------------------------------
+simpilfied graph (merge the multi-edges and delete zero-weight edges)
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=13,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 10(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=14,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 13(2) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=16,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 16(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 5(1) PD=0
+Edg=17,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 16(2) PD=0
+Edg=18,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 19(1) PD=0
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=20,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 22(1) PD=0
+Edg=21,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 22(2) PD=0
+Edg=7,T=4, W=1,V=60, LS=00, PF=0, F1=0, F2=0, Ends: 7(2) 13(1) PD=0
+Edg=9,T=4, W=1,V=60, LS=00, PF=0, F1=0, F2=0, Ends: 7(1) 19(2) PD=0
+Edg=10,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 7(2) 6(1) PD=0
+Edg=11,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 7(1) 1(1) PD=0
+Edg=12,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 10(2) 2(1) PD=0
+Edg=8,T=4, W=1,V=60, LS=00, PF=0, F1=0, F2=0, Ends: 13(2) 19(1) PD=0
+Edg=15,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=19,T=1, W=2,V=NA, LS=00, PF=0, F1=0, F2=0, Ends: 19(2) 5(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:5 6 13 11 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:5 4 14 12 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 3 16 15 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:3 2 17 18 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 1 20 19 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 1 21 10 PD=0 leftEnds: rightEnds: DOF=un un NA NA NA NA un unun
+Ver=7,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 10 11 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Ver=10,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:13 12 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Ver=13,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:14 7 8 15 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Ver=16,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Ver=19,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:18 9 8 19 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Ver=22,T=3, W=4, d=0, LSFI=0000, PF=0, EF=0, edge:20 21 PD=0 leftEnds: rightEnds: DOF=un un un un un un un unun
+Total weight of vertices: 36
+Total weight of edges   : 33
+Total flowed weight     : 0
+---------------------------------------------
+
+12 DRTrees by design decomposition:
+---------
+DRTree 1
+**Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+DRTree 2
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+DRTree 3
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+DRTree 4
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+DRTree 5
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+DRTree 6
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+DRTree 7
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+DRTree 8
+**Core: 10,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+DRTree 9
+**Core: 13,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+DRTree 10
+**Core: 16,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+DRTree 11
+**Core: 19,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+DRTree 12
+**Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------------------------------------------
+---------------------------------------------
+Pop Cluster, 1  Group=0
+---------------------------------------------
+Pop Cluster, 2  Group=0
+Extend Vertice 10
+
+Get new Cluster
+Cluster(core):26, depth=1, type=0, well constrained
+Frontiers: 1 2 
+Previous clusters: 10 2 1 
+Original Vertices: 10 2 1 
+Inner Edge: 22(2,1-26) 23(2,2-26) 
+Onter Edge: 5(1,1-2) 
+Bifurcations (Current Selection: None):
+The Degs are 
+0    0    0    1    0    1    0    1    0    
+---------------------------------------------
+Pop Cluster, 3  Group=0
+Extend Vertice 13
+
+Get new Cluster
+Cluster(core):27, depth=1, type=0, well constrained
+Frontiers: 2 3 13 
+Previous clusters: 13 3 2 
+Original Vertices: 2 13 3 
+Inner Edge: 24(1,2-27) 25(1,3-27) 26(1,13-27) 
+Onter Edge: 4(1,2-3) 14(2,2-13) 15(2,13-3) 
+Bifurcations (Current Selection: None):
+The Degs are 
+0    0    0    1    0    1    0    1    0    
+---------------------------------------------
+Pop Cluster, 4  Group=0
+Extend Vertice 16
+
+Get new Cluster
+Cluster(core):28, depth=1, type=0, well constrained
+Frontiers: 3 4 
+Previous clusters: 16 4 3 
+Original Vertices: 3 16 4 
+Inner Edge: 27(2,3-28) 28(2,4-28) 
+Onter Edge: 3(1,3-4) 
+Bifurcations (Current Selection: None):
+The Degs are 
+0    0    0    1    0    1    0    1    0    
+---------------------------------------------
+Pop Cluster, 5  Group=0
+Extend Vertice 19
+
+Get new Cluster
+Cluster(core):29, depth=1, type=0, well constrained
+Frontiers: 4 5 19 
+Previous clusters: 19 5 4 
+Original Vertices: 4 19 5 
+Inner Edge: 29(1,4-29) 30(1,5-29) 31(1,19-29) 
+Onter Edge: 2(1,4-5) 18(2,4-19) 19(2,19-5) 
+Bifurcations (Current Selection: None):
+The Degs are 
+0    0    0    1    0    1    0    1    0    
+---------------------------------------------
+Pop Cluster, 6  Group=0
+Extend Vertice 7
+
+Get new Cluster
+Cluster(core):30, depth=1, type=0, well constrained
+Frontiers: 1 6 7 
+Previous clusters: 7 6 1 
+Original Vertices: 1 7 6 
+Inner Edge: 32(1,1-30) 33(1,6-30) 34(1,7-30) 
+Onter Edge: 6(1,1-6) 11(2,7-1) 10(2,7-6) 
+Bifurcations (Current Selection: None):
+The Degs are 
+0    0    0    1    0    1    0    1    0    
+---------------------------------------------
+Pop Cluster, 22  Group=0
+---------------------------------------------
+Pop Cluster, 26  Group=0
+---------------------------------------------
+Pop Cluster, 27  Group=0
+---------------------------------------------
+Pop Cluster, 28  Group=0
+---------------------------------------------
+Pop Cluster, 29  Group=0
+---------------------------------------------
+Pop Cluster, 30  Group=0
