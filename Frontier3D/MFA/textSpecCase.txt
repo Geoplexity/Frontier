@@ -1,0 +1,198 @@
+Edg=9,T=6, W=1,V=1, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=1, edge:9 10 11 12 PD=9 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:9 2 6 7 PD=9 DOF=un un un NA NA NA un unun
+Edg=9,T=6, W=1,V=1, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=1, edge:9 10 11 12 13 PD=9 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:9 2 6 7 14 PD=9 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=0, EF=0, edge:12 7 3 8 15 PD=0 DOF=un un un NA NA NA un unun
+Edg=9,T=6, W=1,V=1, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=1, edge:9 10 11 12 13 PD=9 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:9 2 6 7 14 PD=9 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=0, EF=0, edge:12 7 3 8 15 PD=0 DOF=un un un NA NA NA un unun
+Edg=9,T=6, W=1,V=1, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=1, edge:9 10 11 12 13 PD=9 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:9 2 6 7 14 PD=9 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=0, EF=0, edge:12 7 3 8 15 PD=0 DOF=un un un NA NA NA un unun
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=11,T=6, W=1,V=1.15, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=2, edge:9 10 11 12 13 PD=11 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:9 2 6 7 14 PD=9 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:12 7 3 8 15 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:11 8 4 5 PD=11 DOF=un un un NA NA NA un unun
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=11,T=6, W=1,V=1.15, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=2, edge:9 10 11 12 13 PD=11 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:9 2 6 7 14 PD=9 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:12 7 3 8 15 PD=0 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:11 8 4 5 PD=11 DOF=un un un NA NA NA un unun
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=11,T=6, W=1,V=1.15, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=11, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:9 2 6 7 14 PD=9 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=2, edge:9 10 11 12 13 16 PD=11 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=0, EF=0, edge:12 7 3 8 15 18 PD=0 DOF=un un un NA NA NA un unun
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=11,T=6, W=1,V=1.15, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=11, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:9 2 6 7 14 PD=9 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=2, edge:9 10 11 12 13 16 PD=11 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=0, EF=0, edge:12 7 3 8 15 18 PD=0 DOF=un un un NA NA NA un unun
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=11,T=6, W=1,V=1.15, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=11, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:9 2 6 7 14 PD=9 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=2, edge:9 10 11 12 13 16 PD=11 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=0, EF=0, edge:12 7 3 8 15 18 PD=0 DOF=un un un NA NA NA un unun
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=11,T=6, W=1,V=1.15, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 5(1) PD=0
+Ver=2,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:9 2 6 7 14 PD=9 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=3, edge:9 10 11 12 13 16 PD=10 DOF=un un un NA NA NA un unun
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:12 7 3 8 15 18 PD=0 DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:10 6 5 1 PD=10 DOF=un un un NA NA NA un unun
+Edg=7,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=11,T=6, W=1,V=1.15, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=11, PF=0, F1=0, F2=0, Ends: 2(1) 5(1) PD=0
+Edg=9,T=6, W=1,V=1, LS=11, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 4(1) PD=0
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:12 7 3 8 15 18 PD=0 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=3, edge:9 10 11 12 13 16 19 PD=10 DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:10 6 5 1 20 PD=10 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:9 2 6 7 14 21 PD=9 DOF=un un un NA NA NA un unun
+Edg=7,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=11,T=6, W=1,V=1.15, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=11, PF=0, F1=0, F2=0, Ends: 2(1) 5(1) PD=0
+Edg=9,T=6, W=1,V=1, LS=11, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 4(1) PD=0
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:12 7 3 8 15 18 PD=0 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=3, edge:9 10 11 12 13 16 19 PD=10 DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:10 6 5 1 20 PD=10 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:9 2 6 7 14 21 PD=9 DOF=un un un NA NA NA un unun
+Edg=7,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=11,T=6, W=1,V=1.15, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=10, PF=0, F1=1, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=11, PF=0, F1=0, F2=0, Ends: 2(1) 5(1) PD=0
+Edg=9,T=6, W=1,V=1, LS=11, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 4(1) PD=0
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:12 7 3 8 15 18 PD=0 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=1000, PF=1, EF=3, edge:9 10 11 12 13 16 19 PD=10 DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:10 6 5 1 20 PD=10 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:9 2 6 7 14 21 PD=9 DOF=un un un NA NA NA un unun
+Edg=7,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=11,T=6, W=1,V=1.15, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 5(1) PD=0
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 4(1) PD=0
+Edg=2,T=6, W=1,V=1.15, LS=10, PF=0, F1=1, F2=0, Ends: 2(1) 6(1) PD=0
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:12 7 3 8 15 18 PD=0 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=1, EF=3, edge:9 10 11 12 13 16 19 PD=10 DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:10 6 5 1 20 PD=10 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=1, edge:9 2 6 7 14 21 PD=2 DOF=un un un NA NA NA un unun
+Ver=6,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:2 3 4 1 PD=2 DOF=un un un NA NA NA un unun
+Edg=7,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=11,T=6, W=1,V=1.15, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 5(1) PD=0
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 4(1) PD=0
+Edg=2,T=6, W=1,V=1.15, LS=10, PF=0, F1=1, F2=0, Ends: 2(1) 6(1) PD=0
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=0000, PF=0, EF=0, edge:12 7 3 8 15 18 PD=0 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=1, EF=3, edge:9 10 11 12 13 16 19 PD=10 DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:10 6 5 1 20 PD=10 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=1, edge:9 2 6 7 14 21 PD=2 DOF=un un un NA NA NA un unun
+Ver=6,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:2 3 4 1 PD=2 DOF=un un un NA NA NA un unun
+Edg=11,T=6, W=1,V=1.15, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 5(1) PD=0
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 4(1) PD=0
+Edg=2,T=6, W=1,V=1.15, LS=10, PF=0, F1=1, F2=0, Ends: 2(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=11, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(1) PD=0
+Edg=1,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 5(1) PD=0
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=1, EF=3, edge:9 10 11 12 13 16 19 PD=10 DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:10 6 5 1 20 PD=10 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=1, edge:9 2 6 7 14 21 22 PD=2 DOF=un un un NA NA NA un unun
+Ver=6,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:2 3 4 1 23 PD=2 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=0, EF=0, edge:12 7 3 8 15 18 24 PD=0 DOF=un un un NA NA NA un unun
+Edg=11,T=6, W=1,V=1.15, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 5(1) PD=0
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 4(1) PD=0
+Edg=2,T=6, W=1,V=1.15, LS=10, PF=0, F1=1, F2=0, Ends: 2(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=11, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(1) PD=0
+Edg=1,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 5(1) PD=0
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=1, EF=3, edge:9 10 11 12 13 16 19 PD=10 DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:10 6 5 1 20 PD=10 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=1, edge:9 2 6 7 14 21 22 PD=2 DOF=un un un NA NA NA un unun
+Ver=6,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:2 3 4 1 23 PD=2 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=0, EF=0, edge:12 7 3 8 15 18 24 PD=0 DOF=un un un NA NA NA un unun
+Edg=11,T=6, W=1,V=1.15, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 4(1) PD=0
+Edg=8,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=12,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 3(1) PD=0
+Edg=10,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 5(1) PD=0
+Edg=6,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 5(1) PD=0
+Edg=9,T=6, W=1,V=1, LS=00, PF=0, F1=1, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=5,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 4(1) PD=0
+Edg=2,T=6, W=1,V=1.15, LS=10, PF=0, F1=1, F2=0, Ends: 2(1) 6(1) PD=0
+Edg=3,T=6, W=1,V=1, LS=11, PF=0, F1=0, F2=0, Ends: 3(1) 6(1) PD=0
+Edg=7,T=6, W=1,V=1.15, LS=11, PF=0, F1=0, F2=0, Ends: 2(1) 3(1) PD=0
+Edg=4,T=6, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 6(1) PD=0
+Edg=1,T=6, W=1,V=1.15, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 5(1) PD=0
+Ver=4,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:11 8 4 5 17 PD=11 DOF=un un un NA NA NA un unun
+Ver=1,T=6, W=3, d=0, LSFI=0000, PF=1, EF=3, edge:9 10 11 12 13 16 19 PD=10 DOF=un un un NA NA NA un unun
+Ver=5,T=6, W=3, d=0, LSFI=0000, PF=1, EF=0, edge:10 6 5 1 20 PD=10 DOF=un un un NA NA NA un unun
+Ver=2,T=6, W=3, d=0, LSFI=1000, PF=1, EF=1, edge:9 2 6 7 14 21 22 PD=2 DOF=un un un NA NA NA un unun
+Ver=6,T=6, W=3, d=0, LSFI=1000, PF=1, EF=0, edge:2 3 4 1 23 PD=2 DOF=un un un NA NA NA un unun
+Ver=3,T=6, W=3, d=0, LSFI=1000, PF=0, EF=0, edge:12 7 3 8 15 18 24 PD=0 DOF=un un un NA NA NA un unun

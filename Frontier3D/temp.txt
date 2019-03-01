@@ -1,0 +1,6775 @@
+111 added group Groups shapes size=0
+size = 15
+Sent 0
+Sent 0
+Sent 0
+Sent 1
+Sent 0
+Sent 2
+Sent 0
+Sent 3
+Sent 0
+Sent 4
+Sent 0
+Sent 5
+Sent 0
+Sent 6
+Sent 0
+Sent 7
+Sent 0
+Sent 8
+Sent 0
+Sent 9
+Sent 0
+Sent 10
+Sent 0
+Sent 11
+Sent 0
+Sent 12
+Sent 0
+Sent 13
+Sent 0
+Sent 14
+Sent 0
+Sent 15
+Sent -1
+Sent 0
+Sent 1
+Sent 2
+Sent 1
+Sent 1
+Sent 7
+Sent 1
+Sent 0
+Sent 4
+Sent 2
+Sent 1
+Sent 1
+Sent 8
+Sent 1
+Sent 0
+Sent 6
+Sent 2
+Sent 1
+Sent 1
+Sent 2
+Sent 1
+Sent 0
+Sent 20
+Sent 2
+Sent 1
+Sent 1
+Sent 6
+Sent 1
+Sent 0
+Sent 7
+Sent 2
+Sent 2
+Sent 1
+Sent 9
+Sent 1
+Sent 0
+Sent 8
+Sent 2
+Sent 2
+Sent 1
+Sent 4
+Sent 1
+Sent 0
+Sent 2
+Sent 2
+Sent 3
+Sent 1
+Sent 7
+Sent 1
+Sent 0
+Sent 3
+Sent 2
+Sent 3
+Sent 1
+Sent 1
+Sent 1
+Sent 0
+Sent 18
+Sent 2
+Sent 3
+Sent 1
+Sent 5
+Sent 1
+Sent 0
+Sent 19
+Sent 2
+Sent 3
+Sent 1
+Sent 4
+Sent 1
+Sent 0
+Sent 9
+Sent 2
+Sent 4
+Sent 1
+Sent 9
+Sent 1
+Sent 0
+Sent 12
+Sent 2
+Sent 4
+Sent 1
+Sent 10
+Sent 1
+Sent 0
+Sent 13
+Sent 2
+Sent 5
+Sent 1
+Sent 6
+Sent 1
+Sent 0
+Sent 14
+Sent 2
+Sent 5
+Sent 1
+Sent 11
+Sent 1
+Sent 0
+Sent 21
+Sent 2
+Sent 5
+Sent 1
+Sent 2
+Sent 1
+Sent 0
+Sent 27
+Sent 2
+Sent 5
+Sent 1
+Sent 15
+Sent 1
+Sent 0
+Sent 10
+Sent 2
+Sent 6
+Sent 1
+Sent 4
+Sent 1
+Sent 0
+Sent 11
+Sent 2
+Sent 6
+Sent 1
+Sent 10
+Sent 1
+Sent 0
+Sent 5
+Sent 2
+Sent 8
+Sent 1
+Sent 2
+Sent 1
+Sent 0
+Sent 15
+Sent 2
+Sent 11
+Sent 1
+Sent 6
+Sent 1
+Sent 0
+Sent 16
+Sent 2
+Sent 12
+Sent 1
+Sent 5
+Sent 1
+Sent 0
+Sent 17
+Sent 2
+Sent 12
+Sent 1
+Sent 3
+Sent 1
+Sent 0
+Sent 22
+Sent 2
+Sent 13
+Sent 1
+Sent 3
+Sent 1
+Sent 0
+Sent 23
+Sent 2
+Sent 13
+Sent 1
+Sent 4
+Sent 1
+Sent 0
+Sent 24
+Sent 2
+Sent 14
+Sent 1
+Sent 1
+Sent 1
+Sent 0
+Sent 25
+Sent 2
+Sent 14
+Sent 1
+Sent 6
+Sent 1
+Sent 0
+Sent 26
+Sent 2
+Sent 15
+Sent 1
+Sent 2
+Sent 1
+Sent -1
+Sent -1
+Sent 0
+Sent 0
+Sent -1
+Sent 289.0
+Sent 175.0
+Sent 395.0
+Sent 174.0
+Sent 240.0
+Sent 260.0
+Sent 449.0
+Sent 270.0
+Sent 292.0
+Sent 340.0
+Sent 398.0
+Sent 350.0
+Sent 228.0
+Sent 193.0
+Sent 338.0
+Sent 133.0
+Sent 458.0
+Sent 197.0
+Sent 469.0
+Sent 334.0
+Sent 339.0
+Sent 394.0
+Sent 233.0
+Sent 326.0
+Sent 345.0
+Sent 226.0
+Sent 312.0
+Sent 277.0
+Sent 371.0
+Sent 279.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 2.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 2.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 2.0
+Sent 1.5
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.5
+Sent 1.5
+Sent 1.5
+Sent 1.5
+Sent 1.5
+OPEN UTU
+INTS
+DOUBLES
+CHARS
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+*FLAG: 0
+Tree Flag in utuC.cpp: 1
+1. Find mode
+2. Input Mode
+Enter selection:
+backup
+old
+original
+test
+test2
+test3
+/amd/avocado/export/research4/constraints/LaptopVersion/datafiles/original
+/amd/avocado/export/research4/constraints/LaptopVersion/datafiles/original
+The available data files directories are:
+Give name of the required data files directory : In req. dirGraph is Empty.
+shapeType=0
+shapeID=1
+shapeType=0
+shapeID=2
+shapeType=0
+shapeID=3
+shapeType=0
+shapeID=4
+shapeType=0
+shapeID=5
+shapeType=0
+shapeID=6
+shapeType=0
+shapeID=7
+shapeType=0
+shapeID=8
+shapeType=0
+shapeID=9
+shapeType=0
+shapeID=10
+shapeType=0
+shapeID=11
+shapeType=0
+shapeID=12
+shapeType=0
+shapeID=13
+shapeType=0
+shapeID=14
+shapeType=0
+shapeID=15
+15
+-1
+constraintType=0
+constraintID=1
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=4
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=6
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=20
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=7
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=8
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=2
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=3
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=18
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=19
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=9
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=12
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=13
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=14
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=21
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=27
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=10
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=11
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=5
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=15
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=16
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=17
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=22
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=23
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=24
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=25
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=26
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+StartGroup: 223
+original graph:
+data 223 -1
+data 223 0
+data 223 0
+data 223 -1
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+
+15 Solver Input Trees
+---------
+Tree 1
+**Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 4
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 5
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 6
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 7
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 8
+**Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 9
+**Core: 9,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 10
+**Core: 10,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 11
+**Core: 11,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 12
+**Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 13
+**Core: 13,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 14
+**Core: 14,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 15
+**Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+Groups read
+Graph Copied
+Dimension=2
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=un un NA NA NA NA un unun
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=un un NA NA NA NA un unun
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=un un NA NA NA NA un unun
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=un un NA NA NA NA un unun
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=un un NA NA NA NA un unun
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=un un NA NA NA NA un unun
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=un un NA NA NA NA un unun
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=un un NA NA NA NA un unun
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=un un NA NA NA NA un unun
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=un un NA NA NA NA un unun
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=un un NA NA NA NA un unun
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=un un NA NA NA NA un unun
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=un un NA NA NA NA un unun
+SolverTrees called
+Getting Cluster 19
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 20
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 21
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 22
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 23
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 24
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 25
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 26
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 27
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+Getting Cluster 28
+Labeled core: 22
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+Getting Cluster 29
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+END GETCLUSTER
+Getting Cluster 30
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+END GETCLUSTER
+Getting Cluster 31
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+END GETCLUSTER
+Getting Cluster 32
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+Labeled core: 26
+Labeled core: 31
+END GETCLUSTER
+Getting Cluster 33
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+Labeled core: 26
+Labeled core: 31
+Labeled core: 27
+Labeled core: 32
+END GETCLUSTER
+Getting Cluster 34
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+Labeled core: 26
+Labeled core: 31
+Labeled core: 27
+Labeled core: 32
+Labeled core: 19
+Labeled core: 33
+END GETCLUSTER
+Getting Cluster 35
+Labeled core: 19
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+Labeled core: 26
+Labeled core: 31
+Labeled core: 27
+Labeled core: 32
+Labeled core: 19
+Labeled core: 33
+Labeled core: 20
+Labeled core: 34
+END GETCLUSTER
+Getting Cluster 36
+Labeled core: 20
+Labeled core: 19
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+Labeled core: 26
+Labeled core: 31
+Labeled core: 27
+Labeled core: 32
+Labeled core: 19
+Labeled core: 33
+Labeled core: 20
+Labeled core: 34
+Labeled core: 21
+Labeled core: 35
+END GETCLUSTER
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+
+1 Final DR output Trees
+---------
+DRTree 1
+**Core: 36,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 22 23 24 25 26 27 19 20 21 
+****Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 15 5 2 
+******Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 23,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 14 6 1 
+******Core: 14,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 24,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 10 4 6 
+******Core: 10,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 25,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 11 5 6 
+******Core: 11,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 26,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 12 3 5 
+******Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 27,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 13 3 4 
+******Core: 13,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 19,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 2 1 
+******Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 20,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 3 1 
+******Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 21,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 9 4 2 
+******Core: 9,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+---------------------------------------------
+SolverTrees returned
+Solver Start
+AutoSolve: false
+Variable Initialized usingArrays: false
+State Saved
+DRDAG Output
+-1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+DAG Output
+Arrays output, Solver returns
+SKUTU index3674
+first 3674
+Received -2
+Received 1
+Received 36
+Received 0
+Received 15
+Received 2
+Received 1
+Received 6
+Received 5
+Received 3
+Received 4
+Received 15
+Received 14
+Received 10
+Received 11
+Received 12
+Received 13
+Received 8
+Received 7
+Received 9
+Received 9
+Received 22
+Received 23
+Received 24
+Received 25
+Received 26
+Received 27
+Received 19
+Received 20
+Received 21
+Received 22
+Received 0
+Received 3
+Received 2
+Received 15
+Received 5
+Received 3
+Received 15
+Received 5
+Received 2
+Received 15
+Received 0
+Received 1
+Received 15
+Received 0
+Received 5
+Received 0
+Received 1
+Received 5
+Received 0
+first 1023.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+treedia 2
+111 flag sent = 2
+OPEN UTU
+INTS
+DOUBLES
+CHARS
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+*FLAG: 2
+Solver Start
+AutoSolve: false
+Variable Initialized usingArrays: true
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 15
+Integer after Tree: 1
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 6
+Integer after Tree: 1
+Integer after Tree: 4
+Integer after Tree: 6
+Integer after Tree: 20
+Integer after Tree: 3
+Integer after Tree: 24
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 6
+Integer after Tree: 6
+Integer after Tree: 7
+Integer after Tree: 8
+Integer after Tree: 21
+Integer after Tree: 5
+Integer after Tree: 26
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 3
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 6
+Integer after Tree: 2
+Integer after Tree: 3
+Integer after Tree: 18
+Integer after Tree: 19
+Integer after Tree: 17
+Integer after Tree: 22
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: -2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 4
+Integer after Tree: 0
+Integer after Tree: 2
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Integer after Tree: 0
+Graph and Cluster read:
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=un un NA NA NA NA un unun
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=un un NA NA NA NA un unun
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=un un NA NA NA NA un unun
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=un un NA NA NA NA un unun
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=un un NA NA NA NA un unun
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=un un NA NA NA NA un unun
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=un un NA NA NA NA un unun
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=un un NA NA NA NA un unun
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=un un NA NA NA NA un unun
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=un un NA NA NA NA un unun
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=un un NA NA NA NA un unun
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=un un NA NA NA NA un unun
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=un un NA NA NA NA un unun
+
+1 Solver Input Trees
+---------
+Tree 1
+**Core: 36,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 22 23 24 25 26 27 19 20 21 
+****Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 15 5 2 
+******Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 23,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 14 6 1 
+******Core: 14,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 24,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 10 4 6 
+******Core: 10,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 25,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 11 5 6 
+******Core: 11,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 26,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 12 3 5 
+******Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 27,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 13 3 4 
+******Core: 13,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 19,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 2 1 
+******Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 20,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 3 1 
+******Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 21,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 9 4 2 
+******Core: 9,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+value at startI=-1
+Bifucations read, number=-1
+In Solve Forest Loop
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+Children Solved
+Solving Cluster 22...
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 15
+Graph updated
+Child processed: 2
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 5
+Graph updated
+Child processed: 3
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 2
+Graph updated
+Ending Solver usedBifurs
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+ABOUT TO SET REDUCTION
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+end1: 1 end2: 7 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 7 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 1 type: 0 in1: 0 in2: 0 value: 1
+end1: 1 end2: 8 type: 0 in1: 0 in2: 0 value: 1
+end1: 8 end2: 2 type: 0 in1: 0 in2: 1 value: 1
+end1: 1 end2: 2 type: 0 in1: 0 in2: 1 value: 1
+end1: 2 end2: 9 type: 0 in1: 1 in2: 0 value: 1
+end1: 2 end2: 4 type: 0 in1: 1 in2: 0 value: 1
+end1: 4 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 6 end2: 4 type: 0 in1: 0 in2: 0 value: 1
+end1: 6 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 4 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 5 end2: 6 type: 0 in1: 1 in2: 0 value: 1
+end1: 5 end2: 11 type: 0 in1: 1 in2: 0 value: 1
+end1: 11 end2: 6 type: 0 in1: 0 in2: 0 value: 1
+end1: 12 end2: 5 type: 0 in1: 0 in2: 1 value: 1
+end1: 12 end2: 3 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 5 type: 0 in1: 0 in2: 1 value: 1
+end1: 3 end2: 4 type: 0 in1: 0 in2: 0 value: 2
+end1: 1 end2: 6 type: 0 in1: 0 in2: 0 value: 2
+end1: 5 end2: 2 type: 0 in1: 1 in2: 1 value: 2
+end1: 13 end2: 3 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 13 end2: 4 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 1 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 6 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 15 end2: 2 type: 0 in1: 1 in2: 1 value: 1.5
+end1: 5 end2: 15 type: 0 in1: 1 in2: 1 value: 1.5
+longestIndex: 21
+Input File opened
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+0
+21
+0
+5
+2
+0
+0
+1
+1
+2
+Break
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+0
+27
+0
+5
+15
+0
+0
+1
+1
+1.5
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+0
+26
+0
+15
+2
+0
+0
+1
+1
+1.5
+Displaying Temp
+Length : 3
+search_flag: 1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+0
+21
+0
+5
+2
+0
+0
+1
+1
+2
+Break
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+0
+27
+0
+5
+15
+0
+0
+1
+1
+1.5
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+0
+26
+0
+15
+2
+0
+0
+1
+1
+1.5
+Displaying Temp
+Length : 3
+No_of_Searches : 3
+While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x5-x2)^2+(y5-y2)^2=((1.999999))^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x5-x15)^2+(y5-y15)^2=((1.500000))^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x15-x2)^2+(y15-y2)^2=((1.500000))^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x5-x2)^2+(y5-y2)^2=(1.999999)^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x5-x15)^2+(y5-y15)^2=(1.500000)^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x15-x2)^2+(y15-y2)^2=(1.500000)^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x5-x2)^2+(y5-y2)^2=(1.999999)^2
+  Search ends
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x5-x15)^2+(y5-y15)^2=(1.500000)^2
+  Search ends
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x15-x2)^2+(y15-y2)^2=(1.500000)^2
+  Search ends
+outputString=interface(prettyprint=0);
+timelimit(10,solve({(x5-x2)^2+(y5-y2)^2=(1.999999)^2,(x5-x15)^2+(y5-y15)^2=(1.500000)^2,(x15-x2)^2+(y15-y2)^2=(1.500000)^2
+Vars right after search
+{x5,y5,x2,y2,x15,y15}
+Var Length = 6, Eq Count = 3
+Start getOrigin
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=un un NA NA NA NA un unun
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=un un NA NA NA NA un unun
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=un un NA NA NA NA un unun
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=un un NA NA NA NA un unun
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=un un NA NA NA NA un unun
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=un un NA NA NA NA un unun
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=un un NA NA NA NA un unun
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=un un NA NA NA NA un unun
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=un un NA NA NA NA un unun
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=un un NA NA NA NA un unun
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=0 0 NA NA NA NA 0 10
+in getOrigin after getting all data
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({(x5-x2)^2+(y5-y2)^2=(1.999999)^2,(x5
+-x15)^2+(y5-y15)^2=(1.500000)^2,(x15-x2)^2+(y15-y2)^2=(1.500000)^2,x5=0,y5=0,x2=0},{x5,y5,x2,y2,x15,y15}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+(x5-x2)^2+(y5-y2)^2=(1.999999)^2
+(x5-x15)^2+(y5-y15)^2=(1.500000)^2
+(x15-x2)^2+(y15-y2)^2=(1.500000)^2
+x5=0
+y5=0
+x2=0
+{x5,y5,x2,y2,x15,y15}
+String input data
+solve({(x5-x2)^2+(y5-y2)^2=(1.999999)^2,(x5-x15)^2+(y5-y15)^2=(1.500000)^2,(x15-x2)^2+(y15-y2)^2=(1.500000)^2,x5=0,y5=0,x2=0},{x5,y5,x2,y2,x15,y15}));
+
+After postprocesser
+After bifurcations set
+       x5=0,y5=0,x2=0,y2=-1.999999000,y15=-.9999995000,x15=-1.118034436
+       x5=0,y5=0,x2=0,y2=-1.999999000,y15=-.9999995000,x15=1.118034436
+       x5=0,y5=0,x2=0,x15=-1.118034436,y15=.9999995000,y2=1.999999000
+       x5=0,y5=0,x2=0,x15=1.118034436,y15=.9999995000,y2=1.999999000
+After printing bifurs
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 0 at index 1
+Set Value in Cluster 2
+with value 0 at index 0
+Set Value in Cluster 2
+with value -2 at index 1
+Set Value in Cluster 15
+with value -1 at index 1
+Set Value in Cluster 15
+with value -1.11803 at index 0
+Cluster Being Updated: 22
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 0 at index 1
+Set Value in Cluster 2
+with value 0 at index 0
+Set Value in Cluster 2
+with value -2 at index 1
+Set Value in Cluster 15
+with value -1 at index 1
+Set Value in Cluster 15
+with value 1.11803 at index 0
+Cluster Being Updated: 22
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 0 at index 1
+Set Value in Cluster 2
+with value 0 at index 0
+Set Value in Cluster 15
+with value -1.11803 at index 0
+Set Value in Cluster 15
+with value 1 at index 1
+Set Value in Cluster 2
+with value 2 at index 1
+Cluster Being Updated: 22
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 0 at index 1
+Set Value in Cluster 2
+with value 0 at index 0
+Set Value in Cluster 15
+with value 1.11803 at index 0
+Set Value in Cluster 15
+with value 1 at index 1
+Set Value in Cluster 2
+with value 2 at index 1
+Cluster Being Updated: 22
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+Children Solved
+Solving Cluster 23...
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 14,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 14
+Graph updated
+Child processed: 2
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 6
+Graph updated
+Child processed: 3
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 1
+Graph updated
+Ending Solver usedBifurs
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 14,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+ABOUT TO SET REDUCTION
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+end1: 1 end2: 7 type: 0 in1: 1 in2: 0 value: 1
+end1: 3 end2: 7 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 1 type: 0 in1: 0 in2: 1 value: 1
+end1: 1 end2: 8 type: 0 in1: 1 in2: 0 value: 1
+end1: 8 end2: 2 type: 0 in1: 0 in2: 0 value: 1
+end1: 1 end2: 2 type: 0 in1: 1 in2: 0 value: 1
+end1: 2 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 2 end2: 4 type: 0 in1: 0 in2: 0 value: 1
+end1: 4 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 6 end2: 4 type: 0 in1: 1 in2: 0 value: 1
+end1: 6 end2: 10 type: 0 in1: 1 in2: 0 value: 1
+end1: 4 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 5 end2: 6 type: 0 in1: 0 in2: 1 value: 1
+end1: 5 end2: 11 type: 0 in1: 0 in2: 0 value: 1
+end1: 11 end2: 6 type: 0 in1: 0 in2: 1 value: 1
+end1: 12 end2: 5 type: 0 in1: 0 in2: 0 value: 1
+end1: 12 end2: 3 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 5 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 4 type: 0 in1: 0 in2: 0 value: 2
+end1: 1 end2: 6 type: 0 in1: 1 in2: 1 value: 2
+end1: 5 end2: 2 type: 0 in1: 0 in2: 0 value: 2
+end1: 13 end2: 3 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 13 end2: 4 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 1 type: 0 in1: 1 in2: 1 value: 1.5
+end1: 14 end2: 6 type: 0 in1: 1 in2: 1 value: 1.5
+end1: 15 end2: 2 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 5 end2: 15 type: 0 in1: 0 in2: 0 value: 1.5
+longestIndex: 20
+Input File opened
+Break
+Break
+Break
+Break
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+0
+20
+0
+1
+6
+0
+0
+1
+1
+2
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+0
+24
+0
+14
+1
+0
+0
+1
+1
+1.5
+Break
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+0
+25
+0
+14
+6
+0
+0
+1
+1
+1.5
+Break
+Displaying Temp
+Length : 3
+search_flag: 1
+Break
+Break
+Break
+Break
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+0
+20
+0
+1
+6
+0
+0
+1
+1
+2
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+0
+24
+0
+14
+1
+0
+0
+1
+1
+1.5
+Break
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+0
+25
+0
+14
+6
+0
+0
+1
+1
+1.5
+Break
+Displaying Temp
+Length : 3
+No_of_Searches : 3
+While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x1-x6)^2+(y1-y6)^2=((1.999999))^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x14-x1)^2+(y14-y1)^2=((1.500000))^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x14-x6)^2+(y14-y6)^2=((1.500000))^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x1-x6)^2+(y1-y6)^2=(1.999999)^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x14-x1)^2+(y14-y1)^2=(1.500000)^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x14-x6)^2+(y14-y6)^2=(1.500000)^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x1-x6)^2+(y1-y6)^2=(1.999999)^2
+  Search ends
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x14-x1)^2+(y14-y1)^2=(1.500000)^2
+  Search ends
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x14-x6)^2+(y14-y6)^2=(1.500000)^2
+  Search ends
+outputString=interface(prettyprint=0);
+timelimit(10,solve({(x1-x6)^2+(y1-y6)^2=(1.999999)^2,(x14-x1)^2+(y14-y1)^2=(1.500000)^2,(x14-x6)^2+(y14-y6)^2=(1.500000)^2
+Vars right after search
+{x1,y1,x6,y6,x14,y14}
+Var Length = 6, Eq Count = 3
+Start getOrigin
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0 2 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=un un NA NA NA NA un unun
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=un un NA NA NA NA un unun
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=un un NA NA NA NA un unun
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=un un NA NA NA NA un unun
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=un un NA NA NA NA un unun
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=un un NA NA NA NA un unun
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=un un NA NA NA NA un unun
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+in getOrigin after getting all data
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({(x1-x6)^2+(y1-y6)^2=(1.999999)^2,(x14
+-x1)^2+(y14-y1)^2=(1.500000)^2,(x14-x6)^2+(y14-y6)^2=(1.500000)^2,x1=0,y1=0,x6=0},{x1,y1,x6,y6,x14,y14}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+(x1-x6)^2+(y1-y6)^2=(1.999999)^2
+(x14-x1)^2+(y14-y1)^2=(1.500000)^2
+(x14-x6)^2+(y14-y6)^2=(1.500000)^2
+x1=0
+y1=0
+x6=0
+{x1,y1,x6,y6,x14,y14}
+String input data
+solve({(x1-x6)^2+(y1-y6)^2=(1.999999)^2,(x14-x1)^2+(y14-y1)^2=(1.500000)^2,(x14-x6)^2+(y14-y6)^2=(1.500000)^2,x1=0,y1=0,x6=0},{x1,y1,x6,y6,x14,y14}));
+
+After postprocesser
+After bifurcations set
+       x1=0,y1=0,x6=0,y14=-.9999995000,y6=-1.999999000,x14=-1.118034436
+       x1=0,y1=0,x6=0,x14=1.118034436,y14=-.9999995000,y6=-1.999999000
+       x1=0,y1=0,x6=0,y14=.9999995000,y6=1.999999000,x14=-1.118034436
+       x1=0,y1=0,x6=0,x14=1.118034436,y14=.9999995000,y6=1.999999000
+After printing bifurs
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 6
+with value 0 at index 0
+Set Value in Cluster 14
+with value -1 at index 1
+Set Value in Cluster 6
+with value -2 at index 1
+Set Value in Cluster 14
+with value -1.11803 at index 0
+Cluster Being Updated: 23
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 6
+with value 0 at index 0
+Set Value in Cluster 14
+with value 1.11803 at index 0
+Set Value in Cluster 14
+with value -1 at index 1
+Set Value in Cluster 6
+with value -2 at index 1
+Cluster Being Updated: 23
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 6
+with value 0 at index 0
+Set Value in Cluster 14
+with value 1 at index 1
+Set Value in Cluster 6
+with value 2 at index 1
+Set Value in Cluster 14
+with value -1.11803 at index 0
+Cluster Being Updated: 23
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 6
+with value 0 at index 0
+Set Value in Cluster 14
+with value 1.11803 at index 0
+Set Value in Cluster 14
+with value 1 at index 1
+Set Value in Cluster 6
+with value 2 at index 1
+Cluster Being Updated: 23
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+Children Solved
+Solving Cluster 24...
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 10,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 10
+Graph updated
+Child processed: 2
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 4
+Graph updated
+Child processed: 3
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 6
+Graph updated
+Ending Solver usedBifurs
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 10,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+ABOUT TO SET REDUCTION
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+end1: 1 end2: 7 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 7 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 1 type: 0 in1: 0 in2: 0 value: 1
+end1: 1 end2: 8 type: 0 in1: 0 in2: 0 value: 1
+end1: 8 end2: 2 type: 0 in1: 0 in2: 0 value: 1
+end1: 1 end2: 2 type: 0 in1: 0 in2: 0 value: 1
+end1: 2 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 2 end2: 4 type: 0 in1: 0 in2: 1 value: 1
+end1: 4 end2: 9 type: 0 in1: 1 in2: 0 value: 1
+end1: 6 end2: 4 type: 0 in1: 1 in2: 1 value: 1
+end1: 6 end2: 10 type: 0 in1: 1 in2: 1 value: 1
+end1: 4 end2: 10 type: 0 in1: 1 in2: 1 value: 1
+end1: 5 end2: 6 type: 0 in1: 0 in2: 1 value: 1
+end1: 5 end2: 11 type: 0 in1: 0 in2: 0 value: 1
+end1: 11 end2: 6 type: 0 in1: 0 in2: 1 value: 1
+end1: 12 end2: 5 type: 0 in1: 0 in2: 0 value: 1
+end1: 12 end2: 3 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 5 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 4 type: 0 in1: 0 in2: 1 value: 2
+end1: 1 end2: 6 type: 0 in1: 0 in2: 1 value: 2
+end1: 5 end2: 2 type: 0 in1: 0 in2: 0 value: 2
+end1: 13 end2: 3 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 13 end2: 4 type: 0 in1: 0 in2: 1 value: 1.5
+end1: 14 end2: 1 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 6 type: 0 in1: 0 in2: 1 value: 1.5
+end1: 15 end2: 2 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 5 end2: 15 type: 0 in1: 0 in2: 0 value: 1.5
+longestIndex: 10
+Input File opened
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+0
+12
+0
+4
+10
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Edg=10,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+0
+10
+0
+6
+4
+0
+0
+1
+1
+0.999999
+Break
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+0
+11
+0
+6
+10
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+search_flag: 1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+0
+12
+0
+4
+10
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Edg=10,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+0
+10
+0
+6
+4
+0
+0
+1
+1
+0.999999
+Break
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+0
+11
+0
+6
+10
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+No_of_Searches : 3
+While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x4-x10)^2+(y4-y10)^2=((1.000000))^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x6-x4)^2+(y6-y4)^2=((0.999999))^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x6-x10)^2+(y6-y10)^2=((1.000000))^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x4-x10)^2+(y4-y10)^2=(1.000000)^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x6-x4)^2+(y6-y4)^2=(0.999999)^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x6-x10)^2+(y6-y10)^2=(1.000000)^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x4-x10)^2+(y4-y10)^2=(1.000000)^2
+  Search ends
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x6-x4)^2+(y6-y4)^2=(0.999999)^2
+  Search ends
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x6-x10)^2+(y6-y10)^2=(1.000000)^2
+  Search ends
+outputString=interface(prettyprint=0);
+timelimit(10,solve({(x4-x10)^2+(y4-y10)^2=(1.000000)^2,(x6-x4)^2+(y6-y4)^2=(0.999999)^2,(x6-x10)^2+(y6-y10)^2=(1.000000)^2
+Vars right after search
+{x4,y4,x10,y10,x6,y6}
+Var Length = 6, Eq Count = 3
+Start getOrigin
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=10,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0 2 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=un un NA NA NA NA un unun
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=un un NA NA NA NA un unun
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=un un NA NA NA NA un unun
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=un un NA NA NA NA un unun
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=un un NA NA NA NA un unun
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=un un NA NA NA NA un unun
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+in getOrigin after getting all data
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({(x4-x10)^2+(y4
+-y10)^2=(1.000000)^2,(x6-x4)^2+(y6-y4)^2=(0.999999)^2,(x6-x10)^2
++(y6-y10)^2=(1.000000)^2,x4=0,y4=0,x10=0},{x4,y4,x10,y10,x6,y6}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+(x4-x10)^2+(y4-y10)^2=(1.000000)^2
+(x6-x4)^2+(y6-y4)^2=(0.999999)^2
+(x6-x10)^2+(y6-y10)^2=(1.000000)^2
+x4=0
+y4=0
+x10=0
+{x4,y4,x10,y10,x6,y6}
+String input data
+solve({(x4-x10)^2+(y4-y10)^2=(1.000000)^2,(x6-x4)^2+(y6-y4)^2=(0.999999)^2,(x6-x10)^2+(y6-y10)^2=(1.000000)^2,x4=0,y4=0,x10=0},{x4,y4,x10,y10,x6,y6}));
+
+After postprocesser
+After bifurcations set
+       x4=0,y4=0,x10=0,y10=1.,y6=.4999990000,x6=-.8660248264
+       x4=0,y4=0,x10=0,y10=1.,y6=.4999990000,x6=.8660248264
+       x4=0,y4=0,x10=0,x6=-.8660248264,y10=-1.,y6=-.4999990000
+       x4=0,y4=0,x10=0,x6=.8660248264,y10=-1.,y6=-.4999990000
+After printing bifurs
+Set Value in Cluster 4
+with value 0 at index 0
+Set Value in Cluster 4
+with value 0 at index 1
+Set Value in Cluster 10
+with value 0 at index 0
+Set Value in Cluster 10
+with value 1 at index 1
+Set Value in Cluster 6
+with value 0.499999 at index 1
+Set Value in Cluster 6
+with value -0.866025 at index 0
+Cluster Being Updated: 24
+Set Value in Cluster 4
+with value 0 at index 0
+Set Value in Cluster 4
+with value 0 at index 1
+Set Value in Cluster 10
+with value 0 at index 0
+Set Value in Cluster 10
+with value 1 at index 1
+Set Value in Cluster 6
+with value 0.499999 at index 1
+Set Value in Cluster 6
+with value 0.866025 at index 0
+Cluster Being Updated: 24
+Set Value in Cluster 4
+with value 0 at index 0
+Set Value in Cluster 4
+with value 0 at index 1
+Set Value in Cluster 10
+with value 0 at index 0
+Set Value in Cluster 6
+with value -0.866025 at index 0
+Set Value in Cluster 10
+with value -1 at index 1
+Set Value in Cluster 6
+with value -0.499999 at index 1
+Cluster Being Updated: 24
+Set Value in Cluster 4
+with value 0 at index 0
+Set Value in Cluster 4
+with value 0 at index 1
+Set Value in Cluster 10
+with value 0 at index 0
+Set Value in Cluster 6
+with value 0.866025 at index 0
+Set Value in Cluster 10
+with value -1 at index 1
+Set Value in Cluster 6
+with value -0.499999 at index 1
+Cluster Being Updated: 24
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+Children Solved
+Solving Cluster 25...
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 11,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 11
+Graph updated
+Child processed: 2
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 5
+Graph updated
+Child processed: 3
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 6
+Graph updated
+Ending Solver usedBifurs
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 11,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+ABOUT TO SET REDUCTION
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+end1: 1 end2: 7 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 7 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 1 type: 0 in1: 0 in2: 0 value: 1
+end1: 1 end2: 8 type: 0 in1: 0 in2: 0 value: 1
+end1: 8 end2: 2 type: 0 in1: 0 in2: 0 value: 1
+end1: 1 end2: 2 type: 0 in1: 0 in2: 0 value: 1
+end1: 2 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 2 end2: 4 type: 0 in1: 0 in2: 0 value: 1
+end1: 4 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 6 end2: 4 type: 0 in1: 1 in2: 0 value: 0.999999
+end1: 6 end2: 10 type: 0 in1: 1 in2: 0 value: 1
+end1: 4 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 5 end2: 6 type: 0 in1: 1 in2: 1 value: 1
+end1: 5 end2: 11 type: 0 in1: 1 in2: 1 value: 1
+end1: 11 end2: 6 type: 0 in1: 1 in2: 1 value: 1
+end1: 12 end2: 5 type: 0 in1: 0 in2: 1 value: 1
+end1: 12 end2: 3 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 5 type: 0 in1: 0 in2: 1 value: 1
+end1: 3 end2: 4 type: 0 in1: 0 in2: 0 value: 2
+end1: 1 end2: 6 type: 0 in1: 0 in2: 1 value: 2
+end1: 5 end2: 2 type: 0 in1: 1 in2: 0 value: 2
+end1: 13 end2: 3 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 13 end2: 4 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 1 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 6 type: 0 in1: 0 in2: 1 value: 1.5
+end1: 15 end2: 2 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 5 end2: 15 type: 0 in1: 1 in2: 0 value: 1.5
+longestIndex: 13
+Input File opened
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=13,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+0
+13
+0
+5
+6
+0
+0
+1
+1
+0.999999
+Break
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+0
+14
+0
+5
+11
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+0
+15
+0
+11
+6
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+search_flag: 1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=13,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+0
+13
+0
+5
+6
+0
+0
+1
+1
+0.999999
+Break
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+0
+14
+0
+5
+11
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+0
+15
+0
+11
+6
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+No_of_Searches : 3
+While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x5-x6)^2+(y5-y6)^2=((0.999999))^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x5-x11)^2+(y5-y11)^2=((1.000000))^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x11-x6)^2+(y11-y6)^2=((1.000000))^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x5-x6)^2+(y5-y6)^2=(0.999999)^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x5-x11)^2+(y5-y11)^2=(1.000000)^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x11-x6)^2+(y11-y6)^2=(1.000000)^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x5-x6)^2+(y5-y6)^2=(0.999999)^2
+  Search ends
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x5-x11)^2+(y5-y11)^2=(1.000000)^2
+  Search ends
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x11-x6)^2+(y11-y6)^2=(1.000000)^2
+  Search ends
+outputString=interface(prettyprint=0);
+timelimit(10,solve({(x5-x6)^2+(y5-y6)^2=(0.999999)^2,(x5-x11)^2+(y5-y11)^2=(1.000000)^2,(x11-x6)^2+(y11-y6)^2=(1.000000)^2
+Vars right after search
+{x5,y5,x6,y6,x11,y11}
+Var Length = 6, Eq Count = 3
+Start getOrigin
+Edg=13,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0 2 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=un un NA NA NA NA un unun
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=un un NA NA NA NA un unun
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=un un NA NA NA NA un unun
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=un un NA NA NA NA un unun
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=0 -1 NA NA NA NA 0 10
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=un un NA NA NA NA un unun
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+in getOrigin after getting all data
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({(x5-x6)^2+(y5-y6)^2=(0.999999)^2,(x5
+-x11)^2+(y5-y11)^2=(1.000000)^2,(x11-x6)^2+(y11-y6)^2=(1.000000)^2,x5=0,y5=0,x6=0},{x5,y5,x6,y6,x11,y11}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+(x5-x6)^2+(y5-y6)^2=(0.999999)^2
+(x5-x11)^2+(y5-y11)^2=(1.000000)^2
+(x11-x6)^2+(y11-y6)^2=(1.000000)^2
+x5=0
+y5=0
+x6=0
+{x5,y5,x6,y6,x11,y11}
+String input data
+solve({(x5-x6)^2+(y5-y6)^2=(0.999999)^2,(x5-x11)^2+(y5-y11)^2=(1.000000)^2,(x11-x6)^2+(y11-y6)^2=(1.000000)^2,x5=0,y5=0,x6=0},{x5,y5,x6,y6,x11,y11}));
+
+After postprocesser
+After bifurcations set
+       x5=0,y5=0,x6=0,y6=-.9999990000,x11=-.8660256925,y11=-.4999995000
+       x5=0,y5=0,x6=0,y6=-.9999990000,y11=-.4999995000,x11=.8660256925
+       x5=0,y5=0,x6=0,x11=-.8660256925,y11=.4999995000,y6=.9999990000
+       x5=0,y5=0,x6=0,x11=.8660256925,y11=.4999995000,y6=.9999990000
+After printing bifurs
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 0 at index 1
+Set Value in Cluster 6
+with value 0 at index 0
+Set Value in Cluster 6
+with value -0.999999 at index 1
+Set Value in Cluster 11
+with value -0.866026 at index 0
+Set Value in Cluster 11
+with value -0.499999 at index 1
+Cluster Being Updated: 25
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 0 at index 1
+Set Value in Cluster 6
+with value 0 at index 0
+Set Value in Cluster 6
+with value -0.999999 at index 1
+Set Value in Cluster 11
+with value -0.499999 at index 1
+Set Value in Cluster 11
+with value 0.866026 at index 0
+Cluster Being Updated: 25
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 0 at index 1
+Set Value in Cluster 6
+with value 0 at index 0
+Set Value in Cluster 11
+with value -0.866026 at index 0
+Set Value in Cluster 11
+with value 0.499999 at index 1
+Set Value in Cluster 6
+with value 0.999999 at index 1
+Cluster Being Updated: 25
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 0 at index 1
+Set Value in Cluster 6
+with value 0 at index 0
+Set Value in Cluster 11
+with value 0.866026 at index 0
+Set Value in Cluster 11
+with value 0.499999 at index 1
+Set Value in Cluster 6
+with value 0.999999 at index 1
+Cluster Being Updated: 25
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+Children Solved
+Solving Cluster 26...
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 12
+Graph updated
+Child processed: 2
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 3
+Graph updated
+Child processed: 3
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 5
+Graph updated
+Ending Solver usedBifurs
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+ABOUT TO SET REDUCTION
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+end1: 1 end2: 7 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 7 type: 0 in1: 1 in2: 0 value: 1
+end1: 3 end2: 1 type: 0 in1: 1 in2: 0 value: 1
+end1: 1 end2: 8 type: 0 in1: 0 in2: 0 value: 1
+end1: 8 end2: 2 type: 0 in1: 0 in2: 0 value: 1
+end1: 1 end2: 2 type: 0 in1: 0 in2: 0 value: 1
+end1: 2 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 2 end2: 4 type: 0 in1: 0 in2: 0 value: 1
+end1: 4 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 6 end2: 4 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 6 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 4 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 5 end2: 6 type: 0 in1: 1 in2: 0 value: 0.999999
+end1: 5 end2: 11 type: 0 in1: 1 in2: 0 value: 1
+end1: 11 end2: 6 type: 0 in1: 0 in2: 0 value: 1
+end1: 12 end2: 5 type: 0 in1: 1 in2: 1 value: 1
+end1: 12 end2: 3 type: 0 in1: 1 in2: 1 value: 1
+end1: 3 end2: 5 type: 0 in1: 1 in2: 1 value: 1
+end1: 3 end2: 4 type: 0 in1: 1 in2: 0 value: 2
+end1: 1 end2: 6 type: 0 in1: 0 in2: 0 value: 2
+end1: 5 end2: 2 type: 0 in1: 1 in2: 0 value: 2
+end1: 13 end2: 3 type: 0 in1: 0 in2: 1 value: 1.5
+end1: 13 end2: 4 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 1 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 6 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 15 end2: 2 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 5 end2: 15 type: 0 in1: 1 in2: 0 value: 1.5
+longestIndex: 16
+Input File opened
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+0
+18
+0
+3
+5
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=16,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+0
+16
+0
+12
+5
+0
+0
+1
+1
+0.999999
+Break
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+0
+17
+0
+12
+3
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+search_flag: 1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+0
+18
+0
+3
+5
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=16,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+0
+16
+0
+12
+5
+0
+0
+1
+1
+0.999999
+Break
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+0
+17
+0
+12
+3
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+No_of_Searches : 3
+While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x3-x5)^2+(y3-y5)^2=((1.000000))^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x12-x5)^2+(y12-y5)^2=((0.999999))^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x12-x3)^2+(y12-y3)^2=((1.000000))^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x3-x5)^2+(y3-y5)^2=(1.000000)^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x12-x5)^2+(y12-y5)^2=(0.999999)^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x12-x3)^2+(y12-y3)^2=(1.000000)^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x3-x5)^2+(y3-y5)^2=(1.000000)^2
+  Search ends
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x12-x5)^2+(y12-y5)^2=(0.999999)^2
+  Search ends
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x12-x3)^2+(y12-y3)^2=(1.000000)^2
+  Search ends
+outputString=interface(prettyprint=0);
+timelimit(10,solve({(x3-x5)^2+(y3-y5)^2=(1.000000)^2,(x12-x5)^2+(y12-y5)^2=(0.999999)^2,(x12-x3)^2+(y12-y3)^2=(1.000000)^2
+Vars right after search
+{x3,y3,x5,y5,x12,y12}
+Var Length = 6, Eq Count = 3
+Start getOrigin
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=16,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0 2 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=0 0.999999 NA NA NA NA 0 10
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=un un NA NA NA NA un unun
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=un un NA NA NA NA un unun
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=un un NA NA NA NA un unun
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=0 -1 NA NA NA NA 0 10
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=0.866026 0.499999 NA NA NA NA 0 10
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+in getOrigin after getting all data
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({(x3-x5)^2+(y3-y5)^2=(1.000000)^2,(x12
+-x5)^2+(y12-y5)^2=(0.999999)^2,(x12-x3)^2+(y12-y3)^2=(1.000000)^2,x3=0,y3=0,x5=0},{x3,y3,x5,y5,x12,y12}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+(x3-x5)^2+(y3-y5)^2=(1.000000)^2
+(x12-x5)^2+(y12-y5)^2=(0.999999)^2
+(x12-x3)^2+(y12-y3)^2=(1.000000)^2
+x3=0
+y3=0
+x5=0
+{x3,y3,x5,y5,x12,y12}
+String input data
+solve({(x3-x5)^2+(y3-y5)^2=(1.000000)^2,(x12-x5)^2+(y12-y5)^2=(0.999999)^2,(x12-x3)^2+(y12-y3)^2=(1.000000)^2,x3=0,y3=0,x5=0},{x3,y3,x5,y5,x12,y12}));
+
+After postprocesser
+After bifurcations set
+       x3=0,y3=0,x5=0,y5=1.,y12=.5000010000,x12=-.8660248264
+       x3=0,y3=0,x5=0,y5=1.,y12=.5000010000,x12=.8660248264
+       x3=0,y3=0,x5=0,x12=-.8660248264,y5=-1.,y12=-.5000010000
+       x3=0,y3=0,x5=0,x12=.8660248264,y5=-1.,y12=-.5000010000
+After printing bifurs
+Set Value in Cluster 3
+with value 0 at index 0
+Set Value in Cluster 3
+with value 0 at index 1
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 1 at index 1
+Set Value in Cluster 12
+with value 0.500001 at index 1
+Set Value in Cluster 12
+with value -0.866025 at index 0
+Cluster Being Updated: 26
+Set Value in Cluster 3
+with value 0 at index 0
+Set Value in Cluster 3
+with value 0 at index 1
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 1 at index 1
+Set Value in Cluster 12
+with value 0.500001 at index 1
+Set Value in Cluster 12
+with value 0.866025 at index 0
+Cluster Being Updated: 26
+Set Value in Cluster 3
+with value 0 at index 0
+Set Value in Cluster 3
+with value 0 at index 1
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 12
+with value -0.866025 at index 0
+Set Value in Cluster 5
+with value -1 at index 1
+Set Value in Cluster 12
+with value -0.500001 at index 1
+Cluster Being Updated: 26
+Set Value in Cluster 3
+with value 0 at index 0
+Set Value in Cluster 3
+with value 0 at index 1
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 12
+with value 0.866025 at index 0
+Set Value in Cluster 5
+with value -1 at index 1
+Set Value in Cluster 12
+with value -0.500001 at index 1
+Cluster Being Updated: 26
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+Children Solved
+Solving Cluster 27...
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 13,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 13
+Graph updated
+Child processed: 2
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 3
+Graph updated
+Child processed: 3
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 4
+Graph updated
+Ending Solver usedBifurs
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 13,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+ABOUT TO SET REDUCTION
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+end1: 1 end2: 7 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 7 type: 0 in1: 1 in2: 0 value: 1
+end1: 3 end2: 1 type: 0 in1: 1 in2: 0 value: 1
+end1: 1 end2: 8 type: 0 in1: 0 in2: 0 value: 1
+end1: 8 end2: 2 type: 0 in1: 0 in2: 0 value: 1
+end1: 1 end2: 2 type: 0 in1: 0 in2: 0 value: 1
+end1: 2 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 2 end2: 4 type: 0 in1: 0 in2: 1 value: 1
+end1: 4 end2: 9 type: 0 in1: 1 in2: 0 value: 1
+end1: 6 end2: 4 type: 0 in1: 0 in2: 1 value: 0.999999
+end1: 6 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 4 end2: 10 type: 0 in1: 1 in2: 0 value: 1
+end1: 5 end2: 6 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 5 end2: 11 type: 0 in1: 0 in2: 0 value: 1
+end1: 11 end2: 6 type: 0 in1: 0 in2: 0 value: 1
+end1: 12 end2: 5 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 12 end2: 3 type: 0 in1: 0 in2: 1 value: 1
+end1: 3 end2: 5 type: 0 in1: 1 in2: 0 value: 1
+end1: 3 end2: 4 type: 0 in1: 1 in2: 1 value: 2
+end1: 1 end2: 6 type: 0 in1: 0 in2: 0 value: 2
+end1: 5 end2: 2 type: 0 in1: 0 in2: 0 value: 2
+end1: 13 end2: 3 type: 0 in1: 1 in2: 1 value: 1.5
+end1: 13 end2: 4 type: 0 in1: 1 in2: 1 value: 1.5
+end1: 14 end2: 1 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 6 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 15 end2: 2 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 5 end2: 15 type: 0 in1: 0 in2: 0 value: 1.5
+longestIndex: 19
+Input File opened
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+0
+19
+0
+3
+4
+0
+0
+1
+1
+2
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+0
+22
+0
+13
+3
+0
+0
+1
+1
+1.5
+Break
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+0
+23
+0
+13
+4
+0
+0
+1
+1
+1.5
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+search_flag: 1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+0
+19
+0
+3
+4
+0
+0
+1
+1
+2
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+0
+22
+0
+13
+3
+0
+0
+1
+1
+1.5
+Break
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+0
+23
+0
+13
+4
+0
+0
+1
+1
+1.5
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+No_of_Searches : 3
+While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x3-x4)^2+(y3-y4)^2=((1.999999))^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x13-x3)^2+(y13-y3)^2=((1.500000))^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x13-x4)^2+(y13-y4)^2=((1.500000))^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x3-x4)^2+(y3-y4)^2=(1.999999)^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x13-x3)^2+(y13-y3)^2=(1.500000)^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x13-x4)^2+(y13-y4)^2=(1.500000)^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x3-x4)^2+(y3-y4)^2=(1.999999)^2
+  Search ends
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x13-x3)^2+(y13-y3)^2=(1.500000)^2
+  Search ends
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x13-x4)^2+(y13-y4)^2=(1.500000)^2
+  Search ends
+outputString=interface(prettyprint=0);
+timelimit(10,solve({(x3-x4)^2+(y3-y4)^2=(1.999999)^2,(x13-x3)^2+(y13-y3)^2=(1.500000)^2,(x13-x4)^2+(y13-y4)^2=(1.500000)^2
+Vars right after search
+{x3,y3,x4,y4,x13,y13}
+Var Length = 6, Eq Count = 3
+Start getOrigin
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0 2 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 -1 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=0 0.999999 NA NA NA NA 0 10
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=un un NA NA NA NA un unun
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=un un NA NA NA NA un unun
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=un un NA NA NA NA un unun
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=0 -1 NA NA NA NA 0 10
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=0.866026 0.499999 NA NA NA NA 0 10
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=0.866025 -0.500001 NA NA NA NA 0 10
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+in getOrigin after getting all data
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({(x3-x4)^2+(y3-y4)^2=(1.999999)^2,(x13
+-x3)^2+(y13-y3)^2=(1.500000)^2,(x13-x4)^2+(y13-y4)^2=(1.500000)^2,x3=0,y3=0,x4=0},{x3,y3,x4,y4,x13,y13}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+(x3-x4)^2+(y3-y4)^2=(1.999999)^2
+(x13-x3)^2+(y13-y3)^2=(1.500000)^2
+(x13-x4)^2+(y13-y4)^2=(1.500000)^2
+x3=0
+y3=0
+x4=0
+{x3,y3,x4,y4,x13,y13}
+String input data
+solve({(x3-x4)^2+(y3-y4)^2=(1.999999)^2,(x13-x3)^2+(y13-y3)^2=(1.500000)^2,(x13-x4)^2+(y13-y4)^2=(1.500000)^2,x3=0,y3=0,x4=0},{x3,y3,x4,y4,x13,y13}));
+
+After postprocesser
+After bifurcations set
+       x3=0,y3=0,x4=0,y13=-.9999995000,y4=-1.999999000,x13=-1.118034436
+       x3=0,y3=0,x4=0,y13=-.9999995000,y4=-1.999999000,x13=1.118034436
+       x3=0,y3=0,x4=0,x13=-1.118034436,y13=.9999995000,y4=1.999999000
+       x3=0,y3=0,x4=0,x13=1.118034436,y13=.9999995000,y4=1.999999000
+After printing bifurs
+Set Value in Cluster 3
+with value 0 at index 0
+Set Value in Cluster 3
+with value 0 at index 1
+Set Value in Cluster 4
+with value 0 at index 0
+Set Value in Cluster 13
+with value -1 at index 1
+Set Value in Cluster 4
+with value -2 at index 1
+Set Value in Cluster 13
+with value -1.11803 at index 0
+Cluster Being Updated: 27
+Set Value in Cluster 3
+with value 0 at index 0
+Set Value in Cluster 3
+with value 0 at index 1
+Set Value in Cluster 4
+with value 0 at index 0
+Set Value in Cluster 13
+with value -1 at index 1
+Set Value in Cluster 4
+with value -2 at index 1
+Set Value in Cluster 13
+with value 1.11803 at index 0
+Cluster Being Updated: 27
+Set Value in Cluster 3
+with value 0 at index 0
+Set Value in Cluster 3
+with value 0 at index 1
+Set Value in Cluster 4
+with value 0 at index 0
+Set Value in Cluster 13
+with value -1.11803 at index 0
+Set Value in Cluster 13
+with value 1 at index 1
+Set Value in Cluster 4
+with value 2 at index 1
+Cluster Being Updated: 27
+Set Value in Cluster 3
+with value 0 at index 0
+Set Value in Cluster 3
+with value 0 at index 1
+Set Value in Cluster 4
+with value 0 at index 0
+Set Value in Cluster 13
+with value 1.11803 at index 0
+Set Value in Cluster 13
+with value 1 at index 1
+Set Value in Cluster 4
+with value 2 at index 1
+Cluster Being Updated: 27
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+Children Solved
+Solving Cluster 19...
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 8
+Graph updated
+Child processed: 2
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 2
+Graph updated
+Child processed: 3
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 1
+Graph updated
+Ending Solver usedBifurs
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+ABOUT TO SET REDUCTION
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+end1: 1 end2: 7 type: 0 in1: 1 in2: 0 value: 1
+end1: 3 end2: 7 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 1 type: 0 in1: 0 in2: 1 value: 1
+end1: 1 end2: 8 type: 0 in1: 1 in2: 1 value: 1
+end1: 8 end2: 2 type: 0 in1: 1 in2: 1 value: 1
+end1: 1 end2: 2 type: 0 in1: 1 in2: 1 value: 1
+end1: 2 end2: 9 type: 0 in1: 1 in2: 0 value: 1
+end1: 2 end2: 4 type: 0 in1: 1 in2: 0 value: 1
+end1: 4 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 6 end2: 4 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 6 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 4 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 5 end2: 6 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 5 end2: 11 type: 0 in1: 0 in2: 0 value: 1
+end1: 11 end2: 6 type: 0 in1: 0 in2: 0 value: 1
+end1: 12 end2: 5 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 12 end2: 3 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 5 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 4 type: 0 in1: 0 in2: 0 value: 2
+end1: 1 end2: 6 type: 0 in1: 1 in2: 0 value: 2
+end1: 5 end2: 2 type: 0 in1: 0 in2: 1 value: 2
+end1: 13 end2: 3 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 13 end2: 4 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 1 type: 0 in1: 0 in2: 1 value: 1.5
+end1: 14 end2: 6 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 15 end2: 2 type: 0 in1: 0 in2: 1 value: 1.5
+end1: 5 end2: 15 type: 0 in1: 0 in2: 0 value: 1.5
+longestIndex: 4
+Input File opened
+Break
+Break
+Edg=4,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+0
+4
+0
+1
+8
+0
+0
+1
+1
+0.999999
+Break
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+0
+6
+0
+1
+2
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+0
+5
+0
+8
+2
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+search_flag: 1
+Break
+Break
+Edg=4,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+0
+4
+0
+1
+8
+0
+0
+1
+1
+0.999999
+Break
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+0
+6
+0
+1
+2
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+0
+5
+0
+8
+2
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+No_of_Searches : 3
+While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x1-x8)^2+(y1-y8)^2=((0.999999))^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x1-x2)^2+(y1-y2)^2=((1.000000))^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x8-x2)^2+(y8-y2)^2=((1.000000))^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x1-x8)^2+(y1-y8)^2=(0.999999)^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x1-x2)^2+(y1-y2)^2=(1.000000)^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x8-x2)^2+(y8-y2)^2=(1.000000)^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x1-x8)^2+(y1-y8)^2=(0.999999)^2
+  Search ends
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x1-x2)^2+(y1-y2)^2=(1.000000)^2
+  Search ends
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x8-x2)^2+(y8-y2)^2=(1.000000)^2
+  Search ends
+outputString=interface(prettyprint=0);
+timelimit(10,solve({(x1-x8)^2+(y1-y8)^2=(0.999999)^2,(x1-x2)^2+(y1-y2)^2=(1.000000)^2,(x8-x2)^2+(y8-y2)^2=(1.000000)^2
+Vars right after search
+{x1,y1,x8,y8,x2,y2}
+Var Length = 6, Eq Count = 3
+Start getOrigin
+Edg=4,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=0 2 NA NA NA NA 0 10
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 -1 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=0 0.999999 NA NA NA NA 0 10
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=un un NA NA NA NA un unun
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=un un NA NA NA NA un unun
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=0 -1 NA NA NA NA 0 10
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=0.866026 0.499999 NA NA NA NA 0 10
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=0.866025 -0.500001 NA NA NA NA 0 10
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+in getOrigin after getting all data
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({(x1-x8)^2+(y1-y8)^2=(0.999999)^2,(x1
+-x2)^2+(y1-y2)^2=(1.000000)^2,(x8-x2)^2+(y8-y2)^2=(1.000000)^2,x1=0,y1=0,x8=0},{x1,y1,x8,y8,x2,y2}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+(x1-x8)^2+(y1-y8)^2=(0.999999)^2
+(x1-x2)^2+(y1-y2)^2=(1.000000)^2
+(x8-x2)^2+(y8-y2)^2=(1.000000)^2
+x1=0
+y1=0
+x8=0
+{x1,y1,x8,y8,x2,y2}
+String input data
+solve({(x1-x8)^2+(y1-y8)^2=(0.999999)^2,(x1-x2)^2+(y1-y2)^2=(1.000000)^2,(x8-x2)^2+(y8-y2)^2=(1.000000)^2,x1=0,y1=0,x8=0},{x1,y1,x8,y8,x2,y2}));
+
+After postprocesser
+After bifurcations set
+       x1=0,y1=0,x8=0,y2=-.4999995000,y8=-.9999990000,x2=-.8660256925
+       x1=0,y1=0,x8=0,y2=-.4999995000,y8=-.9999990000,x2=.8660256925
+       x1=0,y1=0,x8=0,x2=-.8660256925,y8=.9999990000,y2=.4999995000
+       x1=0,y1=0,x8=0,x2=.8660256925,y8=.9999990000,y2=.4999995000
+After printing bifurs
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 8
+with value 0 at index 0
+Set Value in Cluster 2
+with value -0.499999 at index 1
+Set Value in Cluster 8
+with value -0.999999 at index 1
+Set Value in Cluster 2
+with value -0.866026 at index 0
+Cluster Being Updated: 19
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 8
+with value 0 at index 0
+Set Value in Cluster 2
+with value -0.499999 at index 1
+Set Value in Cluster 8
+with value -0.999999 at index 1
+Set Value in Cluster 2
+with value 0.866026 at index 0
+Cluster Being Updated: 19
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 8
+with value 0 at index 0
+Set Value in Cluster 2
+with value -0.866026 at index 0
+Set Value in Cluster 8
+with value 0.999999 at index 1
+Set Value in Cluster 2
+with value 0.499999 at index 1
+Cluster Being Updated: 19
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 8
+with value 0 at index 0
+Set Value in Cluster 2
+with value 0.866026 at index 0
+Set Value in Cluster 8
+with value 0.999999 at index 1
+Set Value in Cluster 2
+with value 0.499999 at index 1
+Cluster Being Updated: 19
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+Children Solved
+Solving Cluster 20...
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 7
+Graph updated
+Child processed: 2
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 3
+Graph updated
+Child processed: 3
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 1
+Graph updated
+Ending Solver usedBifurs
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+ABOUT TO SET REDUCTION
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+end1: 1 end2: 7 type: 0 in1: 1 in2: 1 value: 1
+end1: 3 end2: 7 type: 0 in1: 1 in2: 1 value: 1
+end1: 3 end2: 1 type: 0 in1: 1 in2: 1 value: 1
+end1: 1 end2: 8 type: 0 in1: 1 in2: 0 value: 0.999999
+end1: 8 end2: 2 type: 0 in1: 0 in2: 0 value: 1
+end1: 1 end2: 2 type: 0 in1: 1 in2: 0 value: 1
+end1: 2 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 2 end2: 4 type: 0 in1: 0 in2: 0 value: 1
+end1: 4 end2: 9 type: 0 in1: 0 in2: 0 value: 1
+end1: 6 end2: 4 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 6 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 4 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 5 end2: 6 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 5 end2: 11 type: 0 in1: 0 in2: 0 value: 1
+end1: 11 end2: 6 type: 0 in1: 0 in2: 0 value: 1
+end1: 12 end2: 5 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 12 end2: 3 type: 0 in1: 0 in2: 1 value: 1
+end1: 3 end2: 5 type: 0 in1: 1 in2: 0 value: 1
+end1: 3 end2: 4 type: 0 in1: 1 in2: 0 value: 2
+end1: 1 end2: 6 type: 0 in1: 1 in2: 0 value: 2
+end1: 5 end2: 2 type: 0 in1: 0 in2: 0 value: 2
+end1: 13 end2: 3 type: 0 in1: 0 in2: 1 value: 1.5
+end1: 13 end2: 4 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 1 type: 0 in1: 0 in2: 1 value: 1.5
+end1: 14 end2: 6 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 15 end2: 2 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 5 end2: 15 type: 0 in1: 0 in2: 0 value: 1.5
+longestIndex: 1
+Input File opened
+Break
+Edg=1,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+0
+1
+0
+1
+7
+0
+0
+1
+1
+0.999999
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+0
+2
+0
+3
+7
+0
+0
+1
+1
+1
+Break
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+0
+3
+0
+3
+1
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+search_flag: 1
+Break
+Edg=1,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+0
+1
+0
+1
+7
+0
+0
+1
+1
+0.999999
+Break
+Break
+Break
+Break
+Break
+Break
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+0
+2
+0
+3
+7
+0
+0
+1
+1
+1
+Break
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+0
+3
+0
+3
+1
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+No_of_Searches : 3
+While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x1-x7)^2+(y1-y7)^2=((0.999999))^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x3-x7)^2+(y3-y7)^2=((1.000000))^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x3-x1)^2+(y3-y1)^2=((1.000000))^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x1-x7)^2+(y1-y7)^2=(0.999999)^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x3-x7)^2+(y3-y7)^2=(1.000000)^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x3-x1)^2+(y3-y1)^2=(1.000000)^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x1-x7)^2+(y1-y7)^2=(0.999999)^2
+  Search ends
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x3-x7)^2+(y3-y7)^2=(1.000000)^2
+  Search ends
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x3-x1)^2+(y3-y1)^2=(1.000000)^2
+  Search ends
+outputString=interface(prettyprint=0);
+timelimit(10,solve({(x1-x7)^2+(y1-y7)^2=(0.999999)^2,(x3-x7)^2+(y3-y7)^2=(1.000000)^2,(x3-x1)^2+(y3-y1)^2=(1.000000)^2
+Vars right after search
+{x1,y1,x7,y7,x3,y3}
+Var Length = 6, Eq Count = 3
+Start getOrigin
+Edg=1,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=1,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0.866026 0.499999 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=0 2 NA NA NA NA 0 10
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 -1 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=0 0.999999 NA NA NA NA 0 10
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=0 0.999999 NA NA NA NA 0 10
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=un un NA NA NA NA un unun
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=0 -1 NA NA NA NA 0 10
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=0.866026 0.499999 NA NA NA NA 0 10
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=0.866025 -0.500001 NA NA NA NA 0 10
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+in getOrigin after getting all data
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({(x1-x7)^2+(y1-y7)^2=(0.999999)^2,(x3
+-x7)^2+(y3-y7)^2=(1.000000)^2,(x3-x1)^2+(y3-y1)^2=(1.000000)^2,x1=0,y1=0,x7=0},{x1,y1,x7,y7,x3,y3}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+(x1-x7)^2+(y1-y7)^2=(0.999999)^2
+(x3-x7)^2+(y3-y7)^2=(1.000000)^2
+(x3-x1)^2+(y3-y1)^2=(1.000000)^2
+x1=0
+y1=0
+x7=0
+{x1,y1,x7,y7,x3,y3}
+String input data
+solve({(x1-x7)^2+(y1-y7)^2=(0.999999)^2,(x3-x7)^2+(y3-y7)^2=(1.000000)^2,(x3-x1)^2+(y3-y1)^2=(1.000000)^2,x1=0,y1=0,x7=0},{x1,y1,x7,y7,x3,y3}));
+
+After postprocesser
+After bifurcations set
+       x1=0,y1=0,x7=0,x3=-.8660256925,y7=-.9999990000,y3=-.4999995000
+       x1=0,y1=0,x7=0,y7=-.9999990000,y3=-.4999995000,x3=.8660256925
+       x1=0,y1=0,x7=0,x3=-.8660256925,y3=.4999995000,y7=.9999990000
+       x1=0,y1=0,x7=0,x3=.8660256925,y3=.4999995000,y7=.9999990000
+After printing bifurs
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 7
+with value 0 at index 0
+Set Value in Cluster 3
+with value -0.866026 at index 0
+Set Value in Cluster 7
+with value -0.999999 at index 1
+Set Value in Cluster 3
+with value -0.499999 at index 1
+Cluster Being Updated: 20
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 7
+with value 0 at index 0
+Set Value in Cluster 7
+with value -0.999999 at index 1
+Set Value in Cluster 3
+with value -0.499999 at index 1
+Set Value in Cluster 3
+with value 0.866026 at index 0
+Cluster Being Updated: 20
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 7
+with value 0 at index 0
+Set Value in Cluster 3
+with value -0.866026 at index 0
+Set Value in Cluster 3
+with value 0.499999 at index 1
+Set Value in Cluster 7
+with value 0.999999 at index 1
+Cluster Being Updated: 20
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 7
+with value 0 at index 0
+Set Value in Cluster 3
+with value 0.866026 at index 0
+Set Value in Cluster 3
+with value 0.499999 at index 1
+Set Value in Cluster 7
+with value 0.999999 at index 1
+Cluster Being Updated: 20
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+About to call Solve Cluster
+Children Solved
+Solving Cluster 21...
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 9,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 9
+Graph updated
+Child processed: 2
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 4
+Graph updated
+Child processed: 3
+useFileToBifur is false
+Bifur parsed
+Cluster Being Updated: 2
+Graph updated
+Ending Solver usedBifurs
+
+3 Solver Input Trees
+---------
+Tree 1
+**Core: 9,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+ABOUT TO SET REDUCTION
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+end1: 1 end2: 7 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 3 end2: 7 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 1 type: 0 in1: 0 in2: 0 value: 1
+end1: 1 end2: 8 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 8 end2: 2 type: 0 in1: 0 in2: 1 value: 1
+end1: 1 end2: 2 type: 0 in1: 0 in2: 1 value: 1
+end1: 2 end2: 9 type: 0 in1: 1 in2: 1 value: 1
+end1: 2 end2: 4 type: 0 in1: 1 in2: 1 value: 1
+end1: 4 end2: 9 type: 0 in1: 1 in2: 1 value: 1
+end1: 6 end2: 4 type: 0 in1: 0 in2: 1 value: 0.999999
+end1: 6 end2: 10 type: 0 in1: 0 in2: 0 value: 1
+end1: 4 end2: 10 type: 0 in1: 1 in2: 0 value: 1
+end1: 5 end2: 6 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 5 end2: 11 type: 0 in1: 0 in2: 0 value: 1
+end1: 11 end2: 6 type: 0 in1: 0 in2: 0 value: 1
+end1: 12 end2: 5 type: 0 in1: 0 in2: 0 value: 0.999999
+end1: 12 end2: 3 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 5 type: 0 in1: 0 in2: 0 value: 1
+end1: 3 end2: 4 type: 0 in1: 0 in2: 1 value: 2
+end1: 1 end2: 6 type: 0 in1: 0 in2: 0 value: 2
+end1: 5 end2: 2 type: 0 in1: 0 in2: 1 value: 2
+end1: 13 end2: 3 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 13 end2: 4 type: 0 in1: 0 in2: 1 value: 1.5
+end1: 14 end2: 1 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 14 end2: 6 type: 0 in1: 0 in2: 0 value: 1.5
+end1: 15 end2: 2 type: 0 in1: 0 in2: 1 value: 1.5
+end1: 5 end2: 15 type: 0 in1: 0 in2: 0 value: 1.5
+longestIndex: 7
+Input File opened
+Break
+Break
+Break
+Break
+Break
+Edg=7,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+0
+7
+0
+2
+9
+0
+0
+1
+1
+0.999999
+Break
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+0
+8
+0
+2
+4
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+0
+9
+0
+4
+9
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+search_flag: 1
+Break
+Break
+Break
+Break
+Break
+Edg=7,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+0
+7
+0
+2
+9
+0
+0
+1
+1
+0.999999
+Break
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+0
+8
+0
+2
+4
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+0
+9
+0
+4
+9
+0
+0
+1
+1
+1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 3
+No_of_Searches : 3
+While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x2-x9)^2+(y2-y9)^2=((0.999999))^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x2-x4)^2+(y2-y4)^2=((1.000000))^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x4-x9)^2+(y4-y9)^2=((1.000000))^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x2-x9)^2+(y2-y9)^2=(0.999999)^2
+  Search can continue
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x2-x4)^2+(y2-y4)^2=(1.000000)^2
+  Search can continue
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x4-x9)^2+(y4-y9)^2=(1.000000)^2
+  Search can continue
+Continue? (y/n)While Loop
+For Loop j=0
+Before searches
+Search No.1: (0,1,0,1,0): (x2-x9)^2+(y2-y9)^2=(0.999999)^2
+  Search ends
+For Loop j=1
+Before searches
+Search No.2: (0,1,0,1,0): (x2-x4)^2+(y2-y4)^2=(1.000000)^2
+  Search ends
+For Loop j=2
+Before searches
+Search No.3: (0,1,0,1,0): (x4-x9)^2+(y4-y9)^2=(1.000000)^2
+  Search ends
+outputString=interface(prettyprint=0);
+timelimit(10,solve({(x2-x9)^2+(y2-y9)^2=(0.999999)^2,(x2-x4)^2+(y2-y4)^2=(1.000000)^2,(x4-x9)^2+(y4-y9)^2=(1.000000)^2
+Vars right after search
+{x2,y2,x9,y9,x4,y4}
+Var Length = 6, Eq Count = 3
+Start getOrigin
+Edg=7,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=1,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=0.866026 0.499999 NA NA NA NA 0 10
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 -1 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=0 0.999999 NA NA NA NA 0 10
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=0 0.999999 NA NA NA NA 0 10
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=0 0.999999 NA NA NA NA 0 10
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=0 -1 NA NA NA NA 0 10
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=0.866026 0.499999 NA NA NA NA 0 10
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=0.866025 -0.500001 NA NA NA NA 0 10
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=1.11803 1 NA NA NA NA 0 10
+in getOrigin after getting all data
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({(x2-x9)^2+(y2-y9)^2=(0.999999)^2,(x2
+-x4)^2+(y2-y4)^2=(1.000000)^2,(x4-x9)^2+(y4-y9)^2=(1.000000)^2,x2=0,y2=0,x9=0},{x2,y2,x9,y9,x4,y4}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+(x2-x9)^2+(y2-y9)^2=(0.999999)^2
+(x2-x4)^2+(y2-y4)^2=(1.000000)^2
+(x4-x9)^2+(y4-y9)^2=(1.000000)^2
+x2=0
+y2=0
+x9=0
+{x2,y2,x9,y9,x4,y4}
+String input data
+solve({(x2-x9)^2+(y2-y9)^2=(0.999999)^2,(x2-x4)^2+(y2-y4)^2=(1.000000)^2,(x4-x9)^2+(y4-y9)^2=(1.000000)^2,x2=0,y2=0,x9=0},{x2,y2,x9,y9,x4,y4}));
+
+After postprocesser
+After bifurcations set
+       x2=0,y2=0,x9=0,y9=-.9999990000,x4=-.8660256925,y4=-.4999995000
+       x2=0,y2=0,x9=0,y9=-.9999990000,y4=-.4999995000,x4=.8660256925
+       x2=0,y2=0,x9=0,y4=.4999995000,y9=.9999990000,x4=-.8660256925
+       x2=0,y2=0,x9=0,y4=.4999995000,y9=.9999990000,x4=.8660256925
+After printing bifurs
+Set Value in Cluster 2
+with value 0 at index 0
+Set Value in Cluster 2
+with value 0 at index 1
+Set Value in Cluster 9
+with value 0 at index 0
+Set Value in Cluster 9
+with value -0.999999 at index 1
+Set Value in Cluster 4
+with value -0.866026 at index 0
+Set Value in Cluster 4
+with value -0.499999 at index 1
+Cluster Being Updated: 21
+Set Value in Cluster 2
+with value 0 at index 0
+Set Value in Cluster 2
+with value 0 at index 1
+Set Value in Cluster 9
+with value 0 at index 0
+Set Value in Cluster 9
+with value -0.999999 at index 1
+Set Value in Cluster 4
+with value -0.499999 at index 1
+Set Value in Cluster 4
+with value 0.866026 at index 0
+Cluster Being Updated: 21
+Set Value in Cluster 2
+with value 0 at index 0
+Set Value in Cluster 2
+with value 0 at index 1
+Set Value in Cluster 9
+with value 0 at index 0
+Set Value in Cluster 4
+with value 0.499999 at index 1
+Set Value in Cluster 9
+with value 0.999999 at index 1
+Set Value in Cluster 4
+with value -0.866026 at index 0
+Cluster Being Updated: 21
+Set Value in Cluster 2
+with value 0 at index 0
+Set Value in Cluster 2
+with value 0 at index 1
+Set Value in Cluster 9
+with value 0 at index 0
+Set Value in Cluster 4
+with value 0.499999 at index 1
+Set Value in Cluster 9
+with value 0.999999 at index 1
+Set Value in Cluster 4
+with value 0.866026 at index 0
+Cluster Being Updated: 21
+Children Solved
+Solving Cluster 36...
+
+9 Solver Input Trees
+---------
+Tree 1
+**Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 15 5 2 
+****Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=1.11803 1 0 1 0 1 0 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 2 0 1 0 1 0 1 
+
+---------
+Tree 2
+**Core: 23,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 14 6 1 
+****Core: 14,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=1.11803 1 0 1 0 1 0 1 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 2 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+---------
+Tree 3
+**Core: 24,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 10 4 6 
+****Core: 10,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 -1 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0.866025 -0.499999 0 1 0 1 0 1 
+
+---------
+Tree 4
+**Core: 25,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 11 5 6 
+****Core: 11,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0.866026 0.499999 0 1 0 1 0 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0.999999 0 1 0 1 0 1 
+
+---------
+Tree 5
+**Core: 26,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 12 3 5 
+****Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0.866025 -0.500001 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 -1 0 1 0 1 0 1 
+
+---------
+Tree 6
+**Core: 27,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 13 3 4 
+****Core: 13,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=1.11803 1 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 2 0 1 0 1 0 1 
+
+---------
+Tree 7
+**Core: 19,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 8 2 1 
+****Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0.999999 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0.866026 0.499999 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+---------
+Tree 8
+**Core: 20,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 7 3 1 
+****Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0.999999 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0.866026 0.499999 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+---------
+Tree 9
+**Core: 21,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 9 4 2 
+****Core: 9,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0.999999 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0.866026 0.499999 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+
+Bifurcations counted.
+Solver usedBifurs
+Solver state saved
+Child processed: 1
+useFileToBifur is false
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 0 at index 1
+Set Value in Cluster 2
+with value 0 at index 0
+Set Value in Cluster 2
+with value -2 at index 1
+Set Value in Cluster 15
+with value -1 at index 1
+Set Value in Cluster 15
+with value -1.11803 at index 0
+Bifur parsed
+Cluster Being Updated: 22
+Graph updated
+Child processed: 2
+useFileToBifur is false
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 6
+with value 0 at index 0
+Set Value in Cluster 14
+with value -1 at index 1
+Set Value in Cluster 6
+with value -2 at index 1
+Set Value in Cluster 14
+with value -1.11803 at index 0
+Bifur parsed
+Cluster Being Updated: 23
+Graph updated
+Child processed: 3
+useFileToBifur is false
+Set Value in Cluster 4
+with value 0 at index 0
+Set Value in Cluster 4
+with value 0 at index 1
+Set Value in Cluster 10
+with value 0 at index 0
+Set Value in Cluster 10
+with value 1 at index 1
+Set Value in Cluster 6
+with value 0.499999 at index 1
+Set Value in Cluster 6
+with value -0.866025 at index 0
+Bifur parsed
+Cluster Being Updated: 24
+Graph updated
+Child processed: 4
+useFileToBifur is false
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 0 at index 1
+Set Value in Cluster 6
+with value 0 at index 0
+Set Value in Cluster 6
+with value -0.999999 at index 1
+Set Value in Cluster 11
+with value -0.866026 at index 0
+Set Value in Cluster 11
+with value -0.499999 at index 1
+Bifur parsed
+Cluster Being Updated: 25
+Graph updated
+Child processed: 5
+useFileToBifur is false
+Set Value in Cluster 3
+with value 0 at index 0
+Set Value in Cluster 3
+with value 0 at index 1
+Set Value in Cluster 5
+with value 0 at index 0
+Set Value in Cluster 5
+with value 1 at index 1
+Set Value in Cluster 12
+with value 0.500001 at index 1
+Set Value in Cluster 12
+with value -0.866025 at index 0
+Bifur parsed
+Cluster Being Updated: 26
+Graph updated
+Child processed: 6
+useFileToBifur is false
+Set Value in Cluster 3
+with value 0 at index 0
+Set Value in Cluster 3
+with value 0 at index 1
+Set Value in Cluster 4
+with value 0 at index 0
+Set Value in Cluster 13
+with value -1 at index 1
+Set Value in Cluster 4
+with value -2 at index 1
+Set Value in Cluster 13
+with value -1.11803 at index 0
+Bifur parsed
+Cluster Being Updated: 27
+Graph updated
+Child processed: 7
+useFileToBifur is false
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 8
+with value 0 at index 0
+Set Value in Cluster 2
+with value -0.499999 at index 1
+Set Value in Cluster 8
+with value -0.999999 at index 1
+Set Value in Cluster 2
+with value -0.866026 at index 0
+Bifur parsed
+Cluster Being Updated: 19
+Graph updated
+Child processed: 8
+useFileToBifur is false
+Set Value in Cluster 1
+with value 0 at index 0
+Set Value in Cluster 1
+with value 0 at index 1
+Set Value in Cluster 7
+with value 0 at index 0
+Set Value in Cluster 3
+with value -0.866026 at index 0
+Set Value in Cluster 7
+with value -0.999999 at index 1
+Set Value in Cluster 3
+with value -0.499999 at index 1
+Bifur parsed
+Cluster Being Updated: 20
+Graph updated
+Child processed: 9
+useFileToBifur is false
+Set Value in Cluster 2
+with value 0 at index 0
+Set Value in Cluster 2
+with value 0 at index 1
+Set Value in Cluster 9
+with value 0 at index 0
+Set Value in Cluster 9
+with value -0.999999 at index 1
+Set Value in Cluster 4
+with value -0.866026 at index 0
+Set Value in Cluster 4
+with value -0.499999 at index 1
+Bifur parsed
+Cluster Being Updated: 21
+Graph updated
+Ending Solver usedBifurs
+
+9 Solver Input Trees
+---------
+Tree 1
+**Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 15 5 2 
+****Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=-1.11803 -1 0 1 0 1 0 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 -2 0 1 0 1 0 1 
+
+---------
+Tree 2
+**Core: 23,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 14 6 1 
+****Core: 14,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=-1.11803 -1 0 1 0 1 0 1 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 -2 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+---------
+Tree 3
+**Core: 24,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 10 4 6 
+****Core: 10,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 1 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=-0.866025 0.499999 0 1 0 1 0 1 
+
+---------
+Tree 4
+**Core: 25,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 11 5 6 
+****Core: 11,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=-0.866026 -0.499999 0 1 0 1 0 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+****Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 -0.999999 0 1 0 1 0 1 
+
+---------
+Tree 5
+**Core: 26,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 12 3 5 
+****Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=-0.866025 0.500001 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+****Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 1 0 1 0 1 0 1 
+
+---------
+Tree 6
+**Core: 27,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 13 3 4 
+****Core: 13,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=-1.11803 -1 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 -2 0 1 0 1 0 1 
+
+---------
+Tree 7
+**Core: 19,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 8 2 1 
+****Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 -0.999999 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=-0.866026 -0.499999 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+---------
+Tree 8
+**Core: 20,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 7 3 1 
+****Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 -0.999999 0 1 0 1 0 1 
+****Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=-0.866026 -0.499999 0 1 0 1 0 1 
+****Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+---------
+Tree 9
+**Core: 21,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1    Children: 9 4 2 
+****Core: 9,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 -0.999999 0 1 0 1 0 1 
+****Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=-0.866026 -0.499999 0 1 0 1 0 1 
+****Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=true, Value=0 0 0 1 0 1 0 1 
+
+ABOUT TO SET REDUCTION
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+1 0
+end1: 1 end2: 7 type: 0 in1: 1 in2: 1 value: 0.999999
+end1: 3 end2: 7 type: 0 in1: 1 in2: 1 value: 1
+end1: 3 end2: 1 type: 0 in1: 1 in2: 1 value: 1
+end1: 1 end2: 8 type: 0 in1: 1 in2: 1 value: 0.999999
+end1: 8 end2: 2 type: 0 in1: 1 in2: 1 value: 1
+end1: 1 end2: 2 type: 0 in1: 1 in2: 1 value: 1
+end1: 2 end2: 9 type: 0 in1: 1 in2: 1 value: 0.999999
+end1: 2 end2: 4 type: 0 in1: 1 in2: 1 value: 1
+end1: 4 end2: 9 type: 0 in1: 1 in2: 1 value: 1
+end1: 6 end2: 4 type: 0 in1: 1 in2: 1 value: 0.999999
+end1: 6 end2: 10 type: 0 in1: 1 in2: 1 value: 1
+end1: 4 end2: 10 type: 0 in1: 1 in2: 1 value: 1
+end1: 5 end2: 6 type: 0 in1: 1 in2: 1 value: 0.999999
+end1: 5 end2: 11 type: 0 in1: 1 in2: 1 value: 1
+end1: 11 end2: 6 type: 0 in1: 1 in2: 1 value: 1
+end1: 12 end2: 5 type: 0 in1: 1 in2: 1 value: 0.999999
+end1: 12 end2: 3 type: 0 in1: 1 in2: 1 value: 1
+end1: 3 end2: 5 type: 0 in1: 1 in2: 1 value: 1
+end1: 3 end2: 4 type: 0 in1: 1 in2: 1 value: 2
+end1: 1 end2: 6 type: 0 in1: 1 in2: 1 value: 2
+end1: 5 end2: 2 type: 0 in1: 1 in2: 1 value: 2
+end1: 13 end2: 3 type: 0 in1: 1 in2: 1 value: 1.5
+end1: 13 end2: 4 type: 0 in1: 1 in2: 1 value: 1.5
+end1: 14 end2: 1 type: 0 in1: 1 in2: 1 value: 1.5
+end1: 14 end2: 6 type: 0 in1: 1 in2: 1 value: 1.5
+end1: 15 end2: 2 type: 0 in1: 1 in2: 1 value: 1.5
+end1: 5 end2: 15 type: 0 in1: 1 in2: 1 value: 1.5
+longestIndex: 19
+Input File opened
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 0
+search_flag: 1
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Break
+Displaying Temp
+Length : 0
+No_of_Searches : 0
+While Loop
+outputString=interface(prettyprint=0);
+timelimit(10,solve({
+Vars right after search
+{}
+Vars before getOverlap
+{}
+THIS IS IN OVERLAP
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0 -2 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=-0.866026 -0.499999 NA NA NA NA 0 10
+THIS IS IN OVERLAP
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=-0.866026 -0.499999 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0 0 NA NA NA NA 0 10
+THIS IS IN OVERLAP
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+THIS IS IN OVERLAP
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0 0 NA NA NA NA 0 10
+THIS IS IN OVERLAP
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=0 -2 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=-0.866025 0.499999 NA NA NA NA 0 10
+THIS IS IN OVERLAP
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=-0.866025 0.499999 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=0 -0.999999 NA NA NA NA 0 10
+THIS IS IN OVERLAP
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 0 NA NA NA NA 0 10
+THIS IS IN OVERLAP
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 1 NA NA NA NA 0 10
+THIS IS IN OVERLAP
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=0 0 NA NA NA NA 0 10
+THIS IS IN OVERLAP
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=-0.866026 -0.499999 NA NA NA NA 0 10
+THIS IS IN OVERLAP
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=0 -2 NA NA NA NA 0 10
+THIS IS IN OVERLAP
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=0 -2 NA NA NA NA 0 10
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=-0.866026 -0.499999 NA NA NA NA 0 10
+Var Length = 32, Eq Count = 32
+OUTPUT FILE WRITTEN
+interface(prettyprint=0);
+timelimit(10,solve({(0.000000)=((-0.866026)
+*t19-(-0.499999)*s19+p19),(-1.999999)=((-0.499999)*t19+(-0.866026)
+*s19+q19),((-0.866026)*t19-(-0.499999)*s19+p19)=((0.000000)
+*t21-(0.000000)*s21+p21),((-0.499999)*t19+(-0.866026)*s19+q19)=((0.000000)
+*t21+(0.000000)*s21+q21),((0.000000)*t23-(0.000000)*s23+p23)=((0.000000)
+*t19-(0.000000)*s19+p19),((0.000000)*t23+(0.000000)*s23+q23)=((0.000000)
+*t19+(0.000000)*s19+q19),((0.000000)*t19-(0.000000)*s19+p19)=((0.000000)
+*t20-(0.000000)*s20+p20),((0.000000)*t19+(0.000000)*s19+q19)=((0.000000)
+*t20+(0.000000)*s20+q20),((0.000000)*t23-(-1.999999)*s23+p23)=((
+-0.866025)*t24-(0.499999)*s24+p24),((-1.999999)*t23+(0.000000)
+*s23+q23)=((0.499999)*t24+(-0.866025)*s24+q24),((-0.866025)
+*t24-(0.499999)*s24+p24)=((0.000000)*t25-(-0.999999)*s25+p25),((0.499999)
+*t24+(-0.866025)*s24+q24)=((-0.999999)*t25+(0.000000)*s25+q25),(0.000000)=((0.000000)
+*t25-(0.000000)*s25+p25),(0.000000)=((0.000000)*t25+(0.000000)
+*s25+q25),((0.000000)*t25-(0.000000)*s25+p25)=((0.000000)*t26
+-(1.000000)*s26+p26),((0.000000)*t25+(0.000000)*s25+q25)=((1.000000)
+*t26+(0.000000)*s26+q26),((0.000000)*t26-(0.000000)*s26+p26)=((0.000000)
+*t27-(0.000000)*s27+p27),((0.000000)*t26+(0.000000)*s26+q26)=((0.000000)
+*t27+(0.000000)*s27+q27),((0.000000)*t27-(0.000000)*s27+p27)=((
+-0.866026)*t20-(-0.499999)*s20+p20),((0.000000)*t27+(0.000000)
+*s27+q27)=((-0.499999)*t20+(-0.866026)*s20+q20),((0.000000)
+*t24-(0.000000)*s24+p24)=((0.000000)*t27-(-1.999999)*s27+p27),((0.000000)
+*t24+(0.000000)*s24+q24)=((-1.999999)*t27+(0.000000)*s27+q27),((0.000000)
+*t27-(-1.999999)*s27+p27)=((-0.866026)*t21-(-0.499999)*s21+p21),((
+-1.999999)*t27+(0.000000)*s27+q27)=((-0.499999)*t21+(-0.866026)
+*s21+q21),s23^2+t23^2=1,s24^2+t24^2=1,s25^2+t25^2=1,s26^2+t26^2=1,s27^2
++t27^2=1,s19^2+t19^2=1,s20^2+t20^2=1,s21^2+t21^2=1},{p19,q19,t19,s19,p21,q21,t21,s21,p23,q23,t23,s23,p20,q20,t20,s20,p24,q24,t24,s24,p25,q25,t25,s25,p26,q26,t26,s26,p27,q27,t27,s27}));
+allvalues(%);
+evalf(%);
+
+Tree Flag in mfa9Solver.cpp: 0
+(0.000000)=((-0.866026)*t19-(-0.499999)*s19+p19)
+(-1.999999)=((-0.499999)*t19+(-0.866026)*s19+q19)
+((-0.866026)*t19-(-0.499999)*s19+p19)=((0.000000)*t21-(0.000000)*s21+p21)
+((-0.499999)*t19+(-0.866026)*s19+q19)=((0.000000)*t21+(0.000000)*s21+q21)
+((0.000000)*t23-(0.000000)*s23+p23)=((0.000000)*t19-(0.000000)*s19+p19)
+((0.000000)*t23+(0.000000)*s23+q23)=((0.000000)*t19+(0.000000)*s19+q19)
+((0.000000)*t19-(0.000000)*s19+p19)=((0.000000)*t20-(0.000000)*s20+p20)
+((0.000000)*t19+(0.000000)*s19+q19)=((0.000000)*t20+(0.000000)*s20+q20)
+((0.000000)*t23-(-1.999999)*s23+p23)=((-0.866025)*t24-(0.499999)*s24+p24)
+((-1.999999)*t23+(0.000000)*s23+q23)=((0.499999)*t24+(-0.866025)*s24+q24)
+((-0.866025)*t24-(0.499999)*s24+p24)=((0.000000)*t25-(-0.999999)*s25+p25)
+((0.499999)*t24+(-0.866025)*s24+q24)=((-0.999999)*t25+(0.000000)*s25+q25)
+(0.000000)=((0.000000)*t25-(0.000000)*s25+p25)
+(0.000000)=((0.000000)*t25+(0.000000)*s25+q25)
+((0.000000)*t25-(0.000000)*s25+p25)=((0.000000)*t26-(1.000000)*s26+p26)
+((0.000000)*t25+(0.000000)*s25+q25)=((1.000000)*t26+(0.000000)*s26+q26)
+((0.000000)*t26-(0.000000)*s26+p26)=((0.000000)*t27-(0.000000)*s27+p27)
+((0.000000)*t26+(0.000000)*s26+q26)=((0.000000)*t27+(0.000000)*s27+q27)
+((0.000000)*t27-(0.000000)*s27+p27)=((-0.866026)*t20-(-0.499999)*s20+p20)
+((0.000000)*t27+(0.000000)*s27+q27)=((-0.499999)*t20+(-0.866026)*s20+q20)
+((0.000000)*t24-(0.000000)*s24+p24)=((0.000000)*t27-(-1.999999)*s27+p27)
+((0.000000)*t24+(0.000000)*s24+q24)=((-1.999999)*t27+(0.000000)*s27+q27)
+((0.000000)*t27-(-1.999999)*s27+p27)=((-0.866026)*t21-(-0.499999)*s21+p21)
+((-1.999999)*t27+(0.000000)*s27+q27)=((-0.499999)*t21+(-0.866026)*s21+q21)
+s23^2+t23^2=1
+s24^2+t24^2=1
+s25^2+t25^2=1
+s26^2+t26^2=1
+s27^2+t27^2=1
+s19^2+t19^2=1
+s20^2+t20^2=1
+s21^2+t21^2=1
+{p19,q19,t19,s19,p21,q21,t21,s21,p23,q23,t23,s23,p20,q20,t20,s20,p24,q24,t24,s24,p25,q25,t25,s25,p26,q26,t26,s26,p27,q27,t27,s27}
+String input data
+solve({(0.000000)=((-0.866026)*t19-(-0.499999)*s19+p19),(-1.999999)=((-0.499999)*t19+(-0.866026)*s19+q19),((-0.866026)*t19-(-0.499999)*s19+p19)=((0.000000)*t21-(0.000000)*s21+p21),((-0.499999)*t19+(-0.866026)*s19+q19)=((0.000000)*t21+(0.000000)*s21+q21),((0.000000)*t23-(0.000000)*s23+p23)=((0.000000)*t19-(0.000000)*s19+p19),((0.000000)*t23+(0.000000)*s23+q23)=((0.000000)*t19+(0.000000)*s19+q19),((0.000000)*t19-(0.000000)*s19+p19)=((0.000000)*t20-(0.000000)*s20+p20),((0.000000)*t19+(0.000000)*s19+q19)=((0.000000)*t20+(0.000000)*s20+q20),((0.000000)*t23-(-1.999999)*s23+p23)=((-0.866025)*t24-(0.499999)*s24+p24),((-1.999999)*t23+(0.000000)*s23+q23)=((0.499999)*t24+(-0.866025)*s24+q24),((-0.866025)*t24-(0.499999)*s24+p24)=((0.000000)*t25-(-0.999999)*s25+p25),((0.499999)*t24+(-0.866025)*s24+q24)=((-0.999999)*t25+(0.000000)*s25+q25),(0.000000)=((0.000000)*t25-(0.000000)*s25+p25),(0.000000)=((0.000000)*t25+(0.000000)*s25+q25),((0.000000)*t25-(0.000000)*s25+p25)=((0.000000)*t26-(1.000000)*s26+p26),((0.000000)*t25+(0.000000)*s25+q25)=((1.000000)*t26+(0.000000)*s26+q26),((0.000000)*t26-(0.000000)*s26+p26)=((0.000000)*t27-(0.000000)*s27+p27),((0.000000)*t26+(0.000000)*s26+q26)=((0.000000)*t27+(0.000000)*s27+q27),((0.000000)*t27-(0.000000)*s27+p27)=((-0.866026)*t20-(-0.499999)*s20+p20),((0.000000)*t27+(0.000000)*s27+q27)=((-0.499999)*t20+(-0.866026)*s20+q20),((0.000000)*t24-(0.000000)*s24+p24)=((0.000000)*t27-(-1.999999)*s27+p27),((0.000000)*t24+(0.000000)*s24+q24)=((-1.999999)*t27+(0.000000)*s27+q27),((0.000000)*t27-(-1.999999)*s27+p27)=((-0.866026)*t21-(-0.499999)*s21+p21),((-1.999999)*t27+(0.000000)*s27+q27)=((-0.499999)*t21+(-0.866026)*s21+q21),s23^2+t23^2=1,s24^2+t24^2=1,s25^2+t25^2=1,s26^2+t26^2=1,s27^2+t27^2=1,s19^2+t19^2=1,s20^2+t20^2=1,s21^2+t21^2=1},{p19,q19,t19,s19,p21,q21,t21,s21,p23,q23,t23,s23,p20,q20,t20,s20,p24,q24,t24,s24,p25,q25,t25,s25,p26,q26,t26,s26,p27,q27,t27,s27}));
+
+After postprocesser
+After bifurcations set
+Using Numeric Solver
+       p25=0,q25=0,p21=0,q24=-1.500546036,t26=.5005471528,t23=-.5000001919,t24=.4994512466,t25=.5005475861,t19=.9999998006,t20=-.4994513146,q26=-.5005471528,p23=.8663415618,p24=-.8663410235,p27=.8657092744,p19=.8663415618,s27=-.8660255820,q27=-.5005471528,p26=.8657092744,s19=-.6314701847e-3,s20=-.8663419558,s21=-.8657088701,s24=-.8663419950,t21=.5005478521,q21=-1.999999000,s23=-.8660252930,s25=-.8657090239,s26=.8657092744,p20=.8663415618,t27=.4999996914,q19=-1.500546969,q20=-1.500546969,q23=-1.500546969
+After printing bifurs
+Set Value in Cluster 25
+with value 0 at index 0
+Set Value in Cluster 25
+with value 0 at index 1
+Set Value in Cluster 21
+with value 0 at index 0
+Set Value in Cluster 24
+with value -1.50055 at index 1
+Set Value in Cluster 26
+with value 0.500547 at index 3
+Set Value in Cluster 23
+with value -0.5 at index 3
+Set Value in Cluster 24
+with value 0.499451 at index 3
+Set Value in Cluster 25
+with value 0.500548 at index 3
+Set Value in Cluster 19
+with value 1 at index 3
+Set Value in Cluster 20
+with value -0.499451 at index 3
+Set Value in Cluster 26
+with value -0.500547 at index 1
+Set Value in Cluster 23
+with value 0.866342 at index 0
+Set Value in Cluster 24
+with value -0.866341 at index 0
+Set Value in Cluster 27
+with value 0.865709 at index 0
+Set Value in Cluster 19
+with value 0.866342 at index 0
+Set Value in Cluster 27
+with value -0.866026 at index 4
+Set Value in Cluster 27
+with value -0.500547 at index 1
+Set Value in Cluster 26
+with value 0.865709 at index 0
+Set Value in Cluster 19
+with value -0.00063147 at index 4
+Set Value in Cluster 20
+with value -0.866342 at index 4
+Set Value in Cluster 21
+with value -0.865709 at index 4
+Set Value in Cluster 24
+with value -0.866342 at index 4
+Set Value in Cluster 21
+with value 0.500548 at index 3
+Set Value in Cluster 21
+with value -2 at index 1
+Set Value in Cluster 23
+with value -0.866025 at index 4
+Set Value in Cluster 25
+with value -0.865709 at index 4
+Set Value in Cluster 26
+with value 0.865709 at index 4
+Set Value in Cluster 20
+with value 0.866342 at index 0
+Set Value in Cluster 27
+with value 0.5 at index 3
+Set Value in Cluster 19
+with value -1.50055 at index 1
+Set Value in Cluster 20
+with value -1.50055 at index 1
+Set Value in Cluster 23
+with value -1.50055 at index 1
+Cluster Being Updated: 36
+Solver ran, return value=0
+usedBifurs=true
+Set Value in Cluster 25
+with value 0 at index 0
+Set Value in Cluster 25
+with value 0 at index 1
+Set Value in Cluster 21
+with value 0 at index 0
+Set Value in Cluster 24
+with value -1.50055 at index 1
+Set Value in Cluster 26
+with value 0.500547 at index 3
+Set Value in Cluster 23
+with value -0.5 at index 3
+Set Value in Cluster 24
+with value 0.499451 at index 3
+Set Value in Cluster 25
+with value 0.500548 at index 3
+Set Value in Cluster 19
+with value 1 at index 3
+Set Value in Cluster 20
+with value -0.499451 at index 3
+Set Value in Cluster 26
+with value -0.500547 at index 1
+Set Value in Cluster 23
+with value 0.866342 at index 0
+Set Value in Cluster 24
+with value -0.866341 at index 0
+Set Value in Cluster 27
+with value 0.865709 at index 0
+Set Value in Cluster 19
+with value 0.866342 at index 0
+Set Value in Cluster 27
+with value -0.866026 at index 4
+Set Value in Cluster 27
+with value -0.500547 at index 1
+Set Value in Cluster 26
+with value 0.865709 at index 0
+Set Value in Cluster 19
+with value -0.00063147 at index 4
+Set Value in Cluster 20
+with value -0.866342 at index 4
+Set Value in Cluster 21
+with value -0.865709 at index 4
+Set Value in Cluster 24
+with value -0.866342 at index 4
+Set Value in Cluster 21
+with value 0.500548 at index 3
+Set Value in Cluster 21
+with value -2 at index 1
+Set Value in Cluster 23
+with value -0.866025 at index 4
+Set Value in Cluster 25
+with value -0.865709 at index 4
+Set Value in Cluster 26
+with value 0.865709 at index 4
+Set Value in Cluster 20
+with value 0.866342 at index 0
+Set Value in Cluster 27
+with value 0.5 at index 3
+Set Value in Cluster 19
+with value -1.50055 at index 1
+Set Value in Cluster 20
+with value -1.50055 at index 1
+Set Value in Cluster 23
+with value -1.50055 at index 1
+Cluster Being Updated: 36
+Cluster Being Updated: 36
+Edg=1,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=0.999999, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=0.866342 -1.50055 NA NA NA NA 0 10
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=0 -2 NA NA NA NA 0 10
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=0.865709 -0.500547 NA NA NA NA 0 10
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=-0.866341 -1.50055 NA NA NA NA 0 10
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=0 0 NA NA NA NA 0 10
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=-0.865708 -0.500547 NA NA NA NA 0 10
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=5.36442e-07 -1.0011 NA NA NA NA 0 10
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=0.86571 -2.50055 NA NA NA NA 0 10
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=-0.865708 -2.50055 NA NA NA NA 0 10
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=1.01328e-06 -1.00109 NA NA NA NA 0 10
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=-0.866341 0.499453 NA NA NA NA 0 10
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=-0.000632524 -0.999999 NA NA NA NA 0 10
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=-0.559333 -0.0323002 NA NA NA NA 0 10
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=0.559334 -0.0323009 NA NA NA NA 0 10
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=-1.11803 -1 NA NA NA NA 0 10
+Memory location of count=5619
+Ignore=false for vertex=1
+Name: 1, x=0.866342, y=-1.50055
+Ignore=false for vertex=2
+Name: 2, x=0, y=-2
+Ignore=false for vertex=3
+Name: 3, x=0.865709, y=-0.500547
+Ignore=false for vertex=4
+Name: 4, x=-0.866341, y=-1.50055
+Ignore=false for vertex=5
+Name: 5, x=0, y=0
+Ignore=false for vertex=6
+Name: 6, x=-0.865708, y=-0.500547
+Ignore=false for vertex=7
+Name: 7, x=5.36442e-07, y=-1.0011
+Ignore=false for vertex=8
+Name: 8, x=0.86571, y=-2.50055
+Ignore=false for vertex=9
+Name: 9, x=-0.865708, y=-2.50055
+Ignore=false for vertex=10
+Name: 10, x=1.01328e-06, y=-1.00109
+Ignore=false for vertex=11
+Name: 11, x=-0.866341, y=0.499453
+Ignore=false for vertex=12
+Name: 12, x=-0.000632524, y=-0.999999
+Ignore=false for vertex=13
+Name: 13, x=-0.559333, y=-0.0323002
+Ignore=false for vertex=14
+Name: 14, x=0.559334, y=-0.0323009
+Ignore=false for vertex=15
+Name: 15, x=-1.11803, y=-1
+Count of bifurcations sent=15
+Final Bifurcation Return
+SKUTU index5616
+first 5616
+Received 1
+Received 1
+Received 36
+Received 15
+Received 1
+Received 2
+Received 3
+Received 4
+Received 5
+Received 6
+Received 7
+Received 8
+Received 9
+Received 10
+Received 11
+Received 12
+Received 13
+Received 14
+Received 15
+Received 1
+Received 0
+Received 24
+Received 0
+Received 10
+Received 0
+Received 4
+Received 0
+Received 6
+Received 0
+Received 25
+Received 0
+Received 11
+Received 0
+Received 5
+Received 0
+Received 6
+Received 0
+Received 26
+Received 0
+Received 12
+Received 0
+Received 3
+Received 0
+Received 5
+Received 0
+Received 27
+Received 0
+Received 13
+Received 0
+Received 3
+first 861.0
+Received 0.8663415908813477
+Received -1.500546932220459
+Received 0.0
+Received -1.9999990463256836
+Received 0.8657092452049255
+Received -0.5005471706390381
+Received -0.8663409948348999
+Received -1.5005459785461426
+Received 0.0
+Received 0.0
+SKUTUF 5616
+111 added group Groups shapes size=0
+size = 15
+Sent 0
+Sent 0
+Sent 0
+Sent 1
+Sent 0
+Sent 2
+Sent 0
+Sent 3
+Sent 0
+Sent 4
+Sent 0
+Sent 5
+Sent 0
+Sent 6
+Sent 0
+Sent 7
+Sent 0
+Sent 8
+Sent 0
+Sent 9
+Sent 0
+Sent 10
+Sent 0
+Sent 11
+Sent 0
+Sent 12
+Sent 0
+Sent 13
+Sent 0
+Sent 14
+Sent 0
+Sent 15
+Sent -1
+Sent 0
+Sent 1
+Sent 2
+Sent 1
+Sent 1
+Sent 7
+Sent 1
+Sent 0
+Sent 4
+Sent 2
+Sent 1
+Sent 1
+Sent 8
+Sent 1
+Sent 0
+Sent 6
+Sent 2
+Sent 1
+Sent 1
+Sent 2
+Sent 1
+Sent 0
+Sent 20
+Sent 2
+Sent 1
+Sent 1
+Sent 6
+Sent 1
+Sent 0
+Sent 7
+Sent 2
+Sent 2
+Sent 1
+Sent 9
+Sent 1
+Sent 0
+Sent 8
+Sent 2
+Sent 2
+Sent 1
+Sent 4
+Sent 1
+Sent 0
+Sent 2
+Sent 2
+Sent 3
+Sent 1
+Sent 7
+Sent 1
+Sent 0
+Sent 3
+Sent 2
+Sent 3
+Sent 1
+Sent 1
+Sent 1
+Sent 0
+Sent 18
+Sent 2
+Sent 3
+Sent 1
+Sent 5
+Sent 1
+Sent 0
+Sent 19
+Sent 2
+Sent 3
+Sent 1
+Sent 4
+Sent 1
+Sent 0
+Sent 9
+Sent 2
+Sent 4
+Sent 1
+Sent 9
+Sent 1
+Sent 0
+Sent 12
+Sent 2
+Sent 4
+Sent 1
+Sent 10
+Sent 1
+Sent 0
+Sent 13
+Sent 2
+Sent 5
+Sent 1
+Sent 6
+Sent 1
+Sent 0
+Sent 14
+Sent 2
+Sent 5
+Sent 1
+Sent 11
+Sent 1
+Sent 0
+Sent 21
+Sent 2
+Sent 5
+Sent 1
+Sent 2
+Sent 1
+Sent 0
+Sent 27
+Sent 2
+Sent 5
+Sent 1
+Sent 15
+Sent 1
+Sent 0
+Sent 10
+Sent 2
+Sent 6
+Sent 1
+Sent 4
+Sent 1
+Sent 0
+Sent 11
+Sent 2
+Sent 6
+Sent 1
+Sent 10
+Sent 1
+Sent 0
+Sent 5
+Sent 2
+Sent 8
+Sent 1
+Sent 2
+Sent 1
+Sent 0
+Sent 15
+Sent 2
+Sent 11
+Sent 1
+Sent 6
+Sent 1
+Sent 0
+Sent 16
+Sent 2
+Sent 12
+Sent 1
+Sent 5
+Sent 1
+Sent 0
+Sent 17
+Sent 2
+Sent 12
+Sent 1
+Sent 3
+Sent 1
+Sent 0
+Sent 22
+Sent 2
+Sent 13
+Sent 1
+Sent 3
+Sent 1
+Sent 0
+Sent 23
+Sent 2
+Sent 13
+Sent 1
+Sent 4
+Sent 1
+Sent 0
+Sent 24
+Sent 2
+Sent 14
+Sent 1
+Sent 1
+Sent 1
+Sent 0
+Sent 25
+Sent 2
+Sent 14
+Sent 1
+Sent 6
+Sent 1
+Sent 0
+Sent 26
+Sent 2
+Sent 15
+Sent 1
+Sent 2
+Sent 1
+Sent -1
+Sent -1
+Sent 0
+Sent 0
+Sent -1
+Sent 289.0
+Sent 175.0
+Sent 395.0
+Sent 174.0
+Sent 240.0
+Sent 260.0
+Sent 449.0
+Sent 270.0
+Sent 292.0
+Sent 340.0
+Sent 398.0
+Sent 350.0
+Sent 228.0
+Sent 193.0
+Sent 338.0
+Sent 133.0
+Sent 458.0
+Sent 197.0
+Sent 469.0
+Sent 334.0
+Sent 339.0
+Sent 394.0
+Sent 233.0
+Sent 326.0
+Sent 345.0
+Sent 226.0
+Sent 312.0
+Sent 277.0
+Sent 371.0
+Sent 279.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 2.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 2.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 2.0
+Sent 1.5
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.0
+Sent 1.5
+Sent 1.5
+Sent 1.5
+Sent 1.5
+Sent 1.5
+OPEN UTU
+INTS
+DOUBLES
+CHARS
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+*FLAG: 0
+Tree Flag in utuC.cpp: 1
+1. Find mode
+2. Input Mode
+Enter selection:
+backup
+old
+original
+test
+test2
+test3
+/amd/avocado/export/research4/constraints/LaptopVersion/datafiles/original
+/amd/avocado/export/research4/constraints/LaptopVersion/datafiles/original
+The available data files directories are:
+Give name of the required data files directory : In req. dirGraph is Empty.
+shapeType=0
+shapeID=1
+shapeType=0
+shapeID=2
+shapeType=0
+shapeID=3
+shapeType=0
+shapeID=4
+shapeType=0
+shapeID=5
+shapeType=0
+shapeID=6
+shapeType=0
+shapeID=7
+shapeType=0
+shapeID=8
+shapeType=0
+shapeID=9
+shapeType=0
+shapeID=10
+shapeType=0
+shapeID=11
+shapeType=0
+shapeID=12
+shapeType=0
+shapeID=13
+shapeType=0
+shapeID=14
+shapeType=0
+shapeID=15
+15
+-1
+constraintType=0
+constraintID=1
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=4
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=6
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=20
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=7
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=8
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=2
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=3
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=18
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=19
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=9
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=12
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=13
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=14
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=21
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=27
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=10
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=11
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=5
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=15
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=16
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=17
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=22
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=23
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=24
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=25
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+constraintType=0
+constraintID=26
+Constraint Type=0 part=1
+Constraint Type=0 part=1
+StartGroup: 223
+original graph:
+data 223 -1
+data 223 0
+data 223 0
+data 223 -1
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+data 223 0
+
+15 Solver Input Trees
+---------
+Tree 1
+**Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 2
+**Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 3
+**Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 4
+**Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 5
+**Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 6
+**Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 7
+**Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 8
+**Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 9
+**Core: 9,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 10
+**Core: 10,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 11
+**Core: 11,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 12
+**Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 13
+**Core: 13,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 14
+**Core: 14,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+---------
+Tree 15
+**Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+Groups read
+Graph Copied
+Dimension=2
+Edg=1,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 7(1) PD=0
+Edg=4,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 8(1) PD=0
+Edg=6,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 2(1) PD=0
+Edg=20,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 1(1) 6(1) PD=0
+Edg=7,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 9(1) PD=0
+Edg=8,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 2(1) 4(1) PD=0
+Edg=2,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 7(1) PD=0
+Edg=3,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 1(1) PD=0
+Edg=18,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 5(1) PD=0
+Edg=19,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 3(1) 4(1) PD=0
+Edg=9,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 9(1) PD=0
+Edg=12,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 4(1) 10(1) PD=0
+Edg=13,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 6(1) PD=0
+Edg=14,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 11(1) PD=0
+Edg=21,T=0, W=1,V=2, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 2(1) PD=0
+Edg=27,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 5(1) 15(1) PD=0
+Edg=10,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 4(1) PD=0
+Edg=11,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 6(1) 10(1) PD=0
+Edg=5,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 8(1) 2(1) PD=0
+Edg=15,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 11(1) 6(1) PD=0
+Edg=16,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 5(1) PD=0
+Edg=17,T=0, W=1,V=1, LS=00, PF=0, F1=0, F2=0, Ends: 12(1) 3(1) PD=0
+Edg=22,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 3(1) PD=0
+Edg=23,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 13(1) 4(1) PD=0
+Edg=24,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 1(1) PD=0
+Edg=25,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 14(1) 6(1) PD=0
+Edg=26,T=0, W=1,V=1.5, LS=00, PF=0, F1=0, F2=0, Ends: 15(1) 2(1) PD=0
+Ver=1,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 4 6 20 3 24 PD=0 DOF=un un NA NA NA NA un unun
+Ver=2,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:6 7 8 21 5 26 PD=0 DOF=un un NA NA NA NA un unun
+Ver=3,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:2 3 18 19 17 22 PD=0 DOF=un un NA NA NA NA un unun
+Ver=4,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:8 19 9 12 10 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=5,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:18 13 14 21 27 16 PD=0 DOF=un un NA NA NA NA un unun
+Ver=6,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:20 13 10 11 15 25 PD=0 DOF=un un NA NA NA NA un unun
+Ver=7,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:1 2 PD=0 DOF=un un NA NA NA NA un unun
+Ver=8,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:4 5 PD=0 DOF=un un NA NA NA NA un unun
+Ver=9,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:7 9 PD=0 DOF=un un NA NA NA NA un unun
+Ver=10,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:12 11 PD=0 DOF=un un NA NA NA NA un unun
+Ver=11,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:14 15 PD=0 DOF=un un NA NA NA NA un unun
+Ver=12,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:16 17 PD=0 DOF=un un NA NA NA NA un unun
+Ver=13,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:22 23 PD=0 DOF=un un NA NA NA NA un unun
+Ver=14,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:24 25 PD=0 DOF=un un NA NA NA NA un unun
+Ver=15,T=0, W=2, d=0, LSFI=0000, PF=0, EF=0, edge:27 26 PD=0 DOF=un un NA NA NA NA un unun
+SolverTrees called
+Getting Cluster 19
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 20
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 21
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 22
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 23
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 24
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 25
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 26
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+Getting Cluster 27
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+type value read in pushOutside=0
+Pushing out 1
+Getting Cluster 28
+Labeled core: 22
+END GETCLUSTER
+IN DISTRIBUTE FOREST
+Getting Cluster 29
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+END GETCLUSTER
+Getting Cluster 30
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+END GETCLUSTER
+Getting Cluster 31
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+END GETCLUSTER
+Getting Cluster 32
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+Labeled core: 26
+Labeled core: 31
+END GETCLUSTER
+Getting Cluster 33
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+Labeled core: 26
+Labeled core: 31
+Labeled core: 27
+Labeled core: 32
+END GETCLUSTER
+Getting Cluster 34
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+Labeled core: 26
+Labeled core: 31
+Labeled core: 27
+Labeled core: 32
+Labeled core: 19
+Labeled core: 33
+END GETCLUSTER
+Getting Cluster 35
+Labeled core: 19
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+Labeled core: 26
+Labeled core: 31
+Labeled core: 27
+Labeled core: 32
+Labeled core: 19
+Labeled core: 33
+Labeled core: 20
+Labeled core: 34
+END GETCLUSTER
+Getting Cluster 36
+Labeled core: 20
+Labeled core: 19
+Labeled core: 22
+Labeled core: 23
+Labeled core: 28
+Labeled core: 24
+Labeled core: 29
+Labeled core: 25
+Labeled core: 30
+Labeled core: 26
+Labeled core: 31
+Labeled core: 27
+Labeled core: 32
+Labeled core: 19
+Labeled core: 33
+Labeled core: 20
+Labeled core: 34
+Labeled core: 21
+Labeled core: 35
+END GETCLUSTER
+AFTER ADDCHILD
+AFTER APPEND
+Checking new cluster
+
+1 Final DR output Trees
+---------
+DRTree 1
+**Core: 36,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 22 23 24 25 26 27 19 20 21 
+****Core: 22,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 15 5 2 
+******Core: 15,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 23,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 14 6 1 
+******Core: 14,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 24,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 10 4 6 
+******Core: 10,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 25,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 11 5 6 
+******Core: 11,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 6,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 26,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 12 3 5 
+******Core: 12,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 5,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 27,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 13 3 4 
+******Core: 13,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 19,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 8 2 1 
+******Core: 8,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 20,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 7 3 1 
+******Core: 7,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 3,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 1,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+****Core: 21,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1    Children: 9 4 2 
+******Core: 9,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 4,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+******Core: 2,  Grp=0,  Type=0, CBifur=-1, Solved=false, Value=0 0 0 1 0 1 0 1 
+
+
+---------------------------------------------
+SolverTrees returned
+Solver Start
+AutoSolve: false
+Variable Initialized usingArrays: false
+State Saved
+DRDAG Output
+-1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+DAG Output
+Arrays output, Solver returns
+SKUTU index3674
+first 3674
+Received -2
+Received 1
+Received 36
+Received 0
+Received 15
+Received 2
+Received 1
+Received 6
+Received 5
+Received 3
+Received 4
+Received 15
+Received 14
+Received 10
+Received 11
+Received 12
+Received 13
+Received 8
+Received 7
+Received 9
+Received 9
+Received 22
+Received 23
+Received 24
+Received 25
+Received 26
+Received 27
+Received 19
+Received 20
+Received 21
+Received 22
+Received 0
+Received 3
+Received 2
+Received 15
+Received 5
+Received 3
+Received 15
+Received 5
+Received 2
+Received 15
+Received 0
+Received 1
+Received 15
+Received 0
+Received 5
+Received 0
+Received 1
+Received 5
+Received 0
+first 1023.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Received 0.0
+Killed

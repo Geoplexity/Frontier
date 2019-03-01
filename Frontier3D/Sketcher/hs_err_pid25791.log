@@ -1,0 +1,89 @@
+
+An unexpected exception has been detected in native code outside the VM.
+Unexpected Signal : 11 occurred at PC=0xf3cd8134
+Function name=returnLabel__6Vertex
+Library=/amd/avocado/export/research4/constraints/LaptopVersion/UTU/classes/libutu.so
+
+Current Java thread:
+	at utuJava.utuC(Native Method)
+	at sketcher.SKUTUFile.writeUTUFile(SKUTUFile.java:1163)
+	at sketcher.SKMainFrame.mniTest(SKMainFrame.java:2691)
+	at sketcher.SKMainFrame.mniTest_actionPerformed(SKMainFrame.java:2673)
+	at sketcher.SKMainFrame$76.actionPerformed(SKMainFrame.java:1374)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1450)
+	at javax.swing.AbstractButton$ForwardActionEvents.actionPerformed(AbstractButton.java:1504)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:378)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:250)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:279)
+	at javax.swing.plaf.basic.BasicMenuItemUI$MenuDragMouseHandler.menuDragMouseReleased(BasicMenuItemUI.java:946)
+	at javax.swing.JMenuItem.fireMenuDragMouseReleased(JMenuItem.java:547)
+	at javax.swing.JMenuItem.processMenuDragMouseEvent(JMenuItem.java:452)
+	at javax.swing.JMenuItem.processMouseEvent(JMenuItem.java:400)
+	at javax.swing.MenuSelectionManager.processMouseEvent(MenuSelectionManager.java:264)
+	at javax.swing.plaf.basic.BasicMenuUI$MouseInputHandler.mouseReleased(BasicMenuUI.java:318)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:230)
+	at java.awt.Component.processMouseEvent(Component.java:3715)
+	at java.awt.Component.processEvent(Component.java:3544)
+	at java.awt.Container.processEvent(Container.java:1164)
+	at java.awt.Component.dispatchEventImpl(Component.java:2593)
+	at java.awt.Container.dispatchEventImpl(Container.java:1213)
+	at java.awt.Component.dispatchEvent(Component.java:2497)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:2451)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:2216)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:2125)
+	at java.awt.Container.dispatchEventImpl(Container.java:1200)
+	at java.awt.Window.dispatchEventImpl(Window.java:926)
+	at java.awt.Component.dispatchEvent(Component.java:2497)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:339)
+	at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchThread.java:131)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:98)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:85)
+
+Dynamic libraries:
+0x10000 	/usr/local/java/bin/sparc/native_threads/java
+0xff350000 	/usr/lib/libthread.so.1
+0xff390000 	/usr/lib/libdl.so.1
+0xff200000 	/usr/lib/libc.so.1
+0xff330000 	/usr/platform/SUNW,Sun-Blade-100/lib/libc_psr.so.1
+0xfe480000 	/export/depot/c1-sun4-solaris2-2.8/JDK-1.3.1_02/java/jre/lib/sparc/client/libjvm.so
+0xff2e0000 	/usr/lib/libCrun.so.1
+0xff1e0000 	/usr/lib/libsocket.so.1
+0xff100000 	/usr/lib/libnsl.so.1
+0xff0d0000 	/usr/lib/libm.so.1
+0xff310000 	/usr/lib/libw.so.1
+0xff0b0000 	/usr/lib/libmp.so.2
+0xff080000 	/export/depot/c1-sun4-solaris2-2.8/JDK-1.3.1_02/java/jre/lib/sparc/native_threads/libhpi.so
+0xff040000 	/export/depot/c1-sun4-solaris2-2.8/JDK-1.3.1_02/java/jre/lib/sparc/libverify.so
+0xfe440000 	/export/depot/c1-sun4-solaris2-2.8/JDK-1.3.1_02/java/jre/lib/sparc/libjava.so
+0xfe410000 	/export/depot/c1-sun4-solaris2-2.8/JDK-1.3.1_02/java/jre/lib/sparc/libzip.so
+0xfd3e0000 	/export/depot/c1-sun4-solaris2-2.8/JDK-1.3.1_02/java/jre/lib/sparc/libawt.so
+0xf4980000 	/export/depot/c1-sun4-solaris2-2.8/JDK-1.3.1_02/java/jre/lib/sparc/motif21/libmawt.so
+0xfd0b0000 	/usr/local/java/jre/lib/sparc/libmlib_image.so
+0xf4700000 	/usr/dt/lib/libXm.so.4
+0xfd040000 	/usr/openwin/lib/libXt.so.4
+0xfd010000 	/usr/openwin/lib/libXext.so.0
+0xfd3c0000 	/usr/openwin/lib/libXtst.so.1
+0xf4600000 	/usr/openwin/lib/libX11.so.4
+0xfafe0000 	/usr/openwin/lib/libSM.so.6
+0xfafb0000 	/usr/openwin/lib/libICE.so.6
+0xfacd0000 	/usr/openwin/lib/libdga.so.1
+0xf4500000 	/export/depot/c1-sun4-solaris2-2.8/JDK-1.3.1_02/java/jre/lib/sparc/libfontmanager.so
+0xfac70000 	/usr/openwin/lib/libdps.so.5
+0xfac40000 	/export/depot/c1-sun4-solaris2-2.8/JDK-1.3.1_02/java/jre/lib/sparc/libJ3D.so
+0xfac20000 	/usr/local/java/jre/lib/sparc/libjawt.so
+0xf4080000 	/usr/openwin/lib/libGL.so.1
+0xf4bd0000 	/usr/openwin/lib/libXmu.so.4
+0xf4ac0000 	/usr/local/java/jre/lib/sparc/libsunwjdga.so
+0xf4960000 	/usr/local/java/jre/lib/sparc/libxinerama.so
+0xf46c0000 	/export/depot/c1-sun4-solaris2-2.8/JDK-1.3.1_02/java/jre/lib/sparc/libdcpr.so
+0xf3b80000 	/amd/avocado/export/research4/constraints/LaptopVersion/UTU/classes/libutu.so
+0xf4590000 	/usr/local/old/lib/libstdc++.so.2.10.0
+
+Local Time = Thu Aug  8 17:46:15 2002
+Elapsed Time = 99
+#
+# The exception above was detected in native code outside the VM
+#
+# Java VM: Java HotSpot(TM) Client VM (1.3.1_02-b02 mixed mode)
+#
