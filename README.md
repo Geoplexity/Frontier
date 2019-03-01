@@ -53,3 +53,14 @@ can be found in the documentation folder within the FRONTIER-gnu directory as we
 The communication between the Java and C++ programs is achieved using the JavaNativeInterface so that they use the same frep datastructures without having to open and close files. The datastructures are explained in documentation/CCcodedocs/datastructures_overview.txt.
 
 FRONTIER needs access to an algebraic/numeric solver, and currently it uses Maple V (or a later version).
+
+### License ###
+Frontier is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+The GNU GPL license can be found at [http://www.gnu.org/licenses/](http://www.gnu.org/licenses/).
+
+### Contact ###
+Meera Sitharam, CISE @ UF
+
