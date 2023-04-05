@@ -10,10 +10,10 @@ namespace ffnx::entities {
 
     struct Constraint {
     public:
-        std::string label;
+        std::string identifier;
         std::set<std::shared_ptr<Shape>> associated_shapes;
 
-        explicit Constraint(std::string label) : label(std::move(label)) {
+        explicit Constraint(std::string identifier) : identifier(std::move(identifier)) {
 
         }
     };

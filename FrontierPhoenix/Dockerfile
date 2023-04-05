@@ -3,8 +3,9 @@ FROM ubuntu:22.04
 
 # System setup
 RUN apt-get update -y
-RUN apt-get install wget clang -y
-
+RUN apt-get install wget -y
+RUN apt-get update -y
+RUN apt-get install g++ -y
 
 # Install boost
 WORKDIR /
@@ -13,7 +14,7 @@ RUN echo "205666dea9f6a7cfed87c7a6dfbeb52a2c1b9de55712c9c1a87735d7181452b6 boost
 RUN tar -xf boost_1_81_0.tar.gz
 WORKDIR /boost_1_81_0
 RUN apt-get install python3.10-dev -y
-RUN ./bootstrap.sh clang
+RUN ./bootstrap.sh gcc
 RUN echo "using python : 3.10 : /usr/bin/python3 ;" > ./user-config.jam
 RUN ./b2 install --without-mpi --user-config="./user-config.jam"
 RUN apt-get install cmake lldb -y
@@ -31,5 +32,31 @@ RUN make -j 6
 RUN make install
 
 
+# Install ginac
+RUN apt-get install bzip2 -y
+WORKDIR /
+RUN mkdir ginac_and_deps
+WORKDIR /ginac_and_deps
+RUN wget https://www.ginac.de/CLN/cln-1.3.6.tar.bz2
+RUN tar -xvf cln-1.3.6.tar.bz2
+WORKDIR ./cln-1.3.6
+RUN ./configure
+RUN make -j 6
+RUN make check
+RUN make install
+
+
+WORKDIR /ginac_and_deps
+RUN apt install git dh-autoreconf pkg-config libreadline-dev libtool libtool-bin libbison-dev flex autogen -y
+RUN wget https://www.ginac.de/ginac-1.8.6.tar.bz2
+RUN tar -xvf ginac-1.8.6.tar.bz2
+WORKDIR ./ginac-1.8.6
+RUN autoreconf -i
+RUN ./configure
+RUN make -j 6
+RUN make check
+RUN make install
+
 # General purpose tools
-RUN apt-get install vim -y
+RUN apt install vim -y
+RUN apt install gdb -y

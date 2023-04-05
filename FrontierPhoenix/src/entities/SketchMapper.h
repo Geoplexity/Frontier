@@ -1,7 +1,7 @@
 #ifndef FRONTIER_PHOENIX_SKETCH_MAPPER_H
 #define FRONTIER_PHOENIX_SKETCH_MAPPER_H
 
-#include "Sketch.h"
+#include "SketchHypergraph.h"
 #include "MappedGraph.h"
 #include <boost/bimap.hpp>
 #include <boost/graph/adjacency_list.hpp>
@@ -11,7 +11,7 @@ namespace ffnx::entities {
 
     class SketchMapper {
     public:
-        static std::unique_ptr<MappedGraph> create_graph(const Sketch &sketch) {
+        static std::unique_ptr<MappedGraph> create_graph(const SketchHypergraph &sketch) {
             std::unique_ptr<MappedGraph> result = std::make_unique<MappedGraph>();
 
             auto source_vert = boost::add_vertex(result->graph());
@@ -21,7 +21,7 @@ namespace ffnx::entities {
 
             for (const auto &s: sketch.shapes) {
                 const auto vert = boost::add_vertex(result->graph());
-                result->graph()[vert].label = s->label;
+                result->graph()[vert].label = s->identifier;
                 result->set_pair(s, vert);
 
                 boost::add_edge(vert, sink_vert, result->graph());
@@ -29,7 +29,7 @@ namespace ffnx::entities {
 
             for (const auto &c: sketch.constraints) {
                 const auto vert = boost::add_vertex(result->graph());
-                result->graph()[vert].label = c->label;
+                result->graph()[vert].label = c->identifier;
                 result->set_pair(c, vert);
 
                 boost::add_edge(source_vert, vert, result->graph());

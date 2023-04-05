@@ -1,12 +1,93 @@
 #ifndef FRONTIER_PHOENIX_SKETCHER_H
 #define FRONTIER_PHOENIX_SKETCHER_H
 
+#include <string>
+#include <vector>
+#include <ginac/ginac.h>
+
+#include "../entities/Shape.h"
+#include "../entities/Constraint.h"
+#include "../entities/SketchHypergraph.h"
+
 /**
  * Define an abstract sketching interface.
  */
 namespace ffnx::sketcher {
 
-    class SketcherInterface {
+    namespace gnac = GiNaC;
+
+    using shape_signature = std::string;
+    using constraint_signature = std::pair<std::string, std::vector<std::string>>;
+
+    using shape_ptr = std::weak_ptr<ffnx::entities::Shape>;
+    using cons_ptr = std::weak_ptr<ffnx::entities::Constraint>;
+
+    struct ShapeSpecification {
+        int dof;
+    };
+
+    enum ConstraintArgumentType {
+        FLOAT,
+        BOOL
+    };
+
+    union ConstraintArgumentValue {
+        double valueDouble;
+        bool valueBool;
+    };
+
+    struct ConstraintArgument {
+        ConstraintArgumentType type;
+        ConstraintArgumentValue value;
+    };
+
+    struct ConstraintSpecification {
+
+        /**
+         * List of value inputs to constraint.
+         */
+        std::vector<ConstraintArgumentType> constraint_arguments;
+
+        /**
+         * Expressions associated with the constraint.
+         * the solution ex == 0 should indicate the
+         * constraint is satisfied. e.g. for a distance
+         * constraint, ex = hypot(x, y) - dist == 0
+         */
+        std::vector<std::string> expressions;
+    };
+
+    class Sketcher {
+
+    private:
+        std::map<shape_signature, ShapeSpecification> shapeTypes;
+        std::map<constraint_signature, ConstraintSpecification> constraintTypes;
+
+        ffnx::entities::SketchHypergraph sketch;
+
+    public:
+        Sketcher(const std::map<shape_signature, ShapeSpecification>& shapeTypes,
+                 const std::map<constraint_signature, ConstraintSpecification>& constraintTypes);
+
+        std::weak_ptr<ffnx::entities::Shape> add_shape(
+                const std::string& identifier,
+                const std::vector<double>& inputValues);
+
+        std::weak_ptr<ffnx::entities::Constraint> add_constraint(
+                const std::string& identifier,
+                const std::vector<shape_ptr>& shapes,
+                const std::vector<ConstraintArgument>& arguments);
+
+        ffnx::entities::SketchHypergraph& get_sketch_hypergraph() {
+            return sketch;
+        }
+    };
+
+    class SketcherBuilder {
+    private:
+        std::map<shape_signature, ShapeSpecification> shapeTypes;
+        std::map<constraint_signature, ConstraintSpecification> constraintTypes;
+
     public:
 
         /**
@@ -65,6 +146,15 @@ namespace ffnx::sketcher {
          *  sketcher->getFlowGraph() // <-- returns the flow graph, which may then be processed via DecompRecomp
          */
 
+        void register_shape_type(
+                const shape_signature& signature,
+                const ShapeSpecification& shapeSpecification);
+
+        void register_constraint_type(
+                const constraint_signature& signature,
+                const ConstraintSpecification& constraintSpecification);
+
+        Sketcher build_sketcher();
     };
 
 }

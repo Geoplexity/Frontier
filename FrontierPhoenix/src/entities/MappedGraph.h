@@ -3,7 +3,7 @@
 
 #include "Shape.h"
 #include "Constraint.h"
-#include "Graph.h"
+#include "FlowGraph.h"
 #include <boost/bimap.hpp>
 
 namespace ffnx::entities {
@@ -11,6 +11,7 @@ namespace ffnx::entities {
     using m_ptr = std::shared_ptr<MappingToken>;
 
     /**
+     * Represents the link between a SketchHypergraph and FlowGraph.
      * Using the mapping tokens, the corresponding shapes can be referred back to.
      */
     struct MappedGraph {
