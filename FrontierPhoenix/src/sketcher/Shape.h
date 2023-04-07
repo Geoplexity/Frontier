@@ -1,5 +1,5 @@
-#ifndef FRONTIER_PHOENIX_SHAPE
-#define FRONTIER_PHOENIX_SHAPE
+#ifndef FRONTIER_PHOENIX_SKETCHER_SHAPE
+#define FRONTIER_PHOENIX_SKETCHER_SHAPE
 
 #include <string>
 #include <utility>
@@ -7,7 +7,7 @@
 #include <stdexcept>
 #include <sstream>
 
-namespace ffnx::entities {
+namespace ffnx::sketcher {
 
     struct Shape {
 

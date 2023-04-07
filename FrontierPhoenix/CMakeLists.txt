@@ -9,6 +9,4 @@ find_package(Boost 1.81.0)
 find_package(GiNaC 1.8)
 
 add_subdirectory(src)
-
-
-
+add_subdirectory(tst)

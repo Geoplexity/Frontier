@@ -1,12 +1,12 @@
-#ifndef FRONTIER_PHOENIX_CONSTRAINT
-#define FRONTIER_PHOENIX_CONSTRAINT
+#ifndef FRONTIER_PHOENIX_SKETCHER_CONSTRAINT
+#define FRONTIER_PHOENIX_SKETCHER_CONSTRAINT
 
 #include "Shape.h"
 
 #include <set>
 #include <memory>
 
-namespace ffnx::entities {
+namespace ffnx::sketcher {
 
     struct Constraint {
     public:

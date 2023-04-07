@@ -1,12 +1,17 @@
 #ifndef FRONTIER_PHOENIX_MAPPED_GRAPH_H
 #define FRONTIER_PHOENIX_MAPPED_GRAPH_H
 
-#include "Shape.h"
-#include "Constraint.h"
-#include "FlowGraph.h"
+#include "sketcher/Shape.h"
+#include "sketcher/Constraint.h"
+#include "flowgraph/FlowGraph.h"
 #include <boost/bimap.hpp>
 
-namespace ffnx::entities {
+namespace ffnx::mapping {
+
+    using Shape = ffnx::sketcher::Shape;
+    using Constraint = ffnx::sketcher::Constraint;
+    using MappingToken = ffnx::flowgraph::MappingToken;
+    using FlowGraph = flowgraph::FlowGraph;
 
     using m_ptr = std::shared_ptr<MappingToken>;
 

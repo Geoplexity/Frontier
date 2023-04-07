@@ -6,7 +6,7 @@
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/graphviz.hpp>
 
-namespace ffnx::entities {
+namespace ffnx::flowgraph {
 
     /**
      * Exists to map between graph input/output and arbitrary data.
@@ -38,28 +38,28 @@ namespace ffnx::entities {
             // vertex properties
             boost::property<
                     boost::vertex_index_t, int, // vertex index required for graphviz
-                    boost::property<
-                            boost::vertex_attribute_t, GVizAttrs,
-                            VertexData>>,
+            boost::property<
+                    boost::vertex_attribute_t, GVizAttrs,
+                    VertexData>>,
 
             // edge properties
             boost::property<
                     boost::edge_index_t, int, // edge index required for graphviz (?)
-                    boost::property<
-                            boost::edge_weight_t, int,
-                            boost::property<
-                                    boost::edge_attribute_t, GVizAttrs,
-                                    EdgeData>>>,
+            boost::property<
+                    boost::edge_weight_t, int,
+            boost::property<
+                    boost::edge_attribute_t, GVizAttrs,
+                    EdgeData>>>,
 
             // graph properties
             boost::property<
                     boost::graph_name_t, std::string,
-                    boost::property<
-                            boost::graph_graph_attribute_t, GVizAttrs,
-                            boost::property<
-                                    boost::graph_vertex_attribute_t, GVizAttrs,
-                                    boost::property<
-                                            boost::graph_edge_attribute_t, GVizAttrs>>>>
+            boost::property<
+                    boost::graph_graph_attribute_t, GVizAttrs,
+            boost::property<
+                    boost::graph_vertex_attribute_t, GVizAttrs,
+            boost::property<
+                    boost::graph_edge_attribute_t, GVizAttrs>>>>
     > FlowGraph;
 
 

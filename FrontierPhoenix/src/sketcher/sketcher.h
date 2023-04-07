@@ -1,16 +1,18 @@
-#ifndef FRONTIER_PHOENIX_SKETCHER_H
-#define FRONTIER_PHOENIX_SKETCHER_H
+#ifndef FRONTIER_PHOENIX_SKETCHER_SKETCHER_H
+#define FRONTIER_PHOENIX_SKETCHER_SKETCHER_H
 
 #include <string>
 #include <vector>
 #include <ginac/ginac.h>
 
-#include "../entities/Shape.h"
-#include "../entities/Constraint.h"
-#include "../entities/SketchHypergraph.h"
+#include "Shape.h"
+#include "Constraint.h"
+#include "hypergraph/HyperGraph.h"
+#include "hypergraph/Annotator.h"
 
 /**
- * Define an abstract sketching interface.
+ * Define an abstract sketching interface. Manages the creation of constraint/shape "classes" and their association with
+ * equations to be solved.
  */
 namespace ffnx::sketcher {
 
@@ -18,9 +20,6 @@ namespace ffnx::sketcher {
 
     using shape_signature = std::string;
     using constraint_signature = std::pair<std::string, std::vector<std::string>>;
-
-    using shape_ptr = std::weak_ptr<ffnx::entities::Shape>;
-    using cons_ptr = std::weak_ptr<ffnx::entities::Constraint>;
 
     struct ShapeSpecification {
         int dof;
@@ -58,27 +57,34 @@ namespace ffnx::sketcher {
     };
 
     class Sketcher {
-
     private:
+        using shape_ptr = std::weak_ptr<Shape>;
+        using constraint_ptr = std::weak_ptr<Constraint>;
+        using HGSketch = ffnx::hypergraph::AnnotatedHypergraph<
+                std::shared_ptr<Shape>,
+                std::shared_ptr<Constraint>>;
+
         std::map<shape_signature, ShapeSpecification> shapeTypes;
         std::map<constraint_signature, ConstraintSpecification> constraintTypes;
 
-        ffnx::entities::SketchHypergraph sketch;
+        // shape-ptr associated with nodes
+        // constraint-ptr associated with edges
+        HGSketch sketch;
 
     public:
         Sketcher(const std::map<shape_signature, ShapeSpecification>& shapeTypes,
                  const std::map<constraint_signature, ConstraintSpecification>& constraintTypes);
 
-        std::weak_ptr<ffnx::entities::Shape> add_shape(
+        shape_ptr addShape(
                 const std::string& identifier,
                 const std::vector<double>& inputValues);
 
-        std::weak_ptr<ffnx::entities::Constraint> add_constraint(
+        constraint_ptr addConstraint(
                 const std::string& identifier,
                 const std::vector<shape_ptr>& shapes,
                 const std::vector<ConstraintArgument>& arguments);
 
-        ffnx::entities::SketchHypergraph& get_sketch_hypergraph() {
+        [[nodiscard]] const HGSketch& getSketchHyperGraph() const {
             return sketch;
         }
     };
@@ -146,15 +152,15 @@ namespace ffnx::sketcher {
          *  sketcher->getFlowGraph() // <-- returns the flow graph, which may then be processed via DecompRecomp
          */
 
-        void register_shape_type(
+        void registerShapeType(
                 const shape_signature& signature,
                 const ShapeSpecification& shapeSpecification);
 
-        void register_constraint_type(
+        void registerConstraintType(
                 const constraint_signature& signature,
                 const ConstraintSpecification& constraintSpecification);
 
-        Sketcher build_sketcher();
+        Sketcher buildSketcher();
     };
 
 }
