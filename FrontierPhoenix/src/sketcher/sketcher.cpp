@@ -26,6 +26,12 @@ std::string formatConstraintSignature(const ffnx::sketcher::constraint_signature
 void ffnx::sketcher::SketcherBuilder::registerConstraintType(
                                                             const constraint_signature &signature,
                                                             const ConstraintSpecification &constraintSpecification) {
+    for (const auto& shape_sig : signature.second) {
+        if (!this->shapeTypes.contains(shape_sig)) {
+            throw std::runtime_error("Shape signature not recognized.");
+        }
+    }
+
     if (this->constraintTypes.contains(signature)) {
         std::stringstream ss;
         ss << "Constraint signature " << formatConstraintSignature(signature) <<

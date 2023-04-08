@@ -66,20 +66,20 @@ namespace ffnx::hypergraph {
             return *_annotator;
         }
 
-        void visitNodes(std::function<void(node_ptr, TNodeAnnotation)> visitor) const {
+        void visitNodes(const std::function<void(node_ptr, TNodeAnnotation)> &visitor) const {
             _graph->visitNodes([&](auto node){
                 visitor(node, this->_annotator->getAnnotation(node));
             });
         }
 
-        void visitEdges(std::function<void(edge_ptr, TEdgeAnnotation)> visitor) const {
+        void visitEdges(const std::function<void(edge_ptr, TEdgeAnnotation)> &visitor) const {
             _graph->visitEdges([&](auto edge){
                 visitor(edge, this->_annotator->getAnnotation(edge));
             });
         }
 
         void visitEdgeNodes(const edge_ptr_ext& edge,
-                            std::function<void(node_ptr, TNodeAnnotation)> visitor) const {
+                            const std::function<void(node_ptr, TNodeAnnotation)> &visitor) const {
             _graph->visitEdgeNodes(edge, [&](auto node){
                 visitor(node, this->_annotator->getAnnotation(node));
             });
