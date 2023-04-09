@@ -3,7 +3,7 @@
 
 #include <boost/bimap.hpp>
 #include "hypergraph/EventDispatching.h"
-#include "hypergraph/Sparse.h"
+#include "hypergraph/sparse/Sparse.h"
 
 namespace ffnx::hypergraph {
 

@@ -2,7 +2,7 @@
 #include "gmock/gmock.h"
 
 #include <hypergraph/EventDispatching.h>
-#include <hypergraph/Sparse.h>
+#include <hypergraph/sparse/Sparse.h>
 
 using namespace ffnx::hypergraph;
 

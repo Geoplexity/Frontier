@@ -1,6 +1,7 @@
 add_library(frontier-phoenix SHARED
         hypergraph/Annotator.cpp
-        hypergraph/Sparse.cpp
+        hypergraph/sparse/Sparse.cpp
+        hypergraph/sparse/Edge.cpp
         hypergraph/EventDispatching.cpp
         mapping/hyper_to_flow/SketchMapper.cpp
         sketcher/Constraint.cpp
