@@ -6,7 +6,9 @@ add_library(frontier-phoenix SHARED
         mapping/hyper_to_flow/SketchMapper.cpp
         sketcher/Constraint.cpp
         sketcher/Shape.cpp
-        sketcher/sketcher.cpp)
+        sketcher/sketcher.cpp
+        cluster/Cluster.h
+        cluster/commands/Condensation.h)
 
 target_include_directories(frontier-phoenix PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
