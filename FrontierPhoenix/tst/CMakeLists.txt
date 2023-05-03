@@ -9,6 +9,7 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
+add_subdirectory(cluster)
 add_subdirectory(flowgraph)
 add_subdirectory(hypergraph)
 add_subdirectory(mapping)

@@ -8,7 +8,8 @@ add_library(frontier-phoenix SHARED
         sketcher/Shape.cpp
         sketcher/sketcher.cpp
         cluster/Cluster.h
-        cluster/commands/Condensation.h)
+        cluster/commands/Condensation.h
+        cluster/commands/Condensation.cpp)
 
 target_include_directories(frontier-phoenix PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

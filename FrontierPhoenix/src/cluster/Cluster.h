@@ -15,6 +15,11 @@ namespace ffnx::cluster {
         std::set<TFlowEdgeType> edges;
 
     public:
+        Cluster(const std::set<TFlowVertType>& vertices, const std::set<TFlowEdgeType>& edges) :
+            vertices(vertices), edges(edges) {
+
+        }
+
         const std::set<TFlowVertType>& getVertices() {
             return vertices;
         }
