@@ -1,6 +1,8 @@
 #ifndef FRONTIER_PHOENIX_CLUSTER_COMMANDS_CONDENSATION_H
 #define FRONTIER_PHOENIX_CLUSTER_COMMANDS_CONDENSATION_H
 
+#include <boost/graph/adjacency_list.hpp>
+
 #include "cluster/Cluster.h"
 #include "flowgraph/Command.h"
 #include "flowgraph/FlowGraph.h"
@@ -11,10 +13,10 @@ namespace ffnx::cluster::commands {
     using FlowGraph = ffnx::flowgraph::FlowGraph<TV, TE>;
 
     template <typename TV, typename TE>
-    using VertDesc = boost::graph_traits<FlowGraph<TV, TE>>::vertex_descriptor;
+    using VertDesc = typename boost::graph_traits<FlowGraph<TV, TE>>::vertex_descriptor;
 
     template <typename TV, typename TE>
-    using EdgeDesc = boost::graph_traits<FlowGraph<TV, TE>>::edge_descriptor;
+    using EdgeDesc = typename boost::graph_traits<FlowGraph<TV, TE>>::edge_descriptor;
 
     template <typename TV, typename TE>
     class Condensation : public ffnx::flowgraph::FlowGraphCommand<TV, TE> {
@@ -51,7 +53,7 @@ namespace ffnx::cluster::commands {
                 }
             }
 
-            boost::graph_traits<FlowGraph<TV, TE>>::vertex_iterator vi, vi_end, next;
+            typename boost::graph_traits<FlowGraph<TV, TE>>::vertex_iterator vi, vi_end, next;
             boost::tie(vi, vi_end, next) = boost::vertices(graph);
             for (next = vi; vi != vi_end; vi = next) {
                 next++;
