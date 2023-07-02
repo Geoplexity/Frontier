@@ -9,7 +9,9 @@ add_library(frontier-phoenix SHARED
         sketcher/sketcher.cpp
         cluster/Cluster.h
         cluster/commands/Condensation.h
-        cluster/commands/Condensation.cpp)
+        cluster/commands/Condensation.cpp
+        drplan/DRPlan.h
+        drplan/plans/Default.h)
 
 target_include_directories(frontier-phoenix PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
