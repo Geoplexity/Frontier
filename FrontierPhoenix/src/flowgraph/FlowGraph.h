@@ -15,7 +15,7 @@ namespace ffnx::flowgraph {
     using boost::directedS;
 
     template <typename TVertexDataType, typename TEdgeDataType>
-    using FlowGraph = boost::adjacency_list<
+    class FlowGraph : public boost::adjacency_list<
             vecS, // OutEdgeListS
             vecS, // VertexListS
             directedS, // directed/undirected
@@ -45,7 +45,17 @@ namespace ffnx::flowgraph {
                 boost::graph_vertex_attribute_t, GVizAttrs,
             boost::property<
                     boost::graph_edge_attribute_t, GVizAttrs>>>>
-    >;
+    > {
+
+
+        auto edges() {
+            return boost::make_iterator_range(boost::edges(*this));
+        }
+
+        auto vertices() {
+            return boost::make_iterator_range(boost::vertices(*this));
+        }
+    };
 
 }
 
