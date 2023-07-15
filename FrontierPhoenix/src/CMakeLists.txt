@@ -11,8 +11,7 @@ add_library(frontier-phoenix SHARED
         cluster/commands/Condensation.h
         cluster/commands/Condensation.cpp
         drplan/DRPlan.h
-        drplan/plans/CanonicalTopDown.h
-        drplan/plans/pebble_game/PebbleGame2D.h)
+        drplan/plans/CanonicalTopDown.h)
 
 target_include_directories(frontier-phoenix PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

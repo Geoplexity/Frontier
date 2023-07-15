@@ -16,12 +16,30 @@
 namespace ffnx::pebblegame {
 
     /**
+     * Responsible for recording the pebble-game state and checking
+     * the rules are enforced.
+     *
      * Pebbles can be placed either on a vertex or an edge.
+     * The following states apply to a pebble:
+     * Placed/Unplaced : is the pebble placed on an edge or vertex
+     * Free/Not Free : free if on a vertex, not free if on an edge
+     *
+     * Free/Not Free state only defined for placed pebbles
      */
     template <typename TVert, typename TEdge>
     class PebbleTracker {
     private:
         unsigned int num_pebbles;
+
+        /**
+         * Max number of pebbles that can be placed on any vertex.
+         */
+        int vertex_capacity;
+
+        /**
+         * Max number of pebbles that can be placed on an edge.
+         */
+        int edge_capacity;
 
         std::map<TVert, std::set<int>> vert_to_pebbles;
         std::map<int, TVert> pebble_to_vert;
@@ -30,17 +48,42 @@ namespace ffnx::pebblegame {
         std::map<int, TEdge> pebble_to_edge;
 
     public:
-        PebbleTracker(std::set<TVert>& verts) {
+        PebbleTracker(const int& vertex_capacity,
+                      const int& edge_capacity) {
 
         }
 
-        void place_pebble(const int& pebble, const TVert& vert) {
-            if (pebble < 0 || pebble >= num_pebbles) {
-                throw std::runtime_error("Invalid pebble index");
-            }
+        const std::map<int, TVert>& vertex_pebbles() const {
+            return pebble_to_vert;
+        }
 
-            if (pebble_to_vert.contains(pebble)) {
-                throw std::runtime_error("Pebble already associated with vertex");
+        const std::map<int, TVert>& edge_pebbles() const {
+            return pebble_to_edge;
+        }
+
+        int pebbles_on_vertex(const TVert& vert) const {
+            if (!vert_to_pebbles.contains(vert)) {
+                return 0;
+            } else {
+                return vert_to_pebbles[vert].size();
+            }
+        }
+
+        int pebbles_on_edge(const TEdge& edge) const {
+            if (!edge_to_pebbles.contains(edge)) {
+                return 0;
+            } else {
+                return edge_to_pebbles[edge].size();
+            }
+        }
+
+        /**
+         * Place the pebble on the specified vertex
+         */
+        void place_pebble(const int& pebble, const TVert& vert) {
+            assert_pebble_unplaced(pebble);
+            if (pebbles_on_vertex(vert) == vertex_capacity) {
+                throw std::runtime_error("Vert already has maximum capacity");
             }
 
             pebble_to_vert[pebble] = vert;
@@ -50,12 +93,93 @@ namespace ffnx::pebblegame {
 
             vert_to_pebbles[vert].insert(pebble);
         }
+
+        /**
+         * Place the pebble on the specified edge
+         */
+        void place_pebble(const int& pebble, const TEdge& edge) {
+            assert_pebble_unplaced(pebble);
+            if (pebbles_on_edge(edge) == edge_capacity) {
+                throw std::runtime_error("Edge already has maximum capacity");
+            }
+
+            pebble_to_edge[pebble] = edge;
+            if (!edge_to_pebbles.contains(edge)) {
+                vert_to_pebbles[edge] = {};
+            }
+
+            edge_to_pebbles[edge].insert(pebble);
+        }
+
+        /**
+         * Removes the specified pebble from the vertex or edge that it is placed on
+         */
+        void unplace_pebble(const int& pebble) {
+            assert_pebble_placed(pebble);
+
+            if (pebble_to_vert.contains(pebble)) {
+                auto vert = pebble_to_vert[pebble];
+
+                pebble_to_vert.erase(pebble);
+
+                vert_to_pebbles[vert].erase(vert);
+            } else {
+                auto edge = pebble_to_edge(pebble);
+
+                pebble_to_edge.erase(edge);
+
+                edge_to_pebbles[edge].erase(pebble);
+            }
+        }
+
+    private:
+        void assert_pebble_in_range(const int& pebble) const {
+            if (pebble < 0 || pebble >= num_pebbles) {
+                throw std::runtime_error("Invalid pebble index");
+            }
+        }
+
+        void assert_pebble_free(const int& pebble) const {
+            assert_pebble_in_range(pebble);
+            assert_pebble_placed(pebble);
+
+            if (!pebble_to_vert.contains(pebble)) {
+                throw std::runtime_error("Pebble not free");
+            }
+        }
+
+        void assert_pebble_not_free(const int& pebble) const {
+            assert_pebble_in_range(pebble);
+            assert_pebble_placed(pebble);
+
+            if (!pebble_to_edge.contains(pebble)) {
+                throw std::runtime_error("Pebble is free");
+            }
+        }
+
+        void assert_pebble_placed(const int& pebble) const {
+            assert_pebble_in_range(pebble);
+        }
+
+        void assert_pebble_unplaced(const int& pebble) const {
+            assert_pebble_in_range(pebble);
+
+            if (pebble_to_vert.contains(pebble)) {
+                throw std::runtime_error("Pebble already associated with vertex");
+            }
+
+            if (pebble_to_edge.contains(pebble)) {
+                throw std::runtime_error("Pebble already associated with edge");
+            }
+        }
     };
 
     template<typename TV, typename TE>
     class PebbleGame2D {
     private:
-        static constexpr int PEBBLES_PER_NODE = 2;
+
+        static constexpr int PEBBLES_PER_VERTEX = 2;
+        static constexpr int PEBBLES_PER_EDGE = 3;
 
         using Pebble = int;
 
@@ -82,12 +206,11 @@ namespace ffnx::pebblegame {
             // total pebbles = k * vertex count for subgraph
 
             // so each vertex gets k pebbles
-            PebbleTracker<VertDesc, EdgeDesc> pebble_tracker(PEBBLES_PER_NODE *
-                cluster.lock()->getVertices().size());
+            PebbleTracker<VertDesc, EdgeDesc> pebble_tracker(PEBBLES_PER_VERTEX, PEBBLES_PER_EDGE);
 
             int pebble_index = 0;
             for (const auto& v : cluster.lock()->getVertices()) {
-                for (int i = 0; i < PEBBLES_PER_NODE; i++) {
+                for (int i = 0; i < PEBBLES_PER_VERTEX; i++) {
                     pebble_tracker.place_pebble(pebble_index, v);
                     pebble_index++;
                 }

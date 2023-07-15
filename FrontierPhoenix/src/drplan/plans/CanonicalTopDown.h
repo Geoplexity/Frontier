@@ -10,7 +10,7 @@
 namespace ffnx::drplan {
 
     template <typename TVert, typename TEdge>
-    class DefaultDRPlan : public DRPlan<TVert, TEdge> {
+    class CanonicalTopDown : public DRPlan<TVert, TEdge> {
         using FlowGraph = ffnx::flowgraph::FlowGraph<TVert, TEdge>;
         using FlowGraphInterface = ffnx::flowgraph::FlowGraphInterface<TVert, TEdge>;
         using Cluster = ffnx::cluster::Cluster<TVert, TEdge>;
@@ -21,7 +21,7 @@ namespace ffnx::drplan {
 
     public:
         void solve(ffnx::flowgraph::FlowGraphInterface<TVert, TEdge>& graph_interface) override {
-            // todo: start with copy of
+            // based on:
             // FrontierPhoenix/canonical-top-down-dr-planner/src/Graph/DR_Plan.cpp
 
             auto cluster_builder = Cluster::Builder(graph_interface.graph());
@@ -43,13 +43,8 @@ namespace ffnx::drplan {
                         sub_tree_node.lock()->value());
 
                 auto sub_sub_clusters = pg.run_component();
+
             }
-
-            // original dr plan starts with separate cluster collections:
-            // cluster_e, cluster_v
-
-            // generate map edge : set(cluster_e)
-            // map edge : (edge : cluster_e)
 
             // todo: incorporate pebblegame 2D
 
