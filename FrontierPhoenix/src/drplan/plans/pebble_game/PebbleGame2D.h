@@ -48,8 +48,11 @@ namespace ffnx::pebblegame {
         std::map<int, TEdge> pebble_to_edge;
 
     public:
-        PebbleTracker(const int& vertex_capacity,
-                      const int& edge_capacity) {
+        PebbleTracker(const int& num_pebbles,
+                      const int& vertex_capacity,
+                      const int& edge_capacity) : num_pebbles(num_pebbles),
+                                                  vertex_capacity(vertex_capacity),
+                                                  edge_capacity(edge_capacity) {
 
         }
 
@@ -65,7 +68,7 @@ namespace ffnx::pebblegame {
             if (!vert_to_pebbles.contains(vert)) {
                 return 0;
             } else {
-                return vert_to_pebbles[vert].size();
+                return vert_to_pebbles.at(vert).size();
             }
         }
 
@@ -73,14 +76,14 @@ namespace ffnx::pebblegame {
             if (!edge_to_pebbles.contains(edge)) {
                 return 0;
             } else {
-                return edge_to_pebbles[edge].size();
+                return edge_to_pebbles.at(edge).size();
             }
         }
 
         /**
          * Place the pebble on the specified vertex
          */
-        void place_pebble(const int& pebble, const TVert& vert) {
+        void place_vert_pebble(const int& pebble, const TVert& vert) {
             assert_pebble_unplaced(pebble);
             if (pebbles_on_vertex(vert) == vertex_capacity) {
                 throw std::runtime_error("Vert already has maximum capacity");
@@ -97,7 +100,7 @@ namespace ffnx::pebblegame {
         /**
          * Place the pebble on the specified edge
          */
-        void place_pebble(const int& pebble, const TEdge& edge) {
+        void place_edge_pebble(const int& pebble, const TEdge& edge) {
             assert_pebble_unplaced(pebble);
             if (pebbles_on_edge(edge) == edge_capacity) {
                 throw std::runtime_error("Edge already has maximum capacity");
@@ -223,7 +226,9 @@ namespace ffnx::pebblegame {
 
             // determine the number of free pebbles in the end. if the
             // result is == 2, the graph is rigid
-            pebble_tracker.available_pebble_count()
+            pebble_tracker.available_pebble_count();
+
+            throw std::runtime_error("Not yet implemented");
         }
     private:
 
