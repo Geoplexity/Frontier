@@ -12,14 +12,19 @@ namespace ffnx::cluster {
     template <typename TFlowVertType, typename TFlowEdgeType>
     class Cluster {
     private:
+        using FlowGraph = flowgraph::FlowGraph<TFlowVertType, TFlowEdgeType>;
+        using VDesc = typename FlowGraph::vertex_descriptor;
+        using EDesc = typename FlowGraph::edge_descriptor;
+
         using graph_ptr = std::weak_ptr<flowgraph::FlowGraph<TFlowVertType, TFlowEdgeType>>;
 
+
         graph_ptr graph;
-        std::set<TFlowVertType> _vertices;
-        std::set<TFlowEdgeType> _edges;
+        std::set<VDesc> _vertices;
+        std::set<EDesc> _edges;
 
     public:
-        Cluster(graph_ptr graph, std::set<TFlowVertType>& vertices, std::set<TFlowEdgeType>& edges) :
+        Cluster(graph_ptr graph, std::set<VDesc>& vertices, std::set<EDesc>& edges) :
             graph(graph), _vertices(std::move(vertices)), _edges(std::move(edges)) {
 
         }
@@ -32,8 +37,8 @@ namespace ffnx::cluster {
          * @return
          */
         std::shared_ptr<Cluster<TFlowVertType, TFlowEdgeType>> get_filtered_cluster(
-                const std::function<bool(const TFlowVertType&)>& vert_filter,
-                const std::function<bool(const TFlowEdgeType&)>& edge_filter) {
+                const std::function<bool(const VDesc&)>& vert_filter,
+                const std::function<bool(const EDesc&)>& edge_filter) {
 
             auto builder = Cluster<TFlowVertType, TFlowEdgeType>::Builder(graph);
 
@@ -53,24 +58,24 @@ namespace ffnx::cluster {
         }
 
         std::shared_ptr<Cluster<TFlowVertType, TFlowEdgeType>> get_edge_filtered_cluster(
-                const std::function<bool(const TFlowEdgeType&)>& edge_filter) {
+                const std::function<bool(const EDesc&)>& edge_filter) {
             return get_filtered_cluster(
-                    [](const TFlowVertType& v){ return true; },
+                    [](const VDesc& v){ return true; },
                     edge_filter);
         }
 
         std::shared_ptr<Cluster<TFlowVertType, TFlowEdgeType>> get_vert_filtered_cluster(
-                const std::function<bool(const TFlowVertType&)>& vert_filter) {
+                const std::function<bool(const VDesc&)>& vert_filter) {
             return get_filtered_cluster(
                     vert_filter,
-                    [](const TFlowEdgeType& v){ return true; });
+                    [](const EDesc& v){ return true; });
         }
 
-        const std::set<TFlowVertType>& vertices() {
+        const std::set<VDesc>& vertices() const {
             return _vertices;
         }
 
-        const std::set<TFlowEdgeType>& edges() {
+        const std::set<EDesc>& edges() const {
             return _edges;
         }
 
@@ -79,32 +84,36 @@ namespace ffnx::cluster {
             using graph_ptr = std::weak_ptr<flowgraph::FlowGraph<TFlowVertType, TFlowEdgeType>>;
 
             graph_ptr graph;
-            std::set<TFlowVertType> vertices;
-            std::set<TFlowEdgeType> edges;
+            std::set<VDesc> vertices;
+            std::set<EDesc> edges;
 
             bool has_built = false;
 
         public:
-            Builder(const graph_ptr& graph) : graph(graph) {
+            explicit Builder(const graph_ptr& graph) : graph(graph), vertices(), edges() {
 
             }
 
-            Builder& add_vertex(const TFlowVertType& vertex) {
+            Builder& add_vertex(const VDesc& vertex) {
                 assert_not_built();
                 if (vertices.contains(vertex)) {
                     throw std::runtime_error("Attempt to add duplicate vertex to cluster. This is likely an error.");
                 }
 
                 vertices.insert(vertex);
+
+                return *this;
             }
 
-            Builder& add_edge(const TFlowEdgeType& edge) {
+            Builder& add_edge(const EDesc& edge) {
                 assert_not_built();
                 if (edges.contains(edge)) {
                     throw std::runtime_error("Attempt to add duplicate edge to cluster. This is likely an error.");
                 }
 
                 edges.insert(edge);
+
+                return *this;
             }
 
             std::shared_ptr<Cluster<TFlowVertType, TFlowEdgeType>> build() {

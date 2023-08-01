@@ -29,6 +29,10 @@ namespace ffnx::pebblegame {
     template <typename TVert, typename TEdge>
     class PebbleTracker {
     private:
+
+        /**
+         * Upper bound on number of pebbles.
+         */
         unsigned int num_pebbles;
 
         /**
@@ -209,18 +213,22 @@ namespace ffnx::pebblegame {
             // total pebbles = k * vertex count for subgraph
 
             // so each vertex gets k pebbles
-            PebbleTracker<VertDesc, EdgeDesc> pebble_tracker(PEBBLES_PER_VERTEX, PEBBLES_PER_EDGE);
+            // todo: setting upper bound on num pebbles to int max for now, upper bound should either be removed
+            // entirely or restricted to a lower value
+            PebbleTracker<VertDesc, EdgeDesc> pebble_tracker(std::numeric_limits<int>::max(),
+                                                             PEBBLES_PER_VERTEX,
+                                                             PEBBLES_PER_EDGE);
 
             int pebble_index = 0;
-            for (const auto& v : cluster.lock()->getVertices()) {
+            for (const auto& v : cluster.lock()->vertices()) {
                 for (int i = 0; i < PEBBLES_PER_VERTEX; i++) {
-                    pebble_tracker.place_pebble(pebble_index, v);
+                    pebble_tracker.place_vert_pebble(pebble_index, v);
                     pebble_index++;
                 }
             }
 
             // attempt to enlarge cover for each edge
-            for (const auto& e : cluster.lock()->getEdges()) {
+            for (const auto& e : cluster.lock()->edges()) {
                 enlarge_cover(e);
             }
 
@@ -240,6 +248,8 @@ namespace ffnx::pebblegame {
 
             // attempt to identify free pebble for v0
             // will be an index from 0 .. k-1 (vertex capacity?)
+
+            throw std::runtime_error("Not implemented");
         }
 
     };

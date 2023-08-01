@@ -54,6 +54,7 @@ namespace ffnx::flowgraph {
 
         using traits = typename boost::graph_traits<flow_graph_boost_def<TVertexDataType, TEdgeDataType>>;
         using vdesc = typename traits::vertex_descriptor;
+        using edesc = typename traits::edge_descriptor;
 
 
         auto out_verts(vdesc & vert) {
@@ -62,6 +63,22 @@ namespace ffnx::flowgraph {
 
         auto edges() {
             return boost::make_iterator_range(boost::edges(*this));
+        }
+
+        vdesc add_vertex() {
+            return boost::add_vertex(*this);
+        }
+
+        edesc add_edge(vdesc& v0, vdesc& v1) {
+            auto result = boost::add_edge(v0, v1, *this);
+
+            auto is_successful = std::get<1>(result);
+
+            if (!is_successful) {
+                throw std::runtime_error("Add edge failed.");
+            }
+
+            return std::get<0>(result);
         }
 
         auto vertices() {

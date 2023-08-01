@@ -23,6 +23,27 @@ TEST(FlowGraphTests, testCreate)
     ASSERT_EQ(1, edges.size());
 }
 
+TEST(FlowGraphTests, testCreateViaInstanceMethods)
+{
+    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+
+    FlowGraph graph;
+
+    auto v0 = graph.add_vertex();
+    auto v1 = graph.add_vertex();
+
+    auto e = graph.add_edge(v0, v1);
+
+    auto vert_it = graph.vertices();
+    std::vector<FlowGraph::vertex_descriptor> verts(vert_it.begin(), vert_it.end());
+
+    auto edge_it = graph.edges();
+    std::vector<FlowGraph::edge_descriptor> edges(edge_it.begin(), edge_it.end());
+
+    ASSERT_EQ(2, verts.size());
+    ASSERT_EQ(1, edges.size());
+}
+
 TEST(FlowGraphTests, testAdjacentVertHelper)
 {
     using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
