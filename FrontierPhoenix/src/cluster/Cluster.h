@@ -94,6 +94,19 @@ namespace ffnx::cluster {
 
             }
 
+            static std::shared_ptr<Cluster<TFlowVertType, TFlowEdgeType>> of_graph(const graph_ptr& graph) {
+                Cluster<TFlowVertType, TFlowEdgeType>::Builder builder(graph);
+                for (const auto& v: graph.lock()->vertices()) {
+                    builder.add_vertex(v);
+                }
+
+                for (const auto& e: graph.lock()->edges()) {
+                    builder.add_edge(e);
+                }
+
+                return builder.build();
+            }
+
             Builder& add_vertex(const VDesc& vertex) {
                 assert_not_built();
                 if (vertices.contains(vertex)) {
