@@ -79,6 +79,27 @@ namespace ffnx::cluster {
             return _edges;
         }
 
+        bool shares_graph(const Cluster<TFlowVertType, TFlowEdgeType>& other) {
+            return graph.lock() == other.graph.lock();
+        }
+
+        /**
+         * @param other
+         * @return true if the set of vertices and set of edges in this cluster exactly match that of other
+         */
+        bool is_equivalent(const Cluster<TFlowVertType, TFlowEdgeType>& other) {
+            return shares_graph(other) && _vertices == other._vertices && _edges == other._edges;
+        }
+
+        /**
+         * Equivalent to std::includes for both vertices and edges. Graphs must match.
+         */
+        bool includes(const Cluster<TFlowVertType, TFlowEdgeType> other) {
+            return shares_graph(other) &&
+                std::includes(_vertices.begin(), _vertices.end(), other._vertices.begin(), other._vertices.end()) &&
+                std::includes(_edges.begin(), _edges.end(), other._edges.begin(), other._edges.end());
+        }
+
         class Builder {
         private:
             using graph_ptr = std::weak_ptr<flowgraph::FlowGraph<TFlowVertType, TFlowEdgeType>>;
