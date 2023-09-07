@@ -19,14 +19,14 @@ namespace ffnx::tree {
 
         }
 
-        std::weak_ptr<TreeNode> &append_child_node(const TValue& value) {
-            auto node = std::make_shared<TreeNode>();
+        std::weak_ptr<TreeNode> append_child_node(const TValue& value) {
+            auto node = std::make_shared<TreeNode>(value);
             _child_nodes.push_back(node);
 
             return node;
         }
 
-        const TValue& value() {
+        const TValue& value() const {
             return _value;
         }
 

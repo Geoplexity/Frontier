@@ -30,6 +30,15 @@ namespace ffnx::cluster {
         }
 
         /**
+         * Copy constructor
+         * @param other
+         */
+        Cluster(const Cluster<TFlowVertType, TFlowEdgeType>& other) :
+            graph(other.graph), _vertices(other._vertices), _edges(other._edges) {
+
+        }
+
+        /**
          * Returns a new cluster where the edges/verts are filtered according
          * to the supplied predicate.
          * @param vert_filter function returns true if a vert should be preserved
@@ -38,7 +47,7 @@ namespace ffnx::cluster {
          */
         std::shared_ptr<Cluster<TFlowVertType, TFlowEdgeType>> get_filtered_cluster(
                 const std::function<bool(const VDesc&)>& vert_filter,
-                const std::function<bool(const EDesc&)>& edge_filter) {
+                const std::function<bool(const EDesc&)>& edge_filter) const {
 
             auto builder = Cluster<TFlowVertType, TFlowEdgeType>::Builder(graph);
 
@@ -58,14 +67,14 @@ namespace ffnx::cluster {
         }
 
         std::shared_ptr<Cluster<TFlowVertType, TFlowEdgeType>> get_edge_filtered_cluster(
-                const std::function<bool(const EDesc&)>& edge_filter) {
+                const std::function<bool(const EDesc&)>& edge_filter) const {
             return get_filtered_cluster(
                     [](const VDesc& v){ return true; },
                     edge_filter);
         }
 
         std::shared_ptr<Cluster<TFlowVertType, TFlowEdgeType>> get_vert_filtered_cluster(
-                const std::function<bool(const VDesc&)>& vert_filter) {
+                const std::function<bool(const VDesc&)>& vert_filter) const {
             return get_filtered_cluster(
                     vert_filter,
                     [](const EDesc& v){ return true; });
@@ -79,7 +88,7 @@ namespace ffnx::cluster {
             return _edges;
         }
 
-        bool shares_graph(const Cluster<TFlowVertType, TFlowEdgeType>& other) {
+        bool shares_graph(const Cluster<TFlowVertType, TFlowEdgeType>& other) const {
             return graph.lock() == other.graph.lock();
         }
 
@@ -87,14 +96,14 @@ namespace ffnx::cluster {
          * @param other
          * @return true if the set of vertices and set of edges in this cluster exactly match that of other
          */
-        bool is_equivalent(const Cluster<TFlowVertType, TFlowEdgeType>& other) {
+        bool is_equivalent(const Cluster<TFlowVertType, TFlowEdgeType>& other) const {
             return shares_graph(other) && _vertices == other._vertices && _edges == other._edges;
         }
 
         /**
          * Equivalent to std::includes for both vertices and edges. Graphs must match.
          */
-        bool includes(const Cluster<TFlowVertType, TFlowEdgeType> other) {
+        bool includes(const Cluster<TFlowVertType, TFlowEdgeType> other) const {
             return shares_graph(other) &&
                 std::includes(_vertices.begin(), _vertices.end(), other._vertices.begin(), other._vertices.end()) &&
                 std::includes(_edges.begin(), _edges.end(), other._edges.begin(), other._edges.end());

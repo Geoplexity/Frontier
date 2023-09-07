@@ -1,9 +1,10 @@
 add_executable(
-        ffnx_PebbleGameTests
+        ffnx_DRPlanTests
         PebbleTrackerTest.cpp
-        PebbleGameTest.cpp)
+        PebbleGameTest.cpp
+        DRPlanTest.cpp)
 
-target_link_libraries(ffnx_PebbleGameTests GTest::gtest_main GTest::gmock frontier-phoenix)
+target_link_libraries(ffnx_DRPlanTests GTest::gtest_main GTest::gmock frontier-phoenix)
 
 include(GoogleTest)
-gtest_discover_tests(ffnx_PebbleGameTests)
+gtest_discover_tests(ffnx_DRPlanTests)

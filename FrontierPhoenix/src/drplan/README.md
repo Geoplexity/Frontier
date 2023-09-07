@@ -1,3 +1,4 @@
 # Decomposition-Recomposition Plan
 
-This package provides an API for mutating flowgraphs based on a decomposition/recomposition plan algorithm.
+This package provides an API for reducing flowgraphs based on a
+generic decomposition/recomposition plan algorithm.
