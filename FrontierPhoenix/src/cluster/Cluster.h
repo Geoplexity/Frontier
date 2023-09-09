@@ -19,13 +19,13 @@ namespace ffnx::cluster {
         using graph_ptr = std::weak_ptr<const flowgraph::FlowGraph<TFlowVertType, TFlowEdgeType>>;
 
 
-        graph_ptr graph;
+        graph_ptr _graph;
         std::set<VDesc> _vertices;
         std::set<EDesc> _edges;
 
     public:
         Cluster(graph_ptr graph, std::set<VDesc>& vertices, std::set<EDesc>& edges) :
-            graph(graph), _vertices(std::move(vertices)), _edges(std::move(edges)) {
+            _graph(graph), _vertices(std::move(vertices)), _edges(std::move(edges)) {
 
         }
 
@@ -34,8 +34,12 @@ namespace ffnx::cluster {
          * @param other
          */
         Cluster(const Cluster<TFlowVertType, TFlowEdgeType>& other) :
-            graph(other.graph), _vertices(other._vertices), _edges(other._edges) {
+            _graph(other._graph), _vertices(other._vertices), _edges(other._edges) {
 
+        }
+
+        graph_ptr graph() const {
+            return _graph;
         }
 
         /**
@@ -49,7 +53,7 @@ namespace ffnx::cluster {
                 const std::function<bool(const VDesc&)>& vert_filter,
                 const std::function<bool(const EDesc&)>& edge_filter) const {
 
-            auto builder = Cluster<TFlowVertType, TFlowEdgeType>::Builder(graph);
+            auto builder = Cluster<TFlowVertType, TFlowEdgeType>::Builder(_graph);
 
             for (const auto& v : _vertices) {
                 if (vert_filter(v)) {
@@ -89,7 +93,7 @@ namespace ffnx::cluster {
         }
 
         bool shares_graph(const Cluster<TFlowVertType, TFlowEdgeType>& other) const {
-            return graph.lock() == other.graph.lock();
+            return _graph.lock() == other._graph.lock();
         }
 
         void assert_shares_graph(const Cluster<TFlowVertType, TFlowEdgeType>& other) const {
@@ -120,7 +124,7 @@ namespace ffnx::cluster {
         std::unique_ptr<Cluster<TFlowVertType, TFlowEdgeType>> intersection(const Cluster<TFlowVertType, TFlowEdgeType>& other) const {
             assert_shares_graph(other);
 
-            auto result = Cluster<TFlowVertType, TFlowEdgeType>::Builder(graph);
+            auto result = Cluster<TFlowVertType, TFlowEdgeType>::Builder(_graph);
 
             for (const auto &v : std::set_intersection(
                     this->_vertices.begin(), this->_vertices.end(),
