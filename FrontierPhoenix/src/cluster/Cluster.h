@@ -16,7 +16,7 @@ namespace ffnx::cluster {
         using VDesc = typename FlowGraph::vertex_descriptor;
         using EDesc = typename FlowGraph::edge_descriptor;
 
-        using graph_ptr = std::weak_ptr<flowgraph::FlowGraph<TFlowVertType, TFlowEdgeType>>;
+        using graph_ptr = std::weak_ptr<const flowgraph::FlowGraph<TFlowVertType, TFlowEdgeType>>;
 
 
         graph_ptr graph;
@@ -92,26 +92,74 @@ namespace ffnx::cluster {
             return graph.lock() == other.graph.lock();
         }
 
+        void assert_shares_graph(const Cluster<TFlowVertType, TFlowEdgeType>& other) const {
+            if (!shares_graph(other)) {
+                throw std::runtime_error("The supplied cluster is based off a different root graph.");
+            }
+        }
+
+        /**
+         * @return true if the set of vertices of this cluster is a maximal subgraph (has precisely one fewer element)
+         * of other. Edges are not considered by the comparison.
+         */
+        bool is_vertex_maximal_subgraph_of(const Cluster<TFlowVertType, TFlowEdgeType>& other) const {
+            return other.includes(*this) && other._vertices.size() == this->_vertices.size() - 1;
+        }
+
+        /**
+         * @return true if the intersection of this cluster with other contains exactly one vertex.
+         */
+        bool intersects_trivially(const Cluster<TFlowVertType, TFlowEdgeType>& other) const {
+            return intersection(other).vertices().size() == 1;
+        }
+
+        /**
+         * @return a new cluster which is the intersection (boolean AND) of this and other. Both vertices and edges
+         * are considered for this.
+         */
+        std::unique_ptr<Cluster<TFlowVertType, TFlowEdgeType>> intersection(const Cluster<TFlowVertType, TFlowEdgeType>& other) const {
+            assert_shares_graph(other);
+
+            auto result = Cluster<TFlowVertType, TFlowEdgeType>::Builder(graph);
+
+            for (const auto &v : std::set_intersection(
+                    this->_vertices.begin(), this->_vertices.end(),
+                    other._vertices.begin(), other._vertices.end())) {
+                result.add_vertex(v);
+            }
+
+            for (const auto &e : std::set_intersection(
+                    this->_edges.begin(), this->_edges.end(),
+                    other._edges.begin(), other._edges.end())) {
+                result.add_edge(e);
+            }
+
+            return result.build();
+        }
+
         /**
          * @param other
          * @return true if the set of vertices and set of edges in this cluster exactly match that of other
          */
         bool is_equivalent(const Cluster<TFlowVertType, TFlowEdgeType>& other) const {
-            return shares_graph(other) && _vertices == other._vertices && _edges == other._edges;
+            assert_shares_graph(other);
+
+            return _vertices == other._vertices && _edges == other._edges;
         }
 
         /**
          * Equivalent to std::includes for both vertices and edges. Graphs must match.
          */
         bool includes(const Cluster<TFlowVertType, TFlowEdgeType> other) const {
-            return shares_graph(other) &&
-                std::includes(_vertices.begin(), _vertices.end(), other._vertices.begin(), other._vertices.end()) &&
+            assert_shares_graph(other);
+
+            return std::includes(_vertices.begin(), _vertices.end(), other._vertices.begin(), other._vertices.end()) &&
                 std::includes(_edges.begin(), _edges.end(), other._edges.begin(), other._edges.end());
         }
 
         class Builder {
         private:
-            using graph_ptr = std::weak_ptr<flowgraph::FlowGraph<TFlowVertType, TFlowEdgeType>>;
+            using graph_ptr = std::weak_ptr<const flowgraph::FlowGraph<TFlowVertType, TFlowEdgeType>>;
 
             graph_ptr graph;
             std::set<VDesc> vertices;
@@ -120,11 +168,11 @@ namespace ffnx::cluster {
             bool has_built = false;
 
         public:
-            explicit Builder(const graph_ptr& graph) : graph(graph), vertices(), edges() {
+            explicit Builder(graph_ptr graph) : graph(graph), vertices(), edges() {
 
             }
 
-            static std::shared_ptr<Cluster<TFlowVertType, TFlowEdgeType>> of_graph(const graph_ptr& graph) {
+            static std::shared_ptr<Cluster<TFlowVertType, TFlowEdgeType>> of_graph(graph_ptr graph) {
                 Cluster<TFlowVertType, TFlowEdgeType>::Builder builder(graph);
                 for (const auto& v: graph.lock()->vertices()) {
                     builder.add_vertex(v);
@@ -159,10 +207,10 @@ namespace ffnx::cluster {
                 return *this;
             }
 
-            std::shared_ptr<Cluster<TFlowVertType, TFlowEdgeType>> build() {
+            std::unique_ptr<Cluster<TFlowVertType, TFlowEdgeType>> build() {
                 assert_not_built();
                 has_built = true;
-                return std::make_shared<Cluster<TFlowVertType, TFlowEdgeType>>(graph, vertices, edges);
+                return std::make_unique<Cluster<TFlowVertType, TFlowEdgeType>>(graph, vertices, edges);
             }
 
         private:
