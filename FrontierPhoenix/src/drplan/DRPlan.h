@@ -6,6 +6,7 @@
 #include "tree/TreeNode.h"
 
 namespace ffnx::drplan {
+
     /**
      * Single Hierarchical decomposition-recomposition plan.
      * The plan is represented as a tree of nested clusters, containing the
@@ -15,13 +16,19 @@ namespace ffnx::drplan {
     class DRPlan {
 
     private:
+
+        /**
+         * The graph that the solution is applied to.
+         */
+        std::shared_ptr<const ffnx::flowgraph::FlowGraph<TVert, TEdge>> graph;
+
         std::shared_ptr<ffnx::tree::TreeNode<
                 ffnx::cluster::Cluster<TVert, TEdge>>> _solution_tree;
 
     public:
 
-        DRPlan(std::shared_ptr<ffnx::tree::TreeNode<
-                        ffnx::cluster::Cluster<TVert, TEdge>>> solution_tree) : _solution_tree(solution_tree) {
+        explicit DRPlan(
+                std::shared_ptr<ffnx::tree::TreeNode<ffnx::cluster::Cluster<TVert, TEdge>>> solution_tree) : _solution_tree(solution_tree) {
 
         }
 
@@ -37,7 +44,7 @@ namespace ffnx::drplan {
             using graph_t = flowgraph::FlowGraph<TVert, TEdge>;
             using cluster_t = ffnx::cluster::Cluster<TVert, TEdge>;
 
-            using graph_ptr = std::weak_ptr<graph_t>;
+            using graph_ptr = std::weak_ptr<const graph_t>;
             using cluster_ptr = std::shared_ptr<cluster_t>;
 
             using tree_node_t = ffnx::tree::TreeNode<cluster_t>;
