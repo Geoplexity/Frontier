@@ -72,3 +72,37 @@ TEST(FlowGraphTests, testAdjacentVertHelper)
     out_vit = graph.out_verts(v3);
     ASSERT_EQ(0, std::distance(out_vit.begin(), out_vit.end()));
 }
+
+
+TEST(FlowGraphTests, testEdgeVertsHelper)
+{
+    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+
+    FlowGraph graph;
+
+    auto v0 = boost::add_vertex(graph);
+    auto v1 = boost::add_vertex(graph);
+    auto v2 = boost::add_vertex(graph);
+    auto v3 = boost::add_vertex(graph);
+
+    auto e_v0_v1 = boost::add_edge(v0, v1, graph);
+    auto e_v1_v2 = boost::add_edge(v1, v2, graph);
+    auto e_v1_v3 = boost::add_edge(v1, v3, graph);
+    auto e_v3_v0 = boost::add_edge(v3, v0, graph);
+
+    auto expected_v0_v1 = graph.vertices_for_edge(e_v0_v1.first);
+    ASSERT_EQ(expected_v0_v1.first, v0);
+    ASSERT_EQ(expected_v0_v1.second, v1);
+
+    auto expected_v1_v2 = graph.vertices_for_edge(e_v1_v2.first);
+    ASSERT_EQ(expected_v1_v2.first, v1);
+    ASSERT_EQ(expected_v1_v2.second, v2);
+
+    auto expected_v1_v3 = graph.vertices_for_edge(e_v1_v3.first);
+    ASSERT_EQ(expected_v1_v3.first, v1);
+    ASSERT_EQ(expected_v1_v3.second, v3);
+
+    auto expected_v3_v0 = graph.vertices_for_edge(e_v3_v0.first);
+    ASSERT_EQ(expected_v3_v0.first, v3);
+    ASSERT_EQ(expected_v3_v0.second, v0);
+}

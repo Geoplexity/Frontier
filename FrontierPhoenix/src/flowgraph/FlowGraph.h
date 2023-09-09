@@ -92,6 +92,12 @@ namespace ffnx::flowgraph {
         auto vertices() const {
             return boost::make_iterator_range(boost::vertices(*this));
         }
+
+        std::pair<vdesc, vdesc> vertices_for_edge(edesc& edge) const {
+            return std::make_pair(
+                    boost::source(edge, *this),
+                    boost::target(edge, *this));
+        }
     };
 
 }
