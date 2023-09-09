@@ -12,7 +12,7 @@ namespace ffnx::drplan {
     template <typename TVert, typename TEdge>
     class DRPlanner {
     public:
-        virtual DRPlan<TVert, TEdge> solve(ffnx::flowgraph::FlowGraphInterface<TVert, TEdge>& graph) = 0;
+        virtual DRPlan<TVert, TEdge> generate_plan(std::shared_ptr<const ffnx::flowgraph::FlowGraph<TVert, TEdge>> graph) = 0;
     };
 }
 

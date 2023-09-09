@@ -60,6 +60,10 @@ namespace ffnx::pebblegame {
 
         }
 
+        [[nodiscard]] int free_pebble_count() const {
+            return pebble_to_vert.size();
+        }
+
         const std::map<int, TVert>& vertex_pebbles() const {
             return pebble_to_vert;
         }
@@ -181,6 +185,19 @@ namespace ffnx::pebblegame {
         }
     };
 
+    struct PebbleGameResult {
+        int free_pebble_count;
+
+        explicit PebbleGameResult(const int& free_pebble_count) : free_pebble_count(free_pebble_count) {
+
+        }
+
+        bool is_rigid() {
+            return free_pebble_count == 2;
+        }
+
+    };
+
     template<typename TV, typename TE>
     class PebbleGame2D {
     private:
@@ -205,7 +222,10 @@ namespace ffnx::pebblegame {
             
         }
 
-        void run_component() {
+        /**
+         * @param result output variable.
+         */
+        std::unique_ptr<PebbleGameResult> run() {
             // resetting the pebbles, to k pebbles per vertex
             // for each vertex:
             //      for i = 0 .. k - 1
@@ -215,17 +235,11 @@ namespace ffnx::pebblegame {
             // so each vertex gets k pebbles
             // todo: setting upper bound on num pebbles to int max for now, upper bound should either be removed
             // entirely or restricted to a lower value
-            PebbleTracker<VertDesc, EdgeDesc> pebble_tracker(std::numeric_limits<int>::max(),
+            PebbleTracker<VertDesc, EdgeDesc> pebble_tracker(cluster.lock()->vertices().size() * PEBBLES_PER_VERTEX,
                                                              PEBBLES_PER_VERTEX,
                                                              PEBBLES_PER_EDGE);
 
-            int pebble_index = 0;
-            for (const auto& v : cluster.lock()->vertices()) {
-                for (int i = 0; i < PEBBLES_PER_VERTEX; i++) {
-                    pebble_tracker.place_vert_pebble(pebble_index, v);
-                    pebble_index++;
-                }
-            }
+            initialize(pebble_tracker);
 
             // attempt to enlarge cover for each edge
             for (const auto& e : cluster.lock()->edges()) {
@@ -234,15 +248,24 @@ namespace ffnx::pebblegame {
 
             // determine the number of free pebbles in the end. if the
             // result is == 2, the graph is rigid
-            pebble_tracker.available_pebble_count();
-
-            throw std::runtime_error("Not yet implemented");
+            return std::move(std::make_unique<PebbleGameResult>(pebble_tracker.free_pebble_count()));
         }
     private:
+
+        void initialize(PebbleTracker<VertDesc, EdgeDesc>& pebble_tracker) {
+            int pebble_index = 0;
+            for (const auto& v : cluster.lock()->vertices()) {
+                for (int i = 0; i < PEBBLES_PER_VERTEX; i++) {
+                    pebble_tracker.place_vert_pebble(pebble_index, v);
+                    pebble_index++;
+                }
+            }
+        }
 
         bool enlarge_cover(const EdgeDesc& edge) {
             // get incident vertices
             // if the vertex should be excluded, return false
+            cluster.lock()->vertices()
 
             // let verts be v0, v1
 

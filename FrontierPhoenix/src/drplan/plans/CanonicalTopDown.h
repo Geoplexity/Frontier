@@ -1,8 +1,8 @@
-#ifndef FRONTIER_PHOENIX_DRPLAN_PLANS_DEFAULT_H
-#define FRONTIER_PHOENIX_DRPLAN_PLANS_DEFAULT_H
+#ifndef FRONTIER_PHOENIX_DRPLAN_PLANS_CANONICAL_TOP_DOWN_H
+#define FRONTIER_PHOENIX_DRPLAN_PLANS_CANONICAL_TOP_DOWN_H
 
 #include "flowgraph/FlowGraph.h"
-#include "drplan/DRPlan.h"
+#include "drplan/DRPlanner.h"
 #include "cluster/Cluster.h"
 #include "tree/TreeNode.h"
 #include "drplan/plans/pebble_game/PebbleGame2D.h"
@@ -10,7 +10,7 @@
 namespace ffnx::drplan {
 
     template <typename TVert, typename TEdge>
-    class CanonicalTopDown : public DRPlan<TVert, TEdge> {
+    class CanonicalTopDown : public DRPlanner<TVert, TEdge> {
         using FlowGraph = ffnx::flowgraph::FlowGraph<TVert, TEdge>;
         using FlowGraphInterface = ffnx::flowgraph::FlowGraphInterface<TVert, TEdge>;
         using Cluster = ffnx::cluster::Cluster<TVert, TEdge>;
@@ -20,33 +20,27 @@ namespace ffnx::drplan {
         using EdgeDesc = typename FlowGraph::edge_descriptor;
 
     public:
-        void solve(ffnx::flowgraph::FlowGraphInterface<TVert, TEdge>& graph_interface) override {
+        DRPlan<TVert, TEdge> solve(std::shared_ptr<const ffnx::flowgraph::FlowGraphInterface<TVert, TEdge>> graph) override {
             // based on:
             // FrontierPhoenix/canonical-top-down-dr-planner/src/Graph/DR_Plan.cpp
 
-            auto cluster_builder = Cluster::Builder(graph_interface.graph());
-            for (const auto& e: graph_interface.graph()->edges()) {
-                cluster_builder.add_edge(e);
-            }
+            // starts with root solution tree node: full graph (verts and edges)
+            auto result = DRPlan<TVert, TEdge>::Builder(graph);
 
-            TreeNode solution_tree(cluster_builder.build());
+            for (const auto &e : graph_interface.graph()->edges()) {
 
-            for (const auto& e: graph_interface.graph()->edgea()) {
-                auto sub_cluster = solution_tree.value()->get_edge_filtered_cluster(
-                        [&e](const auto& ee){ return e != ee; });
+                // constructs a sub_cluster (root cluster minus a single edge)
+                auto sub_cluster = result.root().lock()->get_edge_filtered_cluster([&e](const auto &e_excluded){
+                    return e_excluded != e;
+                });
 
-                auto sub_tree_node = solution_tree.append_child_node(sub_cluster);
+                // add this sub-cluster to the solution root
+                result.add_branch(result.root(), sub_cluster);
 
-                // further divide this node via pebble-game into
-                // sub clusters
-                ffnx::pebblegame::PebbleGame2D<VertDesc, EdgeDesc> pg(
-                        sub_tree_node.lock()->value());
-
-                auto sub_sub_clusters = pg.run_component();
+                auto game_result = ffnx::pebblegame::PebbleGame2D<VertDesc, EdgeDesc>(sub_cluster).run();
 
             }
 
-            // todo: incorporate pebblegame 2D
 
 
         }
