@@ -5,6 +5,7 @@
 #include <boost/config.hpp>
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/graphviz.hpp>
+#include <boost/graph/copy.hpp>
 
 namespace ffnx::flowgraph {
 
@@ -56,12 +57,19 @@ namespace ffnx::flowgraph {
         using vdesc = typename traits::vertex_descriptor;
         using edesc = typename traits::edge_descriptor;
 
+        std::unique_ptr<const FlowGraph<TVertexDataType, TEdgeDataType>> create_immutable_copy() const {
+            auto result = std::make_unique<const FlowGraph<TVertexDataType, TEdgeDataType>>();
+
+            boost::copy_graph(*this, *result);
+
+            return result;
+        }
 
         auto out_verts(vdesc & vert) {
             return boost::make_iterator_range(boost::adjacent_vertices(vert, *this));
         }
 
-        auto edges() {
+        auto edges() const {
             return boost::make_iterator_range(boost::edges(*this));
         }
 
@@ -81,7 +89,7 @@ namespace ffnx::flowgraph {
             return std::get<0>(result);
         }
 
-        auto vertices() {
+        auto vertices() const {
             return boost::make_iterator_range(boost::vertices(*this));
         }
     };
