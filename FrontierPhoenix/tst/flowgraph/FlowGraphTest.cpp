@@ -44,7 +44,7 @@ TEST(FlowGraphTests, testCreateViaInstanceMethods)
     ASSERT_EQ(1, edges.size());
 }
 
-TEST(FlowGraphTests, testAdjacentVertHelper)
+TEST(FlowGraphTests, testAdjacentOutVertHelper)
 {
     using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
 
@@ -73,6 +73,35 @@ TEST(FlowGraphTests, testAdjacentVertHelper)
     ASSERT_EQ(0, std::distance(out_vit.begin(), out_vit.end()));
 }
 
+
+TEST(FlowGraphTests, testAdjacentInVertHelper)
+{
+    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+
+    FlowGraph graph;
+
+    auto v0 = boost::add_vertex(graph);
+    auto v1 = boost::add_vertex(graph);
+    auto v2 = boost::add_vertex(graph);
+    auto v3 = boost::add_vertex(graph);
+
+    auto e_v0_v1 = boost::add_edge(v0, v1, graph);
+
+    auto e_v1_v2 = boost::add_edge(v1, v2, graph);
+    auto e_v1_v3 = boost::add_edge(v1, v3, graph);
+
+    auto in_vit = graph.in_verts(v0);
+    ASSERT_EQ(0, std::distance(in_vit.begin(), in_vit.end()));
+
+    in_vit = graph.in_verts(v1);
+    ASSERT_EQ(1, std::distance(in_vit.begin(), in_vit.end()));
+
+    in_vit = graph.in_verts(v2);
+    ASSERT_EQ(1, std::distance(in_vit.begin(), in_vit.end()));
+
+    in_vit = graph.in_verts(v3);
+    ASSERT_EQ(1, std::distance(in_vit.begin(), in_vit.end()));
+}
 
 TEST(FlowGraphTests, testEdgeVertsHelper)
 {

@@ -15,11 +15,15 @@ namespace ffnx::flowgraph {
     using boost::vecS;
     using boost::directedS;
 
+    // while the intended use of a flow graph is not bidirectional,
+    // this is useful for determining the incoming edges to a vertex
+    using boost::bidirectionalS;
+
     template <typename TVertexDataType, typename TEdgeDataType>
     using flow_graph_boost_def = boost::adjacency_list<
             vecS, // OutEdgeListS
             vecS, // VertexListS
-            directedS, // directed/undirected
+            bidirectionalS, // directed/undirected
 
             // vertex properties
             boost::property<
@@ -65,12 +69,39 @@ namespace ffnx::flowgraph {
             return result;
         }
 
-        auto out_verts(vdesc & vert) {
+        auto in_verts(vdesc & vert) const {
+            return boost::make_iterator_range(boost::inv_adjacent_vertices(vert, *this));
+        }
+
+        auto out_verts(vdesc & vert) const {
             return boost::make_iterator_range(boost::adjacent_vertices(vert, *this));
+        }
+
+        auto in_edges(vdesc & vert) const {
+            return boost::make_iterator_range(boost::in_edges(vert, *this));
+        }
+
+        auto out_edges(vdesc & vert) const {
+            return boost::make_iterator_range(boost::out_edges(vert, *this));
         }
 
         auto edges() const {
             return boost::make_iterator_range(boost::edges(*this));
+        }
+
+        auto edge(const vdesc& v0, const vdesc& v1) const {
+            auto result = boost::edge(v0, v1, *this);
+
+            if (!result.second) {
+                throw std::runtime_error("The specified edge does not exist. "
+                                         "Use has_edge to determine presence");
+            }
+
+            return result.first;
+        }
+
+        bool has_edge(const vdesc& v0, const vdesc& v1) const {
+            return boost::edge(v0, v1, *this).second;
         }
 
         vdesc add_vertex() {
@@ -93,10 +124,10 @@ namespace ffnx::flowgraph {
             return boost::make_iterator_range(boost::vertices(*this));
         }
 
-        std::pair<vdesc, vdesc> vertices_for_edge(edesc& edge) const {
-            return std::make_pair(
-                    boost::source(edge, *this),
-                    boost::target(edge, *this));
+        std::pair<vdesc, vdesc> vertices_for_edge(const edesc& edge) const {
+            vdesc source = boost::source(edge, *this);
+            vdesc target = boost::target(edge, *this);
+            return std::make_pair(source, target);
         }
     };
 
