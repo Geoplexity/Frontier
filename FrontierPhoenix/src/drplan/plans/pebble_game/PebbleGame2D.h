@@ -6,6 +6,7 @@
 #include <boost/bimap.hpp>
 #include <memory>
 #include <stdexcept>
+#include <stack>
 
 /**
  * This is an attempt to understand the pebble game algorithm used by the DR planner here:
@@ -28,6 +29,93 @@ namespace ffnx::pebblegame {
      */
     template <typename TVert, typename TEdge>
     class PebbleTracker {
+    public:
+
+        class PebbleMovement {
+
+            /**
+             * If present, the vertex that the event applies to.
+             */
+            std::optional<TVert> _vertex;
+
+            /**
+             * If present, the edge that the event applies to.
+             */
+            std::optional<TEdge> _edge;
+
+            /**
+             * Indicates that the pebble was set-down ("placed") if true, otherwise removed if false.
+             */
+            bool _is_placed;
+
+            /**
+             * The pebble that was moved.
+             */
+            int _pebble_id;
+
+        public:
+
+            static PebbleMovement for_vertex(const TVert& vert, const bool& is_placed, const int& pebble_id) {
+                PebbleMovement result;
+
+                result._vertex = vert;
+                result._pebble_id = pebble_id;
+                result._is_placed = is_placed;
+
+                return result;
+            }
+
+            static PebbleMovement for_edge(const TEdge& edge, const bool& is_placed, const int& pebble_id) {
+                PebbleMovement result;
+
+                result._edge = edge;
+                result._pebble_id = pebble_id;
+                result._is_placed = is_placed;
+
+                return result;
+            }
+
+            int pebble_id() {
+                return _pebble_id;
+            }
+
+            bool is_pebble_placed() {
+                return _is_placed;
+            }
+
+            bool is_pebble_removed() {
+                return !_is_placed;
+            }
+
+            bool applies_to_vertex() {
+                return _vertex.has_value();
+            }
+
+            bool applies_to_edge() {
+                return _edge.has_value();
+            }
+
+            TVert get_vertex() {
+                if (!_vertex.has_value()) {
+                    throw std::runtime_error("This event is edge-based, use get_edge to get the applicable edge.");
+                }
+
+                return _vertex.value();
+            }
+
+            TEdge get_edge() {
+                if (!_edge.has_value()) {
+                    throw std::runtime_error("This event is vertex-based, use get_vertex to get the applicable vertex.");
+                }
+
+                return _edge.value();
+            }
+
+        };
+
+        using PebbleGameListener = std::function<void(const typename PebbleTracker<TVert, TEdge>::PebbleMovement&,
+                                                      const PebbleTracker<TVert, TEdge>&)>;
+
     private:
 
         /**
@@ -38,12 +126,12 @@ namespace ffnx::pebblegame {
         /**
          * Max number of pebbles that can be placed on any vertex.
          */
-        int vertex_capacity;
+        int _vertex_capacity;
 
         /**
          * Max number of pebbles that can be placed on an edge.
          */
-        int edge_capacity;
+        int _edge_capacity;
 
         std::map<TVert, std::set<int>> vert_to_pebbles;
         std::map<int, TVert> pebble_to_vert;
@@ -51,13 +139,26 @@ namespace ffnx::pebblegame {
         std::map<TEdge, std::set<int>> edge_to_pebbles;
         std::map<int, TEdge> pebble_to_edge;
 
+        PebbleGameListener listener;
+
     public:
         PebbleTracker(const int& num_pebbles,
                       const int& vertex_capacity,
-                      const int& edge_capacity) : num_pebbles(num_pebbles),
-                                                  vertex_capacity(vertex_capacity),
-                                                  edge_capacity(edge_capacity) {
+                      const int& edge_capacity,
+                      const PebbleGameListener& listener = [](const auto &e, const auto &t){}) :
+                        num_pebbles(num_pebbles),
+                        _vertex_capacity(vertex_capacity),
+                        _edge_capacity(edge_capacity),
+                        listener(listener) {
 
+        }
+
+        [[nodiscard]] int vertex_capacity() const {
+            return _vertex_capacity;
+        }
+
+        [[nodiscard]] int edge_capacity() const {
+            return _edge_capacity;
         }
 
         [[nodiscard]] int free_pebble_count() const {
@@ -88,12 +189,50 @@ namespace ffnx::pebblegame {
             }
         }
 
+        bool is_vertex_saturated(const TVert& vert) const {
+            return pebbles_on_vertex(vert) == _vertex_capacity;
+        }
+
+        bool is_edge_saturated(const TEdge& edge) const {
+            return pebbles_on_edge(edge) == _edge_capacity;
+        }
+
+        /**
+         * Transfers a single pebble, if possible, from vert to edge.
+         * Exceptions are thrown when:
+         * - the specified vertex does not have any pebbles to transfer
+         * - the specified edge has already reached a capacity quantity of pebbles
+         *
+         * Callers should check that such a transfer is possible before calling
+         * this method.
+         */
+        void transfer_vert_pebble_to_edge(const TVert& vert, const TEdge& edge) {
+            int vert_pebble_count = pebbles_on_vertex(vert);
+            if (vert_pebble_count == 0) {
+                throw std::runtime_error("Specified vertex does not have any pebbles placed.");
+            }
+
+            int edge_pebble_count = pebbles_on_edge(edge);
+            if (edge_pebble_count > this->_edge_capacity) {
+                throw std::runtime_error("Internal Error: edge has exceeded capacity.");
+            } else if (edge_pebble_count == this->_edge_capacity) {
+                throw std::runtime_error("Destination edge has reached capacity.");
+            }
+
+            // it does not matter which element of the set is removed, so just use the first
+            // that is found.
+            int pebble_to_transfer = *(vert_to_pebbles[vert].begin());
+
+            unplace_pebble(pebble_to_transfer);
+            place_edge_pebble(pebble_to_transfer, edge);
+        }
+
         /**
          * Place the pebble on the specified vertex
          */
         void place_vert_pebble(const int& pebble, const TVert& vert) {
             assert_pebble_unplaced(pebble);
-            if (pebbles_on_vertex(vert) == vertex_capacity) {
+            if (pebbles_on_vertex(vert) == _vertex_capacity) {
                 throw std::runtime_error("Vert already has maximum capacity");
             }
 
@@ -103,6 +242,7 @@ namespace ffnx::pebblegame {
             }
 
             vert_to_pebbles[vert].insert(pebble);
+            listener(PebbleMovement::for_vertex(vert, true, pebble), *this);
         }
 
         /**
@@ -110,16 +250,17 @@ namespace ffnx::pebblegame {
          */
         void place_edge_pebble(const int& pebble, const TEdge& edge) {
             assert_pebble_unplaced(pebble);
-            if (pebbles_on_edge(edge) == edge_capacity) {
+            if (pebbles_on_edge(edge) == _edge_capacity) {
                 throw std::runtime_error("Edge already has maximum capacity");
             }
 
             pebble_to_edge[pebble] = edge;
             if (!edge_to_pebbles.contains(edge)) {
-                vert_to_pebbles[edge] = {};
+                edge_to_pebbles[edge] = {};
             }
 
             edge_to_pebbles[edge].insert(pebble);
+            listener(PebbleMovement::for_edge(edge, true, pebble), *this);
         }
 
         /**
@@ -134,12 +275,16 @@ namespace ffnx::pebblegame {
                 pebble_to_vert.erase(pebble);
 
                 vert_to_pebbles[vert].erase(vert);
-            } else {
-                auto edge = pebble_to_edge(pebble);
 
-                pebble_to_edge.erase(edge);
+                listener(PebbleMovement::for_vertex(vert, false, pebble), *this);
+            } else {
+                auto edge = pebble_to_edge[pebble];
+
+                pebble_to_edge.erase(pebble);
 
                 edge_to_pebbles[edge].erase(pebble);
+
+                listener(PebbleMovement::for_edge(edge, false, pebble), *this);
             }
         }
 
@@ -185,14 +330,16 @@ namespace ffnx::pebblegame {
         }
     };
 
-    struct PebbleGameResult {
+    template <typename TVert, typename TEdge>
+    class PebbleGameResult {
         int free_pebble_count;
 
+    public:
         explicit PebbleGameResult(const int& free_pebble_count) : free_pebble_count(free_pebble_count) {
 
         }
 
-        bool is_rigid() {
+        [[nodiscard]] bool is_rigid() const {
             return free_pebble_count == 2;
         }
 
@@ -217,7 +364,7 @@ namespace ffnx::pebblegame {
 
     public:
 
-        PebbleGame2D(std::weak_ptr<const cluster::Cluster<TV, TE>> cluster) :
+        explicit PebbleGame2D(std::weak_ptr<const cluster::Cluster<TV, TE>> cluster) :
             cluster(cluster) {
             
         }
@@ -225,7 +372,8 @@ namespace ffnx::pebblegame {
         /**
          * @param result output variable.
          */
-        std::unique_ptr<PebbleGameResult> run() {
+        std::unique_ptr<PebbleGameResult<VertDesc, EdgeDesc>> run(
+                const typename PebbleTracker<VertDesc, EdgeDesc>::PebbleGameListener& listener) {
             // resetting the pebbles, to k pebbles per vertex
             // for each vertex:
             //      for i = 0 .. k - 1
@@ -237,18 +385,20 @@ namespace ffnx::pebblegame {
             // entirely or restricted to a lower value
             PebbleTracker<VertDesc, EdgeDesc> pebble_tracker(cluster.lock()->vertices().size() * PEBBLES_PER_VERTEX,
                                                              PEBBLES_PER_VERTEX,
-                                                             PEBBLES_PER_EDGE);
+                                                             PEBBLES_PER_EDGE,
+                                                             listener);
 
             initialize(pebble_tracker);
 
             // attempt to enlarge cover for each edge
             for (const auto& e : cluster.lock()->edges()) {
-                enlarge_cover(e);
+                enlarge_cover(pebble_tracker, e);
             }
 
             // determine the number of free pebbles in the end. if the
             // result is == 2, the graph is rigid
-            return std::move(std::make_unique<PebbleGameResult>(pebble_tracker.free_pebble_count()));
+            return std::move(std::make_unique<PebbleGameResult<VertDesc, EdgeDesc>>(
+                    pebble_tracker.free_pebble_count()));
         }
     private:
 
@@ -262,19 +412,96 @@ namespace ffnx::pebblegame {
             }
         }
 
-        bool enlarge_cover(const EdgeDesc& edge) {
-            // get incident vertices
-            // if the vertex should be excluded, return false
-            cluster.lock()->vertices()
+        /**
+         * @return true if cover of the specified edge could be enlarged.
+         */
+        bool enlarge_cover(PebbleTracker<VertDesc, EdgeDesc>& pebble_tracker,
+                           const EdgeDesc& edge) {
 
-            // let verts be v0, v1
+            if (pebble_tracker.is_edge_saturated(edge) || pebble_tracker.free_pebble_count() == 0) {
+                // edge already saturated, coverage cannot be increased.
+                // OR all pebbles are already on edges
+                return false;
+            }
 
-            // attempt to identify free pebble for v0
-            // will be an index from 0 .. k-1 (vertex capacity?)
+            auto cluster_ptr = cluster.lock();
+            auto graph_ptr = cluster_ptr->graph().lock();
 
-            throw std::runtime_error("Not implemented");
+            auto v0_v1 = graph_ptr->vertices_for_edge(edge);
+            auto v0 = v0_v1.first;
+            auto v1 = v0_v1.second;
+
+            auto vertex_pebble_count = pebble_tracker.pebbles_on_vertex(v0);
+            auto edge_pebble_count = pebble_tracker.pebbles_on_edge(edge);
+
+            if (vertex_pebble_count > 0) {
+                pebble_tracker.transfer_vert_pebble_to_edge(v0, edge);
+                return true;
+            } else {
+                // make a pebble available for v0
+                std::vector<VertDesc> path;
+                bool path_found = reverse_edge_search(
+                        path,
+                        v0,
+                        [&pebble_tracker](const auto& e){ return pebble_tracker.pebbles_on_edge(e) > 0; },
+                        [&pebble_tracker](const auto& v){ return pebble_tracker.pebbles_on_vertex(v) > 0; });
+
+                if (path_found) {
+                    pebble_tracker.transfer_vert_pebble_to_edge(path[0], edge);
+                    return true;
+                }
+            }
+
+            return false;
         }
 
+        /**
+         * Performs a depth first edge search according to the specified predicate.
+         */
+        bool reverse_edge_search(std::vector<VertDesc> &path,
+                                 const VertDesc& starting_vertex,
+                                 std::function<bool(const EdgeDesc&)> edge_predicate,
+                                 std::function<bool(const VertDesc&)> termination_predicate) {
+
+            auto graph_ptr = cluster.lock()->graph().lock();
+
+            std::stack<VertDesc> search_stack;
+            search_stack.push(starting_vertex);
+            std::set<VertDesc> visited_verts;
+            visited_verts.insert(starting_vertex);
+
+            while (!search_stack.empty()) {
+                auto top_vert = search_stack.top();
+
+                // search is terminated w. success.
+                if (termination_predicate(top_vert)) {
+                    path.push_back(top_vert);
+                    while (!search_stack.empty()) {
+                        path.push_back(search_stack.top());
+                        search_stack.pop();
+                    }
+                    return true;
+                }
+
+                bool should_pop = true;
+                for (const auto& v : graph_ptr->in_verts(top_vert)) {
+                    if (!visited_verts.contains(v)) {
+                        if (edge_predicate(graph_ptr->edge(v, top_vert))) {
+                            search_stack.push(v);
+                            should_pop = false;
+                            break;
+                        }
+                    }
+                }
+
+                // no in_verts meeting required criteria, so pop the top off the stack and continue the search
+                if (should_pop) {
+                    search_stack.pop();
+                }
+            }
+
+            return false;
+        }
     };
 }
 

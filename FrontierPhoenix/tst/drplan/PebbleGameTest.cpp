@@ -13,7 +13,7 @@ TEST(PebbleGameTest, testCreate)
     auto v1 = graph->add_vertex();
     auto e = graph->add_edge(v0, v1);
 
-    auto cluster = ffnx::cluster::Cluster<std::string, std::string>::Builder(graph)
+    std::shared_ptr<ffnx::cluster::Cluster<std::string, std::string>> cluster = ffnx::cluster::Cluster<std::string, std::string>::Builder(graph)
             .add_vertex(v0)
             .add_vertex(v1)
             .add_edge(e)
@@ -32,12 +32,12 @@ TEST(PebbleGameTest, testRun)
     auto v1 = graph->add_vertex();
     auto e = graph->add_edge(v0, v1);
 
-    auto cluster = ffnx::cluster::Cluster<std::string, std::string>::Builder(graph)
+    std::shared_ptr<ffnx::cluster::Cluster<std::string, std::string>> cluster = ffnx::cluster::Cluster<std::string, std::string>::Builder(graph)
             .add_vertex(v0)
             .add_vertex(v1)
             .add_edge(e)
             .build();
 
     auto game = ffnx::pebblegame::PebbleGame2D<std::string, std::string>(cluster);
-    game.run_component();
+    auto result = game.run([](const auto &evt, const auto& t){});
 }
