@@ -113,7 +113,11 @@ namespace ffnx::pebblegame {
 
         };
 
-        using PebbleGameListener = std::function<void(const typename PebbleTracker<TVert, TEdge>::PebbleMovement&,
+        /**
+         * Multiple pebble micro-movements may be encapsulated in a single game move. For example unplace + place to
+         * signify a movement from a vertex to an edge. Events are grouped in a vector to represent this.
+         */
+        using PebbleGameListener = std::function<void(const std::vector<typename PebbleTracker<TVert, TEdge>::PebbleMovement>&,
                                                       const PebbleTracker<TVert, TEdge>&)>;
 
     private:
@@ -141,6 +145,11 @@ namespace ffnx::pebblegame {
 
         PebbleGameListener listener;
 
+        /**
+         * Storage for micro-moves of the game. Once the listener is notified the queue is cleared.
+         */
+        std::vector<PebbleMovement> event_queue;
+
     public:
         PebbleTracker(const int& num_pebbles,
                       const int& vertex_capacity,
@@ -151,6 +160,31 @@ namespace ffnx::pebblegame {
                         _edge_capacity(edge_capacity),
                         listener(listener) {
 
+        }
+
+        [[nodiscard]] bool has_pending_events() const {
+            return !event_queue.empty();
+        }
+
+        void assert_no_pending_events() const {
+            if (has_pending_events()) {
+                throw std::runtime_error("There are pending events in the queue. Remember to flush the queue before "
+                                         "starting a new set of micro-moves.");
+            }
+        }
+
+        /**
+         * Notify listener of all pending events in the event queue. Each macro-movement may flush the event stack.
+         * once all micro-moves are complete.
+         */
+        void flush_events() {
+            if (!has_pending_events()) {
+                throw std::runtime_error("No events to notify.");
+            }
+
+            listener(event_queue, *this);
+
+            event_queue.clear();
         }
 
         [[nodiscard]] int vertex_capacity() const {
@@ -207,6 +241,8 @@ namespace ffnx::pebblegame {
          * this method.
          */
         void transfer_vert_pebble_to_edge(const TVert& vert, const TEdge& edge) {
+            assert_no_pending_events();
+
             int vert_pebble_count = pebbles_on_vertex(vert);
             if (vert_pebble_count == 0) {
                 throw std::runtime_error("Specified vertex does not have any pebbles placed.");
@@ -225,6 +261,8 @@ namespace ffnx::pebblegame {
 
             unplace_pebble(pebble_to_transfer);
             place_edge_pebble(pebble_to_transfer, edge);
+
+            flush_events();
         }
 
         /**
@@ -242,7 +280,7 @@ namespace ffnx::pebblegame {
             }
 
             vert_to_pebbles[vert].insert(pebble);
-            listener(PebbleMovement::for_vertex(vert, true, pebble), *this);
+            event_queue.push_back(PebbleMovement::for_vertex(vert, true, pebble));
         }
 
         /**
@@ -260,7 +298,7 @@ namespace ffnx::pebblegame {
             }
 
             edge_to_pebbles[edge].insert(pebble);
-            listener(PebbleMovement::for_edge(edge, true, pebble), *this);
+            event_queue.push_back(PebbleMovement::for_edge(edge, true, pebble));
         }
 
         /**
@@ -276,7 +314,7 @@ namespace ffnx::pebblegame {
 
                 vert_to_pebbles[vert].erase(vert);
 
-                listener(PebbleMovement::for_vertex(vert, false, pebble), *this);
+                event_queue.push_back(PebbleMovement::for_vertex(vert, false, pebble));
             } else {
                 auto edge = pebble_to_edge[pebble];
 
@@ -284,7 +322,7 @@ namespace ffnx::pebblegame {
 
                 edge_to_pebbles[edge].erase(pebble);
 
-                listener(PebbleMovement::for_edge(edge, false, pebble), *this);
+                event_queue.push_back(PebbleMovement::for_edge(edge, false, pebble));
             }
         }
 
@@ -404,12 +442,18 @@ namespace ffnx::pebblegame {
 
         void initialize(PebbleTracker<VertDesc, EdgeDesc>& pebble_tracker) {
             int pebble_index = 0;
+
+            // game should start with no pending events.
+            pebble_tracker.assert_no_pending_events();
+
             for (const auto& v : cluster.lock()->vertices()) {
                 for (int i = 0; i < PEBBLES_PER_VERTEX; i++) {
                     pebble_tracker.place_vert_pebble(pebble_index, v);
                     pebble_index++;
                 }
             }
+
+            pebble_tracker.flush_events();
         }
 
         /**
