@@ -151,8 +151,7 @@ TEST(ClusterTests, testEquivalent)
     ASSERT_FALSE(cluster_c->is_equivalent(*cluster_b));
 }
 
-
-TEST(ClusterTests, testIncludes)
+TEST(ClusterTests, testIncludesOther)
 {
     using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
     using TV = FlowGraph::vertex_descriptor;
@@ -239,4 +238,51 @@ TEST(ClusterTests, testIncludes)
     ASSERT_TRUE(cluster_1_2->includes(*cluster_1_2_1));
 
     ASSERT_FALSE(cluster_1_2->includes(*cluster_1_1));
+}
+
+
+TEST(ClusterTests, testIncludesVertexAndEdge)
+{
+    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using TV = FlowGraph::vertex_descriptor;
+    using TE = FlowGraph::edge_descriptor;
+    using TCluster = ffnx::cluster::Cluster<std::string, std::string>;
+
+    auto graph = std::make_shared<FlowGraph>();
+
+    TV v0 = graph->add_vertex();
+    TV v1 = graph->add_vertex();
+    TV v2 = graph->add_vertex();
+    TV v3 = graph->add_vertex();
+
+    TE e0 = graph->add_edge(v0, v1);
+    TE e1 = graph->add_edge(v1, v2);
+    TE e2 = graph->add_edge(v2, v3);
+
+    auto cluster_root = TCluster::Builder::of_graph(graph);
+    ASSERT_TRUE(cluster_root->includes_edge(e0));
+    ASSERT_TRUE(cluster_root->includes_edge(e1));
+    ASSERT_TRUE(cluster_root->includes_edge(e2));
+
+    ASSERT_TRUE(cluster_root->includes_vertex(v0));
+    ASSERT_TRUE(cluster_root->includes_vertex(v1));
+    ASSERT_TRUE(cluster_root->includes_vertex(v2));
+    ASSERT_TRUE(cluster_root->includes_vertex(v3));
+
+    auto cluster_0 = TCluster::Builder(graph)
+            .add_vertex(v0)
+            .add_vertex(v1)
+            .add_edge(e0)
+            .add_edge(e1)
+            .build();
+
+    ASSERT_TRUE(cluster_0->includes_edge(e0));
+    ASSERT_TRUE(cluster_0->includes_edge(e1));
+    ASSERT_FALSE(cluster_0->includes_edge(e2));
+
+    ASSERT_TRUE(cluster_0->includes_vertex(v0));
+    ASSERT_TRUE(cluster_0->includes_vertex(v1));
+    ASSERT_FALSE(cluster_0->includes_vertex(v2));
+    ASSERT_FALSE(cluster_0->includes_vertex(v3));
+
 }

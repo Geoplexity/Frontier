@@ -161,6 +161,15 @@ namespace ffnx::cluster {
                 std::includes(_edges.begin(), _edges.end(), other._edges.begin(), other._edges.end());
         }
 
+        bool includes_vertex(const VDesc& vertex) const {
+            return includes(*(Builder(_graph).add_vertex(vertex).build()));
+        }
+
+        bool includes_edge(const EDesc& edge) const {
+            return includes(*(Builder(_graph).add_edge(edge).build()));
+        }
+
+
         class Builder {
         private:
             using graph_ptr = std::weak_ptr<const flowgraph::FlowGraph<TFlowVertType, TFlowEdgeType>>;
