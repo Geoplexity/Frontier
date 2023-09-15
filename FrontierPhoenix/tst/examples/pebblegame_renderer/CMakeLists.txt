@@ -1,0 +1,3 @@
+
+add_executable(render_pebblegame_steps render_pebblegame_steps.cpp)
+target_link_libraries(render_pebblegame_steps frontier-phoenix)
