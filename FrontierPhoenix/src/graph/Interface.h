@@ -6,12 +6,13 @@
 
 namespace ffnx::graph {
 
-    template <typename TVertDataType, typename TEdgeDataType>
+    template <typename TGraph>
     class GraphInterface {
     private:
-        Graph<TVertDataType, TEdgeDataType> flowGraph;
+        TGraph _graph;
 
-        using cmd_ptr = std::shared_ptr<GraphCommand<TVertDataType, TEdgeDataType>>;
+        using Command = GraphCommand<TGraph>;
+        using cmd_ptr = std::shared_ptr<Command>;
 
         std::vector<cmd_ptr> commandStack;
         std::set<cmd_ptr> commandSet;
@@ -21,8 +22,8 @@ namespace ffnx::graph {
         /**
          * @return const ref to graph for interrogation.
          */
-        const Graph<TVertDataType, TEdgeDataType>& graph() {
-            return flowGraph;
+        const TGraph& graph() const {
+            return _graph;
         }
 
         /**
@@ -31,13 +32,13 @@ namespace ffnx::graph {
          */
         template <typename TCmd>
         TCmd applyCommand(TCmd cmd) {
-            auto abs_ptr = std::static_pointer_cast<GraphCommand<TVertDataType, TEdgeDataType>>(cmd);
+            auto abs_ptr = std::static_pointer_cast<Command>(cmd);
 
             if (commandSet.contains(abs_ptr)) {
                 throw std::runtime_error("Command has already been applied to this stack.");
             }
 
-            cmd->apply(flowGraph);
+            cmd->apply(_graph);
             commandStack.push_back(abs_ptr);
             commandSet.insert(abs_ptr);
 
@@ -52,7 +53,7 @@ namespace ffnx::graph {
                 throw std::runtime_error("No commands left to undo.");
             }
 
-            commandStack.back()->undo(flowGraph);
+            commandStack.back()->undo(_graph);
 
             cmd_ptr result = commandStack.back();
             commandStack.pop_back();
@@ -63,6 +64,10 @@ namespace ffnx::graph {
 
     };
 
+    template <typename TV, typename TE>
+    class FlowGraphInterface : public GraphInterface<ffnx::graph::FlowGraph<TV, TE>> {
+
+    };
 }
 
 #endif

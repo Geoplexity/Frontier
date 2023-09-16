@@ -7,12 +7,12 @@
 namespace ffnx::drplan {
 
     /**
-     * Constructs a DRPlan based off the specified input flowgraph
+     * Constructs a DRPlan based off the specified input graph
      */
-    template <typename TVert, typename TEdge>
+    template <typename TVert, typename TEdge, typename TDir>
     class DRPlanner {
     public:
-        virtual DRPlan<TVert, TEdge> generate_plan(std::shared_ptr<const ffnx::flowgraph::FlowGraph<TVert, TEdge>> graph) = 0;
+        virtual DRPlan<TVert, TEdge, TDir> generate_plan(std::shared_ptr<const ffnx::graph::Graph<TVert, TEdge, TDir>> graph) = 0;
     };
 }
 

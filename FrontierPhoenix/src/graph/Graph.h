@@ -53,15 +53,17 @@ namespace ffnx::graph {
 
 
     template <typename TVertexDataType, typename TEdgeDataType, typename directedType>
-    class Graph : public flow_graph_boost_def<TVertexDataType, TEdgeDataType, directedType> {
+    class Graph : public graph_boost_def<TVertexDataType, TEdgeDataType, directedType> {
     public:
 
-        using traits = typename boost::graph_traits<flow_graph_boost_def<TVertexDataType, TEdgeDataType>>;
+        using vertex_data_type = TVertexDataType;
+        using edge_data_type = TEdgeDataType;
+        using traits = typename boost::graph_traits<graph_boost_def<TVertexDataType, TEdgeDataType, directedType>>;
         using vdesc = typename traits::vertex_descriptor;
         using edesc = typename traits::edge_descriptor;
 
-        std::unique_ptr<const FlowGraph<TVertexDataType, TEdgeDataType>> create_immutable_copy() const {
-            auto result = std::make_unique<const FlowGraph<TVertexDataType, TEdgeDataType>>();
+        std::unique_ptr<const Graph<TVertexDataType, TEdgeDataType, directedType>> create_immutable_copy() const {
+            auto result = std::make_unique<const Graph<TVertexDataType, TEdgeDataType, directedType>>();
 
             boost::copy_graph(*this, *result);
 
@@ -128,6 +130,13 @@ namespace ffnx::graph {
             vdesc target = boost::target(edge, *this);
             return std::make_pair(source, target);
         }
+    };
+
+    template <typename TVertexDataType, typename TEdgeDataType>
+    class FlowGraph : public Graph<TVertexDataType, TEdgeDataType, bidirectionalS> {
+    public:
+        using directionality = boost::bidirectionalS;
+
     };
 }
 

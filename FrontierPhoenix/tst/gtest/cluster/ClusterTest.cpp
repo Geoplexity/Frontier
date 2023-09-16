@@ -4,10 +4,10 @@
 
 TEST(ClusterTests, testCreate)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
     using TV = FlowGraph::vertex_descriptor;
     using TE = FlowGraph::edge_descriptor;
-    using TCluster = ffnx::cluster::Cluster<std::string, std::string>;
+    using TCluster = ffnx::cluster::Cluster<FlowGraph>;
 
     auto graph = std::make_shared<FlowGraph>();
 
@@ -35,10 +35,10 @@ TEST(ClusterTests, testCreate)
 
 TEST(ClusterTests, testFullGraph)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
     using TV = FlowGraph::vertex_descriptor;
     using TE = FlowGraph::edge_descriptor;
-    using TCluster = ffnx::cluster::Cluster<std::string, std::string>;
+    using TCluster = ffnx::cluster::Cluster<FlowGraph>;
 
     auto graph = std::make_shared<FlowGraph>();
 
@@ -63,10 +63,10 @@ TEST(ClusterTests, testFullGraph)
 
 TEST(ClusterTests, testPartialGraph)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
     using TV = FlowGraph::vertex_descriptor;
     using TE = FlowGraph::edge_descriptor;
-    using TCluster = ffnx::cluster::Cluster<std::string, std::string>;
+    using TCluster = ffnx::cluster::Cluster<FlowGraph>;
 
     auto graph = std::make_shared<FlowGraph>();
 
@@ -104,10 +104,10 @@ TEST(ClusterTests, testPartialGraph)
 
 TEST(ClusterTests, testEquivalent)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
     using TV = FlowGraph::vertex_descriptor;
     using TE = FlowGraph::edge_descriptor;
-    using TCluster = ffnx::cluster::Cluster<std::string, std::string>;
+    using TCluster = ffnx::cluster::Cluster<FlowGraph>;
 
     auto graph = std::make_shared<FlowGraph>();
 
@@ -153,10 +153,10 @@ TEST(ClusterTests, testEquivalent)
 
 TEST(ClusterTests, testIncludesOther)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
     using TV = FlowGraph::vertex_descriptor;
     using TE = FlowGraph::edge_descriptor;
-    using TCluster = ffnx::cluster::Cluster<std::string, std::string>;
+    using TCluster = ffnx::cluster::Cluster<FlowGraph>;
 
     auto graph = std::make_shared<FlowGraph>();
 
@@ -243,10 +243,10 @@ TEST(ClusterTests, testIncludesOther)
 
 TEST(ClusterTests, testIncludesVertexAndEdge)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
     using TV = FlowGraph::vertex_descriptor;
     using TE = FlowGraph::edge_descriptor;
-    using TCluster = ffnx::cluster::Cluster<std::string, std::string>;
+    using TCluster = ffnx::cluster::Cluster<FlowGraph>;
 
     auto graph = std::make_shared<FlowGraph>();
 

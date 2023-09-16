@@ -1,13 +1,13 @@
 #include <boost/graph/adjacency_list.hpp>
 #include <utility>
 #include "cluster/Cluster.h"
-#include "drplan/plans/pebble_game/PebbleGame2D.h"
+#include "drplan/plans/canonical_top_down/PebbleGame2D.h"
 #include <fstream>
 #include <sstream>
 
 using PebbleGame = ffnx::pebblegame::PebbleGame2D<std::string, std::string>;
-using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
-using Cluster = ffnx::cluster::Cluster<std::string, std::string>;
+using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
+using Cluster = ffnx::cluster::Cluster<FlowGraph>;
 using PebbleTracker = ffnx::pebblegame::PebbleTracker<FlowGraph::vertex_descriptor, FlowGraph::edge_descriptor>;
 
 class GraphPropertyWriter {

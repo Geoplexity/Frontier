@@ -5,7 +5,7 @@
 
 TEST(DRPlanTest, testCreate)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
 
     auto graph = std::make_shared<FlowGraph>();
 
@@ -13,14 +13,14 @@ TEST(DRPlanTest, testCreate)
     auto v1 = graph->add_vertex();
     auto e = graph->add_edge(v0, v1);
 
-    auto cluster = ffnx::cluster::Cluster<std::string, std::string>::Builder(graph)
+    auto cluster = ffnx::cluster::Cluster<FlowGraph>::Builder(graph)
             .add_vertex(v0)
             .add_vertex(v1)
             .add_edge(e)
             .build();
 
 
-    auto builder = ffnx::drplan::DRPlan<std::string, std::string>::Builder(graph);
+    auto builder = ffnx::drplan::DRPlan<FlowGraph>::Builder(graph);
 
     auto plan = builder.build();
 
@@ -29,7 +29,7 @@ TEST(DRPlanTest, testCreate)
 
 TEST(DRPlanTest, testBasicSolutionTree)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
 
     auto graph = std::make_shared<FlowGraph>();
 
@@ -37,13 +37,13 @@ TEST(DRPlanTest, testBasicSolutionTree)
     auto v1 = graph->add_vertex();
     auto e = graph->add_edge(v0, v1);
 
-    auto cluster = ffnx::cluster::Cluster<std::string, std::string>::Builder(graph)
+    auto cluster = ffnx::cluster::Cluster<FlowGraph>::Builder(graph)
             .add_vertex(v0)
             .add_vertex(v1)
             .add_edge(e)
             .build();
 
-    auto builder = ffnx::drplan::DRPlan<std::string, std::string>::Builder(graph);
+    auto builder = ffnx::drplan::DRPlan<FlowGraph>::Builder(graph);
 
     // remove v1 from the root cluster
     auto tree_root = builder.root().lock();

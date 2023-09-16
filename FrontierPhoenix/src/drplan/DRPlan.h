@@ -12,7 +12,7 @@ namespace ffnx::drplan {
      * The plan is represented as a tree of nested clusters, containing the
      * vertices to be solved independently. The root node of the tree should be the solution root.
      */
-    template <typename TVert, typename TEdge>
+    template <typename TGraph>
     class DRPlan {
 
     private:
@@ -20,31 +20,28 @@ namespace ffnx::drplan {
         /**
          * The graph that the solution is applied to.
          */
-        std::shared_ptr<const ffnx::flowgraph::FlowGraph<TVert, TEdge>> graph;
+        std::shared_ptr<const TGraph> graph;
 
         std::shared_ptr<ffnx::tree::TreeNode<
-                ffnx::cluster::Cluster<TVert, TEdge>>> _solution_tree;
+                ffnx::cluster::Cluster<TGraph>>> _solution_tree;
 
     public:
 
         explicit DRPlan(
-                std::shared_ptr<ffnx::tree::TreeNode<ffnx::cluster::Cluster<TVert, TEdge>>> solution_tree) : _solution_tree(solution_tree) {
+                std::shared_ptr<ffnx::tree::TreeNode<ffnx::cluster::Cluster<TGraph>>> solution_tree) : _solution_tree(solution_tree) {
 
         }
 
-        const ffnx::tree::TreeNode<ffnx::cluster::Cluster<TVert, TEdge>>& solution_tree() {
+        const ffnx::tree::TreeNode<ffnx::cluster::Cluster<TGraph>>& solution_tree() {
             return *_solution_tree;
         }
 
         class Builder {
         private:
 
-            using FlowGraph = flowgraph::FlowGraph<TVert, TEdge>;
+            using cluster_t = ffnx::cluster::Cluster<TGraph>;
 
-            using graph_t = flowgraph::FlowGraph<TVert, TEdge>;
-            using cluster_t = ffnx::cluster::Cluster<TVert, TEdge>;
-
-            using graph_ptr = std::weak_ptr<const graph_t>;
+            using graph_ptr = std::weak_ptr<const TGraph>;
             using cluster_ptr = std::shared_ptr<cluster_t>;
 
             using tree_node_t = ffnx::tree::TreeNode<cluster_t>;

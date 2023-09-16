@@ -1,10 +1,10 @@
 #include <gtest/gtest.h>
 #include <boost/graph/adjacency_list.hpp>
-#include "flowgraph/FlowGraph.h"
+#include "graph/Graph.h"
 
 TEST(FlowGraphTests, testCreate)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
 
     FlowGraph graph;
 
@@ -25,7 +25,7 @@ TEST(FlowGraphTests, testCreate)
 
 TEST(FlowGraphTests, testCreateViaInstanceMethods)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
 
     FlowGraph graph;
 
@@ -46,7 +46,7 @@ TEST(FlowGraphTests, testCreateViaInstanceMethods)
 
 TEST(FlowGraphTests, testAdjacentOutVertHelper)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
 
     FlowGraph graph;
 
@@ -76,7 +76,7 @@ TEST(FlowGraphTests, testAdjacentOutVertHelper)
 
 TEST(FlowGraphTests, testAdjacentInVertHelper)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
 
     FlowGraph graph;
 
@@ -105,7 +105,7 @@ TEST(FlowGraphTests, testAdjacentInVertHelper)
 
 TEST(FlowGraphTests, testEdgeVertsHelper)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
 
     FlowGraph graph;
 

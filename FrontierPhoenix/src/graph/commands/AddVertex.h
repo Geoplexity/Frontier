@@ -1,41 +1,44 @@
 #ifndef FRONTIER_PHOENIX_FLOWGRAPH_COMMANDS_ADDVERTEX_H
 #define FRONTIER_PHOENIX_FLOWGRAPH_COMMANDS_ADDVERTEX_H
 
-#include "flowgraph/Command.h"
+#include <functional>
+#include "graph/Command.h"
 
 namespace ffnx::graph::commands {
 
-    template <typename TVD, typename TED>
-    class AddVertexCommand : public FlowGraphCommand<TVD, TED> {
+    template <typename TGraph>
+    class AddVertexCommand : public GraphCommand<TGraph> {
     private:
-        typename FlowGraph<TVD, TED>::vertex_descriptor vert_desc;
+        typename TGraph::vertex_descriptor vert_desc;
 
-        std::function<void(TVD&)> propertyInitializer;
+        using vval = TGraph::vertex_data_type;
+
+        std::function<void(vval&)> propertyInitializer;
 
     public:
 
-        AddVertexCommand() : propertyInitializer([](TVD&){}) {
+        AddVertexCommand() : propertyInitializer([](vval&){}) {
 
         }
 
-        explicit AddVertexCommand(std::function<void(TVD&)> propertyInitializer) :
+        explicit AddVertexCommand(std::function<void(vval&)> propertyInitializer) :
             propertyInitializer(propertyInitializer) {
 
         }
 
-        const typename FlowGraph<TVD, TED>::vertex_descriptor& getVertex() {
+        const typename TGraph::vertex_descriptor& getVertex() const {
             return vert_desc;
         }
 
     protected:
 
-        void applyImpl(FlowGraph<TVD, TED> &flowGraph) {
-            vert_desc = boost::add_vertex(flowGraph);
-            propertyInitializer(flowGraph[vert_desc]);
+        void applyImpl(TGraph &graph) {
+            vert_desc = boost::add_vertex(graph);
+            propertyInitializer(graph[vert_desc]);
         }
 
-        void undoImpl(FlowGraph<TVD, TED> &flowGraph) {
-            boost::remove_vertex(vert_desc, flowGraph);
+        void undoImpl(TGraph &graph) {
+            boost::remove_vertex(vert_desc, graph);
         }
     };
 

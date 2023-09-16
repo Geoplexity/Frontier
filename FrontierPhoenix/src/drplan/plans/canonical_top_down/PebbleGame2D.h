@@ -1,7 +1,7 @@
 #ifndef FRONTIER_PHOENIX_PEBBLEGAME_PEBBLEGAME2D
 #define FRONTIER_PHOENIX_PEBBLEGAME_PEBBLEGAME2D
 
-#include "flowgraph/FlowGraph.h"
+#include "graph/Graph.h"
 #include "cluster/Cluster.h"
 #include <boost/bimap.hpp>
 #include <memory>
@@ -392,17 +392,19 @@ namespace ffnx::pebblegame {
 
         using Pebble = int;
 
-        using VertDesc = typename flowgraph::FlowGraph<TV, TE>::vertex_descriptor;
-        using EdgeDesc = typename flowgraph::FlowGraph<TV, TE>::edge_descriptor;
+        using VertDesc = typename graph::FlowGraph<TV, TE>::vertex_descriptor;
+        using EdgeDesc = typename graph::FlowGraph<TV, TE>::edge_descriptor;
+
+        using Cluster = cluster::Cluster<graph::FlowGraph<TV, TE>>;
 
         /**
          * Cluster that the game is played in.
          */
-        std::weak_ptr<const cluster::Cluster<TV, TE>> cluster;
+        std::weak_ptr<const Cluster> cluster;
 
     public:
 
-        explicit PebbleGame2D(std::weak_ptr<const cluster::Cluster<TV, TE>> cluster) :
+        explicit PebbleGame2D(std::weak_ptr<const Cluster> cluster) :
             cluster(cluster) {
             
         }

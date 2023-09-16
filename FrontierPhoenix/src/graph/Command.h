@@ -1,15 +1,15 @@
 #ifndef FRONTIER_PHOENIX_FLOWGRAPH_COMMAND
 #define FRONTIER_PHOENIX_FLOWGRAPH_COMMAND
 
-#include "FlowGraph.h"
+#include "Graph.h"
 
 namespace ffnx::graph {
 
     /**
      * Represents a single mutation of the flowgraph. For example flow redistribution.
      */
-    template <typename TVertDataType, typename TEdgeDataType>
-    class FlowGraphCommand {
+    template <typename TGraph>
+    class GraphCommand {
     private:
 
         /**
@@ -25,28 +25,28 @@ namespace ffnx::graph {
          * Applies re-writing to graph according ot the command's purpose. e.g. if the command describes adding a node,
          * this function performs the operation via boost::add_vertex.
          */
-        virtual void apply(FlowGraph<TVertDataType, TEdgeDataType> &flowGraph) final {
+        virtual void apply(TGraph &graph) final {
             if (hasApplied) {
                 throw std::runtime_error("Apply already called.");
             }
 
-            applyImpl(flowGraph);
+            applyImpl(graph);
             hasApplied = true;
         }
 
         /**
          * Undo any changes caused by apply().
          */
-        virtual void undo(FlowGraph<TVertDataType, TEdgeDataType> &flowGraph) final {
+        virtual void undo(TGraph &graph) final {
             if (!hasApplied) {
                 throw std::runtime_error("No changes to undo.");
             }
 
-            undoImpl(flowGraph);
+            undoImpl(graph);
             hasApplied = false;
         }
 
-        virtual ~FlowGraphCommand() = default;
+        virtual ~GraphCommand() = default;
 
     protected:
         /**
@@ -55,7 +55,7 @@ namespace ffnx::graph {
          *
          * Implementers may throw runtime exceptions to indicate states where the command could not be carried out.
          */
-        virtual void applyImpl(FlowGraph<TVertDataType, TEdgeDataType> &flowGraph) = 0;
+        virtual void applyImpl(TGraph &graph) = 0;
 
         /**
          * Undo the changes caused by applyImpl(). Implementers may assume that applyImpl() has been called before this
@@ -63,7 +63,7 @@ namespace ffnx::graph {
          *
          * As with applyImpl(), runtime exceptions may be thrown to indicate that the command could not be undone.
          */
-        virtual void undoImpl(FlowGraph<TVertDataType, TEdgeDataType> &flowGraph) = 0;
+        virtual void undoImpl(TGraph &graph) = 0;
     };
 
 }

@@ -5,7 +5,7 @@
 
 TEST(PebbleGameTest, testCreate)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
 
     auto graph = std::make_shared<FlowGraph>();
 
@@ -13,7 +13,7 @@ TEST(PebbleGameTest, testCreate)
     auto v1 = graph->add_vertex();
     auto e = graph->add_edge(v0, v1);
 
-    std::shared_ptr<ffnx::cluster::Cluster<std::string, std::string>> cluster = ffnx::cluster::Cluster<std::string, std::string>::Builder(graph)
+    std::shared_ptr<ffnx::cluster::Cluster<FlowGraph>> cluster = ffnx::cluster::Cluster<FlowGraph>::Builder(graph)
             .add_vertex(v0)
             .add_vertex(v1)
             .add_edge(e)
@@ -24,7 +24,7 @@ TEST(PebbleGameTest, testCreate)
 
 TEST(PebbleGameTest, testRun)
 {
-    using FlowGraph = ffnx::flowgraph::FlowGraph<std::string, std::string>;
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
 
     auto graph = std::make_shared<FlowGraph>();
 
@@ -32,7 +32,7 @@ TEST(PebbleGameTest, testRun)
     auto v1 = graph->add_vertex();
     auto e = graph->add_edge(v0, v1);
 
-    std::shared_ptr<ffnx::cluster::Cluster<std::string, std::string>> cluster = ffnx::cluster::Cluster<std::string, std::string>::Builder(graph)
+    std::shared_ptr<ffnx::cluster::Cluster<FlowGraph>> cluster = ffnx::cluster::Cluster<FlowGraph>::Builder(graph)
             .add_vertex(v0)
             .add_vertex(v1)
             .add_edge(e)

@@ -6,9 +6,9 @@
 #include <memory>
 #include <utility>
 
-#include "flowgraph/Interface.h"
-#include "flowgraph/commands/AddVertex.h"
-#include "flowgraph/commands/AddEdge.h"
+#include "graph/Interface.h"
+#include "graph/commands/AddVertex.h"
+#include "graph/commands/AddEdge.h"
 
 #include "hypergraph/HyperGraph.h"
 #include "hypergraph/Annotator.h"
@@ -28,15 +28,15 @@ namespace ffnx::mapping {
         std::string label;
     };
 
-    using FlowGraph = ffnx::flowgraph::FlowGraph<SketchReference, SketchReference>;
-    using FlowGraphInterface = ffnx::flowgraph::FlowGraphInterface<SketchReference, SketchReference>;
+    using FlowGraph = ffnx::graph::FlowGraph<SketchReference, SketchReference>;
+    using FlowGraphInterface = ffnx::graph::FlowGraphInterface<SketchReference, SketchReference>;
 
     using map_out = std::unique_ptr<FlowGraphInterface>;
     using map_out_vd = FlowGraph::vertex_descriptor;
     using map_out_ed = FlowGraph::edge_descriptor;
 
-    using add_vert_cmd = ffnx::flowgraph::commands::AddVertexCommand<SketchReference, SketchReference>;
-    using add_edge_cmd = ffnx::flowgraph::commands::AddEdgeCommand<SketchReference, SketchReference>;
+    using add_vert_cmd = ffnx::graph::commands::AddVertexCommand<FlowGraph>;
+    using add_edge_cmd = ffnx::graph::commands::AddEdgeCommand<FlowGraph>;
 
     using map_in = ffnx::hypergraph::AnnotatedHypergraph<
             std::shared_ptr<ffnx::sketcher::Shape>,

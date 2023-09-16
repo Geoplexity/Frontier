@@ -1,17 +1,18 @@
 #include <gtest/gtest.h>
 #include <boost/graph/adjacency_list.hpp>
 
-#include "flowgraph/Interface.h"
-#include "flowgraph/commands/AddVertex.h"
-#include "flowgraph/commands/AddEdge.h"
+#include "graph/Interface.h"
+#include "graph/commands/AddVertex.h"
+#include "graph/commands/AddEdge.h"
 
-using namespace ffnx::flowgraph;
+using namespace ffnx::graph;
 
 TEST(InterfaceTests, testCreate)
 {
+    using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
     using Interface = FlowGraphInterface<std::string, std::string>;
-    using AddVertex = commands::AddVertexCommand<std::string, std::string>;
-    using AddEdge = commands::AddEdgeCommand<std::string, std::string>;
+    using AddVertex = commands::AddVertexCommand<FlowGraph>;
+    using AddEdge = commands::AddEdgeCommand<FlowGraph>;
 
     Interface interface;
 

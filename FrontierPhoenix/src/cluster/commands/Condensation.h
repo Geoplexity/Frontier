@@ -4,27 +4,23 @@
 #include <boost/graph/adjacency_list.hpp>
 
 #include "cluster/Cluster.h"
-#include "flowgraph/Command.h"
-#include "flowgraph/FlowGraph.h"
+#include "graph/Command.h"
+#include "graph/Graph.h"
 
 namespace ffnx::cluster::commands {
 
-    template <typename TV, typename TE>
-    using FlowGraph = ffnx::flowgraph::FlowGraph<TV, TE>;
-
-    template <typename TV, typename TE>
-    using VertDesc = typename boost::graph_traits<FlowGraph<TV, TE>>::vertex_descriptor;
-
-    template <typename TV, typename TE>
-    using EdgeDesc = typename boost::graph_traits<FlowGraph<TV, TE>>::edge_descriptor;
-
-    template <typename TV, typename TE>
-    class Condensation : public ffnx::flowgraph::FlowGraphCommand<TV, TE> {
+    template <typename Graph>
+    class Condensation : public ffnx::graph::GraphCommand<Graph> {
     private:
-        ffnx::cluster::Cluster<TV, TE> cluster;
+
+        using VertDesc = Graph::vertex_descriptor;
+
+        using EdgeDesc = Graph::edge_descriptor;
+
+        ffnx::cluster::Cluster<Graph> cluster;
 
     public:
-        Condensation(const ffnx::cluster::Cluster<TV, TE>& cluster) : cluster(cluster) {
+        Condensation(const ffnx::cluster::Cluster<Graph>& cluster) : cluster(cluster) {
 
         }
 
@@ -34,14 +30,14 @@ namespace ffnx::cluster::commands {
          * Removes all TV, TE from the graph, replacing them with a single condensed TV. Edges incident to vertices
          * outside the cluster are merged.
          */
-        void applyImpl(FlowGraph<TV, TE> &graph) {
+        void applyImpl(Graph &graph) {
             // edges must be added to represent the connections to the cluster that were eliminated
-            std::set<VertDesc<TV, TE>> externalSources;
-            std::set<VertDesc<TV, TE>> externalTargets;
+            std::set<VertDesc> externalSources;
+            std::set<VertDesc> externalTargets;
 
-            for (const EdgeDesc<TV, TE>& e: cluster.getEdges()) {
-                VertDesc<TV, TE> source = boost::source(e, graph);
-                VertDesc<TV, TE> target = boost::target(e, graph);
+            for (const EdgeDesc& e: cluster.getEdges()) {
+                VertDesc source = boost::source(e, graph);
+                VertDesc target = boost::target(e, graph);
 
                 // todo:: copy edge properties!
                 if (cluster.getVertices().find(source) != decltype(cluster.getVertices())::end) {
@@ -53,7 +49,7 @@ namespace ffnx::cluster::commands {
                 }
             }
 
-            typename boost::graph_traits<FlowGraph<TV, TE>>::vertex_iterator vi, vi_end, next;
+            typename boost::graph_traits<Graph>::vertex_iterator vi, vi_end, next;
             boost::tie(vi, vi_end, next) = boost::vertices(graph);
             for (next = vi; vi != vi_end; vi = next) {
                 next++;
@@ -61,7 +57,7 @@ namespace ffnx::cluster::commands {
             }
         }
 
-        void undoImpl(FlowGraph<TV, TE> &flowGraph) {
+        void undoImpl(Graph &flowGraph) {
 
         }
     };
