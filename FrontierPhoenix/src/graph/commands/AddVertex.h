@@ -3,7 +3,7 @@
 
 #include "flowgraph/Command.h"
 
-namespace ffnx::flowgraph::commands {
+namespace ffnx::graph::commands {
 
     template <typename TVD, typename TED>
     class AddVertexCommand : public FlowGraphCommand<TVD, TED> {

@@ -5,7 +5,7 @@
 
 #include <exception>
 
-namespace ffnx::flowgraph::commands {
+namespace ffnx::graph::commands {
 
     template <typename TVD, typename TED>
     class AddEdgeCommand : public FlowGraphCommand<TVD, TED> {

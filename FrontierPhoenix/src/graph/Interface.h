@@ -1,17 +1,17 @@
 #ifndef FRONTIER_PHOENIX_FLOWGRAPH_INTERFACE_H
 #define FRONTIER_PHOENIX_FLOWGRAPH_INTERFACE_H
 
-#include "FlowGraph.h"
+#include "Graph.h"
 #include "Command.h"
 
-namespace ffnx::flowgraph {
+namespace ffnx::graph {
 
     template <typename TVertDataType, typename TEdgeDataType>
-    class FlowGraphInterface {
+    class GraphInterface {
     private:
-        FlowGraph<TVertDataType, TEdgeDataType> flowGraph;
+        Graph<TVertDataType, TEdgeDataType> flowGraph;
 
-        using cmd_ptr = std::shared_ptr<FlowGraphCommand<TVertDataType, TEdgeDataType>>;
+        using cmd_ptr = std::shared_ptr<GraphCommand<TVertDataType, TEdgeDataType>>;
 
         std::vector<cmd_ptr> commandStack;
         std::set<cmd_ptr> commandSet;
@@ -21,7 +21,7 @@ namespace ffnx::flowgraph {
         /**
          * @return const ref to graph for interrogation.
          */
-        const FlowGraph<TVertDataType, TEdgeDataType>& graph() {
+        const Graph<TVertDataType, TEdgeDataType>& graph() {
             return flowGraph;
         }
 
@@ -31,7 +31,7 @@ namespace ffnx::flowgraph {
          */
         template <typename TCmd>
         TCmd applyCommand(TCmd cmd) {
-            auto abs_ptr = std::static_pointer_cast<FlowGraphCommand<TVertDataType, TEdgeDataType>>(cmd);
+            auto abs_ptr = std::static_pointer_cast<GraphCommand<TVertDataType, TEdgeDataType>>(cmd);
 
             if (commandSet.contains(abs_ptr)) {
                 throw std::runtime_error("Command has already been applied to this stack.");

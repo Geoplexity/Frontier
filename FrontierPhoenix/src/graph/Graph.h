@@ -1,5 +1,5 @@
-#ifndef FRONTIER_PHOENIX_FLOWGRAPH_BOOSTDEF_H
-#define FRONTIER_PHOENIX_FLOWGRAPH_BOOSTDEF_H
+#ifndef FRONTIER_PHOENIX_GRAPH_BOOSTDEF_H
+#define FRONTIER_PHOENIX_GRAPH_BOOSTDEF_H
 
 #include <iostream>
 #include <boost/config.hpp>
@@ -7,23 +7,22 @@
 #include <boost/graph/graphviz.hpp>
 #include <boost/graph/copy.hpp>
 
-namespace ffnx::flowgraph {
+namespace ffnx::graph {
 
     using GVizAttrs = std::map<std::string, std::string>;
 
     using boost::listS;
     using boost::vecS;
+
     using boost::directedS;
-
-    // while the intended use of a flow graph is not bidirectional,
-    // this is useful for determining the incoming edges to a vertex
     using boost::bidirectionalS;
+    using boost::undirectedS;
 
-    template <typename TVertexDataType, typename TEdgeDataType>
-    using flow_graph_boost_def = boost::adjacency_list<
+    template <typename TVertexDataType, typename TEdgeDataType, typename directedType>
+    using graph_boost_def = boost::adjacency_list<
             vecS, // OutEdgeListS
             vecS, // VertexListS
-            bidirectionalS, // directed/undirected
+            directedType, // directed/undirected
 
             // vertex properties
             boost::property<
@@ -53,8 +52,8 @@ namespace ffnx::flowgraph {
     >;
 
 
-    template <typename TVertexDataType, typename TEdgeDataType>
-    class FlowGraph : public flow_graph_boost_def<TVertexDataType, TEdgeDataType> {
+    template <typename TVertexDataType, typename TEdgeDataType, typename directedType>
+    class Graph : public flow_graph_boost_def<TVertexDataType, TEdgeDataType, directedType> {
     public:
 
         using traits = typename boost::graph_traits<flow_graph_boost_def<TVertexDataType, TEdgeDataType>>;
@@ -130,7 +129,6 @@ namespace ffnx::flowgraph {
             return std::make_pair(source, target);
         }
     };
-
 }
 
 #endif

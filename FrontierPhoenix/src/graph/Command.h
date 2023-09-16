@@ -3,7 +3,7 @@
 
 #include "FlowGraph.h"
 
-namespace ffnx::flowgraph {
+namespace ffnx::graph {
 
     /**
      * Represents a single mutation of the flowgraph. For example flow redistribution.
