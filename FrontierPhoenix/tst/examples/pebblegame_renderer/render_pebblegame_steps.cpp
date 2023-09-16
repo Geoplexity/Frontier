@@ -41,14 +41,24 @@ public:
         out << "label=\"" << label << "\"";
     }
 
-    void output_pebbles(std::ostream& out, const int& pebble_count) {
-        out << "xlabel=\"";
+    void output_pebbles(std::ostream& out, const std::vector<int>& pebbles) {
+        out << "xlabel=<";
 
-        for (int i = 0; i < pebble_count; i++) {
-            out << "⬤";
+        std::string open_highlight = R"(<FONT COLOR="RED">)";
+        std::string close_highlight = "</FONT>";
+
+        for (const auto &p : pebbles) {
+            if (pebble_applies_to_move(p)) {
+                out << open_highlight;
+                out << " " << p << " ";
+                out << close_highlight;
+            } else {
+                out << " " << p << " ";
+                //out << "⬤";
+            }
         }
 
-        out << "\"";
+        out << ">";
     }
 
     void operator()(std::ostream& out, const FlowGraph::vertex_descriptor & v) {
@@ -58,7 +68,9 @@ public:
 
         if (tracker != nullptr && cluster->includes_vertex(v)) {
             out << ",";
-            output_pebbles(out, tracker->pebbles_on_vertex(v));
+            std::vector<int> pebbles;
+            tracker->pebbles_on_vertex(v, pebbles);
+            output_pebbles(out, pebbles);
             out << ", color=blue";
         }
 
@@ -72,39 +84,51 @@ public:
 
         if (tracker != nullptr && cluster->includes_edge(v)) {
             out << ",";
-            output_pebbles(out, tracker->pebbles_on_edge(v));
+            std::vector<int> pebbles;
+            tracker->pebbles_on_edge(v, pebbles);
+            output_pebbles(out, pebbles);
             out << ", color=blue";
         }
 
         out << "]";
     }
+
+private:
+    [[nodiscard]] bool pebble_applies_to_move(const int& pebble_id) const {
+        for (const auto &m : *moves) {
+            if (m.pebble_id() == pebble_id) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 };
 
-int main() {
+std::unique_ptr<FlowGraph> load_graph(const std::string& path) {
+    std::cout << "Reading input file: " << path;
 
-    auto graph = std::make_shared<FlowGraph>();
+    std::ifstream dot_file(path);
 
-    auto v0 = graph->add_vertex();
-    auto v1 = graph->add_vertex();
-    auto v2 = graph->add_vertex();
-    auto v3 = graph->add_vertex();
-    auto v4 = graph->add_vertex();
-    auto v5 = graph->add_vertex();
+    auto result = std::make_unique<FlowGraph>();
 
+    boost::dynamic_properties dp(boost::ignore_other_properties);
 
-    auto e = graph->add_edge(v0, v1);
-    graph->add_edge(v1, v2);
-    graph->add_edge(v1, v3);
+    boost::read_graphviz(dot_file, *result, dp);
 
-    graph->add_edge(v3, v4);
-    graph->add_edge(v3, v5);
+    dot_file.close();
 
-    //std::shared_ptr<ffnx::cluster::Cluster<std::string, std::string>> cluster = ffnx::cluster::Cluster<std::string, std::string>::Builder(graph)
-    //        .add_vertex(v0)
-    //        .add_vertex(v1)
-    //        .add_edge(e)
-    //        .build();
-    auto cluster = Cluster::Builder::of_graph(graph)->get_vert_filtered_cluster([&v0](const auto &v){ return v != v0; });
+    return result;
+}
+
+int main(int argc, char* argv[]) {
+    if (argc != 2) {
+        throw std::runtime_error("Expected single argument: path to dot file for graph.");
+    }
+
+    std::shared_ptr<FlowGraph> graph = load_graph(argv[1]);
+
+    auto cluster = Cluster::Builder::of_graph(graph);
 
     auto game = std::make_shared<PebbleGame>(cluster);
 
@@ -113,6 +137,9 @@ int main() {
     GraphPropertyWriter graph_property_writer;
 
     auto result = game->run([&graph_property_writer, &step, &graph, &cluster](const auto &evt, const auto& tracker){
+
+        std::cout << evt.size() << std::endl;
+
         std::stringstream ss;
         ss << "g" << step << ".dot";
         std::ofstream graph_file;
