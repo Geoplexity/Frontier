@@ -75,27 +75,27 @@ namespace ffnx::pebblegame {
                 return result;
             }
 
-            int pebble_id() {
+            [[nodiscard]] int pebble_id() const {
                 return _pebble_id;
             }
 
-            bool is_pebble_placed() {
+            [[nodiscard]] bool is_pebble_placed() const {
                 return _is_placed;
             }
 
-            bool is_pebble_removed() {
+            [[nodiscard]] bool is_pebble_removed() const {
                 return !_is_placed;
             }
 
-            bool applies_to_vertex() {
+            [[nodiscard]] bool applies_to_vertex() const {
                 return _vertex.has_value();
             }
 
-            bool applies_to_edge() {
+            [[nodiscard]] bool applies_to_edge() const {
                 return _edge.has_value();
             }
 
-            TVert get_vertex() {
+            [[nodiscard]] TVert get_vertex() const {
                 if (!_vertex.has_value()) {
                     throw std::runtime_error("This event is edge-based, use get_edge to get the applicable edge.");
                 }
@@ -103,7 +103,7 @@ namespace ffnx::pebblegame {
                 return _vertex.value();
             }
 
-            TEdge get_edge() {
+            [[nodiscard]] TEdge get_edge() const {
                 if (!_edge.has_value()) {
                     throw std::runtime_error("This event is vertex-based, use get_vertex to get the applicable vertex.");
                 }
@@ -203,11 +203,21 @@ namespace ffnx::pebblegame {
             return pebble_to_vert;
         }
 
-        const std::map<int, TVert>& edge_pebbles() const {
+        const std::map<int, TEdge>& edge_pebbles() const {
             return pebble_to_edge;
         }
 
-        int pebbles_on_vertex(const TVert& vert) const {
+        void pebbles_on_vertex(const TVert& v, std::vector<int>& output) const {
+            if (!vert_to_pebbles.contains(v)) {
+                return;
+            }
+
+            for (const auto &i : vert_to_pebbles.at(v)) {
+                output.push_back(i);
+            }
+        }
+
+        int pebble_count_on_vertex(const TVert& vert) const {
             if (!vert_to_pebbles.contains(vert)) {
                 return 0;
             } else {
@@ -215,7 +225,17 @@ namespace ffnx::pebblegame {
             }
         }
 
-        int pebbles_on_edge(const TEdge& edge) const {
+        void pebbles_on_edge(const TEdge& e, std::vector<int>& output) const {
+            if (!edge_to_pebbles.contains(e)) {
+                return;
+            }
+
+            for (const auto &i : edge_to_pebbles.at(e)) {
+                output.push_back(i);
+            }
+        }
+
+        int pebble_count_on_edge(const TEdge& edge) const {
             if (!edge_to_pebbles.contains(edge)) {
                 return 0;
             } else {
@@ -224,11 +244,11 @@ namespace ffnx::pebblegame {
         }
 
         bool is_vertex_saturated(const TVert& vert) const {
-            return pebbles_on_vertex(vert) == _vertex_capacity;
+            return pebble_count_on_vertex(vert) == _vertex_capacity;
         }
 
         bool is_edge_saturated(const TEdge& edge) const {
-            return pebbles_on_edge(edge) == _edge_capacity;
+            return pebble_count_on_edge(edge) == _edge_capacity;
         }
 
         /**
@@ -243,12 +263,12 @@ namespace ffnx::pebblegame {
         void transfer_vert_pebble_to_edge(const TVert& vert, const TEdge& edge) {
             assert_no_pending_events();
 
-            int vert_pebble_count = pebbles_on_vertex(vert);
+            int vert_pebble_count = pebble_count_on_vertex(vert);
             if (vert_pebble_count == 0) {
                 throw std::runtime_error("Specified vertex does not have any pebbles placed.");
             }
 
-            int edge_pebble_count = pebbles_on_edge(edge);
+            int edge_pebble_count = pebble_count_on_edge(edge);
             if (edge_pebble_count > this->_edge_capacity) {
                 throw std::runtime_error("Internal Error: edge has exceeded capacity.");
             } else if (edge_pebble_count == this->_edge_capacity) {
@@ -270,7 +290,7 @@ namespace ffnx::pebblegame {
          */
         void place_vert_pebble(const int& pebble, const TVert& vert) {
             assert_pebble_unplaced(pebble);
-            if (pebbles_on_vertex(vert) == _vertex_capacity) {
+            if (pebble_count_on_vertex(vert) == _vertex_capacity) {
                 throw std::runtime_error("Vert already has maximum capacity");
             }
 
@@ -288,7 +308,7 @@ namespace ffnx::pebblegame {
          */
         void place_edge_pebble(const int& pebble, const TEdge& edge) {
             assert_pebble_unplaced(pebble);
-            if (pebbles_on_edge(edge) == _edge_capacity) {
+            if (pebble_count_on_edge(edge) == _edge_capacity) {
                 throw std::runtime_error("Edge already has maximum capacity");
             }
 
@@ -312,7 +332,7 @@ namespace ffnx::pebblegame {
 
                 pebble_to_vert.erase(pebble);
 
-                vert_to_pebbles[vert].erase(vert);
+                vert_to_pebbles[vert].erase(pebble);
 
                 event_queue.push_back(PebbleMovement::for_vertex(vert, false, pebble));
             } else {
@@ -477,8 +497,8 @@ namespace ffnx::pebblegame {
             auto v0 = v0_v1.first;
             auto v1 = v0_v1.second;
 
-            auto vertex_pebble_count = pebble_tracker.pebbles_on_vertex(v0);
-            auto edge_pebble_count = pebble_tracker.pebbles_on_edge(edge);
+            auto vertex_pebble_count = pebble_tracker.pebble_count_on_vertex(v0);
+            auto edge_pebble_count = pebble_tracker.pebble_count_on_edge(edge);
 
             if (vertex_pebble_count > 0) {
                 pebble_tracker.transfer_vert_pebble_to_edge(v0, edge);
@@ -489,8 +509,8 @@ namespace ffnx::pebblegame {
                 bool path_found = reverse_edge_search(
                         path,
                         v0,
-                        [&pebble_tracker](const auto& e){ return pebble_tracker.pebbles_on_edge(e) > 0; },
-                        [&pebble_tracker](const auto& v){ return pebble_tracker.pebbles_on_vertex(v) > 0; });
+                        [&pebble_tracker](const auto& e){ return pebble_tracker.pebble_count_on_edge(e) > 0; },
+                        [&pebble_tracker](const auto& v){ return pebble_tracker.pebble_count_on_vertex(v) > 0; });
 
                 if (path_found) {
                     pebble_tracker.transfer_vert_pebble_to_edge(path[0], edge);
