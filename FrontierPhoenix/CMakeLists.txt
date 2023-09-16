@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(boost_graph_test)
+project(FrontierPhoenix)
 
 set(CMAKE_CXX_STANDARD 20)
 

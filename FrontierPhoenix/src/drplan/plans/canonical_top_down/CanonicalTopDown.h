@@ -5,7 +5,7 @@
 #include "drplan/DRPlanner.h"
 #include "cluster/Cluster.h"
 #include "tree/TreeNode.h"
-#include "drplan/plans/pebble_game/PebbleGame2D.h"
+#include "drplan/plans/canonical_top_down/PebbleGame2D.h"
 
 namespace ffnx::drplan {
 
@@ -27,7 +27,7 @@ namespace ffnx::drplan {
             // starts with root solution tree node: full graph (verts and edges)
             auto result = DRPlan<TVert, TEdge>::Builder(graph);
 
-            for (const auto &e : graph_interface.graph()->edges()) {
+            for (const auto &e : graph.graph()->edges()) {
 
                 // constructs a sub_cluster (root cluster minus a single edge)
                 auto sub_cluster = result.root().lock()->get_edge_filtered_cluster([&e](const auto &e_excluded){
@@ -39,6 +39,9 @@ namespace ffnx::drplan {
 
                 auto game_result = ffnx::pebblegame::PebbleGame2D<VertDesc, EdgeDesc>(sub_cluster).run();
 
+                if (game_result->is_rigid()) {
+
+                }
             }
 
 

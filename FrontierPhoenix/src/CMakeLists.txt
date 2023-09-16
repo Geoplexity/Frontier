@@ -12,7 +12,7 @@ add_library(frontier-phoenix SHARED
         cluster/commands/Condensation.cpp
         drplan/DRPlanner.h
         drplan/DRPlan.h
-        drplan/plans/CanonicalTopDown.h
+        drplan/plans/canonical_top_down/CanonicalTopDown.h
         tree/TreeNode.h)
 
 target_include_directories(frontier-phoenix PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

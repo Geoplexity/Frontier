@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <boost/graph/adjacency_list.hpp>
 #include "cluster/Cluster.h"
-#include "drplan/plans/pebble_game/PebbleGame2D.h"
+#include "drplan/plans/canonical_top_down/PebbleGame2D.h"
 
 TEST(PebbleGameTest, testCreate)
 {

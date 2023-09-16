@@ -2,7 +2,7 @@
 #include <boost/graph/adjacency_list.hpp>
 #include "cluster/Cluster.h"
 
-#include "drplan/plans/pebble_game/PebbleGame2D.h"
+#include "drplan/plans/canonical_top_down/PebbleGame2D.h"
 
 using namespace ffnx::pebblegame;
 
