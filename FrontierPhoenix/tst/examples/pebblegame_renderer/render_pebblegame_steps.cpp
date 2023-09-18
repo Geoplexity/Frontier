@@ -5,35 +5,52 @@
 #include <fstream>
 #include <sstream>
 
-using PebbleGame = ffnx::pebblegame::PebbleGame2D<std::string, std::string>;
-using FlowGraph = ffnx::graph::FlowGraph<std::string, std::string>;
-using Cluster = ffnx::cluster::Cluster<FlowGraph>;
-using PebbleTracker = ffnx::pebblegame::PebbleTracker<FlowGraph::vertex_descriptor, FlowGraph::edge_descriptor>;
+struct VertProps {
+    std::string label;
+    std::string height;
+    std::string pos;
+    std::string width;
+};
+
+struct EdgeProps {
+    std::string label;
+    std::string pos;
+};
+
+using UndirectedGraph = ffnx::graph::UndirectedGraph<VertProps, EdgeProps>;
+using PebbleGame = ffnx::pebblegame::PebbleGame2D<UndirectedGraph>;
+using PebbleGameGraph = ffnx::pebblegame::PebbleGameGraph<UndirectedGraph>;
+using Cluster = ffnx::cluster::Cluster<UndirectedGraph>;
 
 class GraphPropertyWriter {
+private:
+    int step;
+
 public:
+    GraphPropertyWriter(const int& step) : step(step) {
+
+    }
+
     void operator()(std::ostream& out) const {
-        out << R"(graph [pad="0.5", nodesep="1", ranksep="1"])" << std::endl;
+        out << R"(graph [pad="0.5", nodesep="1", ranksep="1", label=)" << std::endl;
+        out << "\"step " << step << "\"]";
     }
 };
 
 class VertEdgeWriter {
 private:
-    std::shared_ptr<FlowGraph> graph;
+    std::shared_ptr<UndirectedGraph> graph;
     std::shared_ptr<Cluster> cluster;
-    const PebbleTracker* tracker;
-    const std::vector<PebbleTracker::PebbleMovement>* moves;
+    std::shared_ptr<PebbleGame> game;
 
 public:
     VertEdgeWriter(
-            std::shared_ptr<FlowGraph> graph,
+            std::shared_ptr<UndirectedGraph> graph,
             std::shared_ptr<Cluster> cluster,
-            const PebbleTracker* tracker,
-            const std::vector<PebbleTracker::PebbleMovement>* moves) :
+            std::shared_ptr<PebbleGame> game) :
                 graph(std::move(graph)),
-                cluster(cluster),
-                tracker(tracker),
-                moves(moves) {
+                cluster(std::move(cluster)),
+                game(std::move(game)) {
 
     }
 
@@ -41,78 +58,78 @@ public:
         out << "label=\"" << label << "\"";
     }
 
-    void output_pebbles(std::ostream& out, const std::vector<int>& pebbles) {
+    void output_pebbles(std::ostream& out, const std::set<int>& pebbles) {
         out << "xlabel=<";
 
         std::string open_highlight = R"(<FONT COLOR="RED">)";
         std::string close_highlight = "</FONT>";
 
         for (const auto &p : pebbles) {
-            if (pebble_applies_to_move(p)) {
+            if (false) {
                 out << open_highlight;
                 out << " " << p << " ";
                 out << close_highlight;
             } else {
-                out << " " << p << " ";
-                //out << "⬤";
+                //out << " " << p << " ";
+                out << "⬤";
             }
         }
 
         out << ">";
     }
 
-    void operator()(std::ostream& out, const FlowGraph::vertex_descriptor & v) {
-        std::string name = (*graph)[v];
+    void operator()(std::ostream& out, const PebbleGameGraph::InternalGraph::vertex_descriptor & v) {
+        auto ext_e = game->get_game_graph().external_vert(v);
+        std::string name = (*graph)[ext_e].label;
         out << "[";
         output_label(out, name);
+        out << ",height=" << (*graph)[ext_e].height;
+        out << ",pos=\"" << (*graph)[ext_e].pos << "\"";
+        out << ",width=" << (*graph)[ext_e].width;
 
-        if (tracker != nullptr && cluster->includes_vertex(v)) {
+        if (cluster->includes_vertex(ext_e)) {
             out << ",";
-            std::vector<int> pebbles;
-            tracker->pebbles_on_vertex(v, pebbles);
-            output_pebbles(out, pebbles);
-            out << ", color=blue";
+            output_pebbles(out, game->get_game_graph().get_vert_pebbles(v).pebbles());
+            out << "";
         }
 
         out << "]";
     }
 
-    void operator()(std::ostream& out, const FlowGraph::edge_descriptor & v) {
-        std::string name = (*graph)[v];
+    void operator()(std::ostream& out, const PebbleGameGraph::InternalGraph::edge_descriptor & v) {
+        auto ext_e = game->get_game_graph().external_edge(v);
+
+        std::string name = (*graph)[ext_e].label;
         out << "[";
         output_label(out, name);
 
-        if (tracker != nullptr && cluster->includes_edge(v)) {
+        if (cluster->includes_edge(ext_e)) {
             out << ",";
-            std::vector<int> pebbles;
-            tracker->pebbles_on_edge(v, pebbles);
-            output_pebbles(out, pebbles);
-            out << ", color=blue";
+            output_pebbles(out, game->get_game_graph().get_edge_pebbles(v).pebbles());
+            out << "";
         }
 
         out << "]";
     }
 
 private:
-    [[nodiscard]] bool pebble_applies_to_move(const int& pebble_id) const {
-        for (const auto &m : *moves) {
-            if (m.pebble_id() == pebble_id) {
-                return true;
-            }
-        }
-
-        return false;
-    }
 };
 
-std::unique_ptr<FlowGraph> load_graph(const std::string& path) {
+std::unique_ptr<UndirectedGraph> load_graph(const std::string& path) {
     std::cout << "Reading input file: " << path;
 
     std::ifstream dot_file(path);
 
-    auto result = std::make_unique<FlowGraph>();
+    auto result = std::make_unique<UndirectedGraph>();
 
     boost::dynamic_properties dp(boost::ignore_other_properties);
+    dp.property("node_id", boost::get(&VertProps::label, *result));
+    dp.property("height", boost::get(&VertProps::height, *result));
+    dp.property("pos", boost::get(&VertProps::pos, *result));
+    dp.property("width", boost::get(&VertProps::width, *result));
+
+    dp.property("node_id", boost::get(&EdgeProps::label, *result));
+    dp.property("pos", boost::get(&EdgeProps::pos, *result));
 
     boost::read_graphviz(dot_file, *result, dp);
 
@@ -126,31 +143,43 @@ int main(int argc, char* argv[]) {
         throw std::runtime_error("Expected single argument: path to dot file for graph.");
     }
 
-    std::shared_ptr<FlowGraph> graph = load_graph(argv[1]);
-
+    std::shared_ptr<UndirectedGraph> graph = load_graph(argv[1]);
     auto cluster = Cluster::Builder::of_graph(graph);
+
+    auto v = *(graph->vertices().begin());
+    std::cout << "Vertex attributes for vertex" << std::endl;
+    std::map<std::string, std::string> v_attr = boost::get(boost::vertex_attribute_t::vertex_attribute, *graph)[v];
+    for (const auto& kv : v_attr) {
+        std::cout << kv.first << ", " << kv.second << std::endl;
+    }
 
     auto game = std::make_shared<PebbleGame>(cluster);
 
     int step = 0;
 
-    GraphPropertyWriter graph_property_writer;
+    game->run([&step, &graph, &cluster, &game](){
+        if (step > 10) {
+            // prevent runaway loop
+            return false;
+        }
 
-    auto result = game->run([&graph_property_writer, &step, &graph, &cluster](const auto &evt, const auto& tracker){
-
-        std::cout << evt.size() << std::endl;
+        std::cout << "STEP" << std::endl;
 
         std::stringstream ss;
-        ss << "g" << step << ".dot";
+        ss << "g" << (step < 10 ? "0" : "") << step << ".dot";
         std::ofstream graph_file;
         graph_file.open(ss.str());
 
-        auto ve_writer = std::make_shared<VertEdgeWriter>(graph, cluster, &tracker, &evt);
+        auto ve_writer = std::make_shared<VertEdgeWriter>(graph, cluster, game);
 
-        boost::write_graphviz(graph_file, *graph, *ve_writer, *ve_writer, graph_property_writer);
+        GraphPropertyWriter graph_property_writer(step);
+
+
+        boost::write_graphviz(graph_file, game->get_game_graph().graph(), *ve_writer, *ve_writer, graph_property_writer);
         graph_file.close();
 
         step++;
+        return true;
     });
 
 

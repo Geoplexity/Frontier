@@ -62,6 +62,9 @@ namespace ffnx::graph {
         using vdesc = typename traits::vertex_descriptor;
         using edesc = typename traits::edge_descriptor;
 
+        template<typename new_directionality>
+        using with_different_directionality = Graph<TVertexDataType, TEdgeDataType, new_directionality>;
+
         std::unique_ptr<const Graph<TVertexDataType, TEdgeDataType, directedType>> create_immutable_copy() const {
             auto result = std::make_unique<const Graph<TVertexDataType, TEdgeDataType, directedType>>();
 
@@ -130,6 +133,27 @@ namespace ffnx::graph {
             vdesc target = boost::target(edge, *this);
             return std::make_pair(source, target);
         }
+    };
+
+    template <typename TVertexDataType, typename TEdgeDataType>
+    class UndirectedGraph : public Graph<TVertexDataType, TEdgeDataType, undirectedS> {
+    public:
+        using directionality = boost::undirectedS;
+
+    };
+
+    template <typename TVertexDataType, typename TEdgeDataType>
+    class DirectedGraph : public Graph<TVertexDataType, TEdgeDataType, directedS> {
+    public:
+        using directionality = boost::directedS;
+
+    };
+
+    template <typename TVertexDataType, typename TEdgeDataType>
+    class BidirectionalGraph : public Graph<TVertexDataType, TEdgeDataType, bidirectionalS> {
+    public:
+        using directionality = boost::bidirectionalS;
+
     };
 
     template <typename TVertexDataType, typename TEdgeDataType>

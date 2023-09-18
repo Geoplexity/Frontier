@@ -19,7 +19,7 @@ TEST(PebbleGameTest, testCreate)
             .add_edge(e)
             .build();
 
-    auto pebblegame = ffnx::pebblegame::PebbleGame2D<std::string, std::string>(cluster);
+    auto pebblegame = ffnx::pebblegame::PebbleGame2D<FlowGraph>(cluster);
 }
 
 TEST(PebbleGameTest, testRun)
@@ -38,6 +38,6 @@ TEST(PebbleGameTest, testRun)
             .add_edge(e)
             .build();
 
-    auto game = ffnx::pebblegame::PebbleGame2D<std::string, std::string>(cluster);
-    auto result = game.run([](const auto &evt, const auto& t){});
+    auto game = ffnx::pebblegame::PebbleGame2D<FlowGraph>(cluster);
+    game.run([](){ return false; });
 }

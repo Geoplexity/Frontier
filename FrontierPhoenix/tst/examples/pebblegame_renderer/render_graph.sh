@@ -10,7 +10,7 @@ rm -f *.png
 
 
 for f in $graphs; do
-  dot $f -Tpng -o ${f}.png
+  neato $f -n2 -Tpng -o ${f}.png
 done
 
 

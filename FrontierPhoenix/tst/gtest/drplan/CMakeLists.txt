@@ -1,6 +1,5 @@
 add_executable(
         ffnx_DRPlanTests
-        PebbleTrackerTest.cpp
         PebbleGameTest.cpp
         DRPlanTest.cpp)
 
