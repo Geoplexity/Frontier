@@ -8,22 +8,25 @@ namespace ffnx::pebblegame {
 /**
  * Maintains an association between pebbles and an arbitrary data type.
  */
+
+    using PebbleStack = std::vector<int>;
+
     class PebbleMapping {
     private:
         int capacity;
 
-        std::set<int> _pebbles;
+        PebbleStack _pebbles;
 
     public:
         explicit PebbleMapping(const int &capacity) : capacity(capacity) {
 
         }
 
-        [[nodiscard]] const std::set<int> &pebbles() const {
+        [[nodiscard]] const PebbleStack &pebbles() const {
             return _pebbles;
         }
 
-        void take_pebble(std::set<int> &free_pebbles) {
+        void take_pebble(PebbleStack &free_pebbles) {
             if (_pebbles.size() == capacity) {
                 throw std::runtime_error("Already saturated with pebbles.");
             }
@@ -32,29 +35,20 @@ namespace ffnx::pebblegame {
                 throw std::runtime_error("No free pebbles to take.");
             }
 
-            int pebble = *free_pebbles.begin();
-
-            if (_pebbles.contains(pebble)) {
-                throw std::runtime_error("Duplicate pebble!");
-            }
-
-            free_pebbles.erase(pebble);
-            _pebbles.insert(pebble);
+            int pebble = free_pebbles.back();
+            free_pebbles.pop_back();
+            _pebbles.push_back(pebble);
         }
 
-        void give_pebble(std::set<int> &free_pebbles) {
+        void give_pebble(PebbleStack &free_pebbles) {
             if (_pebbles.empty()) {
                 throw std::runtime_error("No pebbles to give.");
             }
 
-            int pebble_to_give = *_pebbles.begin();
+            int pebble_to_give = _pebbles.back();
+            _pebbles.pop_back();
 
-            if (free_pebbles.contains(pebble_to_give)) {
-                throw std::runtime_error("Duplicate pebble!");
-            }
-
-            _pebbles.erase(pebble_to_give);
-            free_pebbles.insert(pebble_to_give);
+            free_pebbles.push_back(pebble_to_give);
         }
 
         void transfer_pebble(PebbleMapping &other) {
@@ -120,6 +114,10 @@ namespace ffnx::pebblegame {
             return vertex_pebbles.at(v);
         }
 
+        int get_vert_pebble_count(const ext_vert &v) const {
+            return vertex_pebbles.at(internal_vert(v)).pebbles().size();
+        }
+
         const PebbleMapping &get_edge_pebbles(const int_edge &e) const {
             if (!edge_pebbles.contains(e)) {
                 throw std::runtime_error("Edge not associated");
@@ -128,23 +126,27 @@ namespace ffnx::pebblegame {
             return edge_pebbles.at(e);
         }
 
-        void place_pebble(std::set<int> &free_pebbles, const ext_vert &v) {
+        int get_edge_pebble_count(const ext_edge &e) const {
+            return edge_pebbles.at(internal_edge(e)).pebbles().size();
+        }
+
+        void place_pebble(PebbleStack &free_pebbles, const ext_vert &v) {
             assert_vertex_associated(v);
             vertex_pebbles.at(internal_vert(v)).take_pebble(free_pebbles);
         }
 
-        void place_pebble(std::set<int> &free_pebbles, const ext_vert &v0, const ext_vert &v1) {
+        void place_pebble(PebbleStack &free_pebbles, const ext_vert &v0, const ext_vert &v1) {
             assert_vertex_associated(v0);
             assert_vertex_associated(v1);
             edge_pebbles.at(internal_edge(v0, v1)).take_pebble(free_pebbles);
         }
 
-        void unplace_pebble(std::set<int> &free_pebbles, const ext_vert &v) {
+        void unplace_pebble(PebbleStack &free_pebbles, const ext_vert &v) {
             assert_vertex_associated(v);
             vertex_pebbles.at(internal_vert(v)).give_pebble(free_pebbles);
         }
 
-        void unplace_pebble(std::set<int> &free_pebbles, const ext_vert &v0, const ext_vert &v1) {
+        void unplace_pebble(PebbleStack &free_pebbles, const ext_vert &v0, const ext_vert &v1) {
             assert_vertex_associated(v0);
             assert_vertex_associated(v1);
             edge_pebbles.at(internal_edge(v0, v1)).give_pebble(free_pebbles);
@@ -193,6 +195,10 @@ namespace ffnx::pebblegame {
 
             auto internal_v0 = vertex_mappings[from];
             auto internal_v1 = vertex_mappings[to];
+
+            if (internal_graph.has_edge(internal_v1, internal_v0)) {
+                throw std::runtime_error("A reverse edge is already present.");
+            }
 
             auto external_edge_desc = input_graph.lock()->edge(from, to);
 

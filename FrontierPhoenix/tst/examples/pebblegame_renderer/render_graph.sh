@@ -10,6 +10,7 @@ rm -f *.png
 
 
 for f in $graphs; do
+  echo "generating pdf for $f"
   neato $f -n2 -Tpng -o ${f}.png
 done
 
@@ -18,6 +19,8 @@ images=$(find . -name "g*.dot.png" | sort)
 
 echo $images
 
-montage *.dot.png -geometry 100x100% -frame 5 -shadow -tile x1 out.png
+echo "Creating montage"
 
-eog out.png
+montage *.dot.png -geometry 100x100% -frame 5 -shadow -tile 5x1 out.png
+
+#eog out*.png
