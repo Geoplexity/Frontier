@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
 #include <boost/graph/adjacency_list.hpp>
 
-#include "graph/Interface.h"
-#include "graph/commands/AddVertex.h"
-#include "graph/commands/AddEdge.h"
+#include "ffnx/graph/Interface.h"
+#include "ffnx/graph/commands/AddVertex.h"
+#include "ffnx/graph/commands/AddEdge.h"
 
 using namespace ffnx::graph;
 

@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include <hypergraph/sparse/Sparse.h>
+#include <ffnx/hypergraph/sparse/Sparse.h>
 #include "./utils.h"
 
 using namespace ffnx::hypergraph;

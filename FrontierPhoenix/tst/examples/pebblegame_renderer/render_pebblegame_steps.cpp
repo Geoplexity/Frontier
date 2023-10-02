@@ -1,7 +1,7 @@
 #include <boost/graph/adjacency_list.hpp>
 #include <utility>
-#include "cluster/Cluster.h"
-#include "drplan/plans/canonical_top_down/PebbleGame2D.h"
+#include "ffnx/cluster/Cluster.h"
+#include "ffnx/drplan/plans/canonical_top_down/PebbleGame2D.h"
 #include <fstream>
 #include <sstream>
 #include <iomanip>

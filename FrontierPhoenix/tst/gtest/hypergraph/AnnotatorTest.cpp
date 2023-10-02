@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include "gmock/gmock.h"
 
-#include <hypergraph/sparse/Sparse.h>
-#include <hypergraph/Annotator.h>
+#include <ffnx/hypergraph/sparse/Sparse.h>
+#include <ffnx/hypergraph/Annotator.h>
 
 #include "./utils.h"
 

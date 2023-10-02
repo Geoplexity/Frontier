@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "sketcher/sketcher.h"
+#include "ffnx/sketcher/sketcher.h"
 
 using namespace ffnx;
 

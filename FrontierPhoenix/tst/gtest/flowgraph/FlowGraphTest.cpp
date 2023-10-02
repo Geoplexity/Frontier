@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <boost/graph/adjacency_list.hpp>
-#include "graph/Graph.h"
+#include "ffnx/graph/Graph.h"
 
 TEST(FlowGraphTests, testCreate)
 {

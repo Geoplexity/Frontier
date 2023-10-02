@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <boost/graph/adjacency_list.hpp>
-#include "cluster/Cluster.h"
+#include "ffnx/cluster/Cluster.h"
 
 TEST(ClusterTests, testCreate)
 {

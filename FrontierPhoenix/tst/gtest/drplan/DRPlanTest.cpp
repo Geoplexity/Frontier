@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <boost/graph/adjacency_list.hpp>
-#include "cluster/Cluster.h"
-#include "drplan/DRPlan.h"
+#include "ffnx/cluster/Cluster.h"
+#include "ffnx/drplan/DRPlan.h"
 
 TEST(DRPlanTest, testCreate)
 {

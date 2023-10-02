@@ -1,7 +1,7 @@
 #ifndef FRONTIER_PHOENIX_TST_HYPERGRAPH_UTILS_H
 #define FRONTIER_PHOENIX_TST_HYPERGRAPH_UTILS_H
 
-#include "hypergraph/HyperGraph.h"
+#include "ffnx/hypergraph/HyperGraph.h"
 
 using namespace ffnx::hypergraph;
 

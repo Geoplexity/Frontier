@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
-#include "sketcher/sketcher.h"
-#include "mapping/hyper_to_flow/SketchMapper.h"
+#include "ffnx/sketcher/sketcher.h"
+#include "ffnx/mapping/hyper_to_flow/SketchMapper.h"
 
 using namespace ffnx;
 

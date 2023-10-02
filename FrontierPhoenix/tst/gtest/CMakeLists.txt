@@ -1,3 +1,5 @@
+enable_testing()
+
 # grab google test
 include(FetchContent)
 FetchContent_Declare(
@@ -6,8 +8,6 @@ FetchContent_Declare(
         GIT_TAG        release-1.11.0
 )
 FetchContent_MakeAvailable(googletest)
-
-enable_testing()
 
 add_subdirectory(cluster)
 add_subdirectory(flowgraph)
