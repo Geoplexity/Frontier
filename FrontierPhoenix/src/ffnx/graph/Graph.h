@@ -73,19 +73,19 @@ namespace ffnx::graph {
             return result;
         }
 
-        auto in_verts(vdesc & vert) const {
+        auto in_verts(const vdesc & vert) const {
             return boost::make_iterator_range(boost::inv_adjacent_vertices(vert, *this));
         }
 
-        auto out_verts(vdesc & vert) const {
+        auto out_verts(const vdesc & vert) const {
             return boost::make_iterator_range(boost::adjacent_vertices(vert, *this));
         }
 
-        auto in_edges(vdesc & vert) const {
+        auto in_edges(const vdesc & vert) const {
             return boost::make_iterator_range(boost::in_edges(vert, *this));
         }
 
-        auto out_edges(vdesc & vert) const {
+        auto out_edges(const vdesc & vert) const {
             return boost::make_iterator_range(boost::out_edges(vert, *this));
         }
 
@@ -112,7 +112,7 @@ namespace ffnx::graph {
             return boost::add_vertex(*this);
         }
 
-        edesc add_edge(vdesc& v0, vdesc& v1) {
+        edesc add_edge(const vdesc& v0, const vdesc& v1) {
             auto result = boost::add_edge(v0, v1, *this);
 
             auto is_successful = std::get<1>(result);
@@ -147,6 +147,40 @@ namespace ffnx::graph {
     public:
         using directionality = boost::directedS;
 
+        using vdesc = typename Graph<TVertexDataType, TEdgeDataType, directedS>::vdesc;
+        using edesc = typename Graph<TVertexDataType, TEdgeDataType, directedS>::edesc;
+
+        std::unique_ptr<std::set<vdesc>> compute_reach(const vdesc &v) {
+            auto result = std::make_unique<std::set<vdesc>>();
+
+            std::stack<vdesc> next_verts;
+            next_verts.push(v);
+
+            while (!next_verts.empty()) {
+                auto to_check = next_verts.top();
+                next_verts.pop();
+
+                result->insert(to_check);
+                compute_direct_reach(*result, next_verts, to_check);
+            }
+
+            result->erase(v);
+
+            return std::move(result);
+        }
+
+    private:
+        void compute_direct_reach(const std::set<vdesc> &visited_verts,
+                                  std::stack<vdesc>& to_explore,
+                                  const vdesc &v_from) {
+            for (const auto &e : this->out_edges(v_from)) {
+                auto next_v = this->vertices_for_edge(e).second;
+
+                if (!visited_verts.contains(next_v)) {
+                    to_explore.push(next_v);
+                }
+            }
+        }
     };
 
     template <typename TVertexDataType, typename TEdgeDataType>

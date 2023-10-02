@@ -14,7 +14,7 @@ if(NOT googletest_POPULATED)
 endif()
 
 add_subdirectory(cluster)
-add_subdirectory(flowgraph)
+add_subdirectory(graph)
 add_subdirectory(hypergraph)
 add_subdirectory(mapping)
 add_subdirectory(sketcher)
