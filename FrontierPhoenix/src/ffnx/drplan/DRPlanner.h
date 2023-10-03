@@ -1,8 +1,8 @@
 #ifndef FRONTIER_PHOENIX_DRPLAN_DRPLANNER_H
 #define FRONTIER_PHOENIX_DRPLAN_DRPLANNER_H
 
-#include "flowgraph/Interface.h"
-#include "drplan/DRPlan.h"
+#include "ffnx/graph/Interface.h"
+#include "ffnx/drplan/DRPlan.h"
 
 namespace ffnx::drplan {
 
