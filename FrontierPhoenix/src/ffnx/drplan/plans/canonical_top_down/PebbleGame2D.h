@@ -4,6 +4,7 @@
 #include "ffnx/graph/Graph.h"
 #include "ffnx/cluster/Cluster.h"
 #include "ffnx/drplan/plans/canonical_top_down/PebbleGameGraph.h"
+#include "ffnx/drplan/plans/canonical_top_down/PebbleGameMove.h"
 #include <boost/bimap.hpp>
 #include <memory>
 #include <stdexcept>
@@ -18,105 +19,7 @@ namespace ffnx::pebblegame {
         using VertDesc = typename TGraph::vertex_descriptor;
         using EdgeDesc = typename TGraph::edge_descriptor;
 
-        struct Move {
-            std::optional<std::pair<VertDesc, VertDesc>> edge_being_added = std::nullopt;
-
-            // entities directly affected by the move
-            std::set<VertDesc> verts;
-            std::set<EdgeDesc> edges;
-
-            // associated entities
-            std::set<VertDesc> dfs_verts;
-            std::set<EdgeDesc> dfs_edges;
-
-            std::vector<std::string> messages;
-
-            static std::unique_ptr<Move> dfs_search(const VertDesc &v0,
-                                                    const VertDesc &v1,
-                                                    const std::vector<VertDesc> &dfs_verts,
-                                                    const std::vector<EdgeDesc> &dfs_edges) {
-                auto result = std::make_unique<Move>();
-
-                result->edge_being_added = {0, 0};
-                result->edge_being_added.value().first = v0;
-                result->edge_being_added.value().second = v1;
-
-                for (const auto& e : dfs_edges) {
-                    result->dfs_edges.insert(e);
-                }
-
-                for (const auto& v : dfs_verts) {
-                    result->dfs_verts.insert(v);
-                }
-
-                result->messages.push_back("dfs");
-
-                return result;
-            }
-
-            static std::unique_ptr<Move> indicate_target_edge(const VertDesc &v0, const VertDesc &v1) {
-                auto result = std::make_unique<Move>();
-
-                result->edge_being_added = {0, 0};
-                result->edge_being_added.value().first = v0;
-                result->edge_being_added.value().second = v1;
-
-                result->messages.push_back("Selecting target edge");
-
-                return result;
-            }
-
-            /**
-             * @param target_v0 vertex of edge affected by move
-             * @param target_v1 vertex of edge affected by move
-             * @param v0 vertex of edge aiming to be added
-             * @param v1 vertex of edge aiming to be added
-             * @param e
-             * @param dfs_verts
-             * @param dfs_edges
-             * @return
-             */
-            static std::unique_ptr<Move> pebble_slide_move(const VertDesc &target_v0,
-                                                           const VertDesc &target_v1,
-                                                           const VertDesc &v0,
-                                                           const VertDesc &v1,
-                                                           const EdgeDesc &e,
-                                                           const std::set<VertDesc> &dfs_verts,
-                                                           const std::vector<EdgeDesc> &dfs_edges) {
-                auto result = std::make_unique<Move>();
-
-                result->edge_being_added = {0, 0};
-                result->edge_being_added.value().first = target_v0;
-                result->edge_being_added.value().second = target_v1;
-
-                for (const auto &v : dfs_verts) {
-                    result->dfs_verts.insert(v);
-                }
-
-                for (const auto &edge : dfs_edges) {
-                    result->dfs_edges.insert(edge);
-                }
-
-                result->messages.push_back("Pebble Slide Move");
-
-                return result;
-            }
-
-            static std::unique_ptr<Move> edge_added(const VertDesc &v0, const VertDesc &v1, const EdgeDesc &e) {
-                auto result = std::make_unique<Move>();
-                result->edge_being_added = {0, 0};
-                result->edge_being_added.value().first = v0;
-                result->edge_being_added.value().second = v1;
-
-                result->verts.insert(v0);
-                result->verts.insert(v1);
-                result->edges.insert(e);
-
-                result->messages.push_back("Add Edge Move");
-
-                return result;
-            }
-        };
+        using Move = PebbleGameMove<VertDesc, EdgeDesc>;
 
         using Callback = std::function<void(std::unique_ptr<Move>)>;
 
@@ -132,7 +35,6 @@ namespace ffnx::pebblegame {
         std::vector<int> free_pebbles;
 
         using Cluster = cluster::Cluster<TGraph>;
-
 
         /**
          * Cluster that the game is played in.
@@ -165,9 +67,7 @@ namespace ffnx::pebblegame {
                 }
             }
 
-            auto move = std::make_unique<Move>();
-            move->messages.push_back("Initial State");
-            callback(std::move(move));
+            callback(std::move(Move::started()));
 
             auto cluster_ptr = cluster.lock();
             auto graph_ptr = cluster_ptr->graph().lock();
@@ -212,7 +112,7 @@ namespace ffnx::pebblegame {
             VertDesc v1;
             boost::tie(v0, v1) = graph->vertices_for_edge(edge);
 
-            callback(Move::indicate_target_edge(v0, v1));
+            callback(Move::input_edge_consideration(v0, v1));
 
             // first establish the number of pebbles currently on each vertex
             int starting_pebble_count =
@@ -233,10 +133,7 @@ namespace ffnx::pebblegame {
             pebble_game_graph.associate_edge(v0, v1);
             pebble_game_graph.unplace_pebble(free_pebbles, v0);
 
-            callback(Move::edge_added(
-                    v0,
-                    v1,
-                    pebble_game_graph.external_edge(pebble_game_graph.graph().edge(v0, v1))));
+            callback(Move::edge_added(v0, v1));
         }
 
         void perform_edge_slide_move(
@@ -259,7 +156,7 @@ namespace ffnx::pebblegame {
 
             auto edge = pebble_game_graph.external_edge(pebble_game_graph.graph().edge(v1, v0));
 
-            callback(Move::pebble_slide_move(target_v0, target_v1, v0, v1, edge, processed_verts, processed_edges));
+            callback(Move::edge_reversed(v1, v0));
         }
 
         bool collect_pebbles_depth_first_search(
@@ -290,11 +187,7 @@ namespace ffnx::pebblegame {
 
                 if (!collected_on_v0 && !collected_on_v1) {
                     // no longer able to increase the pebble coverage
-                    auto move = std::make_unique<Move>();
-                    move->verts.insert(pebble_game_graph.external_vert(v0));
-                    move->verts.insert(pebble_game_graph.external_vert(v1));
-                    move->messages.push_back("Coverage increase failed");
-                    callback(std::move(move));
+                    callback(std::move(Move::input_edge_rejection(v0, v1)));
                     return false;
                 }
             }
@@ -346,11 +239,7 @@ namespace ffnx::pebblegame {
 
                 auto edges = int_stack_to_ext_edges(exploration_stack);
                 auto verts = int_stack_to_ext_verts(exploration_stack);
-                callback(Move::dfs_search(
-                        pebble_game_graph.external_vert(target_vertex),
-                        pebble_game_graph.external_vert(ignored_vertex),
-                        *verts,
-                        *edges));
+                callback(Move::pebble_search_dfs(*verts, *edges));
 
                 for (const auto& v : pebble_game_graph.graph().out_verts(current_vert)) {
                     if (!visited_verts.contains(v)) {
@@ -364,11 +253,7 @@ namespace ffnx::pebblegame {
                     // show that the stack was changed
                     edges = int_stack_to_ext_edges(exploration_stack);
                     verts = int_stack_to_ext_verts(exploration_stack);
-                    callback(Move::dfs_search(
-                            pebble_game_graph.external_vert(target_vertex),
-                            pebble_game_graph.external_vert(ignored_vertex),
-                            *verts,
-                            *edges));
+                    callback(Move::pebble_search_dfs(*verts, *edges));
                 }
 
                 if (exploration_stack.back() == current_vert) {

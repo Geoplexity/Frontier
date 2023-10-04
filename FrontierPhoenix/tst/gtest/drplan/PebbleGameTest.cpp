@@ -39,5 +39,5 @@ TEST(PebbleGameTest, testRun)
             .build();
 
     auto game = ffnx::pebblegame::PebbleGame2D<FlowGraph>(cluster);
-    game.run([](auto m){ return false; });
+    game.run([](const auto& m){ });
 }
