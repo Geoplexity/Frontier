@@ -18,6 +18,7 @@ add_executable(ffnx_all_tests
         cluster/ClusterTest.cpp
         drplan/DRPlanTest.cpp
         drplan/PebbleGameTest.cpp
+        drplan/ComponentPebbleGameTest.cpp
         graph/DirectedGraphTest.cpp
         graph/FlowGraphTest.cpp
         graph/InterfaceTest.cpp

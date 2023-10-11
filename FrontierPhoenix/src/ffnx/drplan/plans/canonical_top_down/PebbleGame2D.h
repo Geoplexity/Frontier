@@ -39,25 +39,37 @@ namespace ffnx::pebblegame {
         /**
          * Cluster that the game is played in.
          */
-        std::weak_ptr<const Cluster> cluster;
+        std::weak_ptr<const Cluster> _cluster;
 
     public:
 
         explicit PebbleGame2D(std::weak_ptr<const Cluster> cluster) :
-            cluster(cluster),
+            _cluster(cluster),
             pebble_game_graph(PEBBLES_PER_VERTEX, PEBBLES_PER_EDGE, cluster.lock()->graph()) {
+        }
+
+        int l() {
+            return PEBBLES_PER_VERTEX;
+        }
+
+        int k() {
+            return PEBBLES_PER_EDGE;
         }
 
         const PebbleGameGraph<TGraph>& get_game_graph() {
             return pebble_game_graph;
         }
 
+        std::weak_ptr<const Cluster> cluster() {
+            return _cluster;
+        }
+
         void run(const Callback& callback) {
             // initializes game state
             free_pebbles = std::vector<int>();
-            pebble_game_graph = PebbleGameGraph<TGraph>(PEBBLES_PER_VERTEX, PEBBLES_PER_EDGE, cluster.lock()->graph());
+            pebble_game_graph = PebbleGameGraph<TGraph>(PEBBLES_PER_VERTEX, PEBBLES_PER_EDGE, _cluster.lock()->graph());
             int pebble_id = 0;
-            for (const auto& v : cluster.lock()->graph().lock()->vertices()) {
+            for (const auto& v : _cluster.lock()->graph().lock()->vertices()) {
                 pebble_game_graph.associate_vert(v);
 
                 for (int i = 0; i < PEBBLES_PER_VERTEX; i++) {
@@ -69,7 +81,7 @@ namespace ffnx::pebblegame {
 
             callback(std::move(Move::started()));
 
-            auto cluster_ptr = cluster.lock();
+            auto cluster_ptr = _cluster.lock();
             auto graph_ptr = cluster_ptr->graph().lock();
 
             for (const auto &input_edge : cluster_ptr->edges()) {
@@ -105,7 +117,7 @@ namespace ffnx::pebblegame {
 
             //    circuits?? = computeCorrespondingSet
 
-            auto cluster_ptr = cluster.lock();
+            auto cluster_ptr = _cluster.lock();
             auto graph = cluster_ptr->graph().lock();
 
             VertDesc v0;

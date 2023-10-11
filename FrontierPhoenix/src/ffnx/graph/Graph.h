@@ -150,7 +150,15 @@ namespace ffnx::graph {
         using vdesc = typename Graph<TVertexDataType, TEdgeDataType, directedS>::vdesc;
         using edesc = typename Graph<TVertexDataType, TEdgeDataType, directedS>::edesc;
 
-        std::unique_ptr<std::set<vdesc>> compute_reach(const vdesc &v) {
+        /**
+         * @param v starting vertex
+         * @param vert_filter (optional) a filter that may veto any next steps in the vertex exploration. For example,
+         * restricting explored vertices to only the members of a cluster.
+         * @return the set of vertices reachable from the specified starting vertex v.
+         */
+        std::unique_ptr<std::set<vdesc>> compute_reach(
+                const vdesc &v,
+                const std::function<bool(const vdesc&)>& vert_filter = [](const vdesc &v){ return true; }) const {
             auto result = std::make_unique<std::set<vdesc>>();
 
             std::stack<vdesc> next_verts;
@@ -161,7 +169,7 @@ namespace ffnx::graph {
                 next_verts.pop();
 
                 result->insert(to_check);
-                compute_direct_reach(*result, next_verts, to_check);
+                compute_direct_reach(*result, next_verts, to_check, vert_filter);
             }
 
             result->erase(v);
@@ -172,11 +180,12 @@ namespace ffnx::graph {
     private:
         void compute_direct_reach(const std::set<vdesc> &visited_verts,
                                   std::stack<vdesc>& to_explore,
-                                  const vdesc &v_from) {
+                                  const vdesc &v_from,
+                                  const std::function<bool(const vdesc&)>& vert_filter) const {
             for (const auto &e : this->out_edges(v_from)) {
                 auto next_v = this->vertices_for_edge(e).second;
 
-                if (!visited_verts.contains(next_v)) {
+                if (!visited_verts.contains(next_v) && vert_filter(next_v)) {
                     to_explore.push(next_v);
                 }
             }
