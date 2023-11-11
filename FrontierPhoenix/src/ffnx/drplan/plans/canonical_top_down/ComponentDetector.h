@@ -66,7 +66,7 @@ namespace ffnx::pebblegame {
     public:
         using Move = typename PebbleGame2D<TGraph>::Move;
 
-        ComponentDetectorI(std::weak_ptr<PebbleGame2D<TGraph>> game) : _game(game), _components() {
+        explicit ComponentDetectorI(std::weak_ptr<PebbleGame2D<TGraph>> game) : _game(game), _components() {
 
         }
 
