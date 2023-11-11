@@ -186,6 +186,101 @@ namespace ffnx::pebblegame {
             return std::move(result);
         }
     };
+
+
+    /**
+     *  from paper:
+     *  Pebble game algorithms and sparse graphs
+     *  Audrey Lee, Ileana Streinu, 2007
+     */
+    template <typename TGraph>
+    class ComponentDetectorII : public PebbleGame2D<TGraph>::Callback {
+    private:
+
+        /**
+         * Detected components.
+         */
+        std::vector<ffnx::cluster::Cluster<TGraph>> _components;
+
+        std::weak_ptr<PebbleGame2D<TGraph>> _game;
+
+    public:
+        using Move = typename PebbleGame2D<TGraph>::Move;
+
+        explicit ComponentDetectorII(std::weak_ptr<PebbleGame2D<TGraph>> game) : _game(game), _components() {
+
+        }
+
+        std::vector<ffnx::cluster::Cluster<TGraph>>& components() {
+            return _components;
+        }
+
+        /**
+         * Process game events and identify components.
+         */
+        void process_move(const std::unique_ptr<Move>& move) {
+            using Vert = typename PebbleGameGraph<TGraph>::InternalGraph::vertex_descriptor;
+
+            // only process edge add moves
+            if (move->type != Move::Type::EDGE_ADDED) {
+                return;
+            }
+
+            std::cout << "Processing edge add" << std::endl;
+
+            auto game_ptr = _game.lock();
+
+            auto u = move->as_edge_added_move().v0;
+            auto v = move->as_edge_added_move().v1;
+
+            // more than L pebbles present on u and v, new edge is free
+            int peb_count_u = game_ptr->get_game_graph().get_vert_pebble_count(u);
+            int peb_count_v = game_ptr->get_game_graph().get_vert_pebble_count(v);
+
+            if (peb_count_u + peb_count_v > game_ptr->l()) {
+                // no component modifications, edge is free
+                std::cout << "peb count u (" << peb_count_u << ") + peb count v (" << peb_count_v << ") > l (" << game_ptr->l() << ")" << std::endl;
+                return;
+            }
+
+            // compute D', the directed graph with all edges of the pebble game graph reversed
+
+            auto reversed_graph = game_ptr->get_game_graph().graph().get_reversed();
+        }
+
+    private:
+
+
+        bool has_free_pebble(const auto &v) const {
+            return _game.lock()->get_game_graph().get_vert_pebble_count(v) > 0;
+        }
+
+        void enqueue_v_with_edge_into(ComponentQueue<typename PebbleGameGraph<TGraph>::InternalGraph> &queue,
+                                      const std::set<typename TGraph::vertex_descriptor> &verts) {
+
+            auto in_verts = v_with_edge_into(verts);
+
+            for (const auto &v : *in_verts) {
+                queue.enqueue_if_unvisited(v);
+            }
+        }
+
+        auto v_with_edge_into(const std::set<typename TGraph::vertex_descriptor>& verts) {
+            auto result = std::make_unique<std::set<typename PebbleGameGraph<TGraph>::InternalGraph::vertex_descriptor>>();
+
+            auto game_ptr = _game.lock();
+
+            for (const auto &e : game_ptr->get_game_graph().graph().edges()) {
+                auto v0_v1 = game_ptr->get_game_graph().graph().vertices_for_edge(e);
+
+                if (!verts.contains(v0_v1.first) && verts.contains(v0_v1.second)) {
+                    result->insert(v0_v1.first);
+                }
+            }
+
+            return std::move(result);
+        }
+    };
 }
 
 #endif

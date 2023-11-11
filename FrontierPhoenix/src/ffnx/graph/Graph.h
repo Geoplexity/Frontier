@@ -151,6 +151,26 @@ namespace ffnx::graph {
         using edesc = typename Graph<TVertexDataType, TEdgeDataType, directedS>::edesc;
 
         /**
+         * @return a copy of this graph, with all edges reversed.
+         */
+        std::unique_ptr<DirectedGraph<TVertexDataType, TEdgeDataType>> get_reversed() const {
+            auto result = std::make_unique<DirectedGraph<TVertexDataType, TEdgeDataType>>();
+
+            *result = *this;
+
+            for (const auto& e : this->edges()) {
+                auto verts = result->vertices_for_edge(e);
+                auto v0 = std::get<0>(verts);
+                auto v1= std::get<1>(verts);
+
+                result->remove_edge(result->edge(v0, v1));
+                result->add_edge(v1, v0);
+            }
+
+            return std::move(result);
+        }
+
+        /**
          * @param v starting vertex
          * @param vert_filter (optional) a filter that may veto any next steps in the vertex exploration. For example,
          * restricting explored vertices to only the members of a cluster.

@@ -63,3 +63,23 @@ TEST(DirectedGraphTests, testCreate)
     ASSERT_EQ(*r0, expected_0);
 
 }
+
+
+TEST(DirectedGraphTests, testCreateReversed)
+{
+    using DirGraph = ffnx::graph::DirectedGraph<std::string, std::string>;
+
+    DirGraph graph;
+
+    auto v0 = graph.add_vertex();
+    auto v1 = graph.add_vertex();
+    auto e = graph.add_edge(v0, v1);
+
+    auto reversed_graph = graph.get_reversed();
+
+    ASSERT_TRUE(graph.has_edge(v0, v1));
+    ASSERT_FALSE(graph.has_edge(v1, v0));
+
+    ASSERT_FALSE(reversed_graph->has_edge(v0, v1));
+    ASSERT_TRUE(reversed_graph->has_edge(v1, v0));
+}
