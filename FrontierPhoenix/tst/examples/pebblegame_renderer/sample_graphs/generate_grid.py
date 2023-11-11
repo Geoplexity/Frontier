@@ -15,10 +15,13 @@ for x in range(0, width):
 
 for x in range(0, width - 1):
     for y in range(0, height - 1):
-        print(f"{x}.{y} -- {x + 1}.{y};")
-        print(f"{x}.{y} -- {x}.{y + 1};")
+        if random.choice([True, True, False]):
+            print(f"{x}.{y} -- {x + 1}.{y};")
 
-        if random.choice([True, False]):
+        if random.choice([True, True, False]):
+            print(f"{x}.{y} -- {x}.{y + 1};")
+
+        if random.choice([True, True, False]):
             print(f"{x}.{y} -- {x + 1}.{y + 1};")
 
 for x in range(1, width):

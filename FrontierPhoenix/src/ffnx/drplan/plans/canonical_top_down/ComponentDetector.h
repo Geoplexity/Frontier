@@ -15,7 +15,7 @@ namespace ffnx::pebblegame {
     template <typename TGraph>
     class ComponentQueue {
     private:
-        using Vert = TGraph::vertex_descriptor;
+        using Vert = typename TGraph::vertex_descriptor;
 
         std::queue<Vert> queue;
         std::set<Vert> all_enqueued;
@@ -25,7 +25,7 @@ namespace ffnx::pebblegame {
             return queue.empty();
         }
 
-        void enqueue_if_unvisited(const TGraph::vertex_descriptor& v) {
+        void enqueue_if_unvisited(const Vert& v) {
             if (!all_enqueued.contains(v)) {
                 queue.push(v);
             }
@@ -39,7 +39,7 @@ namespace ffnx::pebblegame {
             }
         }
 
-        TGraph::vertex_descriptor dequeue() {
+        Vert dequeue() {
             auto result = queue.front();
             queue.pop();
             return result;
@@ -53,21 +53,25 @@ namespace ffnx::pebblegame {
      *  Audrey Lee, Ileana Streinu, 2007
      */
     template <typename TGraph>
-    class ComponentDetector : public PebbleGame2D<TGraph>::Callback {
+    class ComponentDetectorI : public PebbleGame2D<TGraph>::Callback {
     private:
 
         /**
          * Detected components.
          */
-        std::set<ffnx::cluster::Cluster<TGraph>> _components;
+        std::vector<ffnx::cluster::Cluster<TGraph>> _components;
 
         std::weak_ptr<PebbleGame2D<TGraph>> _game;
 
     public:
         using Move = typename PebbleGame2D<TGraph>::Move;
 
-        ComponentDetector(std::weak_ptr<PebbleGame2D<TGraph>> game) : _game(game) {
+        ComponentDetectorI(std::weak_ptr<PebbleGame2D<TGraph>> game) : _game(game), _components() {
 
+        }
+
+        std::vector<ffnx::cluster::Cluster<TGraph>>& components() {
+            return _components;
         }
 
         /**
@@ -81,25 +85,24 @@ namespace ffnx::pebblegame {
                 return;
             }
 
+            std::cout << "Processing edge add" << std::endl;
+
             auto game_ptr = _game.lock();
 
             auto u = move->as_edge_added_move().v0;
             auto v = move->as_edge_added_move().v1;
 
             // more than L pebbles present on u and v, new edge is free
-            // return null
-
             int peb_count_u = game_ptr->get_game_graph().get_vert_pebble_count(u);
             int peb_count_v = game_ptr->get_game_graph().get_vert_pebble_count(v);
 
             if (peb_count_u + peb_count_v > game_ptr->l()) {
                 // no component modifications
+                std::cout << "peb count u (" << peb_count_u << ") + peb count v (" << peb_count_v << ") > l (" << game_ptr->l() << ")" << std::endl;
                 return;
             }
 
             // compute the reach of the game vertices
-            auto cluster_ptr = game_ptr->cluster().lock();
-
             auto reach_u = game_ptr->get_game_graph().graph().compute_reach(u);
             auto reach_v = game_ptr->get_game_graph().graph().compute_reach(v);
 
@@ -136,6 +139,20 @@ namespace ffnx::pebblegame {
                     enqueue_v_with_edge_into(queue, *reach_w);
                 }
             }
+
+            // if l == 0, merge into V' the verts of existing component of G, if exists
+            if (game_ptr->l() == 0) {
+                throw std::runtime_error("l == 0 currently not supported");
+            }
+
+            // return V'
+            std::set<typename TGraph::edge_descriptor> edges;
+            ffnx::cluster::Cluster<TGraph> cluster(
+                    game_ptr->cluster().lock()->graph(),
+                    v_prime,
+                    edges);
+
+            _components.push_back(cluster);
         }
 
     private:
@@ -144,7 +161,7 @@ namespace ffnx::pebblegame {
         }
 
         void enqueue_v_with_edge_into(ComponentQueue<typename PebbleGameGraph<TGraph>::InternalGraph> &queue,
-                                      const std::set<auto> &verts) {
+                                      const std::set<typename TGraph::vertex_descriptor> &verts) {
 
             auto in_verts = v_with_edge_into(verts);
 
@@ -153,7 +170,7 @@ namespace ffnx::pebblegame {
             }
         }
 
-        auto v_with_edge_into(const std::set<auto>& verts) {
+        auto v_with_edge_into(const std::set<typename TGraph::vertex_descriptor>& verts) {
             auto result = std::make_unique<std::set<typename PebbleGameGraph<TGraph>::InternalGraph::vertex_descriptor>>();
 
             auto game_ptr = _game.lock();
