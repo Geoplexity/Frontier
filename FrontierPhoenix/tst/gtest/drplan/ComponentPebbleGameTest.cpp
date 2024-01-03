@@ -64,4 +64,9 @@ TEST(ComponentIIPebbleGameTest, testCreate)
     pebblegame->run([&cd](auto m){
         cd.process_move(m);
     });
+
+    // expected components:
+    // two triangles + 3 single edges
+
+    ASSERT_EQ(5, cd.components().size());
 }

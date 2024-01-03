@@ -70,7 +70,7 @@ namespace ffnx::pebblegame {
 
         }
 
-        std::vector<ffnx::cluster::Cluster<TGraph>>& components() {
+        const std::vector<ffnx::cluster::Cluster<TGraph>>& components() const {
             return _components;
         }
 
@@ -85,8 +85,6 @@ namespace ffnx::pebblegame {
                 return;
             }
 
-            std::cout << "Processing edge add" << std::endl;
-
             auto game_ptr = _game.lock();
 
             auto u = move->as_edge_added_move().v0;
@@ -98,7 +96,6 @@ namespace ffnx::pebblegame {
 
             if (peb_count_u + peb_count_v > game_ptr->l()) {
                 // no component modifications
-                std::cout << "peb count u (" << peb_count_u << ") + peb count v (" << peb_count_v << ") > l (" << game_ptr->l() << ")" << std::endl;
                 return;
             }
 
@@ -211,7 +208,7 @@ namespace ffnx::pebblegame {
 
         }
 
-        std::vector<ffnx::cluster::Cluster<TGraph>>& components() {
+        const std::vector<ffnx::cluster::Cluster<TGraph>>& components() const {
             return _components;
         }
 
@@ -226,8 +223,6 @@ namespace ffnx::pebblegame {
                 return;
             }
 
-            std::cout << "Processing edge add" << std::endl;
-
             auto game_ptr = _game.lock();
 
             auto u = move->as_edge_added_move().v0;
@@ -239,7 +234,6 @@ namespace ffnx::pebblegame {
 
             if (peb_count_u + peb_count_v > game_ptr->l()) {
                 // no component modifications, edge is free
-                std::cout << "peb count u (" << peb_count_u << ") + peb count v (" << peb_count_v << ") > l (" << game_ptr->l() << ")" << std::endl;
                 return;
             }
 
@@ -251,6 +245,7 @@ namespace ffnx::pebblegame {
             reach_uv.insert(reach_u->begin(), reach_u->end());
             reach_uv.insert(reach_v->begin(), reach_v->end());
 
+            // if any of the Reach(u, v) has at least one free pebble, no component detected
             if (std::any_of(reach_uv.begin(), reach_uv.end(), [this](const auto &vertex){
                 return has_free_pebble(vertex);
             })) {
@@ -261,8 +256,37 @@ namespace ffnx::pebblegame {
             // compute D', the directed graph with all edges of the pebble game graph reversed
             auto reversed_graph = game_ptr->get_game_graph().graph().get_reversed();
 
-            // for all vertices w in v \ Reach(u, v) with at least one free pebble, perform depth first search in D'
-            // from w, Return V', the set of non/visited vertices from all these searches
+            // for all vertices w in v \ Reach(u, v) with at least one free pebble,
+            std::set<Vert> v_not_reach_uv;
+            for (const auto& vertex : game_ptr->get_game_graph().graph().vertices()) {
+                if (!reach_uv.contains(vertex) &&  has_free_pebble(vertex)) {
+                    v_not_reach_uv.insert(vertex);
+                }
+            }
+
+            // perform depth first search in D' from all w in v_not_reach_uv
+            // (depth first traversal)
+            std::set<Vert> traversed_vertices;
+            for (const auto& vertex: v_not_reach_uv) {
+                auto reach = reversed_graph->compute_reach(vertex);
+                traversed_vertices.insert(reach->begin(), reach->end());
+            }
+
+            // Return V', the set of non/visited vertices from all these searches
+            std::set<Vert> result;
+            for (const auto& vertex: reversed_graph->vertices()) {
+                if (!traversed_vertices.contains(vertex)) {
+                    result.insert(vertex);
+                }
+            }
+
+            std::set<typename TGraph::edge_descriptor> edges;
+            ffnx::cluster::Cluster<TGraph> cluster(
+                    game_ptr->cluster().lock()->graph(),
+                    result,
+                    edges);
+
+            _components.push_back(cluster);
         }
 
     private:
