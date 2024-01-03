@@ -34,12 +34,27 @@ TEST(ComponentIIPebbleGameTest, testCreate)
 
     auto graph = std::make_shared<Graph>();
 
+    // create the basic "triangular prism" graph
+
     auto v0 = graph->add_vertex();
     auto v1 = graph->add_vertex();
     auto v2 = graph->add_vertex();
+
     auto v3 = graph->add_vertex();
-    auto e0 = graph->add_edge(v0, v1);
-    auto e1 = graph->add_edge(v0, v1);
+    auto v4 = graph->add_vertex();
+    auto v5 = graph->add_vertex();
+
+    graph->add_edge(v0, v1);
+    graph->add_edge(v1, v2);
+    graph->add_edge(v2, v3);
+
+    graph->add_edge(v3, v4);
+    graph->add_edge(v4, v5);
+    graph->add_edge(v5, v3);
+
+    graph->add_edge(v0, v3);
+    graph->add_edge(v1, v4);
+    //graph->add_edge(v2, v5);
 
     std::shared_ptr<ffnx::cluster::Cluster<Graph>> cluster = ffnx::cluster::Cluster<Graph>::Builder::of_graph(graph);
 

@@ -243,9 +243,26 @@ namespace ffnx::pebblegame {
                 return;
             }
 
-            // compute D', the directed graph with all edges of the pebble game graph reversed
+            // compute the reach of the game vertices
+            auto reach_u = game_ptr->get_game_graph().graph().compute_reach(u);
+            auto reach_v = game_ptr->get_game_graph().graph().compute_reach(v);
 
+            std::set<Vert> reach_uv;
+            reach_uv.insert(reach_u->begin(), reach_u->end());
+            reach_uv.insert(reach_v->begin(), reach_v->end());
+
+            if (std::any_of(reach_uv.begin(), reach_uv.end(), [this](const auto &vertex){
+                return has_free_pebble(vertex);
+            })) {
+                // no component modifications
+                return;
+            }
+
+            // compute D', the directed graph with all edges of the pebble game graph reversed
             auto reversed_graph = game_ptr->get_game_graph().graph().get_reversed();
+
+            // for all vertices w in v \ Reach(u, v) with at least one free pebble, perform depth first search in D'
+            // from w, Return V', the set of non/visited vertices from all these searches
         }
 
     private:
