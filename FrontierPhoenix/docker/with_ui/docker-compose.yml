@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  app:
+    image: frontier-dev:latest
+    environment:
+      - XAUTH_ADD_ARG=${XAUTH_ADD_ARG}
+      - DISPLAY=${DISPLAY}
+      - QT_DEBUG_PLUGINS=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev/dri/:/dev/dri
+      - ../../cmake-build-debug-docker:/cmake-build-debug-docker
+      - ../../cmake-build-release-docker:/cmake-build-release-docker
+    security_opt:
+      - seccomp:unconfined
+    network_mode: host
+    command: ./cmake-build-release-docker/src/ffnx_ui/ffnx_ui

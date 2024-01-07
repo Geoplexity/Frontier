@@ -3,8 +3,11 @@ To create a Docker image with the required dependencies etc.
 
 ```shell
 # note, you need to have Docker installed (tested with 23.0.1 but will probably work with most versions)
-./build_dev_env.sh
+pushd docker
+./build_base_environment.sh
 ```
+
+See `docker/README.md` for more info.
 
 ## IDE setup
 

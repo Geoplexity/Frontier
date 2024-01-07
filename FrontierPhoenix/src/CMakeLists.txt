@@ -25,3 +25,5 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ffnx
         FILES_MATCHING PATTERN "*.h"
         PATTERN "*_p.h" EXCLUDE
         )
+
+add_subdirectory(ffnx_ui)

@@ -228,12 +228,17 @@ namespace ffnx::pebblegame {
             auto u = move->as_edge_added_move().v0;
             auto v = move->as_edge_added_move().v1;
 
+            std::cout << "Edge added " << u << " --> " << v << std::endl;
+
             // more than L pebbles present on u and v, new edge is free
             int peb_count_u = game_ptr->get_game_graph().get_vert_pebble_count(u);
             int peb_count_v = game_ptr->get_game_graph().get_vert_pebble_count(v);
 
-            if (peb_count_u + peb_count_v > game_ptr->l()) {
+            std::cout << "Peb count u: " << peb_count_u << "  , v: " << peb_count_v << std::endl;
+
+            if (peb_count_u > game_ptr->l() || peb_count_v > game_ptr->l()) {
                 // no component modifications, edge is free
+                std::cout << "Peb count if u or v exceeds l: " << game_ptr->l() << std::endl;
                 return;
             }
 
@@ -245,10 +250,17 @@ namespace ffnx::pebblegame {
             reach_uv.insert(reach_u->begin(), reach_u->end());
             reach_uv.insert(reach_v->begin(), reach_v->end());
 
+            std::cout << "Reach uv: ";
+            for (const auto &vertex : reach_uv) {
+                std::cout << vertex << " ";
+            }
+            std::cout << std::endl;
+
             // if any of the Reach(u, v) has at least one free pebble, no component detected
             if (std::any_of(reach_uv.begin(), reach_uv.end(), [this](const auto &vertex){
                 return has_free_pebble(vertex);
             })) {
+                std::cout << "At least one of reach_uv has a free pebble. no component detected" << std::endl;
                 // no component modifications
                 return;
             }
