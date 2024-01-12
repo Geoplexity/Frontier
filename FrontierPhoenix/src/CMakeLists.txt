@@ -26,4 +26,9 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ffnx
         PATTERN "*_p.h" EXCLUDE
         )
 
-add_subdirectory(ffnx_ui)
+# whether to include the UI application component
+option(WITH_FFNX_UI OFF)
+
+if (WITH_FFNX_UI)
+        add_subdirectory(ffnx_ui)
+endif()

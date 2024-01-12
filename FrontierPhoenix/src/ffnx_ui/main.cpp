@@ -3,7 +3,7 @@
 
 int main(int argc, char** argv) {
     QApplication app(argc, argv);
-    auto window = new FFNXMainWindow();
+    auto window = new ffnx::ui::FFNXMainWindow();
     window->show();
 
     return QApplication::exec();
