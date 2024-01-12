@@ -34,8 +34,8 @@ namespace ffnx::ui::graph {
     template <typename TGraph>
     class DefaultVertexPositioningEngine : public VertexPositioningEngine<TGraph> {
     private:
-        using graph_ptr = std::weak_ptr<TGraph>;
-        graph_ptr graph;
+        using interface_ptr = std::weak_ptr<ffnx::graph::GraphInterface<TGraph>>;
+        interface_ptr interface;
 
         ogdf::Graph ogdf_graph;
         ogdf::GraphAttributes graph_attributes;
@@ -50,18 +50,20 @@ namespace ffnx::ui::graph {
 
 
     public:
-        DefaultVertexPositioningEngine(graph_ptr graph) :
-            graph(graph),
+        DefaultVertexPositioningEngine(interface_ptr interface) :
+            interface(interface),
             ogdf_graph(),
             graph_attributes(ogdf_graph, ogdf::GraphAttributes::nodeGraphics | ogdf::GraphAttributes::edgeGraphics) {
 
-            for (const auto &v : graph.lock()->vertices()) {
+            auto interface_lk = interface.lock();
+
+            for (const auto &v : interface_lk->graph().vertices()) {
                 auto node = ogdf_graph.newNode();
                 vert_map[v] = node;
             }
 
-            for (const auto &e : graph.lock()->edges()) {
-                auto verts_for_edge = graph.lock()->vertices_for_edge(e);
+            for (const auto &e : interface_lk->graph().edges()) {
+                auto verts_for_edge = interface_lk->graph().vertices_for_edge(e);
 
                 auto v0 = vert_map[verts_for_edge.first];
                 auto v1 = vert_map[verts_for_edge.second];
@@ -119,8 +121,6 @@ namespace ffnx::ui::graph {
             graph_attributes.x(node) = x;
             graph_attributes.y(node) = y;
 
-            auto graph_locked = graph.lock();
-
             for (const auto& e : *(edge_verts[vdesc])) {
                 if (edge_listeners.contains(e)) {
                     edge_listeners[e]();
@@ -131,12 +131,12 @@ namespace ffnx::ui::graph {
         }
 
         std::pair<double, double> get_edge_begin(const TGraph::edge_descriptor &edesc) const override {
-            auto verts_for_edge = graph.lock()->vertices_for_edge(edesc);
+            auto verts_for_edge = interface.lock()->graph().vertices_for_edge(edesc);
             return get_vertex_coordinate(verts_for_edge.first);
         }
 
         std::pair<double, double> get_edge_end(const TGraph::edge_descriptor &edesc) const override {
-            auto verts_for_edge = graph.lock()->vertices_for_edge(edesc);
+            auto verts_for_edge = interface.lock()->graph().vertices_for_edge(edesc);
             return get_vertex_coordinate(verts_for_edge.second);
         }
 

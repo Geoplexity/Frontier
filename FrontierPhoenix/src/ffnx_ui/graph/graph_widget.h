@@ -16,12 +16,12 @@ namespace ffnx::ui::graph {
     template <typename TGraph>
     class GraphWidget : public QGraphicsView {
     private:
-        using graph_ptr = std::weak_ptr<TGraph>;
+        using interface_ptr = std::shared_ptr<ffnx::graph::GraphInterface<TGraph>>;
 
         using vert_desc = typename TGraph::vertex_descriptor;
         using edge_desc = typename TGraph::edge_descriptor;
 
-        graph_ptr graph;
+        interface_ptr graph_interface;
 
         std::shared_ptr<VertexPositioningEngine<TGraph>> positioning_engine;
 
@@ -29,10 +29,10 @@ namespace ffnx::ui::graph {
         std::map<edge_desc, Edge<TGraph>*> edges;
 
     public:
-        GraphWidget(graph_ptr graph,
+        GraphWidget(interface_ptr graph_interface,
                     std::shared_ptr<VertexPositioningEngine<TGraph>> positioning_engine,
                     QWidget *parent = nullptr) :
-                        graph(graph),
+                        graph_interface(graph_interface),
                         positioning_engine(positioning_engine),
                         QGraphicsView(parent) {
 
@@ -49,13 +49,13 @@ namespace ffnx::ui::graph {
             setMinimumSize(400, 400);
             setWindowTitle(tr("Test"));
 
-            for (const auto &v : graph.lock()->vertices()) {
+            for (const auto &v : graph_interface->graph().vertices()) {
                 auto *vert = new Vertex<TGraph>(positioning_engine, v);
                 scene->addItem(vert);
                 verts[v] = vert;
             }
 
-            for (const auto& e : graph.lock()->edges()) {
+            for (const auto& e : graph_interface->graph().edges()) {
                 auto *edge = new Edge<TGraph>(positioning_engine, e);
                 scene->addItem(edge);
                 edges[e] = edge;
