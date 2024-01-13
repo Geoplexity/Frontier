@@ -2,6 +2,7 @@
 #define FFNX_UI_GRAPH_VERTEX_POSITIONING_ENGINE
 
 #include <ffnx/graph/Interface.h>
+#include <ffnx/graph/commands/AddVertex.h>
 #include <ogdf/basic/graph_generators.h>
 #include <ogdf/layered/DfsAcyclicSubgraph.h>
 #include <ogdf/planarity/SubgraphPlanarizer.h>
@@ -45,11 +46,29 @@ namespace ffnx::ui::graph {
 
         std::map<typename TGraph::vertex_descriptor, std::unique_ptr<std::set<typename TGraph::edge_descriptor>>> edge_verts;
 
+        /**
+         * Attach a listener to vertex repositioning
+         */
         std::map<typename TGraph::vertex_descriptor, std::function<void()>> vert_listeners;
+
+        /**
+         * Attach a listener to edge repositioning
+         */
         std::map<typename TGraph::edge_descriptor, std::function<void()>> edge_listeners;
 
-
     public:
+        void update(std::shared_ptr<const ffnx::graph::GraphCommand<TGraph>> cmd) {
+
+            auto as_add_vertex = std::dynamic_pointer_cast<const typename ffnx::graph::commands::AddVertexCommand<TGraph>>(cmd);
+            if (as_add_vertex != nullptr) {
+                auto node = ogdf_graph.newNode();
+                vert_map[as_add_vertex->getVertex()] = node;
+                edge_verts[as_add_vertex->getVertex()] = std::make_unique<std::set<typename TGraph::edge_descriptor>>();
+
+                apply_layout();
+            }
+        }
+
         DefaultVertexPositioningEngine(interface_ptr interface) :
             interface(interface),
             ogdf_graph(),
@@ -93,6 +112,18 @@ namespace ffnx::ui::graph {
             for (const auto& kv: edge_listeners) {
                 kv.second();
             }
+
+            interface_lk->commandAppliedSubject().attachObserver([&](auto evt){
+                update(evt);
+
+                for (const auto& kv: vert_listeners) {
+                    kv.second();
+                }
+
+                for (const auto& kv: edge_listeners) {
+                    kv.second();
+                }
+            });
         }
 
         void apply_layout() {

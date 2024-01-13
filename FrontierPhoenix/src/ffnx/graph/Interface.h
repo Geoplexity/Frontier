@@ -3,6 +3,7 @@
 
 #include "ffnx/graph/Graph.h"
 #include "ffnx/graph/Command.h"
+#include "ffnx/event/observer.h"
 
 namespace ffnx::graph {
 
@@ -17,7 +18,18 @@ namespace ffnx::graph {
         std::vector<cmd_ptr> commandStack;
         std::set<cmd_ptr> commandSet;
 
+        ffnx::event::Subject<std::shared_ptr<const Command>> _commandAppliedSubject;
+        ffnx::event::Subject<std::shared_ptr<const Command>> _commandRevertedSubject;
+
     public:
+
+        ffnx::event::Subject<std::shared_ptr<const Command>>& commandAppliedSubject() {
+            return _commandAppliedSubject;
+        }
+
+        ffnx::event::Subject<std::shared_ptr<const Command>>& commandRevertedSubject() {
+            return _commandRevertedSubject;
+        }
 
         /**
          * @return const ref to graph for interrogation.
@@ -42,6 +54,8 @@ namespace ffnx::graph {
             commandStack.push_back(abs_ptr);
             commandSet.insert(abs_ptr);
 
+            _commandAppliedSubject.notify(cmd);
+
             return cmd;
         }
 
@@ -58,6 +72,8 @@ namespace ffnx::graph {
             cmd_ptr result = commandStack.back();
             commandStack.pop_back();
             commandSet.erase(result);
+
+            _commandRevertedSubject.notify(result);
 
             return result;
         }

@@ -50,11 +50,11 @@ namespace ffnx::ui::graph {
             dest = points.second;
         }
 
-        QRectF boundingRect() const override {
+        [[nodiscard]] QRectF boundingRect() const override {
             return QRectF(source, dest);
         }
 
-        QPainterPath shape() const override {
+        [[nodiscard]] QPainterPath shape() const override {
             QPainterPath path(source);
             path.lineTo(dest);
 
@@ -68,7 +68,7 @@ namespace ffnx::ui::graph {
         }
 
     private:
-        std::pair<QPointF, QPointF> get_points() const {
+        [[nodiscard]] std::pair<QPointF, QPointF> get_points() const {
             auto v0 = vertex_positioning_engine.lock()->get_edge_begin(edge);
             auto v1 = vertex_positioning_engine.lock()->get_edge_end(edge);
 

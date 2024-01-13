@@ -24,7 +24,7 @@ namespace ffnx::graph::commands {
             v0(v0), v1(v1) {
         }
 
-        const typename TGraph::edge_descriptor& getEdge() {
+        const typename TGraph::edge_descriptor& getEdge() const {
             return edge_desc;
         }
 
