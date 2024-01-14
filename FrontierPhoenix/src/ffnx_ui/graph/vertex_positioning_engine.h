@@ -3,6 +3,7 @@
 
 #include <ffnx/graph/Interface.h>
 #include <ffnx/graph/commands/AddVertex.h>
+#include <ffnx/graph/commands/AddEdge.h>
 #include <ogdf/basic/graph_generators.h>
 #include <ogdf/layered/DfsAcyclicSubgraph.h>
 #include <ogdf/planarity/SubgraphPlanarizer.h>
@@ -57,17 +58,6 @@ namespace ffnx::ui::graph {
         std::map<typename TGraph::edge_descriptor, std::function<void()>> edge_listeners;
 
     public:
-        void update(std::shared_ptr<const ffnx::graph::GraphCommand<TGraph>> cmd) {
-
-            auto as_add_vertex = std::dynamic_pointer_cast<const typename ffnx::graph::commands::AddVertexCommand<TGraph>>(cmd);
-            if (as_add_vertex != nullptr) {
-                auto node = ogdf_graph.newNode();
-                vert_map[as_add_vertex->getVertex()] = node;
-                edge_verts[as_add_vertex->getVertex()] = std::make_unique<std::set<typename TGraph::edge_descriptor>>();
-
-                apply_layout();
-            }
-        }
 
         DefaultVertexPositioningEngine(interface_ptr interface) :
             interface(interface),
@@ -124,6 +114,33 @@ namespace ffnx::ui::graph {
                     kv.second();
                 }
             });
+        }
+
+        void update(std::shared_ptr<const ffnx::graph::GraphCommand<TGraph>> cmd) {
+
+            auto as_add_vertex = std::dynamic_pointer_cast<const typename ffnx::graph::commands::AddVertexCommand<TGraph>>(cmd);
+            if (as_add_vertex != nullptr) {
+                auto node = ogdf_graph.newNode();
+                vert_map[as_add_vertex->getVertex()] = node;
+                edge_verts[as_add_vertex->getVertex()] = std::make_unique<std::set<typename TGraph::edge_descriptor>>();
+
+                return;
+            }
+
+            auto as_add_edge = std::dynamic_pointer_cast<const typename ffnx::graph::commands::AddEdgeCommand<TGraph>>(cmd);
+            if (as_add_edge != nullptr) {
+                auto edge_desc = as_add_edge->getEdge();
+                auto verts_desc = interface.lock()->graph().vertices_for_edge(edge_desc);
+
+                auto v0_desc = verts_desc.first;
+                auto v1_desc = verts_desc.second;
+
+                edge_verts[v0_desc]->insert(edge_desc);
+                edge_verts[v1_desc]->insert(edge_desc);
+                edge_map[edge_desc] = ogdf_graph.newEdge(vert_map[v0_desc], vert_map[v1_desc]);
+
+                return;
+            }
         }
 
         void apply_layout() {

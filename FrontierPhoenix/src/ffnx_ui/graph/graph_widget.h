@@ -6,11 +6,14 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QPushButton>
+#include <QMouseEvent>
 #include "vertex.h"
 #include "edge.h"
 #include "vertex_positioning_engine.h"
+#include "graph_command_factory.h"
 #include "ffnx/graph/Interface.h"
 #include "ffnx/graph/commands/AddVertex.h"
+#include "ffnx/graph/commands/AddEdge.h"
 
 // see example:
 // https://doc.qt.io/qt-6/qtwidgets-graphicsview-elasticnodes-example.html
@@ -28,15 +31,23 @@ namespace ffnx::ui::graph {
 
         std::weak_ptr<VertexPositioningEngine<TGraph>> positioning_engine;
 
+        std::weak_ptr<GraphSelectionModel<TGraph>> selection_model;
+
+        std::weak_ptr<GraphCommandFactory<TGraph>> command_factory;
+
         std::map<vert_desc, Vertex<TGraph>*> verts;
         std::map<edge_desc, Edge<TGraph>*> edges;
 
     public:
         GraphGraphicsView(std::weak_ptr<ffnx::graph::GraphInterface<TGraph>> interface,
                                    std::weak_ptr<VertexPositioningEngine<TGraph>> positioning_engine,
+                                   std::weak_ptr<GraphSelectionModel<TGraph>> selection_model,
+                                   std::weak_ptr<GraphCommandFactory<TGraph>> command_factory,
                                    QWidget* parent = nullptr) :
                                        interface(interface),
                                        positioning_engine(positioning_engine),
+                                       selection_model(selection_model),
+                                       command_factory(command_factory),
                                        QGraphicsView(parent) {
 
             auto* scene = new QGraphicsScene(this);
@@ -53,7 +64,6 @@ namespace ffnx::ui::graph {
             // Full viewport update mode also fixes this, but could be slow
             scale(qreal(0.9999999999), qreal(0.9999999999));
             setMinimumSize(400, 400);
-            setWindowTitle(tr("Test"));
 
             for (const auto &v : interface.lock()->graph().vertices()) {
                 add_vertex_to_scene(v);
@@ -76,6 +86,17 @@ namespace ffnx::ui::graph {
                     for (const auto& kv : verts) {
                         kv.second->reposition();
                     }
+                    return;
+                }
+
+                auto add_edge = std::dynamic_pointer_cast<const typename ffnx::graph::commands::AddEdgeCommand<TGraph>>(evt);
+                if (add_edge != nullptr) {
+                    add_edge_to_scene(add_edge->getEdge());
+
+                    for (const auto& kv : verts) {
+                        kv.second->reposition();
+                    }
+                    return;
                 }
             });
         }
@@ -90,18 +111,60 @@ namespace ffnx::ui::graph {
             painter->fillRect(scene_rect, gradient);
         }
 
+        void mousePressEvent(QMouseEvent* evt) {
+            //evt->position();
+            if (evt->button() == Qt::RightButton) {
+                std::vector<std::shared_ptr<ffnx::graph::GraphCommand<TGraph>>> commands;
+                command_factory.lock()->get_commands(commands);
+
+                for (auto& c : commands) {
+                    interface.lock()->applyCommand(c);
+                }
+            } else {
+                QGraphicsView::mousePressEvent(evt);
+            }
+        }
+
     private:
         void add_vertex_to_scene(const TGraph::vertex_descriptor& v) {
-            auto *vert = new Vertex<TGraph>(positioning_engine, v);
+            auto *vert = new Vertex<TGraph>(positioning_engine, selection_model, v);
             scene()->addItem(vert);
             verts[v] = vert;
         }
 
         void add_edge_to_scene(const TGraph::edge_descriptor& e) {
-            auto *edge = new Edge<TGraph>(positioning_engine, e);
+            auto *edge = new Edge<TGraph>(positioning_engine, selection_model, e);
             scene()->addItem(edge);
             edges[e] = edge;
         }
+    };
+
+    template <typename TGraph>
+    class CommandHintLabel : public QLabel {
+    private:
+        std::weak_ptr<GraphSelectionModel<TGraph>> selection_model;
+
+        std::weak_ptr<GraphCommandFactory<TGraph>> command_factory;
+
+        ffnx::event::ObserverToken token;
+
+    public:
+        CommandHintLabel(std::weak_ptr<GraphSelectionModel<TGraph>> selection_model,
+                         std::weak_ptr<GraphCommandFactory<TGraph>> command_factory,
+                         QWidget* parent = nullptr) :
+                             selection_model(selection_model),
+                             command_factory(command_factory),
+                             QLabel(parent) {
+
+            token = selection_model.lock()->selection_changed_subject().attachObserver([&](){
+                update_label();
+            });
+        }
+
+        void update_label() {
+            setText(QString::fromStdString(command_factory.lock()->get_command_suggestion()));
+        }
+
     };
 
     template <typename TGraph>
@@ -113,6 +176,9 @@ namespace ffnx::ui::graph {
 
         std::shared_ptr<VertexPositioningEngine<TGraph>> positioning_engine;
 
+        std::shared_ptr<GraphSelectionModel<TGraph>> selection_model = std::make_shared<GraphSelectionModel<TGraph>>();
+
+        std::shared_ptr<GraphCommandFactory<TGraph>> command_factory = std::make_shared<GraphCommandFactory<TGraph>>(selection_model);
 
     public:
         GraphWidget(interface_ptr graph_interface,
@@ -124,23 +190,19 @@ namespace ffnx::ui::graph {
 
             auto layout = new QVBoxLayout(this);
 
-            auto* graphics_view = new GraphGraphicsView<TGraph>(graph_interface, positioning_engine);
+            auto* graphics_view = new GraphGraphicsView<TGraph>(graph_interface,
+                                                                positioning_engine,
+                                                                selection_model,
+                                                                command_factory);
 
             layout->addWidget(graphics_view);
 
-            auto* label = new QLabel("instructions/state info here");
-            auto* add_vertex = new QPushButton("Add vertex");
+            auto* label = new CommandHintLabel<TGraph>(selection_model, command_factory);
 
-            connect(add_vertex, &QPushButton::released, this, &GraphWidget::add_vertex_button);
-
-            layout->addWidget(add_vertex);
+            layout->addWidget(label);
 
             this->setLayout(layout);
             this->show();
-        }
-
-        void add_vertex_button() {
-            graph_interface->applyCommand(std::make_shared<ffnx::graph::commands::AddVertexCommand<TGraph>>());
         }
     };
 }

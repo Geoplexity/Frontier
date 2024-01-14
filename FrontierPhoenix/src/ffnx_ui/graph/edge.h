@@ -3,6 +3,7 @@
 
 #include <QGraphicsItem>
 #include <iostream>
+#include "graph_selection_model.h"
 
 namespace ffnx::ui::graph {
 
@@ -12,6 +13,8 @@ namespace ffnx::ui::graph {
         using edge_desc = typename TGraph::edge_descriptor;
 
         std::weak_ptr<VertexPositioningEngine<TGraph>> vertex_positioning_engine;
+
+        std::weak_ptr<GraphSelectionModel<TGraph>> selection_model;
 
         edge_desc edge;
 
@@ -27,8 +30,13 @@ namespace ffnx::ui::graph {
         }
 
         Edge(std::weak_ptr<VertexPositioningEngine<TGraph>> vertex_positioning_engine,
-             const edge_desc &edge) : vertex_positioning_engine(vertex_positioning_engine), edge(edge) {
-            setAcceptedMouseButtons(Qt::NoButton);
+             std::weak_ptr<GraphSelectionModel<TGraph>> selection_model,
+             const edge_desc &edge) :
+                vertex_positioning_engine(vertex_positioning_engine),
+                selection_model(selection_model),
+                edge(edge) {
+            setFlag(ItemIsSelectable);
+
 
             auto points = get_points();
             source = points.first;
@@ -58,13 +66,37 @@ namespace ffnx::ui::graph {
             QPainterPath path(source);
             path.lineTo(dest);
 
-            return path;
+            QPainterPathStroker stroker;
+            stroker.setWidth(6);
+
+            return stroker.createStroke(path);
         }
 
         void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override {
-            painter->setPen(QPen(Qt::black, 2));
+            auto pen = isSelected() ? QPen(Qt::red, 2, Qt::DashLine) : QPen(Qt::black, 2);
+
+            QPainterPath path(source);
+            path.lineTo(dest);
+
+            painter->setPen(pen);
             painter->setBrush(Qt::black);
-            painter->drawPath(shape());
+            painter->drawPath(path);
+        }
+
+        QVariant itemChange(GraphicsItemChange change, const QVariant &value) override {
+
+            if (change == ItemSelectedChange) {
+                prepareGeometryChange();
+
+                auto selection_state = value.value<bool>();
+                if (selection_state) {
+                    selection_model.lock()->select_edge(edge);
+                } else {
+                    selection_model.lock()->deselect_edge(edge);
+                }
+            }
+
+            return QGraphicsItem::itemChange(change, value);
         }
 
     private:
