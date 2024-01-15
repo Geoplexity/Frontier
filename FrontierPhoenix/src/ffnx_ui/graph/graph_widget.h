@@ -38,6 +38,8 @@ namespace ffnx::ui::graph {
         std::map<vert_desc, Vertex<TGraph>*> verts;
         std::map<edge_desc, Edge<TGraph>*> edges;
 
+        std::optional<QPointF> user_position_input;
+
     public:
         GraphGraphicsView(std::weak_ptr<ffnx::graph::GraphInterface<TGraph>> interface,
                                    std::weak_ptr<VertexPositioningEngine<TGraph>> positioning_engine,
@@ -77,15 +79,24 @@ namespace ffnx::ui::graph {
                 kv.second->reposition();
             }
 
-            interface.lock()->commandAppliedSubject().attachObserver([&](auto evt){
+            interface.lock()->commandAppliedSubject().attachObserver([this](auto evt){
                 auto add_vert = std::dynamic_pointer_cast<const typename ffnx::graph::commands::AddVertexCommand<TGraph>>(evt);
 
                 if (add_vert != nullptr) {
-                    add_vertex_to_scene(add_vert->getVertex());
+                    this->add_vertex_to_scene(add_vert->getVertex());
 
-                    for (const auto& kv : verts) {
+                    for (const auto& kv : this->verts) {
                         kv.second->reposition();
                     }
+
+                    if (user_position_input.has_value()) {
+
+                        // vert is "tricked" into thinking it is selected and dragged
+                        this->verts[add_vert->getVertex()]->setSelected(true);
+                        this->verts[add_vert->getVertex()]->setPos(user_position_input.value().x(), user_position_input.value().y());
+                        this->verts[add_vert->getVertex()]->setSelected(false);
+                    }
+
                     return;
                 }
 
@@ -114,6 +125,8 @@ namespace ffnx::ui::graph {
         void mousePressEvent(QMouseEvent* evt) {
             //evt->position();
             if (evt->button() == Qt::RightButton) {
+                user_position_input = evt->position();
+
                 std::vector<std::shared_ptr<ffnx::graph::GraphCommand<TGraph>>> commands;
                 command_factory.lock()->get_commands(commands);
 
@@ -159,6 +172,8 @@ namespace ffnx::ui::graph {
             token = selection_model.lock()->selection_changed_subject().attachObserver([&](){
                 update_label();
             });
+
+            update_label();
         }
 
         void update_label() {

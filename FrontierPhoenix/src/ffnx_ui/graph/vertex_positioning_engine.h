@@ -164,6 +164,10 @@ namespace ffnx::ui::graph {
         }
 
         std::pair<double, double> set_vertex_coordinate(const TGraph::vertex_descriptor &vdesc, const double &x, const double &y) override {
+            if (!vert_map.contains(vdesc)) {
+                throw std::runtime_error("Vertex not present in positioning engine");
+            }
+
             auto node = vert_map.at(vdesc);
 
             graph_attributes.x(node) = x;
