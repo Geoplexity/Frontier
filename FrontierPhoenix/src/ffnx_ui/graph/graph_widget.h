@@ -57,6 +57,7 @@ namespace ffnx::ui::graph {
             scene->setSceneRect(0, 0, 400, 400);
 
             this->setScene(scene);
+            setDragMode(RubberBandDrag);
             setCacheMode(CacheBackground);
             setViewportUpdateMode(BoundingRectViewportUpdate);
             setRenderHint(QPainter::Antialiasing);
