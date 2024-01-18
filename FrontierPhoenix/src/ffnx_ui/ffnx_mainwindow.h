@@ -3,7 +3,7 @@
 
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QApplication>
-#include "graph/graph_widget.h"
+#include "graph/widgets/frame.h"
 
 #include <ffnx/graph/Graph.h>
 #include <ffnx/graph/commands/AddVertex.h>
@@ -20,8 +20,7 @@ namespace ffnx::ui {
         explicit FFNXMainWindow(QWidget *parent = nullptr) : QMainWindow(parent) {
             setWindowTitle("FFNX UI");
 
-            auto graph = std::make_shared<TGraph>();
-            auto interface = std::make_shared<ffnx::graph::GraphInterface<TGraph>>();
+            auto interface = std::make_unique<ffnx::graph::GraphInterface<TGraph>>();
 
             auto v0 = interface->applyCommand(std::make_shared<AddVertex>())->getVertex();
             auto v1 = interface->applyCommand(std::make_shared<AddVertex>())->getVertex();
@@ -43,9 +42,9 @@ namespace ffnx::ui {
             interface->applyCommand(std::make_shared<AddEdge>(v1, v4));
             interface->applyCommand(std::make_shared<AddEdge>(v2, v5));
 
-            auto engine = std::make_shared<graph::DefaultVertexPositioningEngine<TGraph>>(interface);
+            //auto engine = std::make_shared<graph::DefaultVertexPositioningEngine<TGraph>>(interface);
 
-            auto *widget = new graph::GraphWidget<TGraph>(interface, engine, this);
+            auto *widget = new graph::GraphFrame<TGraph>(std::move(interface), this);
             setCentralWidget(widget);
         }
 

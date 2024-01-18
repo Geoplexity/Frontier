@@ -19,20 +19,18 @@ namespace ffnx::ui::graph {
         std::set<vert_desc> _selected_vertices;
         std::set<edge_desc> _selected_edges;
 
-        ffnx::event::Subject<> _selection_changed_subject;
-
     public:
 
-        ffnx::event::Subject<>& selection_changed_subject() {
-            return _selection_changed_subject;
-        }
-
-        const std::set<vert_desc>& selected_vertices() {
+        const std::set<vert_desc>& selected_vertices() const {
             return _selected_vertices;
         }
 
-        const std::set<edge_desc>& selected_edges() {
+        const std::set<edge_desc>& selected_edges() const {
             return _selected_edges;
+        }
+
+        bool is_selection_empty() const {
+            return _selected_vertices.size() == 0 && _selected_edges.size() == 0;
         }
 
         void select_vertex(const vert_desc& vert) {
@@ -41,8 +39,6 @@ namespace ffnx::ui::graph {
             }
 
             _selected_vertices.insert(vert);
-
-            _selection_changed_subject.notify();
         }
 
         void deselect_vertex(const vert_desc& vert) {
@@ -51,8 +47,6 @@ namespace ffnx::ui::graph {
             }
 
             _selected_vertices.erase(vert);
-
-            _selection_changed_subject.notify();
         }
 
 
@@ -62,8 +56,6 @@ namespace ffnx::ui::graph {
             }
 
             _selected_edges.insert(edge);
-
-            _selection_changed_subject.notify();
         }
 
         void deselect_edge(const edge_desc& edge) {
@@ -72,8 +64,6 @@ namespace ffnx::ui::graph {
             }
 
             _selected_edges.erase(edge);
-
-            _selection_changed_subject.notify();
         }
 
     };

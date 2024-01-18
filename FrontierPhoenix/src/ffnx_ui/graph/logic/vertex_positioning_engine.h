@@ -3,7 +3,9 @@
 
 #include <ffnx/graph/Interface.h>
 #include <ffnx/graph/commands/AddVertex.h>
+#include <ffnx/graph/commands/RemoveVertex.h>
 #include <ffnx/graph/commands/AddEdge.h>
+#include <ffnx/graph/commands/RemoveEdge.h>
 #include <ogdf/basic/graph_generators.h>
 #include <ogdf/layered/DfsAcyclicSubgraph.h>
 #include <ogdf/planarity/SubgraphPlanarizer.h>
@@ -29,8 +31,7 @@ namespace ffnx::ui::graph {
 
         virtual std::pair<double, double> get_edge_end(const TGraph::edge_descriptor &edesc) const = 0;
 
-        virtual void add_vert_listener(const TGraph::vertex_descriptor &vdesc, const std::function<void()> &callback) = 0;
-        virtual void add_edge_listener(const TGraph::edge_descriptor &edesc, const std::function<void()> &callback) = 0;
+        virtual void apply_layout() = 0;
     };
 
     template <typename TGraph>
@@ -47,15 +48,7 @@ namespace ffnx::ui::graph {
 
         std::map<typename TGraph::vertex_descriptor, std::unique_ptr<std::set<typename TGraph::edge_descriptor>>> edge_verts;
 
-        /**
-         * Attach a listener to vertex repositioning
-         */
-        std::map<typename TGraph::vertex_descriptor, std::function<void()>> vert_listeners;
-
-        /**
-         * Attach a listener to edge repositioning
-         */
-        std::map<typename TGraph::edge_descriptor, std::function<void()>> edge_listeners;
+        ffnx::event::ObserverToken<std::shared_ptr<const ffnx::graph::GraphCommand<TGraph>>> command_token;
 
     public:
 
@@ -94,56 +87,10 @@ namespace ffnx::ui::graph {
             }
 
             apply_layout();
-
-            for (const auto& kv: vert_listeners) {
-                kv.second();
-            }
-
-            for (const auto& kv: edge_listeners) {
-                kv.second();
-            }
-
-            interface_lk->commandAppliedSubject().attachObserver([&](auto evt){
-                update(evt);
-
-                for (const auto& kv: vert_listeners) {
-                    kv.second();
-                }
-
-                for (const auto& kv: edge_listeners) {
-                    kv.second();
-                }
-            });
         }
 
-        void update(std::shared_ptr<const ffnx::graph::GraphCommand<TGraph>> cmd) {
 
-            auto as_add_vertex = std::dynamic_pointer_cast<const typename ffnx::graph::commands::AddVertexCommand<TGraph>>(cmd);
-            if (as_add_vertex != nullptr) {
-                auto node = ogdf_graph.newNode();
-                vert_map[as_add_vertex->getVertex()] = node;
-                edge_verts[as_add_vertex->getVertex()] = std::make_unique<std::set<typename TGraph::edge_descriptor>>();
-
-                return;
-            }
-
-            auto as_add_edge = std::dynamic_pointer_cast<const typename ffnx::graph::commands::AddEdgeCommand<TGraph>>(cmd);
-            if (as_add_edge != nullptr) {
-                auto edge_desc = as_add_edge->getEdge();
-                auto verts_desc = interface.lock()->graph().vertices_for_edge(edge_desc);
-
-                auto v0_desc = verts_desc.first;
-                auto v1_desc = verts_desc.second;
-
-                edge_verts[v0_desc]->insert(edge_desc);
-                edge_verts[v1_desc]->insert(edge_desc);
-                edge_map[edge_desc] = ogdf_graph.newEdge(vert_map[v0_desc], vert_map[v1_desc]);
-
-                return;
-            }
-        }
-
-        void apply_layout() {
+        void apply_layout() override {
             ogdf::SugiyamaLayout SL;
             SL.setRanking(new ogdf::OptimalRanking);
             SL.setCrossMin(new ogdf::MedianHeuristic);
@@ -173,12 +120,6 @@ namespace ffnx::ui::graph {
             graph_attributes.x(node) = x;
             graph_attributes.y(node) = y;
 
-            for (const auto& e : *(edge_verts[vdesc])) {
-                if (edge_listeners.contains(e)) {
-                    edge_listeners[e]();
-                }
-            }
-
             return {x, y};
         }
 
@@ -191,14 +132,6 @@ namespace ffnx::ui::graph {
             auto verts_for_edge = interface.lock()->graph().vertices_for_edge(edesc);
             return get_vertex_coordinate(verts_for_edge.second);
         }
-
-        virtual void add_vert_listener(const TGraph::vertex_descriptor &vdesc, const std::function<void()> &callback) {
-            vert_listeners[vdesc] = callback;
-        };
-
-        virtual void add_edge_listener(const TGraph::edge_descriptor &edesc, const std::function<void()> &callback) {
-            edge_listeners[edesc] = callback;
-        };
 
     };
 }

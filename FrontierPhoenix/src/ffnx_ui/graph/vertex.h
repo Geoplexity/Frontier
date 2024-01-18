@@ -1,8 +1,7 @@
 #ifndef FFNX_UI_GRAPH_VERTEX
 #define FFNX_UI_GRAPH_VERTEX
 
-#include "vertex_positioning_engine.h"
-#include "graph_selection_model.h"
+#include "ffnx_ui/graph/logic/controller.h"
 #include <QGraphicsItem>
 #include <iostream>
 
@@ -10,6 +9,11 @@ namespace ffnx::ui::graph {
 
     template <typename TGraph>
     class Vertex : public QGraphicsItem {
+    private:
+        std::weak_ptr<Controller<TGraph>> controller;
+
+        using vert_desc = typename TGraph::vertex_descriptor;
+
     public:
         enum {
             Type = UserType + 1
@@ -18,35 +22,23 @@ namespace ffnx::ui::graph {
             return Type;
         }
 
-        typename TGraph::vertex_descriptor vertex_descriptor;
+        vert_desc vert;
 
-        std::weak_ptr<VertexPositioningEngine<TGraph>> vertex_positioning_engine;
-
-        std::weak_ptr<GraphSelectionModel<TGraph>> selection_model;
-
-        Vertex(
-                std::weak_ptr<VertexPositioningEngine<TGraph>> vertex_positioning_engine,
-                std::weak_ptr<GraphSelectionModel<TGraph>> selection_model,
-                const typename TGraph::vertex_descriptor &vertex_descriptor) :
-                    vertex_positioning_engine(vertex_positioning_engine),
-                    selection_model(selection_model),
-                    vertex_descriptor(vertex_descriptor) {
+        Vertex(const vert_desc& vert,
+               QWidget* parent = nullptr) : controller(), vert(vert), QGraphicsItem() {
             setFlag(ItemIsMovable);
             setFlag(ItemIsSelectable);
             setFlag(ItemSendsGeometryChanges);
             setCacheMode(DeviceCoordinateCache);
 
-            vertex_positioning_engine.lock()->add_vert_listener(vertex_descriptor, [this](){
-                this->reposition();
-            });
         }
 
-        void reposition() {
-            prepareGeometryChange();
+        void set_controller(std::shared_ptr<Controller<TGraph>> controller) {
+            this->controller = controller;
+        }
 
-            auto coord = vertex_positioning_engine.lock()->get_vertex_coordinate(vertex_descriptor);
-
-            setPos(std::get<0>(coord), std::get<1>(coord));
+        vert_desc vertex_descriptor() const {
+            return vert;
         }
 
         QRectF boundingRect() const override {
@@ -67,28 +59,33 @@ namespace ffnx::ui::graph {
             painter->drawEllipse(-10, -10, 20, 20);
         }
 
+        void recompute_position() {
+            auto new_position = controller.lock()->positioning_engine().get_vertex_coordinate(vert);
+            setPos(new_position.first, new_position.second);
+        }
+
         QVariant itemChange(GraphicsItemChange change, const QVariant &value) override {
 
-            if (change == ItemPositionChange) {
-                auto new_pos = value.value<QPointF>();
 
-                if (scene()->selectedItems().contains(this)) {
-                    // update the vertex engine with the new requested coordinate
-                    auto next_new_pos = vertex_positioning_engine.lock()->set_vertex_coordinate(vertex_descriptor,
-                                                                                                new_pos.x(),
-                                                                                                new_pos.y());
-                    new_pos = QPointF(qreal(next_new_pos.first),
-                                      qreal(next_new_pos.second));
+            auto controller_lk = controller.lock();
 
+            if (!(controller_lk == nullptr)) {
+
+                // if the event loop is running, do not schedule additional events
+                if (controller_lk->is_event_loop_running()) {
+                    return QGraphicsItem::itemChange(change, value);
                 }
-                return new_pos;
-            } else if (change == ItemSelectedChange) {
-                prepareGeometryChange();
-                auto selection_state = value.value<bool>();
-                if (selection_state) {
-                    selection_model.lock()->select_vertex(vertex_descriptor);
-                } else {
-                    selection_model.lock()->deselect_vertex(vertex_descriptor);
+
+                if (change == ItemPositionChange) {
+                    auto updated_position = value.value<QPointF>();
+                    auto x = updated_position.x();
+                    auto y = updated_position.y();
+                    controller_lk->push_command(std::move(std::make_unique<VertexPositioningUICommand<TGraph>>(
+                            vert, x, y)));
+                } else if (change == ItemSelectedChange) {
+                    auto selection_state = value.value<bool>();
+                    controller_lk->push_command(std::move(std::make_unique<VertexSelectionUICommand<TGraph>>(
+                            vert, selection_state)));
                 }
             }
 
