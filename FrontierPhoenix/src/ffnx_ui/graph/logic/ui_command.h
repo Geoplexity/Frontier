@@ -1,6 +1,7 @@
 #ifndef FFNX_UI_GRAPH_UI_UI_COMMAND_H
 #define FFNX_UI_GRAPH_UI_UI_COMMAND_H
 
+#include <set>
 #include "ffnx/graph/Command.h"
 
 namespace ffnx::ui::graph {
@@ -15,6 +16,28 @@ namespace ffnx::ui::graph {
     class Edge;
 
     /**
+     * Identifies the type of change made, without control variables. For example may identify a position change via
+     * the vertex moved, but does not contain the position coordinates themselves.
+     */
+    template <typename TGraph>
+    struct UICommandCategory {
+        std::string identifier;
+
+        /**
+         * Indicates that this command may be consolidated with subsequent commands.
+         */
+        bool permits_consolidation;
+        std::set<typename TGraph::vertex_descriptor> verts;
+        std::set<typename TGraph::edge_descriptor> edges;
+
+        bool operator ==(const UICommandCategory& b) const {
+            return this->permits_consolidation == b.permits_consolidation &&
+                    this->verts == b.verts &&
+                    this->edges == b.edges;
+        }
+    };
+
+    /**
      * Represents a UI change (e.g. vertex repositioning/selection change) that does not affect the underlying graph
      * structure.
      */
@@ -24,6 +47,8 @@ namespace ffnx::ui::graph {
         virtual void apply(Controller<TGraph>& controller) = 0;
 
         virtual void undo(Controller<TGraph>& controller) = 0;
+
+        virtual std::unique_ptr<UICommandCategory<TGraph>> command_category() const = 0;
     };
 
     /**
@@ -92,6 +117,13 @@ namespace ffnx::ui::graph {
         void undo(Controller<TGraph>& controller) {
             throw std::runtime_error("Not implemented");
         }
+
+        std::unique_ptr<UICommandCategory<TGraph>> command_category() const {
+            auto result = std::make_unique<UICommandCategory<TGraph>>("vertex_position_changed", true);
+            result->verts.insert(vertex);
+
+            return std::move(result);
+        }
     };
 
     template <typename TGraph>
@@ -118,6 +150,47 @@ namespace ffnx::ui::graph {
         void undo(Controller<TGraph>& controller) {
             throw std::runtime_error("Not implemented");
         }
+
+        std::unique_ptr<UICommandCategory<TGraph>> command_category() const {
+            auto result = std::make_unique<UICommandCategory<TGraph>>("vertex_selection_changed", true);
+            result->verts.insert(vertex);
+
+            return std::move(result);
+        }
+    };
+
+
+    template <typename TGraph>
+    class EdgeSelectionUICommand : public UICommand<TGraph> {
+    private:
+        typename TGraph::edge_descriptor edge;
+
+        bool state;
+
+    public:
+
+        EdgeSelectionUICommand(typename TGraph::edge_descriptor edge, bool state) : edge(edge), state(state) {
+
+        }
+
+        void apply(Controller<TGraph>& controller) {
+            if (state) {
+                controller.selection_model().select_edge(edge);
+            } else {
+                controller.selection_model().deselect_edge(edge);
+            }
+        }
+
+        void undo(Controller<TGraph>& controller) {
+            throw std::runtime_error("Not implemented");
+        }
+
+        std::unique_ptr<UICommandCategory<TGraph>> command_category() const {
+            auto result = std::make_unique<UICommandCategory<TGraph>>("edge_selection_changed", true);
+            result->edges.insert(edge);
+
+            return std::move(result);
+        }
     };
 
     template <typename TGraph>
@@ -137,6 +210,14 @@ namespace ffnx::ui::graph {
 
         void undo(Controller<TGraph>& controller) {
             throw std::runtime_error("Not implemented");
+        }
+
+
+        std::unique_ptr<UICommandCategory<TGraph>> command_category() const {
+            auto result = std::make_unique<UICommandCategory<TGraph>>("vertex_added_to_scene", false);
+            result->verts.insert(vertex);
+
+            return std::move(result);
         }
     };
 
@@ -159,6 +240,13 @@ namespace ffnx::ui::graph {
         void undo(Controller<TGraph>& controller) {
             throw std::runtime_error("Not implemented");
         }
+
+        std::unique_ptr<UICommandCategory<TGraph>> command_category() const {
+            auto result = std::make_unique<UICommandCategory<TGraph>>("edge_added_to_scene", false);
+            result->edges.insert(edge);
+
+            return std::move(result);
+        }
     };
 
     template <typename TGraph>
@@ -166,7 +254,6 @@ namespace ffnx::ui::graph {
     private:
 
     public:
-
 
         void apply(Controller<TGraph>& controller) {
             controller.positioning_engine().apply_layout();
@@ -179,6 +266,12 @@ namespace ffnx::ui::graph {
 
         void undo(Controller<TGraph>& controller) {
             throw std::runtime_error("Not implemented");
+        }
+
+        std::unique_ptr<UICommandCategory<TGraph>> command_category() const {
+            auto result = std::make_unique<UICommandCategory<TGraph>>("vertex_positions_reset", false);
+
+            return std::move(result);
         }
     };
 };

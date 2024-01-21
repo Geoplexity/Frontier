@@ -30,6 +30,7 @@ namespace ffnx::ui::graph {
         Edge(const edge_desc& edge,
                QWidget* parent = nullptr) : controller(), edge(edge), QGraphicsItem() {
             setFlag(ItemIsSelectable);
+            setFlag(ItemSendsGeometryChanges);
 
             setZValue(-1);
         }
@@ -79,10 +80,22 @@ namespace ffnx::ui::graph {
 
 
         QVariant itemChange(GraphicsItemChange change, const QVariant &value) override {
-            if (change == ItemSelectedChange) {
-                prepareGeometryChange();
+            prepareGeometryChange();
+
+            auto controller_lk = controller.lock();
+            if (controller_lk == nullptr) {
+                return QGraphicsItem::itemChange(change, value);
             }
 
+            if (controller_lk->is_event_loop_running()) {
+                return QGraphicsItem::itemChange(change, value);
+            } else {
+                if (change == ItemSelectedChange) {
+                    auto selection_state = value.value<bool>();
+                    controller_lk->push_command(
+                            std::move(std::make_unique<EdgeSelectionUICommand<TGraph>>(edge, selection_state)));
+                }
+            }
 
             return QGraphicsItem::itemChange(change, value);
         }

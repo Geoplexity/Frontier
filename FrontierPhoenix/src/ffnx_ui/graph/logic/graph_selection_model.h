@@ -2,7 +2,6 @@
 #define FFNX_UI_GRAPH_GRAPHSELECTIONMODEL
 
 #include "ffnx/graph/Interface.h"
-#include "ffnx/event/observer.h"
 
 namespace ffnx::ui::graph {
 

@@ -4,6 +4,8 @@
 #include "ui_command.h"
 #include "vertex_positioning_engine.h"
 #include "graph_selection_model.h"
+#include "command_consolidator.h"
+#include <list>
 
 namespace ffnx::ui::graph {
 
@@ -13,6 +15,8 @@ namespace ffnx::ui::graph {
     template <typename TGraph>
     class Controller : public std::enable_shared_from_this<Controller<TGraph>> {
     private:
+        UICommandConsolidator<TGraph> _command_consolidator;
+
         std::unique_ptr<VertexPositioningEngine<TGraph>> _positioning_engine;
 
         std::unique_ptr<GraphSelectionModel<TGraph>> _selection_model;
@@ -89,7 +93,14 @@ namespace ffnx::ui::graph {
         }
 
         void event_loop() {
+            if (pending_command_index >= command_stack.size()) {
+                // nothing to do
+                return;
+            }
+
             _is_event_loop_running = true;
+
+            std::cout << "Controller loop: " << pending_command_index << " of " << command_stack.size() << std::endl;
 
             while (pending_command_index < command_stack.size()) {
 
@@ -100,6 +111,13 @@ namespace ffnx::ui::graph {
                 }
 
                 pending_command_index++;
+
+                // consolidate commands
+                auto stack_size_before_consolidate = command_stack.size();
+                _command_consolidator.consolidate(command_stack, pending_command_index);
+                auto commands_removed = stack_size_before_consolidate - command_stack.size();
+
+                pending_command_index -= commands_removed;
             }
 
             _is_event_loop_running = false;

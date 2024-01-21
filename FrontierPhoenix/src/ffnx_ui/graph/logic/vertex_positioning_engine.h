@@ -48,8 +48,6 @@ namespace ffnx::ui::graph {
 
         std::map<typename TGraph::vertex_descriptor, std::unique_ptr<std::set<typename TGraph::edge_descriptor>>> edge_verts;
 
-        ffnx::event::ObserverToken<std::shared_ptr<const ffnx::graph::GraphCommand<TGraph>>> command_token;
-
     public:
 
         DefaultVertexPositioningEngine(interface_ptr interface) :
