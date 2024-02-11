@@ -4,6 +4,9 @@
 #include "ffnx_ui/graph/logic/controller.h"
 #include <QGraphicsItem>
 #include <iostream>
+#include <algorithm>
+
+#include <boost/graph/graph_selectors.hpp>
 
 namespace ffnx::ui::graph {
 
@@ -45,8 +48,19 @@ namespace ffnx::ui::graph {
             auto source_coords = this->controller.lock()->positioning_engine().get_edge_begin(edge);
             auto dest_coords = this->controller.lock()->positioning_engine().get_edge_end(edge);
 
+            auto vertex_radius = this->controller.lock()->positioning_engine().get_vertex_radius();
+
             source = QPointF(source_coords.first, source_coords.second);
             dest = QPointF(dest_coords.first, dest_coords.second);
+
+            QLineF line(source, dest);
+            line.setLength(line.length() - vertex_radius);
+            line = QLineF(line.p2(), line.p1());
+            line.setLength(line.length() - vertex_radius);
+
+            source = line.p1();
+            dest = line.p2();
+
         }
 
         edge_desc edge_descriptor() const {
@@ -54,7 +68,13 @@ namespace ffnx::ui::graph {
         }
 
         [[nodiscard]] QRectF boundingRect() const override {
-            return QRectF(source, dest);
+            auto x_min = std::min(source.x(), dest.x());
+            auto y_min = std::min(source.y(), dest.y());
+
+            auto width = std::abs(source.x() - dest.x());
+            auto height = std::abs(source.y() - dest.y());
+
+            return QRectF(x_min - 5, y_min - 5, width + 10, height + 10);
         }
 
         [[nodiscard]] QPainterPath shape() const override {
@@ -70,11 +90,35 @@ namespace ffnx::ui::graph {
         void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override {
             auto pen = isSelected() ? QPen(Qt::red, 2, Qt::DashLine) : QPen(Qt::black, 2);
 
-            QPainterPath path(source);
-            path.lineTo(dest);
-
             painter->setPen(pen);
             painter->setBrush(Qt::black);
+
+
+            QPainterPath path(source);
+            path.lineTo(dest);
+            painter->drawPath(path);
+
+            if(!(typename TGraph::directionality().is_directed)) {
+                return;
+            }
+
+            QLineF delta(source, dest);
+
+            auto arrow_head_length = std::min(qreal(5), delta.length());
+
+            auto arrow_start = QLineF(dest, source);
+            arrow_start.setLength(arrow_head_length);
+            auto arrow_start_1 = QLineF(dest, arrow_start.p2());
+            arrow_start_1.setAngle(arrow_start_1.angle() - 20);
+            auto arrow_start_2 = QLineF(dest, arrow_start.p2());
+            arrow_start_2.setAngle(arrow_start_2.angle() + 20);
+
+            path = QPainterPath(arrow_start_1.p2());
+            path.lineTo(dest);
+            painter->drawPath(path);
+
+            path = QPainterPath(arrow_start_2.p2());
+            path.lineTo(dest);
             painter->drawPath(path);
         }
 

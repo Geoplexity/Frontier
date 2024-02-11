@@ -27,6 +27,8 @@ namespace ffnx::ui::graph {
                                                                  const double &x,
                                                                  const double &y) = 0;
 
+        virtual float get_vertex_radius() const = 0;
+
         virtual std::pair<double, double> get_edge_begin(const TGraph::edge_descriptor &edesc) const = 0;
 
         virtual std::pair<double, double> get_edge_end(const TGraph::edge_descriptor &edesc) const = 0;
@@ -100,6 +102,10 @@ namespace ffnx::ui::graph {
             SL.setLayout(ohl);
 
             SL.call(graph_attributes);
+        }
+
+        float get_vertex_radius() const override {
+            return 10;
         }
 
         std::pair<double, double> get_vertex_coordinate(const TGraph::vertex_descriptor &vdesc) const override {

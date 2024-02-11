@@ -14,6 +14,8 @@ namespace ffnx::ui::graph {
 
         using vert_desc = typename TGraph::vertex_descriptor;
 
+        float radius = 0;
+
     public:
         enum {
             Type = UserType + 1
@@ -35,6 +37,8 @@ namespace ffnx::ui::graph {
 
         void set_controller(std::shared_ptr<Controller<TGraph>> controller) {
             this->controller = controller;
+            prepareGeometryChange();
+            this->radius = controller->positioning_engine().get_vertex_radius();
         }
 
         vert_desc vertex_descriptor() const {
@@ -42,12 +46,12 @@ namespace ffnx::ui::graph {
         }
 
         QRectF boundingRect() const override {
-            return QRectF(-10, -10, 20, 20);
+            return QRectF(-radius, -radius, 2 * radius, 2 * radius);
         }
 
         QPainterPath shape() const override {
             QPainterPath path;
-            path.addEllipse(-10, -10, 20, 20);
+            path.addEllipse(-radius, -radius, 2 * radius, 2 * radius);
             return path;
         }
 
@@ -56,7 +60,7 @@ namespace ffnx::ui::graph {
 
             painter->setPen(pen);
             painter->setBrush(Qt::white);
-            painter->drawEllipse(-10, -10, 20, 20);
+            painter->drawEllipse(-radius, -radius, 2 * radius, 2 * radius);
         }
 
         void recompute_position() {
