@@ -22,8 +22,13 @@ in the documentation index in the documentation
 folder of the FRONTIER-gnu directory; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
+#include <iostream>
 
+#include "mfa1List.h"
+#include "mfa2Clas.h"
 
+using std::ostream;
+using std::cout;
 
 //copies only thet labels from g0 to g1
 void copyLabel(Graph &g0, Graph &g1)
