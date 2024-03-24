@@ -28,7 +28,11 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "mfa1List.h"
 
-using ostream = std::ostream;
+using std::ostream;
+using std::cout;
+using std::endl;
+using std::cin;
+using std::string;
 
 // simple random numbers by numerical recipies
 // ran0 returns a value between 0.0 and 1.0
@@ -553,6 +557,31 @@ public:
    int constrainDegree();
 };
 
+
+// copy a graph and return K value
+int copyG(Graph &g0, Graph &g1)
+{
+    int i, nVer, nEdg, dimen;
+
+    g1.delAllVer();
+    g1.delAllEdg();
+
+    dimen=g0.returnDimen();
+    g1.setDimen(dimen);
+
+    nVer=g0.returnNumVer();
+    nEdg=g0.returnNumEdg();
+
+    for(i=1;i<=nVer;i++)
+        g1.appendVertex(g0.returnVertByIndex(i));
+
+    for(i=1;i<=nEdg;i++)
+        g1.appendEdge(g0.returnEdgeByIndex(i));
+
+    if(dimen==3) return 7;  //K=7 for 3-D problem
+    else return 4;          //K=4 for 2-D problem
+}
+
 void Graph::simplify()
 {
    int i, j, tempNum, e1Name, e2Name, v11, v12, v21, v22;
@@ -970,176 +999,6 @@ int Graph::distribute0(Edge &edge, ostream &file2)
     restoreFlow(edgep);
     return 1; // not able to distribute the edge completely
   }
-}
-
-
-int Graph::sketchInput(int &idx, jint *inputData, int &idxDbl, jdouble *dbleData) //from sketch to graph
-{
-
-   int i, j, shapeType, constraintType, numInvolved, eName, atPart[2];
-   Vertex *vert;
-   Edge new_edg;
-
-   //part 1 shape info.
-   //NumVert=0;  //# of shapes in sketch == # of vertices in graph
-   //idx=1;
-   //idxDbl=0;
-   while(inputData[idx] >= 0)
-   {
-      NumVert++;
-      Vertex new_ver;
-      shapeType=inputData[idx++];            // shapeType
-      cout<<"shapeType="<<shapeType<<endl;
-      new_ver.setType(shapeType);
-      if(singleVertex<inputData[idx])
-         singleVertex=inputData[idx];
-      switch(shapeType)                      // get weigth based on shapeType
-      {
-         case 0:                             // point
-               cout<<"shapeID="<<inputData[idx]<<endl;
-               new_ver.setName(inputData[idx++]);     // shape ID  == vertex name
-	       new_ver.setWeight(2);
-               new_ver.initialValue(0, dbleData[idxDbl++], 0); //x
-               new_ver.initialValue(1, dbleData[idxDbl++], 0); //y
-               new_ver.notDefinedValue(2);   // Not Applicable
-               new_ver.notDefinedValue(3);   // Not Applicable
-               new_ver.notDefinedValue(4);   // Not Applicable
-               new_ver.notDefinedValue(5);   // Not Applicable
-	       break;
-         case 1:                             // line
-               cout<<"shapeID="<<inputData[idx]<<endl;
-               new_ver.setName(inputData[idx++]);     // shape ID  == vertex name
-               new_ver.setWeight(2);
-               new_ver.initialValue(0, dbleData[idxDbl++], 0); //x1
-               new_ver.initialValue(1, dbleData[idxDbl++], 0); //y1
-               new_ver.initialValue(2, dbleData[idxDbl++], 0); //x2
-               new_ver.initialValue(3, dbleData[idxDbl++], 0); //y2
-               idxDbl++;
-               new_ver.notDefinedValue(5);   // Not Applicable
-               break;
-         case 2:                             // ray
-               cout<<"shapeID="<<inputData[idx]<<endl;
-               new_ver.setName(inputData[idx++]);     // shape ID  == vertex name
-               new_ver.setWeight(3);
-               new_ver.initialValue(0, dbleData[idxDbl++], 0); //x1
-               new_ver.initialValue(1, dbleData[idxDbl++], 0); //y1
-               new_ver.initialValue(2, dbleData[idxDbl++], 0); //x2
-               new_ver.initialValue(3, dbleData[idxDbl++], 0); //y2
-               idxDbl++;
-               new_ver.notDefinedValue(5);   // Not Applicable
-               break;
-         case 3:                             // line segment
-               cout<<"shapeID="<<inputData[idx]<<endl;
-               new_ver.setName(inputData[idx++]);     // shape ID  == vertex name
-               new_ver.setWeight(4);
-               new_ver.initialValue(0, dbleData[idxDbl++], 0); //x1
-               new_ver.initialValue(1, dbleData[idxDbl++], 0); //y1
-               new_ver.initialValue(2, dbleData[idxDbl++], 0); //x2
-               new_ver.initialValue(3, dbleData[idxDbl++], 0); //y2
-               idxDbl++;
-               
-/*               if(inputData[idx]>=0) {
-                  new_ver.initialValue(5, dbleData[idxDbl++], -1); //length
-                  new_ver.incrsWt(-1);
-               }*/
-               break;
-         case 4:                             // circle
-               cout<<"shapeID="<<inputData[idx]<<endl;
-               new_ver.setName(inputData[idx++]);     // shape ID  == vertex name
-               new_ver.setWeight(3);
-               new_ver.initialValue(0, dbleData[idxDbl++], 0); //x
-               new_ver.initialValue(1, dbleData[idxDbl++], 0); //y
-/*             if(inputData[idx]>=0) {
-                  new_ver.initialValue(2, dbleData[idxDbl++], -1); // radius
-                  new_ver.incrsWt(-1);
-               } */
-               idxDbl++;
-               new_ver.notDefinedValue(3);   // Not Applicable
-               new_ver.notDefinedValue(4);   // Not Applicable
-               new_ver.notDefinedValue(5);   // Not Applicable
-               break;
-         case 5:                             // arc
-               cout<<"shapeID="<<inputData[idx]<<endl;
-               new_ver.setName(inputData[idx++]);     // shape ID  == vertex name
-               new_ver.setWeight(5);
-               new_ver.initialValue(0, (float)inputData[idx++], 0); //x
-               new_ver.initialValue(1, (float)inputData[idx++], 0); //y
-               if(inputData[idx]>=0) {
-                  new_ver.initialValue(2, dbleData[idxDbl++], -1); // radius
-                  new_ver.incrsWt(-1);
-               }
-               idx=idx+2;  // float is 64-bit
-               if(inputData[idx]>=0) {
-                  new_ver.initialValue(3, dbleData[idxDbl++], -1); // angle
-                  new_ver.incrsWt(-1);
-               }
-               break;
-      };
-      //if(inputData[idx]!=-1) idx++;
-      vertices.append(new_ver);
-   }
-   nextVerName=singleVertex+4;
-   cout<<NumVert<<endl;
-   cout<<inputData[idx]<<endl;
-   idx++;
-
-   //part 2 constraint info.
-   while(inputData[idx]>=0)
-   {
-      NumEdge++;
-      constraintType=inputData[idx++];      // constraint type
-      cout<<"constraintType="<<constraintType<<endl;
-      new_edg.setType(constraintType);
-      new_edg.setWeight(1);                 // weight = 1 for most constraints
-      eName=inputData[idx++];               // constraint ID  == edge name
-      cout<<"constraintID="<<eName<<endl;
-      if(nextEdgeName<=eName)
-         nextEdgeName=eName+1;
-      new_edg.setName(eName);
-      numInvolved=inputData[idx++];         // # of Shapes involved==2 for now
-      for(i=0;i<numInvolved;i++)
-      {
-         //out<<"   involved="<<inputData[idx]<<endl;
-         new_edg.setEnd(i, inputData[idx]);
-         for(j=1;j<=NumVert;j++)
-         {
-            vert=vertices.addrByIndex(j);
-            if(vert->returnName()==inputData[idx])
-               vert->appendIncid(eName);
-         }
-         idx++;
-         if(constraintType==0||constraintType==1||constraintType==4) {// dista
-            atPart[i]=inputData[idx];
-            //out<<"   part="<<inputData[idx]<<endl;
-            new_edg.setPart(i, inputData[idx++]);
-         }
-         else
-            new_edg.setPart(i, 0);
-      }
-      if(constraintType==1) { //incidence
-         if(atPart[0]==0&&atPart[1]==0)
-            new_edg.setWeight(0);
-         if(atPart[0]>0&&atPart[0]<4&&atPart[1]==0)
-            new_edg.setWeight(1);
-         if(atPart[1]>0&&atPart[1]<4&&atPart[0]==0)
-            new_edg.setWeight(1);
-         if(atPart[0]!=0&&atPart[1]!=0)
-            new_edg.setWeight(2);
-      }
-
-      if(constraintType==0||constraintType==4) { // distance or angle
-         new_edg.setValue(dbleData[idxDbl++]);//-1.0 for arbitrary
-         //new_edg.setValue(toFloat(inputData[idx]));//-1.0 for arbitrary
-         //idx=idx+2;
-      }
-      else
-         new_edg.setValue(-2.0);                 // N/A for other constraints
-      edges.append(new_edg);
-   }
-   idx++;
-   //out<<"in input, idx="<<idx<<" inputData[idx]="<<inputData[idx]<<endl;
-   return idx;
-
 }
 
 void Graph::randomGraph()
