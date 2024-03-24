@@ -647,30 +647,6 @@ namespace ffnx::mfa {
         int constrainDegree();
     };
 
-
-// copy a graph and return K value
-    int copyG(Graph &g0, Graph &g1) {
-        int i, nVer, nEdg, dimen;
-
-        g1.delAllVer();
-        g1.delAllEdg();
-
-        dimen = g0.returnDimen();
-        g1.setDimen(dimen);
-
-        nVer = g0.returnNumVer();
-        nEdg = g0.returnNumEdg();
-
-        for (i = 1; i <= nVer; i++)
-            g1.appendVertex(g0.returnVertByIndex(i));
-
-        for (i = 1; i <= nEdg; i++)
-            g1.appendEdge(g0.returnEdgeByIndex(i));
-
-        if (dimen == 3) return 7;  //K=7 for 3-D problem
-        else return 4;          //K=4 for 2-D problem
-    }
-
     void Graph::simplify() {
         int i, j, tempNum, e1Name, e2Name, v11, v12, v21, v22;
         Edge edg1, edg2;
@@ -940,7 +916,7 @@ namespace ffnx::mfa {
         return constrain;
     }
 
-//distribut Edge
+    //distribut Edge
     int Graph::distribute0(Edge &edge, ostream &file2) {
         int no_of_unscanned = 1;
         Edge *edgep, *ep;
@@ -1433,6 +1409,14 @@ namespace ffnx::mfa {
 
         os << endl;
     }
+
+
+    class StaticVariables {
+    public:
+        int singleVertex = 1;
+        int nextVerName = 1;
+        int nextEdgeName = 1;
+    };
 }
 
 #endif
