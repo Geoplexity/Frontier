@@ -22,6 +22,9 @@ in the documentation index in the documentation
 folder of the FRONTIER-gnu directory; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
+#ifndef MFA_6_DIST_H
+#define MFA_6_DIST_H
+
 #include <iostream>
 
 #include "mfa1List.h"
@@ -30,90 +33,83 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 using std::ostream;
 using std::cout;
 
-//copies only thet labels from g0 to g1
-void copyLabel(Graph &g0, Graph &g1)
-{
-    int i, nVer, nEdg;
-    Vertex *v;
-    Edge *e;
+namespace ffnx::mfa {
 
-    nVer=g0.returnNumVer();
-    for(i=1;i<=nVer;i++)
-    {
-        v=g1.VertAddr(g0.returnVertByIndex(i).returnName());
-        v->setLabel(g0.returnVertByIndex(i).returnLabel());
+    //copies only thet labels from g0 to g1
+    void copyLabel(Graph &g0, Graph &g1) {
+        int i, nVer, nEdg;
+        Vertex *v;
+        Edge *e;
+
+        nVer = g0.returnNumVer();
+        for (i = 1; i <= nVer; i++) {
+            v = g1.VertAddr(g0.returnVertByIndex(i).returnName());
+            v->setLabel(g0.returnVertByIndex(i).returnLabel());
+        }
+        nEdg = g0.returnNumEdg();
+        for (i = 1; i <= nEdg; i++) {
+            e = g1.EdgeAddr(g0.returnEdgeByIndex(i).returnName());
+            e->setLabel(g0.returnEdgeByIndex(i).returnLabel());
+        }
+        return;
     }
-    nEdg=g0.returnNumEdg();
-    for(i=1;i<=nEdg;i++)
-    {
-        e=g1.EdgeAddr(g0.returnEdgeByIndex(i).returnName());
-        e->setLabel(g0.returnEdgeByIndex(i).returnLabel());
+
+    //delete inner vertices and edges of newTree from F
+    void delInnerVer(Graph &F, Graph &graph0) {
+        int i, j, nVerF, vName, nIncid, eOldName;
+        Vertex vOld;
+
+        //out<<"before delete inner vertex of new cluster"<<endl;
+        //F.output(out);
+
+        nVerF = F.returnNumVer();
+        for (i = 1; i <= nVerF; i++) {
+            vOld = F.returnVertByIndex(1);
+            F.delVer(vOld);
+            if (vOld.returnScan() <= -1) // inner vertices
+            {
+                vName = vOld.returnName();
+                graph0.freezeVertForever(vName);
+                nIncid = vOld.numIncid();
+                for (j = 1; j <= nIncid; j++) {
+                    //eOld=F.returnEdgeByName(vOld.returnIncid(j));
+                    //out<<"edge "<<eOld.returnName()<<" deleted"<<endl;
+                    //if(eOld.returnName()>0) F.delEdg(eOld);
+                    eOldName = vOld.returnIncid(j);
+                    //out<<"edge "<<eOldName<<endl;
+                    F.delEdgeByName(vOld.returnIncid(j));
+                }
+            } else {
+                //if(vOld.returnLabel()<0)
+                //   vOld.setLabel(1);
+                F.appendVertex(vOld);
+            }
+        }
     }
-    return;
+
+    // distribute edge when K!=0
+    int distributEdge(Edge &edge, Graph &F, ostream &file2) {
+        int a, K;
+        Graph CF;
+
+        a = F.distribute0(edge, file2);
+
+        if (a == 1) return 1; //Found dense in Phase one
+        else {
+            K = copyG(F, CF);   // copy F to CF and return K value
+            CF.delEdg(edge);
+            edge.setWeight(K);
+            a = CF.distribute0(edge, file2);
+            if (a == 1) {
+                copyLabel(CF, F); // copy label from CF to F
+                return 2;
+            }
+            return 0;
+        }
+    }
 }
 
-//delete inner vertices and edges of newTree from F
-void delInnerVer(Graph &F, Graph &graph0)
-{
-   int i, j, nVerF, vName, nIncid, eOldName;
-   Vertex vOld;
-
-   //out<<"before delete inner vertex of new cluster"<<endl;
-   //F.output(out);
-
-   nVerF=F.returnNumVer();
-   for(i=1;i<=nVerF;i++)
-   {
-     vOld=F.returnVertByIndex(1);
-     F.delVer(vOld);
-     if(vOld.returnScan()<=-1) // inner vertices
-     {
-         vName=vOld.returnName();
-         graph0.freezeVertForever(vName);
-         nIncid=vOld.numIncid();
-         for(j=1;j<=nIncid;j++)
-         {
-            //eOld=F.returnEdgeByName(vOld.returnIncid(j));
-            //out<<"edge "<<eOld.returnName()<<" deleted"<<endl;
-            //if(eOld.returnName()>0) F.delEdg(eOld);
-            eOldName=vOld.returnIncid(j);
-            //out<<"edge "<<eOldName<<endl;
-            F.delEdgeByName(vOld.returnIncid(j));
-         }
-     }
-     else
-     {
-        //if(vOld.returnLabel()<0)
-        //   vOld.setLabel(1);
-        F.appendVertex(vOld);
-     }
-   }
-}
-
-// distribute edge when K!=0
-int distributEdge(Edge &edge, Graph &F, ostream &file2)
-{
-  int a, K;
-  Graph CF;
-
-  a=F.distribute0(edge, file2);
-
-  if (a==1) return 1; //Found dense in Phase one
-  else
-  {
-     K=copyG(F, CF);   // copy F to CF and return K value
-     CF.delEdg(edge);
-     edge.setWeight(K);
-     a=CF.distribute0(edge, file2);
-     if (a==1)
-     {
-         copyLabel(CF, F); // copy label from CF to F
-         return 2;
-     }
-     return 0;
-  }
-}
-
+/*
 //see attached paper documentation for description of push outside
 int pushOutside(Cluster &C, Graph &F, Graph &graph0, ostream &file1, ostream &file2)
 {
@@ -417,3 +413,6 @@ Cluster & distributeCl
    return *dummy;
 }
 
+*/
+
+#endif

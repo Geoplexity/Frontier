@@ -66,32 +66,6 @@ float Random::ran0() {
   return ans;
 }
 
-//Refere IEEE 745 standard format for 64-bit floating- point number at
-//Computer architecture and organization by Hayes (ISBN 0-07-027366-9) p.196
-float toFloat(int readed)
-{
-      int i, exponent;
-      float mantissa, floatNumber;
-      exponent = (readed>>20)&2047;      // 2^11 - 1 == 2047
-      exponent = exponent - 1023;
-      mantissa = (readed&1048575);       // 2^20 - 1 == 1048575
-      mantissa =mantissa / 1048575.0;    // use 20 bit mantissa
-
-      if(readed&(1<<31))
-         floatNumber=-1.0;
-      else
-         floatNumber=1.0;
-
-      if(exponent>0)
-         for(i=0;i<exponent;i++)
-            floatNumber=floatNumber*2.0;
-      else
-         for(i=0;i<-exponent;i++)
-            floatNumber=floatNumber/2.0;
-      floatNumber=floatNumber*(1.0+mantissa);
-      return floatNumber;
-}
-
 class Vertex
 {
 private:
@@ -533,9 +507,6 @@ public:
    // return a Edge or Vertex point to the edge or vertex with the given ID
    Vertex * VertAddr(int vName);
    Edge   * EdgeAddr(int eName);
-
-   // reads data from the arrays sent by the sketcher
-   int sketchInput(int &idx, jint *inputData, int &indxDbl, jdouble *dbleData); //from sketch to graph
 
    // used for testing generates a random graph
    void randomGraph();
