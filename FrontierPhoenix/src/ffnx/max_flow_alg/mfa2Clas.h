@@ -70,7 +70,95 @@ namespace ffnx::mfa {
         return ans;
     }
 
+    enum VertexType {
+        point = 0,
+        line = 1,
+        ray = 2,
+        lSeg = 3,
+        circle = 4,
+        arc = 5,
+        cluster = -1
+    };
+
+    class FreeDegsValues {
+    public:
+        static constexpr int FREE = 0;
+        static constexpr int NOT_FREE = 1;
+    };
+
+    class DegValuesIndexResolver {
+    public:
+        /******************************************************************\
+        *              point line   Ray   LineSeg circle  arc      cluster *
+        *  degValue[0]   x    x1     x1     x1      x      x        x-sft  *
+        *  degValue[1]   y    y1     y1     y1      y      y        y-sft  *
+        *  degValue[2]   -    x2     x2     x2      r      r       rot-cos *
+        *  degValue[3]   -    y2     y2     y2      -    angle     rot-sin *
+        *  degValue[4]   -  slope   cos   slope     -  start_cos      -    *
+        *  degValue[5]   -          sin   length    -  start_sin      -    *
+        *  degValue[6]   -    -      -      -       -   end_cos       -    *
+        *  degValue[7]   -    -      -      -       -   end_sin       -    *
+        \******************************************************************/
+        enum class Point {
+            X = 0,
+            Y = 1
+        };
+
+        enum class Line {
+            X1 = 0,
+            Y1 = 1,
+            X2 = 2,
+            Y2 = 3,
+            SLOPE = 4
+        };
+
+        enum class Ray {
+            X1 = 0,
+            Y1 = 1,
+            X2 = 2,
+            Y2 = 3,
+            COS = 4,
+            SIN = 5
+        };
+
+        enum class LineSeg {
+            X1 = 0,
+            Y1 = 1,
+            X2 = 2,
+            Y2 = 3,
+            SLOPE = 4,
+            LENGTH = 5
+        };
+
+        enum class Circle {
+            X = 0,
+            Y = 1,
+            RADIUS = 2
+        };
+
+        enum class Arc {
+            X = 0,
+            Y = 1,
+            RADIUS = 2,
+            ANGLE = 3,
+            START_COS = 4,
+            START_SIN = 5,
+            END_COS = 6,
+            END_SIN = 7,
+        };
+
+        enum class Cluster {
+            X_SFT = 0,
+            Y_SFT = 1,
+            ROT_COS = 2,
+            ROT_SIN = 3
+        };
+    };
+
     class Vertex {
+    public:
+        static constexpr int TYPE_POINT = 0;
+
     private:
         int name;           // unique object ID
         int type;           // point=0,line=1,ray=2,LSeg=3,circle=4,arc=5,cluster=-1
@@ -319,6 +407,12 @@ namespace ffnx::mfa {
         }
         return os;
     }
+
+    enum EdgeType {
+        distance = 0,
+        incidence = 1
+        // todo: remaining edge types
+    };
 
     class Edge {
     protected:
