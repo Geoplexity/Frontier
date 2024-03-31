@@ -38,6 +38,8 @@ std::unique_ptr<Graph> prepare_test_graph() {
 std::unique_ptr<List<Cluster>> get_initial_cluster_list(Graph& graph) {
     auto result = std::make_unique<List<Cluster>>();
 
+    Cluster dr_tree_root;
+
     for (int i = 0; i < graph.returnNumVer(); i++) {
         Cluster cluster;
         List<int> frontiers;
@@ -45,8 +47,10 @@ std::unique_ptr<List<Cluster>> get_initial_cluster_list(Graph& graph) {
         List<Edge> innerE, outerE;
         cluster.formCl(graph.returnVertByIndex(i), frontiers, innerE, outerE, originalV);
 
-        result->append(cluster);
+        dr_tree_root.children.append(cluster);
     }
+
+    result->append(dr_tree_root);
 
     return std::move(result);
 }
