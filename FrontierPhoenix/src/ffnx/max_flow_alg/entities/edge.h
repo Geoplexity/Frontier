@@ -8,7 +8,6 @@ namespace ffnx::mfa {
     class Edge {
     protected:
         int name;             // name = Constraint ID
-        int type;             // 0=distance, 1=incidence, ...
         int weight;           // DOF is removed by the constraint
         float value;          // of distance, angle, etc.
         int end1;         // ID of the vertex at end1
@@ -29,7 +28,6 @@ namespace ffnx::mfa {
         //default constructor sets all values to zero
         Edge() {
             name = 0;
-            type = 0;
             weight = 0;
             value = 0.0;
             end1 = 0;
@@ -49,8 +47,6 @@ namespace ffnx::mfa {
 
 
         void setName(int nm) { name = nm; }
-
-        void setType(int tp) { type = tp; }
 
         void setWeight(int wt) { weight = wt; }
 
@@ -86,8 +82,6 @@ namespace ffnx::mfa {
         }
 
         int returnName() { return name; }
-
-        int returnType() { return type; }
 
         int returnWeight() { return weight; }
 
@@ -130,7 +124,6 @@ namespace ffnx::mfa {
 
     Edge::Edge(const Edge &edg) {
         name = edg.name;
-        type = edg.type;
         weight = edg.weight;
         value = edg.value;
         end1 = edg.end1;
@@ -148,7 +141,6 @@ namespace ffnx::mfa {
     Edge &Edge::operator=(const Edge &edg) {
         if (this != &edg) {
             name = edg.name;
-            type = edg.type;
             weight = edg.weight;
             value = edg.value;
             end1 = edg.end1;
@@ -166,7 +158,7 @@ namespace ffnx::mfa {
     }
 
     std::ostream &operator<<(std::ostream &os, const Edge &edg) {
-        os << "Edg=" << edg.name << ",T=" << edg.type << ", W=" << edg.weight << ",V=";
+        os << "Edg=" << edg.name << ", W=" << edg.weight << ",V=";
         if (edg.value < -1)     //if (edg.value==-2.0)
             os << "NA";          // Not Applicable
         else if (edg.value < 0) //if (edg.value==-1.0)
