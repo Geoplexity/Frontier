@@ -25,7 +25,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifndef MFA_7_DRTREE
 #define MFA_7_DRTREE
 
-#include "mfa2Clas.h"
+#include "entities/cluster.h"
+#include "entities/graph.h"
+#include "entities/static_variables.h"
 #include "mfa6Dist.h"
 
 //recursively defrosts and entire forest, used with defrostTree

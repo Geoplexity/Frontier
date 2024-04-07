@@ -26,7 +26,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifndef MFA_8_ALGO
 #define MFA_8_ALGO
 
-#include "mfa2Clas.h"
 #include "mfa7DRTree.h"
 #include "mfa3Prnt.h"
 

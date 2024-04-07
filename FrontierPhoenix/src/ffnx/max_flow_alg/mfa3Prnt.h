@@ -23,10 +23,10 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifndef MFA_3_PRINT
 #define MFA_3_PRINT
 
-#include "mfa2Clas.h"
+#include "entities/cluster.h"
 
 namespace ffnx::mfa {
-    void printForest(List <Cluster> &DR_Trees, ostream &os, int indent);
+    void printForest(List<Cluster> &DR_Trees, ostream &os, int indent);
 
     void printTree(Cluster &DR_Tree, ostream &os, int indent) {
         int i, numKids, kidName;

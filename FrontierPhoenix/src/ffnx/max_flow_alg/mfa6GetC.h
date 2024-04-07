@@ -24,9 +24,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifndef MFA_6_GETC
 #define MFA_6_GETC
 
-#include "mfa2Clas.h"
-
 #include <iostream>
+
+#include "entities/graph.h"
 
 namespace ffnx::mfa {
 
