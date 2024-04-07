@@ -61,7 +61,7 @@ namespace ffnx::mfa {
         int i, j, nVerF, vName, nIncid, eOldName;
         Vertex vOld;
 
-        //out<<"before delete inner vertex of new cluster"<<endl;
+        //out<<"before delete inner vertex of new cluster"<<std::endl;
         //F.output(out);
 
         nVerF = F.returnNumVer();
@@ -75,7 +75,7 @@ namespace ffnx::mfa {
                 nIncid = vOld.numIncid();
                 for (j = 1; j <= nIncid; j++) {
                     //eOld=F.returnEdgeByName(vOld.returnIncid(j));
-                    //out<<"edge "<<eOld.returnName()<<" deleted"<<endl;
+                    //out<<"edge "<<eOld.returnName()<<" deleted"<<std::endl;
                     //if(eOld.returnName()>0) F.delEdg(eOld);
                     eOldName = vOld.returnIncid(j);
                     //out<<"edge "<<eOldName<<endl;
@@ -275,7 +275,7 @@ namespace ffnx::mfa {
         if (F.hasVert(v1Name)) F.defrostOneVert(v1Name);
         else F.appendVertex(v1);       // F = F + {v}
 
-        file2 << "add or defrost vertex v" << v1Name << endl;
+        file2 << "add or defrost vertex v" << v1Name << std::endl;
         F.output(file2);
 
         for (v2Name = 1; v2Name <= staticVariables.singleVertex; v2Name++) {
@@ -290,10 +290,10 @@ namespace ffnx::mfa {
                 diff = edgeWeight + K - 1 - v1Weight - v2Weight;
                 if (diff > 0) {
                     cout << "Overconstrain between vertices v" << v1Name << " and v"
-                         << v2Name << endl;
-                    cout << "Hit 1 to stop" << endl;
-                    cout << "Hit 2 to continue (replace it)" << endl;
-                    cin >> ans;
+                         << v2Name << std::endl;
+                    cout << "Hit 1 to stop" << std::endl;
+                    cout << "Hit 2 to continue (replace it)" << std::endl;
+                    std::cin >> ans;
                     if (ans == 1)
                         exit(0);
                     else
@@ -350,18 +350,18 @@ namespace ffnx::mfa {
         v1Name = C.returnCore().returnName();
         if (v1Name > 0 && v1Name <= staticVariables.singleVertex) // distributing single vertex
         {
-            //out<<"in distributeCl 1"<<endl;
+            //out<<"in distributeCl 1"<<std::endl;
             v1 = C.returnCore();
             newTree = distributeVert(v1, F, graph0, file1, file2, staticVariables);
             //newTree->output(out);
-            //out<<"in distributeCl 11"<<endl;
+            //out<<"in distributeCl 11"<<std::endl;
             if (newTree->empty())
                 delete newTree;
             else
                 return *newTree;
         } else  // distributing a cluster
         {
-            //out<<"in distributeCl 2"<<endl;
+            //out<<"in distributeCl 2"<<std::endl;
             //if(C.returnCore().returnName()==19) { C.output(out);}
             ClusterDepth = C.returnCore().returnDepth();
             if (F.returnDepth() < ClusterDepth) F.setDepth(ClusterDepth);

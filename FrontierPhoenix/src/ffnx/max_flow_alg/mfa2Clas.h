@@ -31,11 +31,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "mfa1List.h"
 
-using std::ostream;
-using std::cout;
-using std::endl;
-using std::cin;
-using std::string;
 
 namespace ffnx::mfa {
 
@@ -274,7 +269,7 @@ namespace ffnx::mfa {
         }
 
         //stream output
-        friend ostream &operator<<(ostream &, const Vertex &);
+        friend std::ostream &operator<<(std::ostream &, const Vertex &);
     };
 
     Vertex::Vertex() {
@@ -354,7 +349,7 @@ namespace ffnx::mfa {
         return *this;
     }
 
-    ostream &operator<<(ostream &os, const Vertex &ver) {
+    std::ostream &operator<<(std::ostream &os, const Vertex &ver) {
         int i;
         os << "Ver=" << ver.name << ",T=" << ver.type << ", W=" << ver.weight << ", d=" << ver.depth
            << ", LSF=" << ver.label << ver.scan << ver.frozen
@@ -503,7 +498,7 @@ namespace ffnx::mfa {
         }
 
         //stream output
-        friend ostream &operator<<(ostream &, const Edge &);
+        friend std::ostream &operator<<(std::ostream &, const Edge &);
     };
 
     Edge::Edge(const Edge &edg) {
@@ -543,7 +538,7 @@ namespace ffnx::mfa {
         return *this;
     }
 
-    ostream &operator<<(ostream &os, const Edge &edg) {
+    std::ostream &operator<<(std::ostream &os, const Edge &edg) {
         os << "Edg=" << edg.name << ",T=" << edg.type << ", W=" << edg.weight << ",V=";
         if (edg.value < -1)     //if (edg.value==-2.0)
             os << "NA";          // Not Applicable
@@ -691,7 +686,7 @@ namespace ffnx::mfa {
         Edge *EdgeAddr(int eName);
 
         //stream output
-        void output(ostream &);
+        void output(std::ostream &);
 
         //set all of the labels in both the edges and the vertices to the unlabeled state, 0
         void removeLabels();
@@ -700,7 +695,7 @@ namespace ffnx::mfa {
         void restoreFlow(Edge *edgep);
 
         // see the attached paper for complete documentation
-        int distribute0(Edge &edge, ostream &file2);
+        int distribute0(Edge &edge, std::ostream &file2);
 
         // returns the difference between the total weight of the edges and the weight of the vertices
         // less the number of degrees of freedom of a rigid object in space, 2D = 3, 3D = 6
@@ -766,7 +761,7 @@ namespace ffnx::mfa {
 
         len = vertices.returnLen();
         for (i = 1; i <= len; i++) {
-            //out<<"defrosting ver="<<vertices.retrieve(i)<<endl;
+            //out<<"defrosting ver="<<vertices.retrieve(i)<<std::endl;
             verP = vertices.addrByIndex(i);
             verP->defrost();
         }
@@ -977,7 +972,7 @@ namespace ffnx::mfa {
     }
 
     //distribut Edge
-    int Graph::distribute0(Edge &edge, ostream &file2) {
+    int Graph::distribute0(Edge &edge, std::ostream &file2) {
         int no_of_unscanned = 1;
         Edge *edgep, *ep;
         Vertex *v1p, *v2p, *v3p;
@@ -985,7 +980,7 @@ namespace ffnx::mfa {
 
 
         removeLabels();
-        //file2<<"Before distribute edge"<<edge.returnName()<<endl;
+        //file2<<"Before distribute edge"<<edge.returnName()<<std::endl;
         //output(file2);
         edges.append(edge); //add edge in F
         NumEdge++;
@@ -1061,17 +1056,17 @@ namespace ffnx::mfa {
         }
     }
 
-    void Graph::output(ostream &os) {
+    void Graph::output(std::ostream &os) {
         int i;
         if (NumVert == 0 && NumEdge == 0) {
-            os << "Graph is Empty." << endl;
+            os << "Graph is Empty." << std::endl;
             return;
         }
         for (i = 1; i <= NumVert; i++)
-            os << vertices.retrieve(i) << endl;
+            os << vertices.retrieve(i) << std::endl;
 
         for (i = 1; i <= NumEdge; i++)
-            os << edges.retrieve(i) << endl;
+            os << edges.retrieve(i) << std::endl;
     }
 
 
@@ -1116,7 +1111,7 @@ namespace ffnx::mfa {
         List<Edge> innerE;     // list of edges between core and frontiers
         List<Edge> outerE;     // list of edges between frontiers
         List<int> originalV;   // list of vertices corresponding to original graph
-        List<string> bifurs;   // list of the strings representing the bifurcations of this cluster
+        List<std::string> bifurs;   // list of the strings representing the bifurcations of this cluster
         int constrain;         // 1--well constrained, 2,3,...--over constrained
         int numBifurs;         // lenght of the list bifurs
         int currBifur;         // the currently selected bifurcation, -1 means no selection
@@ -1154,7 +1149,7 @@ namespace ffnx::mfa {
 
         void setGroup(int g) { group = g; }
 
-        void setBifurs(List<string> &theBifurs) {
+        void setBifurs(List<std::string> &theBifurs) {
             bifurs = theBifurs;
             numBifurs = theBifurs.returnLen();
         }
@@ -1252,9 +1247,9 @@ namespace ffnx::mfa {
 
         int returnCurrBifur() { return currBifur; }
 
-        string returnCurrBifurString() { return bifurs.retrieve(currBifur); }
+        std::string returnCurrBifurString() { return bifurs.retrieve(currBifur); }
 
-        List<string> &returnBifurs() { return bifurs; }
+        List<std::string> &returnBifurs() { return bifurs; }
 
         List<int> &returnFrontiers() { return frontiers; }
 
@@ -1317,7 +1312,7 @@ namespace ffnx::mfa {
         }
 
         // stream output
-        void output(ostream &);
+        void output(std::ostream &);
     };
 
 
@@ -1370,19 +1365,19 @@ namespace ffnx::mfa {
     }
 
 
-    void Cluster::output(ostream &os) {
+    void Cluster::output(std::ostream &os) {
         int i, len, child;
         os << "Cluster(core):" << core.returnName()
            << ", depth=" << core.returnDepth();
         if (constrain == 1) os << ", well constrained";
         if (constrain > 1) os << ", over constrained";
         if (constrain < 1) os << ", under constrained";
-        os << endl << "Frontiers: ";
+        os << std::endl << "Frontiers: ";
         len = frontiers.returnLen();
         for (i = 1; i <= len; i++)
             os << frontiers.retrieve(i) << ' ';
 
-        os << endl << "Previous clusters: ";
+        os << std::endl << "Previous clusters: ";
         len = children.returnLen();
         for (i = 1; i <= len; i++) {
             child = children.retrieve(i).returnCore().returnName();
@@ -1392,12 +1387,12 @@ namespace ffnx::mfa {
                 os << "Grp" << children.retrieve(i).returnGroup() << ' ';
         }
 
-        os << endl << "Original Vertices: ";
+        os << std::endl << "Original Vertices: ";
         len = originalV.returnLen();
         for (i = 1; i <= len; i++)
             os << originalV.retrieve(i) << ' ';
 
-        os << endl << "Inner Edge: ";
+        os << std::endl << "Inner Edge: ";
         len = innerE.returnLen();
         for (i = 1; i <= len; i++)
             os << innerE.retrieve(i).returnName() << '('
@@ -1405,7 +1400,7 @@ namespace ffnx::mfa {
                << innerE.retrieve(i).returnEnd1() << '-'
                << innerE.retrieve(i).returnEnd2() << ") ";
 
-        os << endl << "Onter Edge: ";
+        os << std::endl << "Onter Edge: ";
         len = outerE.returnLen();
         for (i = 1; i <= len; i++)
             os << outerE.retrieve(i).returnName() << '('
@@ -1413,14 +1408,14 @@ namespace ffnx::mfa {
                << outerE.retrieve(i).returnEnd1() << '-'
                << outerE.retrieve(i).returnEnd2() << ") ";
 
-        os << endl << "Bifurcations (Current Selection: ";
-        if (currBifur < 1) os << "None):" << endl;
-        else os << currBifur << "):" << endl;
+        os << std::endl << "Bifurcations (Current Selection: ";
+        if (currBifur < 1) os << "None):" << std::endl;
+        else os << currBifur << "):" << std::endl;
         len = bifurs.returnLen();
         for (i = 1; i <= len; i++)
-            os << "    " << bifurs.retrieve(i) << endl;
+            os << "    " << bifurs.retrieve(i) << std::endl;
 
-        os << endl;
+        os << std::endl;
     }
 
 

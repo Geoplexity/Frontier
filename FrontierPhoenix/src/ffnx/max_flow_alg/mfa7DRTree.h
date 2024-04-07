@@ -139,7 +139,7 @@ namespace ffnx::mfa {
           groupID=aDRtree.returnGroup();
           *newDRtree=Children.retrieve(1);
           newDRtree->setGroup(groupID);
-          file1<<"Group="<<groupID<<endl;
+          file1<<"Group="<<groupID<<std::endl;
           if(groupID!=0)
           {
              F.defrostGraph();
@@ -323,8 +323,8 @@ namespace ffnx::mfa {
 
        while(DR_Trees.returnLen()>0)
        {
-          file1<<"---------------------------------------------"<<endl;
-          file2<<"---------------------------------------------"<<endl;
+          file1<<"---------------------------------------------"<<std::endl;
+          file2<<"---------------------------------------------"<<std::endl;
           if(extension(F, graph0, file1, file2, staticVariables))
           {
              newTree=*getCluster(F, graph0, staticVariables);
@@ -334,28 +334,28 @@ namespace ffnx::mfa {
              aTree=popMinDepth(DR_Trees, staticVariables);  // item is deleted in DR_Trees
              popedTrees.append(aTree);
              file1<<"Pop Cluster, "<<aTree.returnCore().returnName();
-             file1<<"  Group="<<aTree.returnGroup()<<endl;
-             file2<<"Pop Cluster, "<<aTree.returnCore().returnName()<<endl;
+             file1<<"  Group="<<aTree.returnGroup()<<std::endl;
+             file2<<"Pop Cluster, "<<aTree.returnCore().returnName()<<std::endl;
              F.output(file2);
              newTree=distributeCl(aTree, F, graph0, file1, file2, staticVariables);
           }
 
           if(!newTree.empty()) {
-              file2<<"got new Cluster"<<endl;
+              file2<<"got new Cluster"<<std::endl;
               F.output(file2);
               addChild(newTree, popedTrees, DR_Trees, F, graph0, staticVariables);
               //constrain=F.constrainDegree();
-              //file2<<"constrain="<<constrain<<endl;
+              //file2<<"constrain="<<constrain<<std::endl;
               F.output(file2);
               //newTree.setConst(constrain); //1--well constrained, 2,3...--over
               newTree.output(file2);
               delInnerVer(F, graph0);
-              file2<<"delete inner"<<endl;
+              file2<<"delete inner"<<std::endl;
               F.output(file2);
               DR_Trees.append(newTree);
-              file1<<endl<<"Get new Cluster"<<endl;
+              file1<<std::endl<<"Get new Cluster"<<std::endl;
               newTree.output(file1);
-              //out<<"Get new Cluster"<<endl;
+              //out<<"Get new Cluster"<<std::endl;
               //newTree.output(out);
               if(DR_Trees.returnLen()==1&&popedTrees.returnLen()==0)
               {

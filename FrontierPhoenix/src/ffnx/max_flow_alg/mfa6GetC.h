@@ -26,6 +26,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "mfa2Clas.h"
 
+#include <iostream>
+
 namespace ffnx::mfa {
 
     // copy a graph and return K value
@@ -55,7 +57,7 @@ namespace ffnx::mfa {
 
 //performs a sequential extension on the labeled section of F, sequential extensions are described in the
 //attached paper documentation
-    int extension(Graph &F, Graph &graph0, ostream &file1, ostream &file2, StaticVariables& staticVariables)
+    int extension(Graph &F, Graph &graph0, std::ostream &file1, std::ostream &file2, StaticVariables& staticVariables)
     {
         Vertex v0, v1;
         Edge edge;
@@ -66,7 +68,7 @@ namespace ffnx::mfa {
 
         nLabelF=F.numLabeled();
         if(nLabelF==0) return 0;
-        file2<<"In the beginning of extension F"<<endl;
+        file2<<"In the beginning of extension F"<<std::endl;
         F.output(file2);
 
         for(v0Name=1;v0Name < staticVariables.nextVerName;v0Name++) // v0--new vertex to be extended
@@ -156,8 +158,8 @@ namespace ffnx::mfa {
                         }
                     }
                     F.appendVertex(v0);  // extended vertex is added to F
-                    file1<<"Extend Vertice "<<v0Name<<endl;
-                    file2<<"new extended v0="<<v0Name<<" current F is "<<endl;
+                    file1<<"Extend Vertice "<<v0Name<<std::endl;
+                    file2<<"new extended v0="<<v0Name<<" current F is "<<std::endl;
                     F.output(file2);
                     return 1;
                     //v0Name=0;   // try one more cycle

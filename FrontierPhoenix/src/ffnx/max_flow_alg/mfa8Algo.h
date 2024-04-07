@@ -46,42 +46,42 @@ namespace ffnx::mfa {
         Graph F;       //contain distributed vertices & current edges
 
         //print the graph1 (simplified from graph0)
-        file1 << "---------------------------------------------" << endl;
-        file1 << "simpilfied graph (merge the multi-edges and delete zero-weight edges)" << endl;
+        file1 << "---------------------------------------------" << std::endl;
+        file1 << "simpilfied graph (merge the multi-edges and delete zero-weight edges)" << std::endl;
         graph1.output(file1);
 
         //print the DR Input Trees
-        file1 << "---------------------------------------------" << endl;
+        file1 << "---------------------------------------------" << std::endl;
         numTrees = DRTrees.returnLen();
-        file1 << endl << numTrees << " DRTrees by design decomposition:" << endl;
+        file1 << std::endl << numTrees << " DRTrees by design decomposition:" << std::endl;
         for (i = 1; i <= numTrees; i++) {
-            file1 << "---------" << endl;
-            file1 << "DRTree " << i << endl;
+            file1 << "---------" << std::endl;
+            file1 << "DRTree " << i << std::endl;
             printTree(DRTrees.retrieve(i), file1, 1);
         }
-        file1 << "---------------------------------------------" << endl;
+        file1 << "---------------------------------------------" << std::endl;
         DRTrees = distributeForest(DRTrees, F, graph1, file1, file2, 0, 0, staticVariables);
 
         //get trivial clusters from the single left vertices, if possible
         getTrivial(DRTrees, graph1, staticVariables);
 
         //print the DR Output Trees
-        file1 << "---------------------------------------------" << endl;
+        file1 << "---------------------------------------------" << std::endl;
         numTrees = DRTrees.returnLen();
-        file1 << endl << numTrees << " Final DR output Trees" << endl;
+        file1 << std::endl << numTrees << " Final DR output Trees" << std::endl;
         for (i = 1; i <= numTrees; i++) {
-            file1 << "---------" << endl;
-            file1 << "DRTree " << i << endl;
+            file1 << "---------" << std::endl;
+            file1 << "DRTree " << i << std::endl;
             printTree(DRTrees.retrieve(i), file1, 1);
         }
-        file1 << "---------------------------------------------" << endl;
-        cout << endl << numTrees << " Final DR output Trees" << endl;
+        file1 << "---------------------------------------------" << std::endl;
+        cout << std::endl << numTrees << " Final DR output Trees" << std::endl;
         for (i = 1; i <= numTrees; i++) {
-            cout << "---------" << endl;
-            cout << "DRTree " << i << endl;
+            cout << "---------" << std::endl;
+            cout << "DRTree " << i << std::endl;
             printTree(DRTrees.retrieve(i), cout, 1);
         }
-        cout << "---------------------------------------------" << endl;
+        cout << "---------------------------------------------" << std::endl;
         return DRTrees;
     }
 

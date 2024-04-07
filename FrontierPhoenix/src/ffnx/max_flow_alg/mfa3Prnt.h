@@ -52,11 +52,11 @@ namespace ffnx::mfa {
                 else
                     os << kidName << ' ';
             }
-            os << endl;
+            os << std::endl;
 
             printForest(kids, os, indent);
         }
-        os << endl;
+        os << std::endl;
     }
 
     void printForest(List <Cluster> &DR_Trees, ostream &os, int indent) {
