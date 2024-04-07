@@ -129,8 +129,22 @@ namespace ffnx::mfa {
 
         int returnDepth() { return depth; }
 
-        //overridden = operator
-        Vertex &operator=(const Vertex &ver);
+        Vertex& operator=(const Vertex &ver) {
+            if (this != &ver) {
+                name = ver.name;
+                weight = ver.weight;
+                nIncid = ver.nIncid;
+                label = ver.label;
+                scan = ver.scan;
+                frozen = ver.frozen;
+                posFlow = ver.posFlow;
+                existFlow = ver.existFlow;
+                predEdge = ver.predEdge;
+                depth = ver.depth;
+                incid = ver.incid;
+            }
+            return *this;
+        }
 
         //two vertices are equal if they have the same name and weight
         inline bool operator==(const Vertex &v) {
@@ -139,39 +153,19 @@ namespace ffnx::mfa {
         }
 
         //stream output
-        friend std::ostream &operator<<(std::ostream &, const Vertex &);
-    };
-
-
-    Vertex &Vertex::operator=(const Vertex &ver) {
-        if (this != &ver) {
-            name = ver.name;
-            weight = ver.weight;
-            nIncid = ver.nIncid;
-            label = ver.label;
-            scan = ver.scan;
-            frozen = ver.frozen;
-            posFlow = ver.posFlow;
-            existFlow = ver.existFlow;
-            predEdge = ver.predEdge;
-            depth = ver.depth;
-            incid = ver.incid;
+        friend std::ostream &operator<<(std::ostream & os, const Vertex & ver) {
+            int i;
+            os << "Ver=" << ver.name << ", W=" << ver.weight << ", d=" << ver.depth
+               << ", LSF=" << ver.label << ver.scan << ver.frozen
+               << ", PF=" << ver.posFlow << ", EF=" << ver.existFlow;
+            os << ", edge:";
+            if (ver.nIncid > 0)
+                for (i = 1; i <= ver.nIncid; i++)
+                    os << (ver.incid).retrieve(i) << ' ';
+            os << "PD=" << ver.predEdge;
+            return os;
         }
-        return *this;
-    }
-
-    std::ostream &operator<<(std::ostream &os, const Vertex &ver) {
-        int i;
-        os << "Ver=" << ver.name << ", W=" << ver.weight << ", d=" << ver.depth
-           << ", LSF=" << ver.label << ver.scan << ver.frozen
-           << ", PF=" << ver.posFlow << ", EF=" << ver.existFlow;
-        os << ", edge:";
-        if (ver.nIncid > 0)
-            for (i = 1; i <= ver.nIncid; i++)
-                os << (ver.incid).retrieve(i) << ' ';
-        os << "PD=" << ver.predEdge;
-        return os;
-    }
+    };
 
 }
 
