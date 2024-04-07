@@ -8,65 +8,21 @@
 namespace ffnx::mfa {
 
     class Vertex {
-    public:
-        static constexpr int TYPE_POINT = 0;
-
     private:
-        int name;           // unique object ID
-        int weight;         // degree of freedom
+        int name = 0;           // unique object ID
+        int weight = 0;         // degree of freedom
 
-        List<int> incid;  // List of the ID's of the inicident edges
-        int nIncid;       // number of incident edges
-        int label;        // 0 or 1 used for augmenting path
-        int scan;         // 0 or 1 used for augmenting path
-        int frozen;       // If frozen=1, we don't distribute; If frozen=2, frozen forever
-        int posFlow;      // possible flow that could be delivered to this vertex
-        int existFlow;    // flow already absorbed by this vertex
-        int predEdge;     // predecessor edge in the augmenting path
-        int depth;        // depth==0 for original vertex
+        List<int> incid = List<int>();  // List of the ID's of the inicident edges
+        int nIncid = 0;       // number of incident edges
+        int label = 0;        // 0 or 1 used for augmenting path
+        int scan = 0;         // 0 or 1 used for augmenting path
+        int frozen = 0;       // If frozen=1, we don't distribute; If frozen=2, frozen forever
+        int posFlow = 0;      // possible flow that could be delivered to this vertex
+        int existFlow = 0;    // flow already absorbed by this vertex
+        int predEdge = 0;     // predecessor edge in the augmenting path
+        int depth = 0;        // depth==0 for original vertex
 
     public:
-
-        //Constructors
-        Vertex() {
-            name = 0;
-            weight = 0;
-            nIncid = 0;
-            label = 0;
-            scan = 0;
-            frozen = 0;
-            posFlow = 0;
-            existFlow = 0;
-            predEdge = 0;
-            depth = 0;
-        }
-
-        Vertex(int theName, int theType) {
-            name = theName;
-            weight = 0;
-            nIncid = 0;
-            label = 0;
-            scan = 0;
-            frozen = 0;
-            posFlow = 0;
-            existFlow = 0;
-            predEdge = 0;
-            depth = 0;
-        }
-
-        Vertex(const Vertex &ver) {
-            name = ver.name;
-            weight = ver.weight;
-            nIncid = ver.nIncid;
-            label = ver.label;
-            scan = ver.scan;
-            frozen = ver.frozen;
-            posFlow = ver.posFlow;
-            existFlow = ver.existFlow;
-            predEdge = ver.predEdge;
-            depth = ver.depth;
-            incid = ver.incid;
-        }
 
         void setName(int nm) { name = nm; }
 
@@ -128,23 +84,6 @@ namespace ffnx::mfa {
         int returnPredEdg() { return predEdge; }
 
         int returnDepth() { return depth; }
-
-        Vertex& operator=(const Vertex &ver) {
-            if (this != &ver) {
-                name = ver.name;
-                weight = ver.weight;
-                nIncid = ver.nIncid;
-                label = ver.label;
-                scan = ver.scan;
-                frozen = ver.frozen;
-                posFlow = ver.posFlow;
-                existFlow = ver.existFlow;
-                predEdge = ver.predEdge;
-                depth = ver.depth;
-                incid = ver.incid;
-            }
-            return *this;
-        }
 
         //two vertices are equal if they have the same name and weight
         inline bool operator==(const Vertex &v) {

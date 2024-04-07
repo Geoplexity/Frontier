@@ -7,83 +7,27 @@ namespace ffnx::mfa {
 
     class Edge {
     protected:
-        int name;             // name = Constraint ID
-        int weight;           // DOF is removed by the constraint
-        float value;          // of distance, angle, etc.
-        int end1;         // ID of the vertex at end1
-        int end2;             // ID of the vertex at end2
-        int part1;            // part of shape involved in an incidence constraint
-        // 0=arbitrary, 1=point1, 2=point2, 3=center
-        int part2;            // same as part1
+        int name = 0;             // name = Constraint ID
+        int weight = 0;           // DOF is removed by the constraint
 
-        int label;            // 0 or 1 used for augmenting path
-        int scan;             // 0 or 1 used for augmenting path
-        int flow1;            // flow to end1
-        int flow2;            // flow to end2
-        int posFlow;          // possible flow to deliver to this edge
-        int predVertex;       // predecessor Vertex in the augmenting path
+        int end1 = 0;         // ID of the vertex at end1
+        int end2 = 0;             // ID of the vertex at end2
+        int part1 = 0;            // part of shape involved in an incidence constraint
+        // 0=arbitrary, 1=point1, 2=point2, 3=center
+        int part2 = 0;            // same as part1
+
+        int label = 0;            // 0 or 1 used for augmenting path
+        int scan = 0;             // 0 or 1 used for augmenting path
+        int flow1 = 0;            // flow to end1
+        int flow2 = 0;            // flow to end2
+        int posFlow = 0;          // possible flow to deliver to this edge
+        int predVertex = 0;       // predecessor Vertex in the augmenting path
 
     public:
-
-        //default constructor sets all values to zero
-        Edge() {
-            name = 0;
-            weight = 0;
-            value = 0.0;
-            end1 = 0;
-            end2 = 0;
-            part1 = 0;
-            part2 = 0;
-            label = 0;
-            scan = 0;
-            flow1 = 0;
-            flow2 = 0;
-            posFlow = 0;
-            predVertex = 0;
-        }
-
-        Edge(const Edge &edg) {
-            name = edg.name;
-            weight = edg.weight;
-            value = edg.value;
-            end1 = edg.end1;
-            end2 = edg.end2;
-            part1 = edg.part1;
-            part2 = edg.part2;
-            label = edg.label;
-            scan = edg.scan;
-            flow1 = edg.flow1;
-            flow2 = edg.flow2;
-            posFlow = edg.posFlow;
-            predVertex = edg.predVertex;
-        }
-
-        Edge& operator=(const Edge &edg) {
-            if (this != &edg) {
-                name = edg.name;
-                weight = edg.weight;
-                value = edg.value;
-                end1 = edg.end1;
-                end2 = edg.end2;
-                part1 = edg.part1;
-                part2 = edg.part2;
-                label = edg.label;
-                scan = edg.scan;
-                flow1 = edg.flow1;
-                flow2 = edg.flow2;
-                posFlow = edg.posFlow;
-                predVertex = edg.predVertex;
-            }
-            return *this;
-        }
-
-
 
         void setName(int nm) { name = nm; }
 
         void setWeight(int wt) { weight = wt; }
-
-        void setValue(float vl) { value = vl; }
 
         void setEnd(int i, int v) { if (i == 0) end1 = v; else end2 = v; }
 
@@ -118,8 +62,6 @@ namespace ffnx::mfa {
 
         int returnWeight() { return weight; }
 
-        float returnValue() { return value; }
-
         int returnEnd1() { return end1; }
 
         int returnEnd2() { return end2; }
@@ -150,13 +92,8 @@ namespace ffnx::mfa {
 
         //stream output
         friend std::ostream &operator<<(std::ostream &os, const Edge &edg){
-            os << "Edg=" << edg.name << ", W=" << edg.weight << ",V=";
-            if (edg.value < -1)     //if (edg.value==-2.0)
-                os << "NA";          // Not Applicable
-            else if (edg.value < 0) //if (edg.value==-1.0)
-                os << "un";          //unknown
-            else
-                os << edg.value;
+            os << "Edg=" << edg.name << ", W=" << edg.weight;
+
             os << ", LS=" << edg.label << edg.scan << ", PF=" << edg.posFlow << ", F1=" << edg.flow1
                << ", F2=" << edg.flow2 << ", Ends: " << edg.end1 << '(' << edg.part1 << ") "
                << edg.end2 << '(' << edg.part2 << ") PD=" << edg.predVertex;
