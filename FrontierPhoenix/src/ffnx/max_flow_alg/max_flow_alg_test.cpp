@@ -9,13 +9,13 @@ std::unique_ptr<Graph> prepare_test_graph() {
     List<Vertex> v_list;
     List<Edge> e_list;
 
-    Vertex v0(0, VertexType::point);
-    v0.initialValue(static_cast<int>(DegValuesIndexResolver::Point::X), 0.0f, FreeDegsValues::NOT_FREE);
-    v0.initialValue(static_cast<int>(DegValuesIndexResolver::Point::Y), 0.0f, FreeDegsValues::NOT_FREE);
+    Vertex v0;
+    v0.setName(123);
+    v0.setWeight(2);
 
-    Vertex v1(1, VertexType::point);
-    v1.initialValue(static_cast<int>(DegValuesIndexResolver::Point::X), 1.0f, FreeDegsValues::FREE);
-    v1.initialValue(static_cast<int>(DegValuesIndexResolver::Point::Y), 1.0f, FreeDegsValues::FREE);
+    Vertex v1;
+    v1.setName(456);
+    v1.setWeight(2);
 
     v_list.append(v0);
     v_list.append(v1);
@@ -23,8 +23,7 @@ std::unique_ptr<Graph> prepare_test_graph() {
     Edge e;
     e.setEnd(0, 0);
     e.setEnd(1, 1);
-    e.setType(EdgeType::distance);
-    e.setValue(1);
+    e.setWeight(1);
 
     e_list.append(e);
 
@@ -40,7 +39,7 @@ std::unique_ptr<List<Cluster>> get_initial_cluster_list(Graph& graph) {
 
     Cluster dr_tree_root;
 
-    for (int i = 0; i < graph.returnNumVer(); i++) {
+    for (int i = 1; i <= graph.returnNumVer(); i++) {
         Cluster cluster;
         List<int> frontiers;
         List<int> originalV;
