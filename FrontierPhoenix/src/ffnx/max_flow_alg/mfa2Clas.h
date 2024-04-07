@@ -39,37 +39,6 @@ using std::string;
 
 namespace ffnx::mfa {
 
-// simple random numbers by numerical recipies
-// ran0 returns a value between 0.0 and 1.0
-    class Random {
-    private:
-        int idum;
-    public:
-        Random(int seed) { idum = seed; }
-
-        float ran0();
-    };
-
-
-    static const int RAND_IA = 16807;
-    static const int RAND_IM = 2147483647;
-    static const float RAND_AM = 1.0 / RAND_IM;
-    static const int RAND_IQ = 127773;
-    static const int RAND_IR = 2836;
-    static const int RAND_MASK = 123459876;
-
-    float Random::ran0() {
-        long int k;
-        float ans;
-        idum ^= RAND_MASK;
-        k = idum / RAND_IQ;
-        idum = RAND_IA * (idum - k * RAND_IQ) - RAND_IR * k;
-        if (idum < 0) idum += RAND_IM;
-        ans = RAND_AM * idum;
-        idum ^= RAND_MASK;
-        return ans;
-    }
-
     enum VertexType {
         point = 0,
         line = 1,
@@ -721,9 +690,6 @@ namespace ffnx::mfa {
 
         Edge *EdgeAddr(int eName);
 
-        // used for testing generates a random graph
-        void randomGraph();
-
         //stream output
         void output(ostream &);
 
@@ -1094,53 +1060,6 @@ namespace ffnx::mfa {
             return 1; // not able to distribute the edge completely
         }
     }
-
-    void Graph::randomGraph() {
-        int i, j, Vweight, Eweight;
-        float propability;
-        Vertex old_ver;
-        Random random(11);
-
-        cout << "creating a random graph\n";
-        cout << "input number of vertices: ";
-        cin >> NumVert;
-        cout << "edge existing propability between two vertices:";
-        cin >> propability;
-
-        for (i = 1; i <= NumVert; i++) {
-            Vertex new_ver;
-            new_ver.setName(i);
-            Vweight = 2 + (int) (3 * random.ran0());
-            new_ver.setWeight(Vweight);
-            vertices.append(new_ver);
-        }
-
-        NumEdge = 0;
-        for (i = 1; i <= NumVert; i++) {
-            for (j = i + 1; j <= NumVert; j++) {
-                if (random.ran0() + propability >= 1.0) {
-                    Edge new_edg;
-                    NumEdge++;
-                    new_edg.setName(NumEdge);
-                    Eweight = 1 + (int) (2 * random.ran0());
-                    new_edg.setWeight(Eweight);
-                    new_edg.setEnd(0, i);
-                    new_edg.setEnd(1, j);
-                    edges.append(new_edg);
-
-                    old_ver = vertices.retrieve(i);
-                    old_ver.appendIncid(NumEdge);
-                    vertices.changeElem(i, old_ver); // Vname==position
-
-                    old_ver = vertices.retrieve(j);
-                    old_ver.appendIncid(NumEdge);
-                    vertices.changeElem(j, old_ver); // Vname==position
-                }
-            }
-        }
-        cout << "NumEdge=" << NumEdge << endl;
-    }
-
 
     void Graph::output(ostream &os) {
         int i;
